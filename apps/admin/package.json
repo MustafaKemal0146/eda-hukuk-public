@@ -1,0 +1,32 @@
+{
+  "name": "@eda/admin",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev --port 3001",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@base-ui/react": "catalog:",
+    "@eda/contracts": "workspace:*",
+    "@eda/ui": "workspace:*",
+    "@tailwindcss/postcss": "catalog:",
+    "next": "catalog:react",
+    "next-intl": "catalog:",
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@eda/config": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react",
+    "@types/react-dom": "catalog:react",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

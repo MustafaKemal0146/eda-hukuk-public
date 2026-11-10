@@ -1,0 +1,22 @@
+{
+  "name": "@eda/config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    "./tsconfig.base.json": "./tsconfig.base.json",
+    "./tsconfig.node.json": "./tsconfig.node.json",
+    "./tsconfig.next.json": "./tsconfig.next.json",
+    "./tsconfig.react-lib.json": "./tsconfig.react-lib.json",
+    "./biome.preset.json": "./biome.preset.json",
+    "./vitest/node": "./vitest/node.ts",
+    "./vitest/dom": "./vitest/dom.ts",
+    "./tailwind/postcss.config.mjs": "./tailwind/postcss.config.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "catalog:",
+    "happy-dom": "catalog:",
+    "vitest": "catalog:"
+  }
+}

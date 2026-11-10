@@ -1,0 +1,17 @@
+# egress-portal izin listesi (yargi-mcp; 002 §3, 070 §11) — TAM OLARAK 7 alan adı.
+# Alan adlarının tek kaynağı: plans/00-baslangic/002-kanonik-degerler.md §3 (egress-portal satırı).
+# V1.1 ekleri (KİK, Rekabet, GİB, Resmî Gazete) bu dosyaya şimdi EKLENMEZ.
+version: v1
+services: []
+default:
+  name: default
+  project: eda
+  action: enforce
+  allowed_domains:
+    - bedesten.adalet.gov.tr
+    - mevzuat.adalet.gov.tr
+    - www.mevzuat.gov.tr
+    - mevzuat.gov.tr
+    - normkararlarbilgibankasi.anayasa.gov.tr
+    - kararlarbilgibankasi.anayasa.gov.tr
+    - kararlar.uyusmazlik.gov.tr

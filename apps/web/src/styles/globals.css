@@ -1,0 +1,7 @@
+/* Uygulama stilleri: tasarım sistemi (051 §15) + Tailwind kaynak yolları. Ham renk yazılmaz. */
+@import "@eda/ui/styles/theme.css";
+@import "@eda/ui/styles/base.css";
+@import "@eda/ui/styles/paper.css";
+
+@source "../../../../packages/ui/src";
+@source "../";

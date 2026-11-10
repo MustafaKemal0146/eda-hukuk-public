@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "recorded_at": "2026-10-10T18:56:57.481Z",
+    "method": "POST",
+    "url": "https://normkararlarbilgibankasi.anayasa.gov.tr/api/core/public/search",
+    "request_body": "{\"kararTipi\":\"NormDenetimi\",\"kararNo\":\"1960/9999\",\"page\":\"0\",\"size\":\"5\"}",
+    "status": 200,
+    "synthetic": false,
+    "note": "Kalıcı numaradan kayıt çözümleme"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json"
+    },
+    "body": "{\"total\":0,\"page\":1,\"data\":[],\"page_size\":5}"
+  }
+}

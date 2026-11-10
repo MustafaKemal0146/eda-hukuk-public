@@ -1,0 +1,2283 @@
+[
+  {
+    "name": "Button",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "IconButton",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "Input",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "PasswordInput",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "Textarea",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "Field",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "FormErrorSummary",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "Checkbox",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "Switch",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "RadioGroup",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "RadioCard",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "Select",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "Combobox",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "BaroCombobox",
+    "layer": "ui",
+    "status": "planned",
+    "area": "form"
+  },
+  {
+    "name": "SegmentedControl",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "Tabs",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gosterim",
+    "exports": ["Tabs", "TabPanel"]
+  },
+  {
+    "name": "Accordion",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gosterim",
+    "exports": ["Accordion", "AccordionItem"]
+  },
+  {
+    "name": "Tooltip",
+    "layer": "ui",
+    "status": "ready",
+    "area": "katman",
+    "exports": ["Tooltip", "TooltipProvider"]
+  },
+  {
+    "name": "Popover",
+    "layer": "ui",
+    "status": "ready",
+    "area": "katman"
+  },
+  {
+    "name": "DropdownMenu",
+    "layer": "ui",
+    "status": "ready",
+    "area": "katman",
+    "exports": [
+      "DropdownMenu",
+      "DropdownMenuItem",
+      "DropdownMenuLabel",
+      "DropdownMenuRadioGroup",
+      "DropdownMenuSeparator"
+    ]
+  },
+  {
+    "name": "Dialog",
+    "layer": "ui",
+    "status": "ready",
+    "area": "katman"
+  },
+  {
+    "name": "AlertDialog",
+    "layer": "ui",
+    "status": "ready",
+    "area": "katman"
+  },
+  {
+    "name": "Sheet",
+    "layer": "ui",
+    "status": "ready",
+    "area": "katman"
+  },
+  {
+    "name": "Toast",
+    "layer": "ui",
+    "status": "ready",
+    "area": "geri-bildirim",
+    "exports": ["ToastProvider"]
+  },
+  {
+    "name": "NoticeBanner",
+    "layer": "ui",
+    "status": "ready",
+    "area": "geri-bildirim"
+  },
+  {
+    "name": "Alert",
+    "layer": "ui",
+    "status": "ready",
+    "area": "geri-bildirim"
+  },
+  {
+    "name": "Badge",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gosterim"
+  },
+  {
+    "name": "Chip",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gosterim"
+  },
+  {
+    "name": "Card",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gosterim",
+    "exports": ["Card", "CardHeader"]
+  },
+  {
+    "name": "DataTable",
+    "layer": "ui",
+    "status": "planned",
+    "area": "veri"
+  },
+  {
+    "name": "Pagination",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gezinme"
+  },
+  {
+    "name": "Skeleton",
+    "layer": "ui",
+    "status": "ready",
+    "area": "geri-bildirim"
+  },
+  {
+    "name": "Loader",
+    "layer": "ui",
+    "status": "ready",
+    "area": "geri-bildirim"
+  },
+  {
+    "name": "Progress",
+    "layer": "ui",
+    "status": "ready",
+    "area": "geri-bildirim"
+  },
+  {
+    "name": "ScrollArea",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gosterim"
+  },
+  {
+    "name": "Separator",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gosterim"
+  },
+  {
+    "name": "Kbd",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gosterim"
+  },
+  {
+    "name": "Avatar",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gosterim"
+  },
+  {
+    "name": "Breadcrumb",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gezinme"
+  },
+  {
+    "name": "Stepper",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gezinme"
+  },
+  {
+    "name": "DateField",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "TimeField",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "FileInput",
+    "layer": "ui",
+    "status": "ready",
+    "area": "form"
+  },
+  {
+    "name": "EmptyState",
+    "layer": "ui",
+    "status": "ready",
+    "area": "geri-bildirim"
+  },
+  {
+    "name": "ErrorState",
+    "layer": "ui",
+    "status": "ready",
+    "area": "geri-bildirim"
+  },
+  {
+    "name": "LockedFeatureState",
+    "layer": "ui",
+    "status": "ready",
+    "area": "geri-bildirim"
+  },
+  {
+    "name": "Announcer",
+    "layer": "ui",
+    "status": "ready",
+    "area": "geri-bildirim"
+  },
+  {
+    "name": "Icon",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gosterim"
+  },
+  {
+    "name": "SkipLinks",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gezinme"
+  },
+  {
+    "name": "NavItem",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gezinme"
+  },
+  {
+    "name": "Splitter",
+    "layer": "ui",
+    "status": "planned",
+    "area": "gezinme"
+  },
+  {
+    "name": "EnvironmentStrip",
+    "layer": "ui",
+    "status": "ready",
+    "area": "geri-bildirim"
+  },
+  {
+    "name": "DataClassChip",
+    "layer": "ui",
+    "status": "ready",
+    "area": "durum"
+  },
+  {
+    "name": "ProviderBadge",
+    "layer": "ui",
+    "status": "ready",
+    "area": "durum"
+  },
+  {
+    "name": "CitationStatusBadge",
+    "layer": "ui",
+    "status": "ready",
+    "area": "durum"
+  },
+  {
+    "name": "SourceChip",
+    "layer": "ui",
+    "status": "ready",
+    "area": "durum"
+  },
+  {
+    "name": "DeadlineCheckMark",
+    "layer": "ui",
+    "status": "planned",
+    "area": "durum"
+  },
+  {
+    "name": "DocStatusBadge",
+    "layer": "ui",
+    "status": "ready",
+    "area": "durum"
+  },
+  {
+    "name": "ZoomControl",
+    "layer": "ui",
+    "status": "planned",
+    "area": "kagit"
+  },
+  {
+    "name": "A4Page",
+    "layer": "ui",
+    "status": "planned",
+    "area": "kagit"
+  },
+  {
+    "name": "FileStatusBadge",
+    "layer": "ui",
+    "status": "ready",
+    "area": "durum"
+  },
+  {
+    "name": "EventChip",
+    "layer": "ui",
+    "status": "ready",
+    "area": "durum"
+  },
+  {
+    "name": "DeadlineCountdown",
+    "layer": "ui",
+    "status": "planned",
+    "area": "durum"
+  },
+  {
+    "name": "ActiveFilterChips",
+    "layer": "ui",
+    "status": "planned",
+    "area": "filtre"
+  },
+  {
+    "name": "QuickChips",
+    "layer": "ui",
+    "status": "planned",
+    "area": "filtre"
+  },
+  {
+    "name": "SectionRoleLabel",
+    "layer": "ui",
+    "status": "planned",
+    "area": "durum"
+  },
+  {
+    "name": "StorageMeter",
+    "layer": "ui",
+    "status": "planned",
+    "area": "olcum"
+  },
+  {
+    "name": "QuotaBar",
+    "layer": "ui",
+    "status": "planned",
+    "area": "olcum"
+  },
+  {
+    "name": "SettingsSection",
+    "layer": "ui",
+    "status": "planned",
+    "area": "ayarlar"
+  },
+  {
+    "name": "SaveBar",
+    "layer": "ui",
+    "status": "planned",
+    "area": "ayarlar"
+  },
+  {
+    "name": "DangerZone",
+    "layer": "ui",
+    "status": "planned",
+    "area": "ayarlar"
+  },
+  {
+    "name": "AdminKpiCard",
+    "layer": "ui",
+    "status": "planned",
+    "area": "grafik"
+  },
+  {
+    "name": "StatTile",
+    "layer": "ui",
+    "status": "planned",
+    "area": "grafik"
+  },
+  {
+    "name": "ChartFrame",
+    "layer": "ui",
+    "status": "planned",
+    "area": "grafik"
+  },
+  {
+    "name": "LineChart",
+    "layer": "ui",
+    "status": "planned",
+    "area": "grafik"
+  },
+  {
+    "name": "BarChart",
+    "layer": "ui",
+    "status": "planned",
+    "area": "grafik"
+  },
+  {
+    "name": "StackedBarChart",
+    "layer": "ui",
+    "status": "planned",
+    "area": "grafik"
+  },
+  {
+    "name": "Sparkline",
+    "layer": "ui",
+    "status": "planned",
+    "area": "grafik"
+  },
+  {
+    "name": "Meter",
+    "layer": "ui",
+    "status": "planned",
+    "area": "olcum"
+  },
+  {
+    "name": "BrandMark",
+    "layer": "ui",
+    "status": "ready",
+    "area": "marka",
+    "note": "052 dışı ek ilkel (tasarım yenilemesi); 052 §3'e satır eklenmeli (§1.6)"
+  },
+  {
+    "name": "IconTile",
+    "layer": "ui",
+    "status": "ready",
+    "area": "gosterim",
+    "note": "052 dışı ek ilkel (tasarım yenilemesi); 052 §3'e satır eklenmeli (§1.6)"
+  },
+  {
+    "name": "PageContainer",
+    "layer": "ui",
+    "status": "ready",
+    "area": "sayfa",
+    "note": "052 dışı ek ilkel (tasarım yenilemesi); 052 §3'e satır eklenmeli (§1.6)"
+  },
+  {
+    "name": "PageHeader",
+    "layer": "ui",
+    "status": "ready",
+    "area": "sayfa",
+    "note": "052 dışı ek ilkel (tasarım yenilemesi); 052 §3'e satır eklenmeli (§1.6)"
+  },
+  {
+    "name": "SectionHeader",
+    "layer": "ui",
+    "status": "ready",
+    "area": "sayfa",
+    "note": "052 dışı ek ilkel (tasarım yenilemesi); 052 §3'e satır eklenmeli (§1.6)"
+  },
+  {
+    "name": "Table",
+    "layer": "ui",
+    "status": "ready",
+    "area": "veri",
+    "exports": ["Table", "Th", "Td", "Tr"],
+    "note": "052 dışı ek ilkel (tasarım yenilemesi); 052 §3'e satır eklenmeli (§1.6)"
+  },
+  {
+    "name": "Message",
+    "layer": "ai",
+    "status": "ready",
+    "area": "sohbet"
+  },
+  {
+    "name": "MessageContent",
+    "layer": "ai",
+    "status": "ready",
+    "area": "sohbet"
+  },
+  {
+    "name": "ReasoningBlock",
+    "layer": "ai",
+    "status": "ready",
+    "area": "sohbet"
+  },
+  {
+    "name": "MessageActions",
+    "layer": "ai",
+    "status": "ready",
+    "area": "sohbet"
+  },
+  {
+    "name": "ConversationView",
+    "layer": "ai",
+    "status": "ready",
+    "area": "sohbet"
+  },
+  {
+    "name": "AppShell",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "Sidebar",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "NewChatButton",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "ConversationGroup",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "ConversationListItem",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "Topbar",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "ThemeMenu",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "UserMenu",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "NotificationBell",
+    "layer": "feature",
+    "status": "planned",
+    "area": "notifications"
+  },
+  {
+    "name": "NotificationPanel",
+    "layer": "feature",
+    "status": "planned",
+    "area": "notifications"
+  },
+  {
+    "name": "CommandPalette",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "ShortcutHelpDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "CapabilityGate",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "ConnectionBanner",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "SessionExpiryDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "StepUpDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "StudioLayout",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "PanelTabs",
+    "layer": "feature",
+    "status": "planned",
+    "area": "shell"
+  },
+  {
+    "name": "CreditMeter",
+    "layer": "feature",
+    "status": "planned",
+    "area": "billing"
+  },
+  {
+    "name": "ConversationProvider",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "ChatWelcome",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "FeedbackBar",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "FeedbackShareDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "NoticeCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "DisclaimerLine",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "LockBanner",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "Composer",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "ModeChip",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "ScopePicker",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "ModelPicker",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "MaskingPreviewBadge",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "AttachmentButton",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "AttachmentChip",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "SlashMentionMenu",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "SendButton",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "StopButton",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "PromptPicker",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "PublicModeDeclarationDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "PolicyBlockedPanel",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "ThreadDivider",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "SuggestionChips",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "QuickActionChips",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "PipelineBar",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "OutlineEditor",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "CitationPreview",
+    "layer": "feature",
+    "status": "planned",
+    "area": "sources-panel"
+  },
+  {
+    "name": "CitationSummaryLine",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "SourcesPanel",
+    "layer": "feature",
+    "status": "planned",
+    "area": "sources-panel"
+  },
+  {
+    "name": "SourceListItem",
+    "layer": "feature",
+    "status": "planned",
+    "area": "sources-panel"
+  },
+  {
+    "name": "SourceViewer",
+    "layer": "feature",
+    "status": "planned",
+    "area": "sources-panel"
+  },
+  {
+    "name": "UserSourceDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "sources-panel"
+  },
+  {
+    "name": "AttestDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "sources-panel"
+  },
+  {
+    "name": "DeadlineSuggestionCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "StudioHeader",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "CanvasToolbar",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "BlockCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "BlockHandle",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "AutosaveIndicator",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "ConflictPanel",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "WriterLockBanner",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "SuggestionBar",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "SuggestionDiff",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "SuggestionCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "CitationNodeView",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "VersionList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "VersionDiffView",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "ExportDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "ExportChecklist",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "SearchHero",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "TopicCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "FilterBar",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "SerpResultCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "ResultsRegion",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "SearchOverviewCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "RerankStatus",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "DecisionViewer",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "AiSummaryDisclosure",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "LawSearch",
+    "layer": "feature",
+    "status": "planned",
+    "area": "legislation"
+  },
+  {
+    "name": "LawList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "legislation"
+  },
+  {
+    "name": "ArticleView",
+    "layer": "feature",
+    "status": "planned",
+    "area": "legislation"
+  },
+  {
+    "name": "LawOutline",
+    "layer": "feature",
+    "status": "planned",
+    "area": "legislation"
+  },
+  {
+    "name": "KunyeCheckUploader",
+    "layer": "feature",
+    "status": "planned",
+    "area": "kunye-check"
+  },
+  {
+    "name": "KunyeCheckProgress",
+    "layer": "feature",
+    "status": "planned",
+    "area": "kunye-check"
+  },
+  {
+    "name": "KunyeCheckReport",
+    "layer": "feature",
+    "status": "planned",
+    "area": "kunye-check"
+  },
+  {
+    "name": "MarkedTextView",
+    "layer": "feature",
+    "status": "planned",
+    "area": "kunye-check"
+  },
+  {
+    "name": "KunyeResultItem",
+    "layer": "feature",
+    "status": "planned",
+    "area": "kunye-check"
+  },
+  {
+    "name": "CaseCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "CaseRow",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "CaseHeader",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "CaseForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "PartyList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "PartyForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "ClientCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "clients"
+  },
+  {
+    "name": "ClientForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "clients"
+  },
+  {
+    "name": "PowerOfAttorneyList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "clients"
+  },
+  {
+    "name": "UploadZone",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "UploadQueue",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "FileTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "FileCardPanel",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "HiddenContentNotice",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "FilePreviewFrame",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "MoveToCaseDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "CustodyTimeline",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "Sha256Verifier",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "CalendarView",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "DayCell",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "CalendarLegend",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "CalendarFilterChips",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "TodaySummaryCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "QuickAddForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "EventDetail",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "ReminderEditor",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "DeadlineCalculator",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "DeadlineResultCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "SettingsLayout",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "SettingsNav",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "ThemeDensityForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "ProfileForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "OrgSettingsForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "AiPolicyForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "AiPolicyAcceptanceCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "CaseAiAuthorizationDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "onboarding"
+  },
+  {
+    "name": "NotificationPreferences",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "SessionList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "TotpSetup",
+    "layer": "feature",
+    "status": "planned",
+    "area": "auth"
+  },
+  {
+    "name": "PasskeyEnroll",
+    "layer": "feature",
+    "status": "planned",
+    "area": "auth"
+  },
+  {
+    "name": "MfaRequiredDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "auth"
+  },
+  {
+    "name": "DataExportCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "SubscriptionCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "billing"
+  },
+  {
+    "name": "PlanCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "billing"
+  },
+  {
+    "name": "CouponForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "billing"
+  },
+  {
+    "name": "InvoiceTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "billing"
+  },
+  {
+    "name": "CreditLedgerTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "billing"
+  },
+  {
+    "name": "UsageMeter",
+    "layer": "feature",
+    "status": "planned",
+    "area": "billing"
+  },
+  {
+    "name": "AuthLayout",
+    "layer": "feature",
+    "status": "planned",
+    "area": "auth"
+  },
+  {
+    "name": "LoginForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "auth"
+  },
+  {
+    "name": "RegisterForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "auth"
+  },
+  {
+    "name": "RegisterSuccess",
+    "layer": "feature",
+    "status": "planned",
+    "area": "auth"
+  },
+  {
+    "name": "QuoteCarousel",
+    "layer": "feature",
+    "status": "planned",
+    "area": "auth"
+  },
+  {
+    "name": "PendingVerificationPanel",
+    "layer": "feature",
+    "status": "planned",
+    "area": "auth"
+  },
+  {
+    "name": "PendingVerificationBanner",
+    "layer": "feature",
+    "status": "planned",
+    "area": "auth"
+  },
+  {
+    "name": "OnboardingWizard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "onboarding"
+  },
+  {
+    "name": "OnboardingTour",
+    "layer": "feature",
+    "status": "planned",
+    "area": "onboarding"
+  },
+  {
+    "name": "OnboardingChecklist",
+    "layer": "feature",
+    "status": "planned",
+    "area": "onboarding"
+  },
+  {
+    "name": "MemberTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "InviteForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "InvitationTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "FirmAuditTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "TemplateList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "ApprovalQueueRow",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "SupportTicketForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "support"
+  },
+  {
+    "name": "SupportTicketList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "support"
+  },
+  {
+    "name": "PartnerStatCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "partner"
+  },
+  {
+    "name": "PartnerReportTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "partner"
+  },
+  {
+    "name": "AdminShell",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "ApplicationReviewCard",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "TenantTable",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "UserTable",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "ProviderTable",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "ModelRouteTable",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "SourceHealthTable",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "UsageMarginTable",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "SettingsTable",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "FlagTable",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "MaintenanceControl",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "AuditTable",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "CouponForm",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "CouponTable",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "PayoutReportButton",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "ConversationHeader",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "ConversationMenu",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "LinkConversationDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "ShareConversationDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "PromptGallery",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "PromptGalleryCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "DocumentLinkCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "SourcesDisclosure",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "ReadOnlyBanner",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "ScrollToLatestButton",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "SensitiveTopicHint",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "EditingNotice",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "ComposerOptionsSheet",
+    "layer": "feature",
+    "status": "planned",
+    "area": "chat"
+  },
+  {
+    "name": "NewDocumentDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "ImportDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "ImportReportDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "OutlinePreview",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "PlaceholderList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "SelectionMenu",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "StudioChatColumn",
+    "layer": "feature",
+    "status": "planned",
+    "area": "studio"
+  },
+  {
+    "name": "SerpTabs",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "LiveSearchBanner",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "LegislationHitList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "PortalOpenLink",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "ArchiveBetaBadge",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "SearchExpiredState",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "CitedArticleChips",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "AddToDocumentDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "SectionBody",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "CoverageNote",
+    "layer": "feature",
+    "status": "planned",
+    "area": "decisions"
+  },
+  {
+    "name": "ArticleList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "legislation"
+  },
+  {
+    "name": "LawHeader",
+    "layer": "feature",
+    "status": "planned",
+    "area": "legislation"
+  },
+  {
+    "name": "LegalStatusBand",
+    "layer": "feature",
+    "status": "planned",
+    "area": "legislation"
+  },
+  {
+    "name": "UseInChatButton",
+    "layer": "feature",
+    "status": "planned",
+    "area": "legislation"
+  },
+  {
+    "name": "CopyButton",
+    "layer": "feature",
+    "status": "planned",
+    "area": "legislation"
+  },
+  {
+    "name": "CaseSummary",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "CaseAiBand",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "CasePolicySettings",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "CloseCaseDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "NewCaseDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "InboxAttachmentList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "FileRowActions",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "EvrakViewer",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "ExtractedTextPanel",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "ReplyDraftDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "CaseAiLogTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "ClientSearch",
+    "layer": "feature",
+    "status": "planned",
+    "area": "cases"
+  },
+  {
+    "name": "CalendarPanel",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "UpcomingDeadlines",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "DeadlineApproveDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "HolidayCoverageBanner",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "PushStatusRow",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "ConflictNotice",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "PendingCalendarMode",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "EventForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "AgendaList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "calendar"
+  },
+  {
+    "name": "OrgScopeNote",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "UnsavedChangesGuard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "StepUpProvider",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "SignatureBlockForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "SignaturePreview",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "LetterheadForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "LetterheadPreview",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "AiPolicySummary",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "ResidencyTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "AiInstructionsField",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "PasswordChangeForm",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "TotpManager",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "PasskeyList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "RecoveryRequestPanel",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "NotificationMatrix",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "PushDeviceCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "PlanSummaryCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "PlanPicker",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "ErasureDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "DataSubjectSearchDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "KvkkRequestLedger",
+    "layer": "feature",
+    "status": "planned",
+    "area": "settings"
+  },
+  {
+    "name": "BuroLayout",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "BuroNav",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "PolicyChangeDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "ForbiddenState",
+    "layer": "ui",
+    "status": "planned",
+    "area": "geri-bildirim"
+  },
+  {
+    "name": "SeatSummary",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "RecoveryRequestList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "OwnershipTransferDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "MemberOffboardWizard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "MemberCreditTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "PolicyEffectPreview",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "ClientNoticeTemplates",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "AuditSealPanel",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "TemplateFromDocumentDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "PromptEditorDialog",
+    "layer": "feature",
+    "status": "planned",
+    "area": "firm"
+  },
+  {
+    "name": "PartnerShell",
+    "layer": "feature",
+    "status": "planned",
+    "area": "partner"
+  },
+  {
+    "name": "PartnerOrgTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "partner"
+  },
+  {
+    "name": "PartnerCreditTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "partner"
+  },
+  {
+    "name": "PartnerCommissionTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "partner"
+  },
+  {
+    "name": "ReportStatusBadge",
+    "layer": "feature",
+    "status": "planned",
+    "area": "partner"
+  },
+  {
+    "name": "CsvDownloadButton",
+    "layer": "feature",
+    "status": "planned",
+    "area": "partner"
+  },
+  {
+    "name": "AdminActionDialog",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "PasskeyStepUpDialog",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "StepUpDialog",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "ReadOnlyHint",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "HealthTile",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "ReasonSelect",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "AdminAlertList",
+    "layer": "admin",
+    "status": "planned",
+    "area": "admin"
+  },
+  {
+    "name": "MarketingHeader",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "MarketingFooter",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "Section",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "Hero",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "FeatureCard",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "StepList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "ClaimNote",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "Disclosure",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "PriceLine",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "CreditTariffTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "SubProcessorTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "TbbQuestionList",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "DataPathDiagram",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "LegalDocument",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  },
+  {
+    "name": "CookieTable",
+    "layer": "feature",
+    "status": "planned",
+    "area": "marketing"
+  }
+]

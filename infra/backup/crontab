@@ -1,0 +1,7 @@
+# infra/backup/crontab (073 §4.4, §5.4)
+0 2 * * 0 /usr/local/bin/backup-run.sh full
+0 2 * * 1-6 /usr/local/bin/backup-run.sh incr
+*/5 * * * * /usr/local/bin/offsite-sync.sh wal
+*/15 * * * * /usr/local/bin/offsite-sync.sh obj
+0 4 * * 3 /usr/local/bin/offsite-sync.sh check
+* * * * * /usr/local/bin/backup-run.sh status-refresh

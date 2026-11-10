@@ -1,0 +1,24 @@
+# egress-llm izin listesi — sandbox (development, test, staging, beta-synthetic; EGRESS_LLM_ACL ile seçilir, 070 §11).
+# egress-llm.yaml ile yalnız iyzico satırında farklıdır.
+# Alan adlarının tek kaynağı: plans/00-baslangic/002-kanonik-degerler.md §3 (egress-llm satırı).
+# Değişiklik yalnız CODEOWNERS onaylı PR ile (070 §11); check-egress-allowlist denetler.
+#
+# Henüz eklenmeyenler (yer tutucu YAZILMAZ):
+# - Azure AB kaynağı (<kaynak>.services.ai.azure.com) ve e-posta sağlayıcısının API host'u:
+#   gerçek değerler IG-05/IG-16 sonrası CODEOWNERS PR'ı ile eklenir.
+# api.anthropic.com (P07d): Claude adaptörü; `anthropic` sağlayıcısı tohumda kapalıdır, gerçek
+# çağrı yalnız DEV_REAL_LLM=anthropic (development) veya eval kapısı sonrası etkinleştirmeyle olur.
+version: v1
+services: []
+default:
+  name: default
+  project: eda
+  action: enforce
+  allowed_domains:
+    - api.anthropic.com
+    - api.deepseek.com
+    - sandbox-api.iyzipay.com
+    - fcm.googleapis.com
+    - updates.push.services.mozilla.com
+    - web.push.apple.com
+    - "*.notify.windows.com"

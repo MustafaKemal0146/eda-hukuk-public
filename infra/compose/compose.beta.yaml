@@ -1,0 +1,30 @@
+# E.D.A. Hukuk — beta ve staging katmanı (070 §8).
+# 014 §7.2 tablosu; prod üzerine bindirilir.
+x-eda-env: &eda-env { EDA_ENV: "${EDA_ENV:?}" }
+
+services:
+  web:          { mem_limit: 768m,  memswap_limit: 768m,  cpus: 0.5,  environment: *eda-env }
+  admin:        { mem_limit: 512m,  memswap_limit: 512m,  cpus: 0.25, environment: *eda-env }
+  api:          { mem_limit: 1g,    memswap_limit: 1g,    cpus: 1,    environment: *eda-env }
+  worker:       { mem_limit: 1536m, memswap_limit: 1536m, cpus: 1,    environment: *eda-env }
+  jobs:         { mem_limit: 512m,  memswap_limit: 512m,  cpus: 0.25, environment: *eda-env }
+  migrate:      { environment: *eda-env }
+  yargi-mcp:    { mem_limit: 384m,  memswap_limit: 384m,  cpus: 0.25, environment: *eda-env }
+  doc-engine:   { mem_limit: 3g,    memswap_limit: 3g,    cpus: 1.5,  environment: *eda-env,
+                  tmpfs: !override ["/tmp:size=1g,mode=0700,uid=10006,gid=10006,noexec,nosuid,nodev"] }
+  gotenberg:    { mem_limit: 1g,    memswap_limit: 1g,    cpus: 0.5 }
+  postgres:     { mem_limit: 8g,    memswap_limit: 8g,    cpus: 2 }
+  valkey:       { mem_limit: 1g,    memswap_limit: 1g,    cpus: 0.25, command: ["/etc/valkey/valkey.conf", "--maxmemory", "768mb"] }
+  valkey-cache: { mem_limit: 512m,  memswap_limit: 512m,  cpus: 0.25, command: ["/etc/valkey/valkey-cache.conf", "--maxmemory", "384mb"] }
+  objstore:     { mem_limit: 512m,  memswap_limit: 512m,  cpus: 0.5 }
+  embed-query:  { mem_limit: 3g,    memswap_limit: 3g,    cpus: 1.5 }
+  embed-batch:  { profiles: !override [disabled-in-beta] }
+  clamav:       { mem_limit: 1536m, memswap_limit: 1536m, cpus: 0.5 }
+  freshclam:    { cpus: 0.1 }
+  caddy:        { mem_limit: 128m,  memswap_limit: 128m,  cpus: 0.25 }
+  egress-llm:    { cpus: 0.1 }
+  egress-portal: { cpus: 0.1 }
+  egress-backup: { cpus: 0.1 }
+  egress-av:     { cpus: 0.1 }
+  backup:       { cpus: 0.5 }
+  rerank:       { profiles: !override [disabled-in-beta] }

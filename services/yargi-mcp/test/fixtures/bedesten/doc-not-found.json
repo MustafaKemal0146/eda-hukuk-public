@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "recorded_at": "2026-10-10T17:24:16.977Z",
+    "method": "POST",
+    "url": "https://bedesten.adalet.gov.tr/emsal-karar/getDocumentContent",
+    "request_body": "{\"data\":{\"documentId\":\"99999999999\"},\"applicationName\":\"UyapMevzuat\"}",
+    "status": 200,
+    "synthetic": false,
+    "note": "ADALET_RECORD_NOT_FOUND_EXCEPTION"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json"
+    },
+    "body": "{\"data\":null,\"metadata\":{\"FMTY\":\"ERROR\",\"FMC\":\"ADALET_RECORD_NOT_FOUND_EXCEPTION\",\"FMTE\":\"Record not found exception:99999999999 Id'li döküman sistemde bulunamadı!!!\",\"FMU\":\"Record not found exception:99999999999 Id'li döküman sistemde bulunamadı!!!\",\"FEC\":\"tr.gov.adalet.core.exception.AdaletRecordNotFoundException\",\"ESN\":\"emsal-karar-service\",\"PTID\":\"e18b15b8c791c747\",\"TID\":\"58fd0669c6f24740406c75c8998ee3a1\",\"SID\":\"59cc30788e3c8b60\"}}"
+  }
+}

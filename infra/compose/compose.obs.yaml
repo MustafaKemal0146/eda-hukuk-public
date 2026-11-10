@@ -1,0 +1,105 @@
+# E.D.A. Hukuk — gözlem katmanı (070 §9).
+# Ayrı proje (eda-obs), ayrı VM; uygulama hostuyla birleştirilmez.
+name: eda-obs
+
+x-hardened: &hardened
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: ["no-new-privileges:true"]
+  init: true
+  pids_limit: 256
+  logging: { driver: json-file, options: { max-size: "10m", max-file: "5" } }
+
+x-hc: &hc { interval: 10s, timeout: 3s, retries: 5, start_period: 20s }
+
+services:
+  glitchtip-db:
+    <<: *hardened
+    profiles: [obs-lite]
+    image: postgres:18.6-alpine@sha256:d8703cd7fba306b9fec9268ecedfa8a966846c053036a60e3635791957eb2f66
+    user: "70:70"
+    networks: [obs]
+    environment:
+      POSTGRES_DB: glitchtip
+      POSTGRES_USER: glitchtip
+      POSTGRES_PASSWORD_FILE: /run/secrets/glitchtip_db_password
+    secrets: [glitchtip_db_password]
+    volumes: ["glitchtipdata:/var/lib/postgresql"]
+    tmpfs: ["/tmp:size=64m", "/var/run/postgresql:size=1m,uid=70,gid=70"]
+    mem_limit: 256m
+    memswap_limit: 256m
+    healthcheck: { <<: *hc, test: ["CMD-SHELL", "pg_isready -U glitchtip -d glitchtip"] }
+
+  glitchtip:
+    <<: *hardened
+    profiles: [obs-lite]
+    image: glitchtip/glitchtip:6.2.1@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+    networks: [obs]
+    ports: ["${OBS_BIND_IP:?}:8000:8000"]
+    environment:
+      DATABASE_URL_FILE: /run/secrets/glitchtip_database_url
+      SECRET_KEY_FILE: /run/secrets/glitchtip_secret_key
+      GLITCHTIP_DOMAIN: "https://${OBS_HOST:?}"
+      DEFAULT_FROM_EMAIL: "izleme@${APP_DOMAIN:?}"
+      GLITCHTIP_MAX_EVENT_LIFE_DAYS: "30"
+    secrets: [glitchtip_secret_key, glitchtip_database_url]
+    tmpfs: ["/tmp:size=128m"]
+    mem_limit: 512m
+    memswap_limit: 512m
+    depends_on: { glitchtip-db: { condition: service_healthy } }
+
+  uptime-kuma:
+    <<: *hardened
+    profiles: [obs-lite]
+    image: louislam/uptime-kuma:2.0.0@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+    networks: [obs]
+    ports: ["${OBS_BIND_IP:?}:3001:3001"]
+    volumes: ["uptimekumadata:/app/data"]
+    tmpfs: ["/tmp:size=64m"]
+    mem_limit: 256m
+    memswap_limit: 256m
+
+  alloy:
+    profiles: [obs]
+    image: "grafana/alloy@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    mem_limit: 256m
+    ports: ["${OBS_BIND_IP:?}:4317:4317", "${OBS_BIND_IP:?}:4318:4318"]
+    networks: [obs]
+
+  loki:
+    profiles: [obs]
+    image: "grafana/loki:3.0.0@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    mem_limit: 512m
+    volumes: ["lokidata:/loki"]
+    networks: [obs]
+
+  prometheus:
+    profiles: [obs]
+    image: "prom/prometheus@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    mem_limit: 512m
+    volumes: ["prometheusdata:/prometheus"]
+    networks: [obs]
+
+  grafana:
+    profiles: [obs]
+    image: "grafana/grafana@sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    mem_limit: 256m
+    ports: ["${OBS_BIND_IP:?}:3000:3000"]
+    volumes: ["grafanadata:/var/lib/grafana"]
+    networks: [obs]
+
+networks:
+  obs: { internal: false }
+
+volumes:
+  glitchtipdata: {}
+  uptimekumadata: {}
+  lokidata: {}
+  prometheusdata: {}
+  grafanadata: {}
+
+secrets:
+  glitchtip_secret_key:   { file: "${EDA_SECRETS_DIR:?}/glitchtip_secret_key" }
+  glitchtip_db_password:  { file: "${EDA_SECRETS_DIR:?}/glitchtip_db_password" }
+  glitchtip_database_url: { file: "${EDA_SECRETS_DIR:?}/glitchtip_database_url" }
+  grafana_admin_password: { file: "${EDA_SECRETS_DIR:?}/grafana_admin_password" }

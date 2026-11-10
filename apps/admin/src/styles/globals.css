@@ -1,0 +1,6 @@
+/* Yönetim paneli stilleri: tasarım sistemi (A4 kâğıdı yok). */
+@import "@eda/ui/styles/theme.css";
+@import "@eda/ui/styles/base.css";
+
+@source "../../../../packages/ui/src";
+@source "../";

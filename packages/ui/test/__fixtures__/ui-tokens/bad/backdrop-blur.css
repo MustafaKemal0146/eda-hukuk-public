@@ -1,0 +1,4 @@
+/* Negatif fixture (KK-P05-3): bulanık arka plan. */
+.fixture {
+  backdrop-filter: none;
+}

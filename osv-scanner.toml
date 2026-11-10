@@ -1,0 +1,14 @@
+# osv-scanner yapılandırması (072 §4.2; 061 CTL-SUP-03). Her istisna gerekçe (`reason`) ve bitiş
+# tarihi (`ignoreUntil`) taşır; süresi dolan veya gerekçesiz girdi `check-scan-exceptions.ts`'te
+# hatadır. Dosya CODEOWNERS ile korunur.
+#
+# Biçim:
+# [[IgnoredVulns]]
+# id = "GHSA-xxxx-xxxx-xxxx"
+# ignoreUntil = 2026-12-31T00:00:00Z
+# reason = "Etkilenen kod yolu kullanılmıyor; düzeltme yayımlanınca yükseltilecek (AS-NNNN)"
+
+[[IgnoredVulns]]
+id = "GHSA-67mh-4wv8-2f99"
+ignoreUntil = 2026-12-31T00:00:00Z
+reason = "esbuild 0.18.20 yalnız drizzle-kit -> @esbuild-kit/esm-loader geliştirme zincirinde (@eda/db devDependencies); bulgu esbuild serve geliştirme sunucusuna özgü ve kullanılmıyor; üretim imajlarında yok (images-scan migrate). drizzle-kit yükseltmesi izlenir (AS-0109)"

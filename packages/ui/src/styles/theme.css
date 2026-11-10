@@ -1,0 +1,332 @@
+/*
+ * Tailwind v4 eşlemesi (051 §15). Sınıf adlarının tek kaynağı bu dosyadır.
+ * Renk takma adı kuralı (051 §3): text -> fg, text-muted -> fg-muted, text-subtle -> fg-subtle,
+ * text-on-primary -> on-primary; diğer tokenlar aynı adla. Ham değer yalnız tokens.css içindedir;
+ * burada yalnız var(--eda-*) başvurusu ve Tailwind'in derleme anında gerektirdiği kırılım
+ * değerleri (tokens.source.json breakpoints ile eşit; tokens-canon testi denetler) bulunur.
+ * Uygulama globals.css: @import "@eda/ui/styles/theme.css"; ardından base.css ve paper.css.
+ */
+@import "tailwindcss";
+@import "../tokens/tokens.css";
+
+/*
+ * dark: varyantı yalnız temaya bağlı düzen farkı içindir (051 §15 notu); renkler token değişimiyle
+ * zaten değişir. Sistem teması koyu tercihte de dark: uygulanır (051 §14).
+ */
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where([data-theme="system"], [data-theme="system"] *) {
+      @slot;
+    }
+  }
+}
+
+@custom-variant pointer-coarse (@media (pointer: coarse));
+
+@theme inline {
+  /* Renk: 051 §4.1 */
+  --color-*: initial;
+  --color-bg: var(--eda-bg);
+  --color-surface: var(--eda-surface);
+  --color-surface-raised: var(--eda-surface-raised);
+  --color-surface-sunken: var(--eda-surface-sunken);
+  --color-primary-soft: var(--eda-primary-soft);
+  --color-fg: var(--eda-text);
+  --color-fg-muted: var(--eda-text-muted);
+  --color-fg-subtle: var(--eda-text-subtle);
+  --color-on-primary: var(--eda-text-on-primary);
+  --color-border: var(--eda-border);
+  --color-border-strong: var(--eda-border-strong);
+  --color-primary: var(--eda-primary);
+  --color-primary-hover: var(--eda-primary-hover);
+  --color-primary-active: var(--eda-primary-active);
+  --color-primary-soft-fg: var(--eda-primary-soft-fg);
+  --color-primary-soft-border: var(--eda-primary-soft-border);
+  --color-focus-ring: var(--eda-focus-ring);
+  --color-success: var(--eda-success);
+  --color-success-soft: var(--eda-success-soft);
+  --color-success-on-soft: var(--eda-success-on-soft);
+  --color-success-border: var(--eda-success-border);
+  --color-warning: var(--eda-warning);
+  --color-warning-soft: var(--eda-warning-soft);
+  --color-warning-on-soft: var(--eda-warning-on-soft);
+  --color-warning-border: var(--eda-warning-border);
+  --color-danger: var(--eda-danger);
+  --color-danger-hover: var(--eda-danger-hover);
+  --color-danger-soft: var(--eda-danger-soft);
+  --color-danger-on-soft: var(--eda-danger-on-soft);
+  --color-danger-border: var(--eda-danger-border);
+  --color-info: var(--eda-info);
+  --color-info-soft: var(--eda-info-soft);
+  --color-info-on-soft: var(--eda-info-on-soft);
+  --color-info-border: var(--eda-info-border);
+  --color-neutral-soft: var(--eda-neutral-soft);
+  --color-neutral-on-soft: var(--eda-neutral-on-soft);
+  --color-neutral-border: var(--eda-neutral-border);
+  --color-violet-soft: var(--eda-violet-soft);
+  --color-violet-on-soft: var(--eda-violet-on-soft);
+  --color-violet-border: var(--eda-violet-border);
+  --color-teal-soft: var(--eda-teal-soft);
+  --color-teal-on-soft: var(--eda-teal-on-soft);
+  --color-teal-border: var(--eda-teal-border);
+  --color-inverse-bg: var(--eda-inverse-bg);
+  --color-inverse-fg: var(--eda-inverse-fg);
+  --color-selection-bg: var(--eda-selection-bg);
+  --color-disabled-fg: var(--eda-disabled-fg);
+  --color-disabled-bg: var(--eda-disabled-bg);
+  --color-diff-add-bg: var(--eda-diff-add-bg);
+  --color-diff-add-fg: var(--eda-diff-add-fg);
+  --color-diff-del-bg: var(--eda-diff-del-bg);
+  --color-diff-del-fg: var(--eda-diff-del-fg);
+  --color-paper-bg: var(--eda-paper-bg);
+  --color-paper-ink: var(--eda-paper-ink);
+
+  /* Modal arka planı (051 §9) */
+  --color-scrim: var(--eda-scrim);
+
+  /* Künye durumu ve veri sınıfı (051 §4.3, §4.4; 052 Açık Soru 1) */
+  --color-citation-pending-bg: var(--eda-citation-pending-bg);
+  --color-citation-pending-fg: var(--eda-citation-pending-fg);
+  --color-citation-pending-border: var(--eda-citation-pending-border);
+  --color-citation-verified-bg: var(--eda-citation-verified-bg);
+  --color-citation-verified-fg: var(--eda-citation-verified-fg);
+  --color-citation-verified-border: var(--eda-citation-verified-border);
+  --color-citation-verified-user-source-bg: var(--eda-citation-verified-user-source-bg);
+  --color-citation-verified-user-source-fg: var(--eda-citation-verified-user-source-fg);
+  --color-citation-verified-user-source-border: var(--eda-citation-verified-user-source-border);
+  --color-citation-out-of-context-bg: var(--eda-citation-out-of-context-bg);
+  --color-citation-out-of-context-fg: var(--eda-citation-out-of-context-fg);
+  --color-citation-out-of-context-border: var(--eda-citation-out-of-context-border);
+  --color-citation-source-unavailable-bg: var(--eda-citation-source-unavailable-bg);
+  --color-citation-source-unavailable-fg: var(--eda-citation-source-unavailable-fg);
+  --color-citation-source-unavailable-border: var(--eda-citation-source-unavailable-border);
+  --color-citation-not-found-bg: var(--eda-citation-not-found-bg);
+  --color-citation-not-found-fg: var(--eda-citation-not-found-fg);
+  --color-citation-not-found-border: var(--eda-citation-not-found-border);
+  --color-citation-out-of-coverage-bg: var(--eda-citation-out-of-coverage-bg);
+  --color-citation-out-of-coverage-fg: var(--eda-citation-out-of-coverage-fg);
+  --color-citation-out-of-coverage-border: var(--eda-citation-out-of-coverage-border);
+  --color-citation-attested-bg: var(--eda-citation-attested-bg);
+  --color-citation-attested-fg: var(--eda-citation-attested-fg);
+  --color-citation-attested-border: var(--eda-citation-attested-border);
+  --color-data-class-public-bg: var(--eda-data-class-public-bg);
+  --color-data-class-public-fg: var(--eda-data-class-public-fg);
+  --color-data-class-public-border: var(--eda-data-class-public-border);
+  --color-data-class-client-bg: var(--eda-data-class-client-bg);
+  --color-data-class-client-fg: var(--eda-data-class-client-fg);
+  --color-data-class-client-border: var(--eda-data-class-client-border);
+  --color-data-class-case-bg: var(--eda-data-class-case-bg);
+  --color-data-class-case-fg: var(--eda-data-class-case-fg);
+  --color-data-class-case-border: var(--eda-data-class-case-border);
+
+  /* Grafik (051 §4.10); durum renkleri seri rengi olarak kullanılmaz */
+  --color-chart-1: var(--eda-chart-1);
+  --color-chart-2: var(--eda-chart-2);
+  --color-chart-3: var(--eda-chart-3);
+  --color-chart-4: var(--eda-chart-4);
+  --color-chart-5: var(--eda-chart-5);
+  --color-chart-6: var(--eda-chart-6);
+  --color-chart-7: var(--eda-chart-7);
+  --color-chart-8: var(--eda-chart-8);
+  --color-chart-grid: var(--eda-chart-grid);
+  --color-chart-axis: var(--eda-chart-axis);
+  --color-chart-seq-100: var(--eda-chart-seq-100);
+  --color-chart-seq-200: var(--eda-chart-seq-200);
+  --color-chart-seq-300: var(--eda-chart-seq-300);
+  --color-chart-seq-400: var(--eda-chart-seq-400);
+  --color-chart-seq-500: var(--eda-chart-seq-500);
+  --color-chart-seq-600: var(--eda-chart-seq-600);
+  --color-chart-seq-700: var(--eda-chart-seq-700);
+
+  /* Yazı aileleri (051 §6.1, §16) */
+  --font-sans: var(--eda-font-sans);
+  --font-display: var(--eda-font-display);
+  --font-mono: var(--eda-font-mono);
+  --font-paper: var(--eda-paper-font);
+
+  /* Yazı ölçeği (051 §6.2) */
+  --text-*: initial;
+  --text-display: var(--eda-type-display-size);
+  --text-display--line-height: var(--eda-type-display-line-height);
+  --text-display--font-weight: var(--eda-type-display-weight);
+  --text-display--letter-spacing: var(--eda-type-display-tracking);
+  --text-heading-lg: var(--eda-type-heading-lg-size);
+  --text-heading-lg--line-height: var(--eda-type-heading-lg-line-height);
+  --text-heading-lg--font-weight: var(--eda-type-heading-lg-weight);
+  --text-heading-lg--letter-spacing: var(--eda-type-heading-lg-tracking);
+  --text-heading-md: var(--eda-type-heading-md-size);
+  --text-heading-md--line-height: var(--eda-type-heading-md-line-height);
+  --text-heading-md--font-weight: var(--eda-type-heading-md-weight);
+  --text-heading-md--letter-spacing: var(--eda-type-heading-md-tracking);
+  --text-heading-sm: var(--eda-type-heading-sm-size);
+  --text-heading-sm--line-height: var(--eda-type-heading-sm-line-height);
+  --text-heading-sm--font-weight: var(--eda-type-heading-sm-weight);
+  --text-heading-sm--letter-spacing: var(--eda-type-heading-sm-tracking);
+  --text-title: var(--eda-type-title-size);
+  --text-title--line-height: var(--eda-type-title-line-height);
+  --text-title--font-weight: var(--eda-type-title-weight);
+  --text-body: var(--eda-type-body-size);
+  --text-body--line-height: var(--eda-type-body-line-height);
+  --text-body--font-weight: var(--eda-type-body-weight);
+  --text-prose: var(--eda-type-prose-size);
+  --text-prose--line-height: var(--eda-type-prose-line-height);
+  --text-prose--font-weight: var(--eda-type-prose-weight);
+  --text-body-sm: var(--eda-type-body-sm-size);
+  --text-body-sm--line-height: var(--eda-type-body-sm-line-height);
+  --text-body-sm--font-weight: var(--eda-type-body-sm-weight);
+  --text-label: var(--eda-type-label-size);
+  --text-label--line-height: var(--eda-type-label-line-height);
+  --text-label--font-weight: var(--eda-type-label-weight);
+  --text-label--letter-spacing: var(--eda-type-label-tracking);
+  --text-caption: var(--eda-type-caption-size);
+  --text-caption--line-height: var(--eda-type-caption-line-height);
+  --text-caption--font-weight: var(--eda-type-caption-weight);
+  --text-overline: var(--eda-type-overline-size);
+  --text-overline--line-height: var(--eda-type-overline-line-height);
+  --text-overline--font-weight: var(--eda-type-overline-weight);
+  --text-overline--letter-spacing: var(--eda-type-overline-tracking);
+  --text-code: var(--eda-type-code-size);
+  --text-code--line-height: var(--eda-type-code-line-height);
+  --text-code--font-weight: var(--eda-type-code-weight);
+  --text-paper-body: var(--eda-paper-font-size);
+  --text-paper-body--line-height: var(--eda-paper-line-height);
+  --text-paper-note: var(--eda-paper-note-size);
+  --text-paper-note--line-height: var(--eda-paper-line-height);
+
+  /* Yarıçap (051 §8) */
+  --radius-*: initial;
+  --radius-none: var(--eda-radius-none);
+  --radius-sm: var(--eda-radius-sm);
+  --radius-md: var(--eda-radius-md);
+  --radius-lg: var(--eda-radius-lg);
+  --radius-xl: var(--eda-radius-xl);
+  --radius-2xl: var(--eda-radius-2xl);
+  --radius-full: var(--eda-radius-full);
+
+  /* Gölge (051 §9); shadow-0 yerine shadow-none */
+  --shadow-*: initial;
+  --shadow-1: var(--eda-shadow-1);
+  --shadow-2: var(--eda-shadow-2);
+  --shadow-3: var(--eda-shadow-3);
+  --shadow-paper: var(--eda-shadow-paper);
+
+  /* z-index katmanları (051 §9); keyfi z değeri yasak */
+  --z-index-base: var(--eda-z-base);
+  --z-index-sticky: var(--eda-z-sticky);
+  --z-index-sidebar: var(--eda-z-sidebar);
+  --z-index-topbar: var(--eda-z-topbar);
+  --z-index-dropdown: var(--eda-z-dropdown);
+  --z-index-overlay: var(--eda-z-overlay);
+  --z-index-dialog: var(--eda-z-dialog);
+  --z-index-toast: var(--eda-z-toast);
+  --z-index-tooltip: var(--eda-z-tooltip);
+  --z-index-skip-link: var(--eda-z-skip-link);
+
+  /* Hareket (051 §10.1); azaltılmış harekette süre tokenları 0ms olur */
+  --ease-standard: var(--eda-ease-standard);
+  --ease-emphasized: var(--eda-ease-emphasized);
+  --transition-duration-instant: var(--eda-duration-instant);
+  --transition-duration-fast: var(--eda-duration-fast);
+  --transition-duration-base: var(--eda-duration-base);
+  --transition-duration-slow: var(--eda-duration-slow);
+  --transition-duration-highlight: var(--eda-duration-highlight);
+
+  /* Yerleşim ölçüleri (051 §7.2) ve yoğunluğa bağlı kontrol yükseklikleri (051 §7.3) */
+  --width-sidebar: var(--eda-sidebar-width);
+  --width-rail: var(--eda-rail-width);
+  --width-panel-sources: var(--eda-panel-sources);
+  --width-panel-preview: var(--eda-panel-preview);
+  --height-topbar: var(--eda-topbar-height);
+  --container-chat: var(--eda-chat-max);
+  --container-doc: var(--eda-doc-max);
+  --container-form: var(--eda-form-max);
+  --container-content: var(--eda-content-max);
+  --container-studio-chat-min: var(--eda-studio-chat-min);
+  --container-studio-chat-max: var(--eda-studio-chat-max);
+  --spacing-control-sm: var(--eda-control-h-sm);
+  --spacing-control-md: var(--eda-control-h-md);
+  --spacing-control-lg: var(--eda-control-h-lg);
+  --spacing-row: var(--eda-row-h);
+  --spacing-sidebar-item: var(--eda-sidebar-item-h);
+  --spacing-target: var(--eda-target-min);
+  --spacing-target-coarse: var(--eda-target-coarse);
+  --spacing-gutter: var(--eda-gutter);
+}
+
+/*
+ * Derleme anında çözülmesi gereken değerler: kırılımlar medya sorgusuna literal girer (var() olamaz).
+ * Değerler tokens.source.json breakpoints ile birebir (051 §12).
+ */
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 100rem;
+
+  /* Yalnız dönen yükleme simgesi (animate-spin); pulse/ping/bounce derlenmez (051 §10.2). */
+  --animate-pulse: initial;
+  --animate-ping: initial;
+  --animate-bounce: initial;
+
+  /* Bulanıklık ölçeği sıfır: backdrop/filter blur sınıfları derlenmez (051 §9). */
+  --blur-*: initial;
+}
+
+/* Odak halkası tek tanımı (051 §13.2); bileşenler focus-visible:focus-ring kullanır. */
+@utility focus-ring {
+  outline: 2px solid var(--eda-focus-ring);
+  outline-offset: 2px;
+  @media (forced-colors: active) {
+    outline-color: Highlight;
+  }
+}
+
+/* Taşma kırpan kap (tablo hücresi, liste satırı, sekme) için içe dönük halka. */
+@utility focus-ring-inset {
+  outline: 2px solid var(--eda-focus-ring);
+  outline-offset: -2px;
+  @media (forced-colors: active) {
+    outline-color: Highlight;
+  }
+}
+
+/* Yerleşim yardımcıları (051 §7.2 tokenlarından türetilir; keyfi değer yerine adlandırılmış sınıf). */
+@utility w-dialog {
+  width: calc(100vw - 2rem);
+}
+@utility max-h-dialog {
+  max-height: 85dvh;
+}
+@utility top-dialog {
+  top: 12dvh;
+}
+/* Base UI Positioner'ın verdiği kullanılabilir yükseklik (açılır içerik ekrandan taşmaz). */
+@utility max-h-available {
+  max-height: var(--available-height, 85dvh);
+}
+@utility max-w-drawer {
+  max-width: 85vw;
+}
+@utility min-h-main {
+  min-height: calc(100dvh - var(--eda-topbar-height));
+}
+@utility grid-cols-auth {
+  grid-template-columns: minmax(0, 1fr) 52%;
+}
+@utility grid-cols-auth-wide {
+  grid-template-columns: minmax(0, 1fr) 54%;
+}
+@utility grid-cols-main-panel {
+  grid-template-columns: minmax(0, 1fr) var(--eda-panel-sources);
+}
+@utility aspect-a4 {
+  aspect-ratio: 210 / 297;
+}
+@utility grid-cols-settings {
+  grid-template-columns: 12rem minmax(0, 1fr);
+}

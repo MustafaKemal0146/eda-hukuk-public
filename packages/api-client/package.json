@@ -1,0 +1,25 @@
+{
+  "name": "@eda/api-client",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    "./browser": "./src/browser.ts",
+    "./endpoints/documents": "./src/endpoints/documents.ts",
+    "./server": "./src/server.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@eda/contracts": "workspace:*"
+  },
+  "devDependencies": {
+    "@eda/config": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "corpus-aym-norm-1",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. AYM norm: itirazın gerekçesi taraf iddiası, esasın incelenmesi gerekçe, hüküm, farklı gerekçe.",
+  "courtType": "aym_norm",
+  "lines": [
+    "ANAYASA MAHKEMESİ KARARI",
+    "Esas Sayısı : 2024/900601",
+    "KARAR",
+    "I. İTİRAZIN KONUSU",
+    "Örnek kanun hükmünün iptali istemidir.",
+    "II. İTİRAZIN GEREKÇESİ",
+    "Başvuran mahkeme kuralın Anayasa'ya aykırı olduğunu ileri sürmüştür.",
+    "III. ESASIN İNCELENMESİ",
+    "Örnek değerlendirme paragrafı.",
+    "IV. HÜKÜM",
+    "İtirazın reddine karar verildi.",
+    "FARKLI GEREKÇE",
+    "Örnek farklı gerekçe."
+  ],
+  "roles": ["kunye", "istem", "taraf_iddiasi", "gerekce", "hukum", "karsi_oy"],
+  "outcome": "patterned",
+  "gerekceExcludes": ["aykırı olduğunu ileri sürmüştür"]
+}

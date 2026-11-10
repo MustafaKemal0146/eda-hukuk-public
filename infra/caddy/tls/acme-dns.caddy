@@ -1,0 +1,6 @@
+# CADDY_TLS_MODE=acme: admin host'u genel DNS'te yayınlanmaz; sertifika ACME DNS-01 ile alınır.
+# Belirteç Docker sırrından okunur ({file.*} global yer tutucusu, Caddy >= 2.8; sondaki satır sonu
+# kırpılır). Env ile sır geçirilmez.
+tls {
+	dns {$ACME_DNS_PROVIDER} {file./run/secrets/acme_dns_api_token}
+}

@@ -1,0 +1,10 @@
+# egress-av izin listesi (freshclam; 002 §3, 070 §11) — yalnız ClamAV imza sunucusu.
+# freshclam yönlendirme/CDN alan adı ekleri P01c'de doğrulanır; doğrulanmadan eklenmez.
+version: v1
+services: []
+default:
+  name: default
+  project: eda
+  action: enforce
+  allowed_domains:
+    - database.clamav.net

@@ -1,0 +1,292 @@
+{
+  "_kaynak": "002 §12.1–§12.3, 032 §10.2 (AI kataloğu v1) ve 032 §10.6 (paketler). Model kimlikleri bu dosyada tutulmaz (Y-96; yalnız *_seed_ai_*.sql).",
+  "providers": [
+    {
+      "id": "deepseek",
+      "kind": "deepseek",
+      "region": "CN",
+      "transfer_basis": "none",
+      "allowed_data_classes": ["public"],
+      "secret_ref": "deepseek_api_key",
+      "training_use": true,
+      "human_review": true,
+      "retention_days": null,
+      "enabled": true,
+      "priority": 10
+    },
+    {
+      "id": "azure-eu",
+      "kind": "azure",
+      "region": "EU",
+      "transfer_basis": "scc_pending",
+      "allowed_data_classes": ["public"],
+      "secret_ref": "azure_eu_api_key",
+      "training_use": false,
+      "human_review": true,
+      "retention_days": 30,
+      "enabled": false,
+      "priority": 20
+    },
+    {
+      "id": "local",
+      "kind": "openai_compatible",
+      "region": "TR",
+      "transfer_basis": "domestic",
+      "allowed_data_classes": ["public", "client", "case"],
+      "secret_ref": "local_llm_api_key",
+      "training_use": false,
+      "human_review": false,
+      "retention_days": 0,
+      "enabled": false,
+      "priority": 30
+    },
+    {
+      "id": "vertex-eu",
+      "kind": "vertex",
+      "region": "EU",
+      "transfer_basis": "scc_pending",
+      "allowed_data_classes": ["public"],
+      "secret_ref": "vertex_credentials",
+      "training_use": true,
+      "human_review": true,
+      "retention_days": null,
+      "enabled": false,
+      "priority": 40
+    }
+  ],
+  "models": [
+    {
+      "alias": "edai-flash",
+      "provider_id": "deepseek",
+      "thinking": "off",
+      "context_budget": 64000,
+      "max_output_tokens": 16000,
+      "cache_hit_offpeak": 3000,
+      "cache_hit_peak": 6000,
+      "input_offpeak": 150000,
+      "input_peak": 300000,
+      "output_offpeak": 600000,
+      "output_peak": 1200000,
+      "tools": true,
+      "enabled": true
+    },
+    {
+      "alias": "edai-pro",
+      "provider_id": "deepseek",
+      "thinking": "high",
+      "context_budget": 64000,
+      "max_output_tokens": 16000,
+      "cache_hit_offpeak": 22000,
+      "cache_hit_peak": 44000,
+      "input_offpeak": 660000,
+      "input_peak": 1320000,
+      "output_offpeak": 1980000,
+      "output_peak": 3960000,
+      "tools": true,
+      "enabled": true
+    },
+    {
+      "alias": "edai-flash",
+      "provider_id": "azure-eu",
+      "thinking": "off",
+      "context_budget": 64000,
+      "max_output_tokens": 16000,
+      "cache_hit_offpeak": 31000,
+      "cache_hit_peak": 31000,
+      "input_offpeak": 210000,
+      "input_peak": 210000,
+      "output_offpeak": 560000,
+      "output_peak": 560000,
+      "tools": false,
+      "enabled": true
+    }
+  ],
+  "routes": [
+    {
+      "task": "chat",
+      "alias_source": "user_choice",
+      "default_alias": "edai-flash",
+      "thinking_override": null,
+      "tool_set": "chat_tools",
+      "credit_op_code": null,
+      "max_output_tokens": 8000,
+      "enabled": true
+    },
+    {
+      "task": "draft_document",
+      "alias_source": "user_choice",
+      "default_alias": "edai-flash",
+      "thinking_override": "off",
+      "tool_set": "submit_outline",
+      "credit_op_code": "document_draft",
+      "max_output_tokens": 16000,
+      "enabled": true
+    },
+    {
+      "task": "edit_document",
+      "alias_source": "fixed",
+      "default_alias": "edai-flash",
+      "thinking_override": "off",
+      "tool_set": "edit_document",
+      "credit_op_code": "edit_round",
+      "max_output_tokens": 4000,
+      "enabled": true
+    },
+    {
+      "task": "title",
+      "alias_source": "fixed",
+      "default_alias": "edai-flash",
+      "thinking_override": "off",
+      "tool_set": "none",
+      "credit_op_code": null,
+      "max_output_tokens": 32,
+      "enabled": true
+    },
+    {
+      "task": "summarize_history",
+      "alias_source": "conversation_last",
+      "default_alias": "edai-flash",
+      "thinking_override": null,
+      "tool_set": "chat_tools",
+      "credit_op_code": null,
+      "max_output_tokens": 4000,
+      "enabled": true
+    },
+    {
+      "task": "search_overview",
+      "alias_source": "fixed",
+      "default_alias": "edai-flash",
+      "thinking_override": "off",
+      "tool_set": "none",
+      "credit_op_code": null,
+      "max_output_tokens": 600,
+      "enabled": true
+    },
+    {
+      "task": "decision_summary",
+      "alias_source": "fixed",
+      "default_alias": "edai-flash",
+      "thinking_override": "off",
+      "tool_set": "submit_result",
+      "credit_op_code": null,
+      "max_output_tokens": 1200,
+      "enabled": true
+    },
+    {
+      "task": "file_card",
+      "alias_source": "fixed",
+      "default_alias": "edai-flash",
+      "thinking_override": "off",
+      "tool_set": "submit_result",
+      "credit_op_code": "file_card",
+      "max_output_tokens": 1500,
+      "enabled": true
+    },
+    {
+      "task": "pii_risk_check",
+      "alias_source": "local_engine",
+      "default_alias": null,
+      "thinking_override": null,
+      "tool_set": "none",
+      "credit_op_code": null,
+      "max_output_tokens": null,
+      "enabled": true
+    },
+    {
+      "task": "citation_support_check",
+      "alias_source": "fixed",
+      "default_alias": "edai-flash",
+      "thinking_override": "off",
+      "tool_set": "submit_result",
+      "credit_op_code": null,
+      "max_output_tokens": 800,
+      "enabled": false
+    }
+  ],
+  "plans": [
+    {
+      "code": "trial",
+      "name": "Deneme",
+      "per_seat": false,
+      "seat_min": 1,
+      "seat_max": 1,
+      "monthly_credits": 0,
+      "monthly_ocr_pages": 100,
+      "storage_quota_bytes": 2147483648,
+      "price_monthly_kurus": null,
+      "price_yearly_kurus": null,
+      "is_public": false,
+      "sort_order": 0
+    },
+    {
+      "code": "trainee",
+      "name": "Stajyer",
+      "per_seat": false,
+      "seat_min": 1,
+      "seat_max": 1,
+      "monthly_credits": 300,
+      "monthly_ocr_pages": 500,
+      "storage_quota_bytes": 10737418240,
+      "price_monthly_kurus": null,
+      "price_yearly_kurus": 1188000,
+      "is_public": true,
+      "sort_order": 1
+    },
+    {
+      "code": "lawyer",
+      "name": "Avukat",
+      "per_seat": false,
+      "seat_min": 1,
+      "seat_max": 1,
+      "monthly_credits": 600,
+      "monthly_ocr_pages": 1500,
+      "storage_quota_bytes": 26843545600,
+      "price_monthly_kurus": 199000,
+      "price_yearly_kurus": 1990000,
+      "is_public": true,
+      "sort_order": 2
+    },
+    {
+      "code": "lawyer_pro",
+      "name": "Avukat Pro",
+      "per_seat": false,
+      "seat_min": 1,
+      "seat_max": 1,
+      "monthly_credits": 1500,
+      "monthly_ocr_pages": 4000,
+      "storage_quota_bytes": 107374182400,
+      "price_monthly_kurus": 349000,
+      "price_yearly_kurus": 3490000,
+      "is_public": true,
+      "sort_order": 3
+    },
+    {
+      "code": "firm",
+      "name": "Büro",
+      "per_seat": true,
+      "seat_min": 3,
+      "seat_max": null,
+      "monthly_credits": 600,
+      "monthly_ocr_pages": 1500,
+      "storage_quota_bytes": 26843545600,
+      "price_monthly_kurus": null,
+      "price_yearly_kurus": 2988000,
+      "is_public": true,
+      "sort_order": 4
+    },
+    {
+      "code": "enterprise",
+      "name": "Kurumsal",
+      "per_seat": true,
+      "seat_min": 3,
+      "seat_max": null,
+      "monthly_credits": 0,
+      "monthly_ocr_pages": 0,
+      "storage_quota_bytes": 0,
+      "price_monthly_kurus": null,
+      "price_yearly_kurus": null,
+      "is_public": true,
+      "sort_order": 5
+    }
+  ]
+}

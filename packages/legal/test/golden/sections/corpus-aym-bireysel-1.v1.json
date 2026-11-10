@@ -1,0 +1,31 @@
+{
+  "id": "corpus-aym-bireysel-1",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. AYM bireysel: başvurunun konusu, başvuru süreci, ilgili hukuk, inceleme ve gerekçe içinde başvurucunun iddiaları ve değerlendirme, hüküm; numaralı paragraflar bölüm içinde kalır.",
+  "courtType": "aym_bireysel",
+  "lines": [
+    "TÜRKİYE CUMHURİYETİ",
+    "ANAYASA MAHKEMESİ",
+    "ÖRNEK BÖLÜM",
+    "KARAR",
+    "Başvuru Numarası : 2022/900501",
+    "I. BAŞVURUNUN KONUSU",
+    "1. Başvuru, örnek hakkın ihlal edildiği iddiasına ilişkindir.",
+    "II. BAŞVURU SÜRECİ",
+    "2. Başvuru örnek komisyona sunulmuştur.",
+    "III. İLGİLİ HUKUK",
+    "3. Örnek mevzuat hükmü.",
+    "IV. İNCELEME VE GEREKÇE",
+    "A. Başvurucunun İddiaları",
+    "4. Başvurucu hakkının ihlal edildiğini ileri sürmüştür.",
+    "B. Değerlendirme",
+    "5. Örnek değerlendirme paragrafı.",
+    "6. İkinci örnek paragraf.",
+    "V. HÜKÜM",
+    "Örnek hakkın ihlal edildiğine karar verildi."
+  ],
+  "roles": ["kunye", "istem", "diger", "gerekce", "taraf_iddiasi", "gerekce", "hukum"],
+  "outcome": "patterned",
+  "gerekceExcludes": ["ihlal edildiğini ileri sürmüştür"]
+}

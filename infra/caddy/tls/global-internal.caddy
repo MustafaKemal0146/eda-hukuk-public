@@ -1,0 +1,5 @@
+# CADDY_TLS_MODE=internal: dev'de yalnız 443 (host 8443) yayınlanır; 80'e yönlendirme sunucusu açılmaz.
+auto_https disable_redirects
+# Kök sertifika konteynır içi güven deposuna kurulmaz (kök dışı + salt-okunur kök; kurulum
+# denemesi hata logu üretir). Ana makineye güven `make dev-ca` ile kullanıcı eylemidir.
+skip_install_trust

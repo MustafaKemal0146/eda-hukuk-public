@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Yalnız sahnelenen dosyalar: Biome ve kabuk sözdizimi (004 §6.5). Host'ta Node gerekmez.
+set -euo pipefail
+root="$(git rev-parse --show-toplevel)"
+cd "$root"
+mapfile -t staged < <(git diff --cached --name-only --diff-filter=ACMR)
+(( ${#staged[@]} == 0 )) && exit 0
+for f in "${staged[@]}"; do
+  if [[ "$f" == *.sh || "$f" == .husky/* ]]; then bash -n "$f"; fi
+done
+RUN_TOOL_NETWORK=none infra/scripts/dev/run-tool.sh ./node_modules/.bin/biome check --staged --no-errors-on-unmatched --colors=off

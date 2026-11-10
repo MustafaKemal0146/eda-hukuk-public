@@ -1,0 +1,96 @@
+{
+  "source": "026 §7.5 (4) tablosu ve elle yazılmış ek örnekler",
+  "verified": false,
+  "note": "Dil uzmanı/avukat doğrulaması bekliyor (026 Açık Sorular 10, AS-0150); kapıya girmez. Büyük harf kuralı 026 §7.5 (3) ile tüm tiplere uygulanır (IBAN/plaka harfleri dahil)",
+  "records": [
+    {
+      "display": "Ahmet Yılmaz",
+      "tip": "KISI",
+      "writtenSuffix": "in",
+      "expected": "Ahmet Yılmaz'ın"
+    },
+    { "display": "Ayşe", "tip": "KISI", "writtenSuffix": "e", "expected": "Ayşe'ye" },
+    { "display": "Ahmet", "tip": "KISI", "writtenSuffix": "te", "expected": "Ahmet'te" },
+    {
+      "display": "Mavi Yapı A.Ş.",
+      "tip": "SIRKET",
+      "writtenSuffix": "e",
+      "expected": "Mavi Yapı A.Ş.'ye"
+    },
+    {
+      "display": "12345678901",
+      "tip": "TCKN",
+      "writtenSuffix": "in",
+      "expected": "12345678901'in"
+    },
+    {
+      "display": "AHMET YILMAZ",
+      "tip": "KISI",
+      "writtenSuffix": "in",
+      "expected": "AHMET YILMAZ'IN"
+    },
+    {
+      "display": "Ayşe Karaduman",
+      "tip": "KISI",
+      "writtenSuffix": "in",
+      "expected": "Ayşe Karaduman'ın"
+    },
+    { "display": "Burak", "tip": "KISI", "writtenSuffix": "e", "expected": "Burak'a" },
+    { "display": "Ömür", "tip": "KISI", "writtenSuffix": "un", "expected": "Ömür'ün" },
+    { "display": "Kemal", "tip": "KISI", "writtenSuffix": "ı", "expected": "Kemal'i" },
+    { "display": "Ali", "tip": "KISI", "writtenSuffix": "dan", "expected": "Ali'den" },
+    { "display": "Zeynep", "tip": "KISI", "writtenSuffix": "da", "expected": "Zeynep'te" },
+    {
+      "display": "Ege Gıda Ltd. Şti.",
+      "tip": "SIRKET",
+      "writtenSuffix": "nin",
+      "expected": "Ege Gıda Ltd. Şti.'nin"
+    },
+    {
+      "display": "Toros Holding",
+      "tip": "SIRKET",
+      "writtenSuffix": "e",
+      "expected": "Toros Holding'e"
+    },
+    { "display": "1234567890", "tip": "VKN", "writtenSuffix": "un", "expected": "1234567890'ın" },
+    {
+      "display": "0532 123 45 67",
+      "tip": "TEL",
+      "writtenSuffix": "e",
+      "expected": "0532 123 45 67'ye"
+    },
+    {
+      "display": "ahmet@example.com",
+      "tip": "EPOSTA",
+      "writtenSuffix": "a",
+      "expected": "ahmet@example.com'a"
+    },
+    {
+      "display": "TR33 0006 1005 1978 6457 8413 26",
+      "tip": "IBAN",
+      "writtenSuffix": "a",
+      "expected": "TR33 0006 1005 1978 6457 8413 26'YA"
+    },
+    { "display": "34 ABC 123", "tip": "PLAKA", "writtenSuffix": "ın", "expected": "34 ABC 123'ÜN" },
+    { "display": "2024/118", "tip": "DOSYA", "writtenSuffix": "de", "expected": "2024/118'de" },
+    {
+      "display": "12.03.1985",
+      "tip": "TARIH_DOGUM",
+      "writtenSuffix": "te",
+      "expected": "12.03.1985'te"
+    },
+    { "display": "diyabet", "tip": "SAGLIK", "writtenSuffix": "i", "expected": "diyabet'i" },
+    {
+      "display": "Gültepe Mahallesi Lale Sokak No: 5 Çankaya/Ankara",
+      "tip": "ADRES",
+      "writtenSuffix": "de",
+      "expected": "Gültepe Mahallesi Lale Sokak No: 5 Çankaya/Ankara'da"
+    },
+    {
+      "display": "Ahmet Yılmaz",
+      "tip": "KISI",
+      "writtenSuffix": "xyz",
+      "expected": "Ahmet Yılmaz'xyz"
+    }
+  ]
+}

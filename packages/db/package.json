@@ -1,0 +1,53 @@
+{
+  "name": "@eda/db",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./auth": "./src/auth.ts",
+    "./admin": "./src/admin.ts",
+    "./jobs": "./src/jobs.ts",
+    "./schema": "./src/schema/index.ts",
+    "./tenant": "./src/tenant/index.ts",
+    "./ai-catalog": "./src/ai-catalog/snapshot.ts",
+    "./email": "./src/email.ts",
+    "./canary": "./src/canary.ts",
+    "./files": "./src/files/index.ts",
+    "./keyring": "./src/keyring.ts",
+    "./s3": "./src/s3/index.ts",
+    "./testing": "./src/testing.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --project unit",
+    "test:db": "vitest run --project db",
+    "build": "tsdown",
+    "db:generate": "drizzle-kit generate",
+    "db:custom": "drizzle-kit generate --custom",
+    "db:check": "drizzle-kit check && node scripts/check-migrations.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "catalog:",
+    "@eda/contracts": "workspace:*",
+    "@eda/crypto": "workspace:*",
+    "@eda/legal": "workspace:*",
+    "@node-rs/argon2": "catalog:",
+    "drizzle-orm": "catalog:",
+    "pg": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@better-auth/passkey": "catalog:",
+    "@eda/config": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/pg": "catalog:",
+    "auth": "catalog:",
+    "better-auth": "catalog:",
+    "drizzle-kit": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

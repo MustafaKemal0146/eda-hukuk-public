@@ -1,0 +1,16 @@
+{
+  "note": "023 §3.6 ts_debug kabul tablosu (KK-023-3) ve §3.3 durak sözcük ekleri. Girdi tr_normalize sonrası metindir; lexemes boşluk dışı belirteçlerin leksemleri, sırayla; durak sözcük boş dizi verir. PG 18.6 + public.tr_hukuk ile ölçüldü (2026-10-11, AS-0332).",
+  "rows": [
+    { "input": "kanunun maddesi", "lexemes": [["kanun"], ["madde"]] },
+    {
+      "input": "yargıtay 9. hukuk dairesi",
+      "lexemes": [["yargıtay"], ["9"], ["hukuk"], ["daire"]]
+    },
+    { "input": "4369/82 sayılı kanun", "lexemes": [["4369/82"], ["sayıl"], ["kanun"]] },
+    { "input": "göre", "lexemes": [[]] },
+    { "input": "kıdem tazminatı", "lexemes": [["kıdem"], ["tazminat"]] },
+    { "input": "2021/1234 e.", "lexemes": [["2021/1234"], ["e"]] },
+    { "input": "ilişkin dair istinaden itibaren", "lexemes": [[], [], [], []] },
+    { "input": "hakkında aleyhine lehine", "lexemes": [["hakk"], ["aleyh"], ["leh"]] }
+  ]
+}

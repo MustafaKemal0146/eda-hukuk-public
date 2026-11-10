@@ -1,0 +1,20 @@
+{
+  "id": "corpus-uyusmazlik-2",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. Uyuşmazlık: dava konusu olay diger, gerekçe, karar.",
+  "courtType": "uyusmazlik",
+  "lines": [
+    "T.C. UYUŞMAZLIK MAHKEMESİ",
+    "ÖRNEK GENEL KURULU",
+    "K A R A R",
+    "DAVA KONUSU OLAY : Örnek olay.",
+    "GEREKÇE",
+    "Örnek gerekçe.",
+    "SONUÇ",
+    "İdari yargının görevli olduğuna karar verildi."
+  ],
+  "roles": ["kunye", "istem", "gerekce", "hukum"],
+  "outcome": "patterned",
+  "gerekceExcludes": []
+}

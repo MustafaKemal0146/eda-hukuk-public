@@ -1,0 +1,23 @@
+{
+  "id": "corpus-danistay-kurul",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. Danıştay kurulu: istem, savunma, değerlendirme, karar sonucu ve karşı oy.",
+  "courtType": "danistay",
+  "lines": [
+    "T.C. DANIŞTAY",
+    "ÖRNEK İDARE DAVA DAİRELERİ KURULU",
+    "İSTEMİN ÖZETİ : Örnek kararın bozulması istenmektedir.",
+    "SAVUNMA",
+    "Örnek idare istemin reddini savunmuştur.",
+    "DEĞERLENDİRME",
+    "Örnek değerlendirme paragrafı.",
+    "KARAR SONUCU",
+    "Temyiz isteminin reddine karar verildi.",
+    "KARŞI OY",
+    "Örnek karşı oy gerekçesi."
+  ],
+  "roles": ["kunye", "istem", "taraf_iddiasi", "gerekce", "hukum", "karsi_oy"],
+  "outcome": "patterned",
+  "gerekceExcludes": ["reddini savunmuştur"]
+}

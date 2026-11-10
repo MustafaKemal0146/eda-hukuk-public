@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Push öncesi kapı: lint, tip ve test (CI aynı kapıları yeniden koşar).
+set -euo pipefail
+cd "$(git rev-parse --show-toplevel)"
+make lint typecheck test

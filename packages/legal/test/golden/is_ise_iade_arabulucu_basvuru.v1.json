@@ -1,0 +1,73 @@
+{
+  "ruleCode": "is_ise_iade_arabulucu_basvuru",
+  "ruleVersion": 1,
+  "source": "083 §9 tablosu; beklenen son gün tablodan aynen, stepKinds/warnings §5.2 algoritma izinden elle (P22.3). Hukuk onayı bekliyor (AS-0205).",
+  "cases": [
+    {
+      "id": "G11",
+      "title": "Ay sonu sıkıştırma ve Cumartesi",
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2026-01-30",
+        "serviceMethod": "postal",
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-03-02",
+        "dueAt": "2026-03-02T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period", "weekend_shift"],
+        "warnings": ["saturday_shift"]
+      },
+      "rationale": "30.01 + 1 ay = ayda 30 yok -> 28.02 (Cmt) sıkıştırma; Cumartesi kaydırma",
+      "reviewedBy": null
+    },
+    {
+      "id": "G12",
+      "title": "Ay sonu sıkıştırma (31 -> 30)",
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2026-03-31",
+        "serviceMethod": "postal",
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-04-30",
+        "dueAt": "2026-04-30T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period"],
+        "warnings": []
+      },
+      "rationale": "31.03 + 1 ay -> 30.04 (ay sonu sıkıştırma); iş günü",
+      "reviewedBy": null
+    },
+    {
+      "id": "G29",
+      "title": "Artık yılda ay sonu",
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2028-01-31",
+        "serviceMethod": "postal",
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2028-02-29",
+        "dueAt": "2028-02-29T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period"],
+        "warnings": []
+      },
+      "rationale": "31.01 + 1 ay = artık yıl 29.02",
+      "reviewedBy": null
+    }
+  ]
+}

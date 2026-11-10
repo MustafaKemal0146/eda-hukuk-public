@@ -1,0 +1,29 @@
+{
+  "ruleCode": "iik_sikayet",
+  "ruleVersion": 1,
+  "source": "083 §9 tablosu; beklenen son gün tablodan aynen, stepKinds/warnings §5.2 algoritma izinden elle (P22.3). Hukuk onayı bekliyor (AS-0205).",
+  "cases": [
+    {
+      "id": "G34",
+      "title": "Öğrenme başlangıcı",
+      "input": {
+        "startEvent": "learning",
+        "eventDate": "2026-04-03",
+        "serviceMethod": null,
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-04-10",
+        "dueAt": "2026-04-10T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period"],
+        "warnings": []
+      },
+      "rationale": "learning başlangıcı; 7 gün",
+      "reviewedBy": null
+    }
+  ]
+}

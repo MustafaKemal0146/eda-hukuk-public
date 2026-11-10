@@ -1,0 +1,19 @@
+{
+  "name": "@eda/evals",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "eval": "node -e \"console.error('eval: P08/P32'de uygulanır');process.exit(2)\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@eda/contracts": "workspace:*"
+  },
+  "devDependencies": {
+    "@eda/config": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  }
+}

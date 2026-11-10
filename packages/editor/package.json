@@ -1,0 +1,35 @@
+{
+  "name": "@eda/editor",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./diff": "./src/diff/index.ts",
+    "./docast": "./src/docast/index.ts",
+    "./hash": "./src/hash/canonical.ts",
+    "./schema": "./src/schema/index.ts",
+    "./validate": "./src/validate/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@eda/contracts": "workspace:*",
+    "@eda/legal": "workspace:*",
+    "@tiptap/core": "catalog:tiptap",
+    "@tiptap/extension-table": "catalog:tiptap",
+    "@tiptap/extension-unique-id": "catalog:tiptap",
+    "@tiptap/pm": "catalog:tiptap",
+    "@tiptap/starter-kit": "catalog:tiptap",
+    "diff-match-patch-es": "catalog:"
+  },
+  "devDependencies": {
+    "@eda/config": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

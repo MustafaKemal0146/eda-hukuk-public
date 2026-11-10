@@ -1,0 +1,29 @@
+{
+  "ruleCode": "cmk_temyiz",
+  "ruleVersion": 1,
+  "source": "083 §9 tablosu; beklenen son gün tablodan aynen, stepKinds/warnings §5.2 algoritma izinden elle (P22.3). Hukuk onayı bekliyor (AS-0205).",
+  "cases": [
+    {
+      "id": "G17",
+      "title": "Uzama sonrası Pazar kaydırması",
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2028-08-14",
+        "serviceMethod": null,
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2028-09-04",
+        "dueAt": "2028-09-04T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": true,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period", "recess_extension", "weekend_shift"],
+        "warnings": []
+      },
+      "rationale": "ham 29.08 tatil içinde; 31.08 + 3 = 03.09 Pazar; kaydırma 04.09 (zincir, uzama önce kaydırma sonra). serviceMethod null: postal varsayılır",
+      "reviewedBy": null
+    }
+  ]
+}

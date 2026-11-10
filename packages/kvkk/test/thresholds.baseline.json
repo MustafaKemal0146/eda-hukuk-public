@@ -1,0 +1,152 @@
+{
+  "suite": "kvkk_masking",
+  "status": "baseline",
+  "note": "Ölçülen başlangıç değerleri; eşik değildir. Hukuk/ürün onayı ve P32 thresholds.json bekler (026 §14, AS-0153).",
+  "seed": 20261011,
+  "corpusTool": "kvkk/corpus@1",
+  "sizes": {
+    "perTip": 200,
+    "negativeHard": 500,
+    "adversarial": 100,
+    "corpusOrigin": 100
+  },
+  "hard": {
+    "roundtripIdentityRate": 1,
+    "corpusOriginViolations": 0,
+    "tokenLikeResolved": 0
+  },
+  "captureByTip": {
+    "ADRES": {
+      "n": 200,
+      "captureRate": 1,
+      "wilsonLower": 0.9811546733310369,
+      "precision": 1
+    },
+    "DOSYA": {
+      "n": 250,
+      "captureRate": 1,
+      "wilsonLower": 0.9848667002694291,
+      "precision": 1
+    },
+    "EPOSTA": {
+      "n": 200,
+      "captureRate": 1,
+      "wilsonLower": 0.9811546733310369,
+      "precision": 1
+    },
+    "IBAN": {
+      "n": 200,
+      "captureRate": 1,
+      "wilsonLower": 0.9811546733310369,
+      "precision": 1
+    },
+    "KISI": {
+      "n": 483,
+      "captureRate": 0.9296066252587992,
+      "wilsonLower": 0.9032421085355068,
+      "precision": 1
+    },
+    "PLAKA": {
+      "n": 200,
+      "captureRate": 1,
+      "wilsonLower": 0.9811546733310369,
+      "precision": 1
+    },
+    "SAGLIK": {
+      "n": 200,
+      "captureRate": 1,
+      "wilsonLower": 0.9811546733310369,
+      "precision": 1
+    },
+    "SIRKET": {
+      "n": 200,
+      "captureRate": 1,
+      "wilsonLower": 0.9811546733310369,
+      "precision": 1
+    },
+    "TARIH_DOGUM": {
+      "n": 200,
+      "captureRate": 1,
+      "wilsonLower": 0.9811546733310369,
+      "precision": 1
+    },
+    "TCKN": {
+      "n": 200,
+      "captureRate": 1,
+      "wilsonLower": 0.9811546733310369,
+      "precision": 1
+    },
+    "TEL": {
+      "n": 200,
+      "captureRate": 1,
+      "wilsonLower": 0.9811546733310369,
+      "precision": 1
+    },
+    "VKN": {
+      "n": 200,
+      "captureRate": 1,
+      "wilsonLower": 0.9811546733310369,
+      "precision": 1
+    }
+  },
+  "nameForms": {
+    "abbrev": {
+      "n": 30,
+      "captureRate": 1,
+      "leak": 0
+    },
+    "free": {
+      "n": 200,
+      "captureRate": 0.89,
+      "leak": 22
+    },
+    "inflected": {
+      "n": 50,
+      "captureRate": 1,
+      "leak": 0
+    },
+    "lowercase": {
+      "n": 20,
+      "captureRate": 0.4,
+      "leak": 12
+    },
+    "nfd_spaced": {
+      "n": 10,
+      "captureRate": 1,
+      "leak": 0
+    },
+    "plain": {
+      "n": 50,
+      "captureRate": 1,
+      "leak": 0
+    },
+    "surname_only": {
+      "n": 30,
+      "captureRate": 1,
+      "leak": 0
+    },
+    "uppercase": {
+      "n": 10,
+      "captureRate": 1,
+      "leak": 0
+    }
+  },
+  "negativeHardFpRate": 0,
+  "adversarialLeakRate": 0,
+  "recordCleanRate": 0.9896969696969697,
+  "remaskDrift": 0,
+  "suffixAccuracy": {
+    "KISI": 1,
+    "TCKN": 1,
+    "VKN": 1,
+    "TEL": 1,
+    "EPOSTA": 1,
+    "IBAN": 1,
+    "ADRES": 1,
+    "SIRKET": 1,
+    "PLAKA": 1,
+    "DOSYA": 1,
+    "TARIH_DOGUM": 1,
+    "SAGLIK": 1
+  }
+}

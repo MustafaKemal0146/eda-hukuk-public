@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "recorded_at": "2026-10-10T18:56:42.048Z",
+    "method": "POST",
+    "url": "https://normkararlarbilgibankasi.anayasa.gov.tr/api/core/public/search",
+    "request_body": "{\"kararTipi\":\"NormDenetimi\",\"kararNo\":\"2025/42\",\"page\":\"0\",\"size\":\"5\"}",
+    "status": 200,
+    "synthetic": false,
+    "note": "Kalıcı numaradan kayıt çözümleme"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json"
+    },
+    "body": "{\"total\":1,\"page\":1,\"data\":[{\"kararTipi\":\"NormDenetimi\",\"id\":\"7c31037d-be2a-4a4b-087f-ab5ff35e0a2e\",\"eskiDBID\":6224,\"kararNo\":\"2025/42\",\"esasNo\":\"2024/176\",\"kararTarihi\":\"2025-02-11\",\"yayinTarihi\":\"2025-05-06T00:00:00\",\"resmiGazeteTarihi\":\"2025-05-06\",\"ilkincelemeTarihi\":\"2024-10-17\",\"resmiGazeteSayisi\":32892,\"kararKonusu\":\"<p class=\\\"MsoNormal\\\" style=\\\"margin-top:0cm;margin-right:14.15pt;margin-bottom:\\r\\n10.0pt;margin-left:0cm;text-align:justify;text-indent:35.45pt\\\"><b><span style=\\\"color:#010000\\\">İTİRAZIN KONUSU:</span></b><span style=\\\"color:#010000\\\"> </span><span style=\\\"color:#010000\\\">22/12/2016 tarihli ve 6769 sayılı Sınai Mülkiyet Kanunu’nun 151. maddesinin (2) numaralı fıkrasının (b) bendinde yer alan “<i>…elde ettiği net kazanç.</i>” ibaresinin Anayasa’nın 35. ve 36. maddelerine aykırılığı ileri sürülerek iptaline karar verilmesi talebidir.</span></p>\",\"sozluAciklama\":\"false\",\"anayasaDonemi\":\"6e2d0518-66ed-4416-9bee-ceeecde49367\",\"basvuruTuru\":\"2ea77d81-53b6-f7bf-ab8c-2cd5f3a30025\",\"kararTuruDosyaSonucu\":\"5d2e8196-2979-87c1-7eb1-7ec791061976\",\"kararTuruDosyaSonucuLabel\":\"Esas - Ret\",\"durum\":\"5a1d555f-e4b6-499b-9b79-b2d28b3dc6c5\",\"basvuranGenel\":\"24126cc1-efe5-e5c9-5990-abf3ffaea3c6\",\"basvuranOzel\":\"3e06d2b9-0bda-5c65-eafe-00f47099d4d6\",\"sinirlama\":false,\"kararYururlugundeErteleme\":false,\"basinDuyurusu\":false,\"highlightCount\":0,\"normDenetimiIncelemeGerekceleri\":[{\"durumParamId\":\"5a1d555f-e4b6-499b-9b79-b2d28b3dc6c5\",\"normTuruParamId\":\"53ab265d-7e56-47e0-9e63-f8ee6a4a4611\",\"normTarihi\":\"2016-12-22\",\"normNumaraAdParamId\":\"148ad9ed-2e41-aeac-2e3d-e1383e7347af\",\"incelemeturuKarsonucuParamId\":\"23fcca64-d9a4-419a-cc11-20a5c62b4a95\",\"sonucGerekcesiParamId\":\"e8c14485-6a16-63b3-53b1-9ddd4bec95ad\",\"kararYururlulukDurumu\":null,\"ertelemeSuresi\":null,\"maddeNumarasi\":null,\"maddeNumarasiList\":null,\"maddeNumaralari\":[{\"maddeNumarasi\":\"151\",\"fikra\":\"2\",\"bent\":\"b\",\"altBent\":null,\"diger\":null}],\"karsiOy\":false,\"farkliGerekce\":false,\"dayanakAnayasaHukumList\":[{\"hukum\":\"5, 35\"}],\"normDenetimiKarsiOyRelList\":null,\"normDenetimiFarkliGerekceRelList\":null}]}],\"page_size\":5}"
+  }
+}

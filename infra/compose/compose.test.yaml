@@ -1,0 +1,109 @@
+# E.D.A. Hukuk — test katmanı (070 §6). İç ağlar internal: true KALIR; veri birimleri tmpfs; port yok.
+x-hardened: &hardened
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: ["no-new-privileges:true"]
+  init: true
+  pids_limit: 256
+  logging: { driver: json-file, options: { max-size: "10m", max-file: "5" } }
+
+x-hc: &hc { interval: 10s, timeout: 3s, retries: 5, start_period: 20s }
+
+services:
+  caddy:
+    mem_limit: 128m
+    memswap_limit: 128m
+    networks:
+      edge: { aliases: [eda.localhost, app.eda.localhost] }
+      admin-edge: { ipv4_address: 172.30.10.3, aliases: [admin.eda.localhost] }
+
+  migrate:
+    environment:
+      SEED_PROFILE: dev
+      KEK_MASTER_FILE: /run/secrets/kek_master
+      DEV_SEED_PASSWORD_FILE: /run/secrets/dev_seed_password
+    secrets: [kek_master, dev_seed_password]
+
+  yargi-mcp:
+    mem_limit: 384m
+    memswap_limit: 384m
+    environment:
+      SOURCE_FIXTURE_MODE: replay
+    volumes:
+      - ../../services/yargi-mcp/test/fixtures:/app/test/fixtures:ro
+
+  mailpit:
+    <<: *hardened
+    profiles: [core]
+    image: axllent/mailpit:v1.31.4@sha256:b68349e3a014b90c5610bfb26b2ae36f3892d7b8cf25ee140c6c71c98d2fcf48
+    user: "10008:10008"
+    networks: [data]
+    tmpfs: ["/tmp:size=64m"]
+    mem_limit: 64m
+    memswap_limit: 64m
+    healthcheck: { <<: *hc, test: ["CMD", "/mailpit", "readyz"] }
+
+  test-runner:
+    <<: *hardened
+    profiles: [test]
+    build: { context: ../.., dockerfile: infra/docker/node-app.Dockerfile, target: ci }
+    image: ${EDA_IMAGE_PREFIX:-eda}/ci:${EDA_TAG:-dev}
+    read_only: false
+    user: "${EDA_UID:-1000}:${EDA_GID:-1000}"
+    working_dir: /workspace
+    command: ["sleep", "infinity"]
+    volumes: ["../..:/workspace"]
+    ipc: host
+    pids_limit: 2048
+    mem_limit: 3g
+    memswap_limit: 3g
+    tmpfs: ["/home/ci:size=512m,mode=0755"]
+    networks:
+      data: {}
+      edge: {}
+      admin-edge: { ipv4_address: 172.30.10.5 }
+      mcp: {}
+      docproc: {}
+    environment:
+      HOME: /home/ci
+      EDA_ENV: test
+      NODE_ENV: test
+      CI: "${CI:-}"
+      TEST_SECRETS_DIR: /run/secrets
+      E2E_APP_URL: https://app.eda.localhost
+      E2E_ADMIN_URL: https://admin.eda.localhost
+      E2E_MARKETING_URL: https://eda.localhost
+      E2E_HOST_RESOLVER_RULES: "MAP eda.localhost caddy,MAP app.eda.localhost caddy,MAP admin.eda.localhost caddy"
+      E2E_IGNORE_HTTPS_ERRORS: "1"
+      NODE_EXTRA_CA_CERTS: /workspace/.tmp/caddy-test-root.crt
+    secrets: [pg_owner_password, pg_auth_password, pg_app_password, pg_worker_password, pg_jobs_password, pg_readonly_admin_password,
+              valkey_api_password, valkey_worker_password, valkey_jobs_password, valkey_cache_api_password, valkey_cache_worker_password,
+              valkey_cache_mcp_password, s3_access_key_id, s3_secret_access_key, s3_audit_access_key_id, s3_audit_secret_access_key,
+              s3_admin_access_key_id, s3_admin_secret_access_key, kek_master, hmac_pseudonym_key, internal_jwt_private_key,
+              doc_engine_token, tei_api_key, dev_seed_password]
+
+  postgres: { mem_limit: 1536m, memswap_limit: 1536m, cpus: 2 }
+  valkey: { mem_limit: 256m, memswap_limit: 256m, command: ["/etc/valkey/valkey.conf", "--maxmemory", "128mb"] }
+  valkey-cache: { mem_limit: 256m, memswap_limit: 256m, command: ["/etc/valkey/valkey-cache.conf", "--maxmemory", "128mb"] }
+  objstore: { mem_limit: 512m, memswap_limit: 512m }
+  api: { mem_limit: 1g, memswap_limit: 1g }
+  worker: { mem_limit: 1g, memswap_limit: 1g }
+  jobs: { mem_limit: 384m, memswap_limit: 384m }
+  web: { mem_limit: 768m, memswap_limit: 768m }
+  admin: { mem_limit: 512m, memswap_limit: 512m }
+  doc-engine: { mem_limit: 2560m, memswap_limit: 2560m, tmpfs: !override ["/tmp:size=512m,mode=0700,uid=10006,gid=10006,noexec,nosuid,nodev"] }
+  gotenberg: { mem_limit: 1g, memswap_limit: 1g }
+  clamav: { mem_limit: 1536m, memswap_limit: 1536m }
+  freshclam: { mem_limit: 256m, memswap_limit: 256m }
+  egress-llm: { mem_limit: 64m, memswap_limit: 64m }
+  egress-portal: { mem_limit: 64m, memswap_limit: 64m }
+  egress-av: { mem_limit: 64m, memswap_limit: 64m }
+
+volumes:
+  pgdata: { driver: local, driver_opts: { type: tmpfs, device: tmpfs, o: "size=1g,uid=999,gid=999,mode=0700" } }
+  objdata: { driver: local, driver_opts: { type: tmpfs, device: tmpfs, o: "size=512m,uid=10003,gid=10003" } }
+  valkeydata: { driver: local, driver_opts: { type: tmpfs, device: tmpfs, o: "size=128m,uid=999,gid=999" } }
+  clamavdb: { driver: local, driver_opts: { type: tmpfs, device: tmpfs, o: "size=512m,uid=100,gid=101" } }
+
+secrets:
+  dev_seed_password: { file: "${EDA_SECRETS_DIR:?}/dev_seed_password" }

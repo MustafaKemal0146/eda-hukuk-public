@@ -1,0 +1,9 @@
+{
+  "id": "decision-headless-fallback",
+  "synthetic": true,
+  "note": "SENTETİK; başlık içermeyen metin tek kunye bölümüdür (fallback).",
+  "profile": "default",
+  "lines": ["Başlık içermeyen örnek karar metni.", "", "İkinci paragraf."],
+  "roles": ["kunye"],
+  "gerekceExcludes": []
+}

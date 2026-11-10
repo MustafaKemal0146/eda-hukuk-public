@@ -1,0 +1,2070 @@
+{
+  "alerts.auditSealLagMin": {
+    "adminEditable": true,
+    "default": 15
+  },
+  "alerts.backupVerifyMaxHours": {
+    "adminEditable": true,
+    "default": 36
+  },
+  "alerts.clamavDbAgeHours": {
+    "adminEditable": true,
+    "default": 48
+  },
+  "alerts.diskPct": {
+    "adminEditable": true,
+    "default": 70
+  },
+  "alerts.emailFailurePct": {
+    "adminEditable": true,
+    "default": 20
+  },
+  "alerts.failedJobs15m": {
+    "adminEditable": true,
+    "default": 5
+  },
+  "alerts.loginFailuresPerAccount15m": {
+    "adminEditable": true,
+    "default": 30
+  },
+  "alerts.ocrQueueP95Min": {
+    "adminEditable": true,
+    "default": 5
+  },
+  "alerts.queueOldestWaitSec.batch": {
+    "adminEditable": true,
+    "default": 3600
+  },
+  "alerts.queueOldestWaitSec.interactive": {
+    "adminEditable": true,
+    "default": 300
+  },
+  "alerts.queueOldestWaitSec.maintenance": {
+    "adminEditable": true,
+    "default": 180
+  },
+  "alerts.reminderLagSec": {
+    "adminEditable": true,
+    "default": 120
+  },
+  "alerts.schedulerMissedFactor": {
+    "adminEditable": true,
+    "default": 3
+  },
+  "alerts.stalledJobs15m": {
+    "adminEditable": true,
+    "default": 3
+  },
+  "alerts.valkeyMemoryPct": {
+    "adminEditable": true,
+    "default": 70
+  },
+  "api.idempotencyLockSec": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "api.idempotencyTtlHours": {
+    "adminEditable": false,
+    "default": 24
+  },
+  "api.pageSizeDefault": {
+    "adminEditable": false,
+    "default": 25
+  },
+  "api.pageSizeMax": {
+    "adminEditable": false,
+    "default": 100
+  },
+  "audit.loginFailureSamplePerIpPerMin": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "audit.sealLagMin": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "audit.verifyLastSeals": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "auth.accountGlobalFailureThreshold": {
+    "adminEditable": false,
+    "default": 20
+  },
+  "auth.adminSessionAbsoluteHours": {
+    "adminEditable": false,
+    "default": 12
+  },
+  "auth.adminSessionIdleMin": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "auth.adminSessionUpdateAgeSec": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "auth.argon2MemoryKiB": {
+    "adminEditable": false,
+    "default": 19456
+  },
+  "auth.argon2Parallelism": {
+    "adminEditable": false,
+    "default": 1
+  },
+  "auth.argon2TimeCost": {
+    "adminEditable": false,
+    "default": 2
+  },
+  "auth.backupCodeCount": {
+    "adminEditable": false,
+    "default": 10
+  },
+  "auth.credentialStepUpWindowMin": {
+    "adminEditable": false,
+    "default": 2
+  },
+  "auth.emailVerificationTtlMin": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "auth.inviteTtlHours": {
+    "adminEditable": true,
+    "default": 72
+  },
+  "auth.loginBackoffBaseSec": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "auth.loginBackoffMaxSec": {
+    "adminEditable": false,
+    "default": 900
+  },
+  "auth.loginBackoffThreshold": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "auth.loginFailureWindowMin": {
+    "adminEditable": false,
+    "default": 15
+  },
+  "auth.maxPasskeys": {
+    "adminEditable": false,
+    "default": 10
+  },
+  "auth.mfaResetWaitHours": {
+    "adminEditable": false,
+    "default": 72
+  },
+  "auth.passwordMaxLength": {
+    "adminEditable": false,
+    "default": 128
+  },
+  "auth.passwordMinLength": {
+    "adminEditable": false,
+    "default": 12
+  },
+  "auth.passwordResetTtlMin": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "auth.reapplyCooldownHours": {
+    "adminEditable": false,
+    "default": 24
+  },
+  "auth.recoveryApprovalTtlHours": {
+    "adminEditable": false,
+    "default": 168
+  },
+  "auth.recoveryCompleteWindowHours": {
+    "adminEditable": false,
+    "default": 72
+  },
+  "auth.sessionAbsoluteDays": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "auth.sessionIdleHours": {
+    "adminEditable": false,
+    "default": 12
+  },
+  "auth.sessionUpdateAgeSec": {
+    "adminEditable": false,
+    "default": 300
+  },
+  "auth.staffEnrollmentTtlHours": {
+    "adminEditable": false,
+    "default": 24
+  },
+  "auth.stepUpWindowMin": {
+    "adminEditable": false,
+    "default": 10
+  },
+  "auth.totpReplayTtlSec": {
+    "adminEditable": false,
+    "default": 90
+  },
+  "auth.twoFactorPendingMin": {
+    "adminEditable": false,
+    "default": 10
+  },
+  "auth.unverifiedAccountTtlHours": {
+    "adminEditable": false,
+    "default": 72
+  },
+  "auth.verificationSlaBusinessHours": {
+    "adminEditable": true,
+    "default": 4
+  },
+  "billing.activeToleranceHours": {
+    "adminEditable": false,
+    "default": 48
+  },
+  "billing.adjustMaxCredits": {
+    "adminEditable": true,
+    "default": 5000
+  },
+  "billing.checkoutOpenHours": {
+    "adminEditable": false,
+    "default": 24
+  },
+  "billing.checkoutPollMax": {
+    "adminEditable": false,
+    "default": 10
+  },
+  "billing.couponAttemptsPerHour": {
+    "adminEditable": false,
+    "default": 10
+  },
+  "billing.couponMaxPercent": {
+    "adminEditable": true,
+    "default": 40
+  },
+  "billing.creditLowPct": {
+    "adminEditable": true,
+    "default": 15
+  },
+  "billing.dunningFinalNoticeDay": {
+    "adminEditable": true,
+    "default": 5
+  },
+  "billing.dunningReminderDays": {
+    "adminEditable": true,
+    "default": [0, 3]
+  },
+  "billing.dunningRetryDays": {
+    "adminEditable": true,
+    "default": [1, 3, 5]
+  },
+  "billing.goodwillRefundDays": {
+    "adminEditable": true,
+    "default": 14
+  },
+  "billing.goodwillRefundMaxUsedPct": {
+    "adminEditable": true,
+    "default": 10
+  },
+  "billing.invoiceIssueAlarmDays": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "billing.invoiceIssueTargetDays": {
+    "adminEditable": true,
+    "default": 3
+  },
+  "billing.iyzicoEnabled": {
+    "adminEditable": true,
+    "default": false
+  },
+  "billing.iyzicoProductRef": {
+    "adminEditable": true,
+    "default": ""
+  },
+  "billing.marginAlertLlmSharePct": {
+    "adminEditable": true,
+    "default": 45
+  },
+  "billing.marginHalfCacheMaxPct": {
+    "adminEditable": true,
+    "default": 30
+  },
+  "billing.marginReviewDriftPct": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "billing.marginTargetLlmSharePct": {
+    "adminEditable": true,
+    "default": 20
+  },
+  "billing.maxSeatsSelfServe": {
+    "adminEditable": true,
+    "default": 50
+  },
+  "billing.pastDueGraceDays": {
+    "adminEditable": true,
+    "default": 7
+  },
+  "billing.paymentFeePct": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "billing.paymentRetryPerDay": {
+    "adminEditable": true,
+    "default": 1
+  },
+  "billing.payoutFinalAfterDays": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "billing.pendingCheckoutScanMax": {
+    "adminEditable": false,
+    "default": 20
+  },
+  "billing.priceChangeNoticeDays": {
+    "adminEditable": true,
+    "default": 30
+  },
+  "billing.providerTimeoutMs": {
+    "adminEditable": false,
+    "default": 8000
+  },
+  "billing.renewalNoticeDaysYearly": {
+    "adminEditable": true,
+    "default": 30
+  },
+  "billing.trialEndingDays": {
+    "adminEditable": true,
+    "default": 2
+  },
+  "billing.upgradeMode": {
+    "adminEditable": true,
+    "default": "now"
+  },
+  "billing.usdTryRate": {
+    "adminEditable": true,
+    "default": 48
+  },
+  "billing.vatPct": {
+    "adminEditable": false,
+    "default": 20
+  },
+  "billing.webhookMaxBodyKb": {
+    "adminEditable": false,
+    "default": 64
+  },
+  "breaker.consecutiveFailures": {
+    "adminEditable": true,
+    "default": 5
+  },
+  "breaker.errorRatePct": {
+    "adminEditable": true,
+    "default": 50
+  },
+  "breaker.openMaxMs": {
+    "adminEditable": true,
+    "default": 60000
+  },
+  "breaker.openMs": {
+    "adminEditable": true,
+    "default": 30000
+  },
+  "breaker.wafOpenMs": {
+    "adminEditable": true,
+    "default": 3600000
+  },
+  "breaker.windowMs": {
+    "adminEditable": true,
+    "default": 30000
+  },
+  "cache.legislationTtlHours": {
+    "adminEditable": true,
+    "default": 24
+  },
+  "cache.searchTtlHours": {
+    "adminEditable": true,
+    "default": 12
+  },
+  "calendar.agendaWindowDays": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "calendar.dayViewEndHour": {
+    "adminEditable": false,
+    "default": 21
+  },
+  "calendar.dayViewStartHour": {
+    "adminEditable": false,
+    "default": 7
+  },
+  "calendar.defaultDurationMin": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "calendar.rangeMaxDays": {
+    "adminEditable": false,
+    "default": 93
+  },
+  "calendar.soonDays": {
+    "adminEditable": true,
+    "default": 7
+  },
+  "calendar.urgentDays": {
+    "adminEditable": true,
+    "default": 3
+  },
+  "chat.attachmentWaitSec": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "chat.citationPollMaxSec": {
+    "adminEditable": false,
+    "default": 120
+  },
+  "chat.documentJobTimeoutSec": {
+    "adminEditable": false,
+    "default": 600
+  },
+  "chat.drainGraceSec": {
+    "adminEditable": false,
+    "default": 120
+  },
+  "chat.drainSafetyMarginSec": {
+    "adminEditable": false,
+    "default": 15
+  },
+  "chat.heartbeatSec": {
+    "adminEditable": false,
+    "default": 15
+  },
+  "chat.maxAttachmentsPerMessage": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "chat.maxMentionsPerMessage": {
+    "adminEditable": false,
+    "default": 10
+  },
+  "chat.maxOutputTokensPerTurn": {
+    "adminEditable": true,
+    "default": 8000
+  },
+  "chat.maxParallelTools": {
+    "adminEditable": true,
+    "default": 3
+  },
+  "chat.maxStepsPerTurn": {
+    "adminEditable": true,
+    "default": 4
+  },
+  "chat.maxToolCallsPerTurn": {
+    "adminEditable": true,
+    "default": 4
+  },
+  "chat.maxUserMessageChars": {
+    "adminEditable": false,
+    "default": 20000
+  },
+  "chat.partialFlushMs": {
+    "adminEditable": false,
+    "default": 2000
+  },
+  "chat.partialFlushTokens": {
+    "adminEditable": false,
+    "default": 500
+  },
+  "chat.pollIntervalMs": {
+    "adminEditable": false,
+    "default": 2000
+  },
+  "chat.turnTimeoutSec": {
+    "adminEditable": true,
+    "default": 180
+  },
+  "chat.uiThrottleMs": {
+    "adminEditable": false,
+    "default": 50
+  },
+  "chat.userConcurrentBackgroundDocJobs": {
+    "adminEditable": true,
+    "default": 1
+  },
+  "chat.userConcurrentStreams": {
+    "adminEditable": false,
+    "default": 1
+  },
+  "citations.checkConcurrentPerUser": {
+    "adminEditable": false,
+    "default": 1
+  },
+  "citations.checkDailyPerUser": {
+    "adminEditable": true,
+    "default": 10
+  },
+  "citations.checkMaxItems": {
+    "adminEditable": true,
+    "default": 150
+  },
+  "citations.checkMaxLiveLookups": {
+    "adminEditable": true,
+    "default": 40
+  },
+  "citations.editorParseDebounceMs": {
+    "adminEditable": true,
+    "default": 1500
+  },
+  "citations.editorPollMs": {
+    "adminEditable": false,
+    "default": 3000
+  },
+  "citations.exportGateScanBudgetMs": {
+    "adminEditable": true,
+    "default": 2000
+  },
+  "citations.headerZoneChars": {
+    "adminEditable": false,
+    "default": 800
+  },
+  "citations.liveSearchMaxPages": {
+    "adminEditable": true,
+    "default": 2
+  },
+  "citations.maxLivePerMessage": {
+    "adminEditable": true,
+    "default": 8
+  },
+  "citations.maxPerMessage": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "citations.nearMissMaxCandidates": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "citations.quoteAttributionWindowChars": {
+    "adminEditable": false,
+    "default": 160
+  },
+  "citations.quoteFragmentMinChars": {
+    "adminEditable": false,
+    "default": 12
+  },
+  "citations.quoteMinChars": {
+    "adminEditable": false,
+    "default": 20
+  },
+  "citations.reverifyCooldownSec": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "citations.reverifyDelayMin": {
+    "adminEditable": true,
+    "default": 30
+  },
+  "citations.reverifyMaxAttempts": {
+    "adminEditable": true,
+    "default": 3
+  },
+  "citations.sourceIndexMaxEntries": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "citations.syncLocalBudgetMs": {
+    "adminEditable": true,
+    "default": 300
+  },
+  "config.settingsRefreshSec": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "context.caseContextMaxTokens": {
+    "adminEditable": false,
+    "default": 500
+  },
+  "context.compactionKeepTurns": {
+    "adminEditable": false,
+    "default": 2
+  },
+  "context.inlineFileMaxTokens": {
+    "adminEditable": true,
+    "default": 30000
+  },
+  "context.profileMaxTokens": {
+    "adminEditable": false,
+    "default": 200
+  },
+  "context.summaryMaxTokens": {
+    "adminEditable": true,
+    "default": 4000
+  },
+  "corpus.archiveBetaBadge": {
+    "adminEditable": true,
+    "default": true
+  },
+  "corpus.bulk.batchMaxItems": {
+    "adminEditable": false,
+    "default": 40
+  },
+  "corpus.bulk.batchMaxSeconds": {
+    "adminEditable": false,
+    "default": 120
+  },
+  "corpus.bulk.enabled": {
+    "adminEditable": false,
+    "default": false
+  },
+  "corpus.bulk.hnswRebuildThresholdChunks": {
+    "adminEditable": false,
+    "default": 200000
+  },
+  "corpus.bulk.legalBasisRef": {
+    "adminEditable": false,
+    "default": null
+  },
+  "corpus.bulk.requestIntervalMs": {
+    "adminEditable": false,
+    "default": 5000
+  },
+  "corpus.bulk.windowEndHour": {
+    "adminEditable": false,
+    "default": 6
+  },
+  "corpus.bulk.windowStartHour": {
+    "adminEditable": false,
+    "default": 0
+  },
+  "corpus.chunkHardMaxTokens": {
+    "adminEditable": false,
+    "default": 512
+  },
+  "corpus.chunkingVersion": {
+    "adminEditable": false,
+    "default": 1
+  },
+  "corpus.datasetAuditSample": {
+    "adminEditable": false,
+    "default": 200
+  },
+  "corpus.embedBatchSize": {
+    "adminEditable": false,
+    "default": 16
+  },
+  "corpus.embedBatchTimeoutMs": {
+    "adminEditable": false,
+    "default": 120000
+  },
+  "corpus.embedCoverageMinPct": {
+    "adminEditable": true,
+    "default": 99
+  },
+  "corpus.embedCpuMaxChunksPerRun": {
+    "adminEditable": true,
+    "default": 2000
+  },
+  "corpus.embedSharedModeBatchSize": {
+    "adminEditable": false,
+    "default": 4
+  },
+  "corpus.embedSharedModePauseMs": {
+    "adminEditable": false,
+    "default": 500
+  },
+  "corpus.legislation.emptyWindowsStop": {
+    "adminEditable": false,
+    "default": 2
+  },
+  "corpus.legislation.maxShrinkPct": {
+    "adminEditable": true,
+    "default": 20
+  },
+  "corpus.legislation.onDemandMaxPerDay": {
+    "adminEditable": true,
+    "default": 50
+  },
+  "corpus.legislation.windowSize": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "corpus.liveHit.ingestOnBufferMiss": {
+    "adminEditable": true,
+    "default": false
+  },
+  "corpus.liveHit.maxDeferrals": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "corpus.loadBatchRows": {
+    "adminEditable": false,
+    "default": 2000
+  },
+  "corpus.minTextChars": {
+    "adminEditable": false,
+    "default": 200
+  },
+  "corpus.prefixMaxCitedArticles": {
+    "adminEditable": false,
+    "default": 6
+  },
+  "corpus.prefixMaxTokens": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "corpus.prefixVersion": {
+    "adminEditable": false,
+    "default": 1
+  },
+  "corpus.redactDirectIdentifiers": {
+    "adminEditable": false,
+    "default": true
+  },
+  "corpus.sectioningVersion": {
+    "adminEditable": false,
+    "default": 1
+  },
+  "corpus.segmentation.fallbackAlertPct": {
+    "adminEditable": true,
+    "default": 30
+  },
+  "corpus.summary.enabled": {
+    "adminEditable": true,
+    "default": false
+  },
+  "corpus.summary.maxPerNight": {
+    "adminEditable": true,
+    "default": 500
+  },
+  "costGuard.balanceCheckIntervalMin": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "costGuard.balanceCriticalDays": {
+    "adminEditable": true,
+    "default": 5
+  },
+  "costGuard.balanceManualAt": {
+    "adminEditable": true,
+    "default": null
+  },
+  "costGuard.balanceManualUsd": {
+    "adminEditable": true,
+    "default": null
+  },
+  "costGuard.balanceMinUsd": {
+    "adminEditable": true,
+    "default": 20
+  },
+  "costGuard.balanceWarnDays": {
+    "adminEditable": true,
+    "default": 14
+  },
+  "costGuard.batchDailyCapMicroUsd": {
+    "adminEditable": true,
+    "default": 30000000
+  },
+  "costGuard.batchQuietEndTsi": {
+    "adminEditable": false,
+    "default": "07:00"
+  },
+  "costGuard.batchQuietStartTsi": {
+    "adminEditable": false,
+    "default": "19:00"
+  },
+  "costGuard.deepDisabled": {
+    "adminEditable": true,
+    "default": false
+  },
+  "costGuard.documentMaxMicroUsd": {
+    "adminEditable": true,
+    "default": 400000
+  },
+  "costGuard.invoiceDriftPct": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "costGuard.killSwitch": {
+    "adminEditable": true,
+    "default": false
+  },
+  "costGuard.orgDailyCapFloorMicroUsd": {
+    "adminEditable": true,
+    "default": 2000000
+  },
+  "costGuard.orgDailyCapPerSeatMicroUsd": {
+    "adminEditable": true,
+    "default": 1000000
+  },
+  "costGuard.orgDailyWarnPct": {
+    "adminEditable": false,
+    "default": 80
+  },
+  "costGuard.platformDailyCapMicroUsd": {
+    "adminEditable": true,
+    "default": 100000000
+  },
+  "costGuard.searchOverviewPerUserPerDay": {
+    "adminEditable": true,
+    "default": 100
+  },
+  "costGuard.turnMaxMicroUsd.edaiFlash": {
+    "adminEditable": true,
+    "default": 100000
+  },
+  "costGuard.turnMaxMicroUsd.edaiPro": {
+    "adminEditable": true,
+    "default": 400000
+  },
+  "credits.maxNegativeOps": {
+    "adminEditable": false,
+    "default": 1
+  },
+  "credits.price.chatDeep": {
+    "adminEditable": true,
+    "default": 5
+  },
+  "credits.price.chatFast": {
+    "adminEditable": true,
+    "default": 1
+  },
+  "credits.price.documentDraft": {
+    "adminEditable": true,
+    "default": 10
+  },
+  "credits.price.editRound": {
+    "adminEditable": true,
+    "default": 1
+  },
+  "credits.price.fileCard": {
+    "adminEditable": true,
+    "default": 1
+  },
+  "credits.price.ocrPer20Pages": {
+    "adminEditable": true,
+    "default": 1
+  },
+  "db.backfillBatchSize": {
+    "adminEditable": false,
+    "default": 5000
+  },
+  "db.backfillBatchSleepMs": {
+    "adminEditable": false,
+    "default": 50
+  },
+  "db.backfillMaxMinutes": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "db.idleInTxTimeoutMs": {
+    "adminEditable": false,
+    "default": 10000
+  },
+  "db.jobsPoolMax": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "db.jobsStatementTimeoutMs": {
+    "adminEditable": false,
+    "default": 300000
+  },
+  "db.lockTimeoutMs": {
+    "adminEditable": false,
+    "default": 2000
+  },
+  "db.migrationAdvisoryWaitSec": {
+    "adminEditable": false,
+    "default": 120
+  },
+  "db.migrationLockRetries": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "db.migrationLockRetryWaitMs": {
+    "adminEditable": false,
+    "default": 5000
+  },
+  "db.migrationLongTxSec": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "db.migrationStatementTimeoutMs": {
+    "adminEditable": false,
+    "default": 600000
+  },
+  "db.poolConnectTimeoutMs": {
+    "adminEditable": false,
+    "default": 2000
+  },
+  "db.poolIdleTimeoutMs": {
+    "adminEditable": false,
+    "default": 30000
+  },
+  "db.statementTimeoutMs": {
+    "adminEditable": false,
+    "default": 15000
+  },
+  "deadline.officeCloseTime": {
+    "adminEditable": false,
+    "default": "17:00"
+  },
+  "deadline.unverifiedVisible": {
+    "adminEditable": false,
+    "default": false
+  },
+  "editor.autosaveDebounceMs": {
+    "adminEditable": false,
+    "default": 3000
+  },
+  "editor.autosaveMaxWaitMs": {
+    "adminEditable": false,
+    "default": 15000
+  },
+  "editor.autosaveRetryMax": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "editor.diffTimeoutMs": {
+    "adminEditable": false,
+    "default": 200
+  },
+  "editor.inlineDiffMaxChars": {
+    "adminEditable": false,
+    "default": 20000
+  },
+  "editor.maxBlocks": {
+    "adminEditable": false,
+    "default": 200
+  },
+  "editor.maxDraftBytes": {
+    "adminEditable": false,
+    "default": 1500000
+  },
+  "editor.pasteMaxChars": {
+    "adminEditable": false,
+    "default": 200000
+  },
+  "editor.selectionMaxChars": {
+    "adminEditable": false,
+    "default": 4000
+  },
+  "editor.versionSessionMin": {
+    "adminEditable": false,
+    "default": 10
+  },
+  "editor.zoomLevels": {
+    "adminEditable": false,
+    "default": [75, 90, 100, "fit"]
+  },
+  "email.globalDailyCap": {
+    "adminEditable": true,
+    "default": 60
+  },
+  "email.perIpDailyCap": {
+    "adminEditable": true,
+    "default": 20
+  },
+  "eval.alpha": {
+    "adminEditable": false,
+    "default": 0.05
+  },
+  "eval.baselineMinRuns": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "eval.bootstrapResamples": {
+    "adminEditable": false,
+    "default": 10000
+  },
+  "eval.citationWaitSec": {
+    "adminEditable": false,
+    "default": 120
+  },
+  "eval.humanSampleSize": {
+    "adminEditable": false,
+    "default": 80
+  },
+  "eval.judgeSampleSize": {
+    "adminEditable": false,
+    "default": 150
+  },
+  "eval.judgeTemperature": {
+    "adminEditable": false,
+    "default": 0
+  },
+  "eval.maxCostUsdPerRun": {
+    "adminEditable": false,
+    "default": 25
+  },
+  "eval.minQueriesForComparison": {
+    "adminEditable": false,
+    "default": 300
+  },
+  "eval.modelGateFreshnessDays": {
+    "adminEditable": false,
+    "default": 14
+  },
+  "eval.regressionTolerancePts": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "eval.runsPerQuery": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "eval.selfCheckMinRate": {
+    "adminEditable": false,
+    "default": 0.95
+  },
+  "eval.userPoolSize": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "eval.vetoAlpha": {
+    "adminEditable": false,
+    "default": 0.2
+  },
+  "exports.maxBundleMb": {
+    "adminEditable": true,
+    "default": 2048
+  },
+  "files.clamavMaxDbAgeDays": {
+    "adminEditable": true,
+    "default": 7
+  },
+  "files.deleteGraceDays": {
+    "adminEditable": false,
+    "default": 7
+  },
+  "files.downloadTokenTtlSec": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "files.interactiveMaxPages": {
+    "adminEditable": true,
+    "default": 20
+  },
+  "files.orgMaxConcurrentJobs": {
+    "adminEditable": true,
+    "default": 2
+  },
+  "files.orphanMinAgeHours": {
+    "adminEditable": true,
+    "default": 24
+  },
+  "files.orphanSweepMaxDeletes": {
+    "adminEditable": true,
+    "default": 500
+  },
+  "files.viewEventDedupSec": {
+    "adminEditable": false,
+    "default": 300
+  },
+  "health.readyCacheMs": {
+    "adminEditable": false,
+    "default": 2000
+  },
+  "health.readyTimeoutMs": {
+    "adminEditable": false,
+    "default": 1000
+  },
+  "holidays.horizonYears": {
+    "adminEditable": false,
+    "default": 2
+  },
+  "http.headersTimeoutMs": {
+    "adminEditable": false,
+    "default": 130000
+  },
+  "http.jsonBodyMaxBytes": {
+    "adminEditable": false,
+    "default": 2097152
+  },
+  "http.keepAliveTimeoutMs": {
+    "adminEditable": false,
+    "default": 125000
+  },
+  "http.requestTimeoutMs": {
+    "adminEditable": false,
+    "default": 600000
+  },
+  "http.routeTimeoutMs": {
+    "adminEditable": false,
+    "default": 30000
+  },
+  "jobs.attempts": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "jobs.backoffBaseMs": {
+    "adminEditable": false,
+    "default": 30000
+  },
+  "jobs.backoffJitter": {
+    "adminEditable": false,
+    "default": 0.2
+  },
+  "jobs.concurrency.billing": {
+    "adminEditable": true,
+    "default": 1
+  },
+  "jobs.concurrency.chat": {
+    "adminEditable": true,
+    "default": 4
+  },
+  "jobs.concurrency.citations": {
+    "adminEditable": true,
+    "default": 2
+  },
+  "jobs.concurrency.corpus": {
+    "adminEditable": true,
+    "default": 1
+  },
+  "jobs.concurrency.exports": {
+    "adminEditable": true,
+    "default": 2
+  },
+  "jobs.concurrency.filesBatch": {
+    "adminEditable": true,
+    "default": 1
+  },
+  "jobs.concurrency.filesInteractive": {
+    "adminEditable": true,
+    "default": 2
+  },
+  "jobs.concurrency.maintenance": {
+    "adminEditable": true,
+    "default": 1
+  },
+  "jobs.concurrency.notifications": {
+    "adminEditable": true,
+    "default": 4
+  },
+  "jobs.corpusSliceSec": {
+    "adminEditable": false,
+    "default": 120
+  },
+  "jobs.deferMaxDelaySec": {
+    "adminEditable": false,
+    "default": 900
+  },
+  "jobs.dependencyDeferMaxHours": {
+    "adminEditable": false,
+    "default": 24
+  },
+  "jobs.fileQueueDepthMax": {
+    "adminEditable": false,
+    "default": 20
+  },
+  "jobs.fileStuckMin": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "jobs.lockDurationMs": {
+    "adminEditable": false,
+    "default": 60000
+  },
+  "jobs.maxStalledCount": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "jobs.pendingFeedBatch": {
+    "adminEditable": false,
+    "default": 50
+  },
+  "jobs.purgeMaxContinuations": {
+    "adminEditable": false,
+    "default": 20
+  },
+  "jobs.purgeMaxRunSec": {
+    "adminEditable": false,
+    "default": 240
+  },
+  "jobs.reminderScanBatch": {
+    "adminEditable": false,
+    "default": 500
+  },
+  "jobs.removeOnCompleteAgeSec": {
+    "adminEditable": false,
+    "default": 86400
+  },
+  "jobs.removeOnCompleteCount": {
+    "adminEditable": false,
+    "default": 1000
+  },
+  "jobs.removeOnFailAgeSec": {
+    "adminEditable": false,
+    "default": 604800
+  },
+  "jobs.rollupLookbackHours": {
+    "adminEditable": false,
+    "default": 48
+  },
+  "jobs.rowBatchSize": {
+    "adminEditable": false,
+    "default": 1000
+  },
+  "jobs.shutdownGraceSec": {
+    "adminEditable": false,
+    "default": 50
+  },
+  "jobs.staleSkipFactor": {
+    "adminEditable": false,
+    "default": 2
+  },
+  "jobs.stalledIntervalMs": {
+    "adminEditable": false,
+    "default": 30000
+  },
+  "jobs.stuckRequeueAfterSec": {
+    "adminEditable": false,
+    "default": 120
+  },
+  "jobs.timeoutSec.corpus": {
+    "adminEditable": false,
+    "default": 600
+  },
+  "jobs.timeoutSec.heavy": {
+    "adminEditable": false,
+    "default": 300
+  },
+  "jobs.timeoutSec.light": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "jobs.timeoutSec.maintenance": {
+    "adminEditable": false,
+    "default": 240
+  },
+  "jobs.timeoutSec.ocr": {
+    "adminEditable": false,
+    "default": 900
+  },
+  "jobs.timeoutSec.standard": {
+    "adminEditable": false,
+    "default": 120
+  },
+  "kvkk.accountErasureGraceDays": {
+    "adminEditable": false,
+    "default": 7
+  },
+  "kvkk.addressMaxChars": {
+    "adminEditable": false,
+    "default": 160
+  },
+  "kvkk.dictionaryCacheEntries": {
+    "adminEditable": false,
+    "default": 64
+  },
+  "kvkk.dictionaryMaxSurfaces": {
+    "adminEditable": false,
+    "default": 100000
+  },
+  "kvkk.learnedMaxSurfaces": {
+    "adminEditable": false,
+    "default": 5000
+  },
+  "kvkk.maskInputMaxChars": {
+    "adminEditable": false,
+    "default": 1000000
+  },
+  "kvkk.nameMaxWords": {
+    "adminEditable": false,
+    "default": 4
+  },
+  "kvkk.offloadMinChars": {
+    "adminEditable": false,
+    "default": 200000
+  },
+  "kvkk.previewDebounceMs": {
+    "adminEditable": false,
+    "default": 300
+  },
+  "kvkk.previewMaxChars": {
+    "adminEditable": false,
+    "default": 50000
+  },
+  "kvkk.previewTimeoutMs": {
+    "adminEditable": false,
+    "default": 1500
+  },
+  "kvkk.requestDueDays": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "kvkk.requestReminderDaysBefore": {
+    "adminEditable": false,
+    "default": [10, 3]
+  },
+  "kvkk.searchMaxHitsPerTable": {
+    "adminEditable": true,
+    "default": 200
+  },
+  "kvkk.searchPerOrgPerHour": {
+    "adminEditable": true,
+    "default": 20
+  },
+  "kvkk.suffixMaxLetters": {
+    "adminEditable": false,
+    "default": 12
+  },
+  "kvkk.tokenHashChars": {
+    "adminEditable": false,
+    "default": 4
+  },
+  "kvkk.weakVariantMinChars": {
+    "adminEditable": false,
+    "default": 4
+  },
+  "kvkk.windowBudgetFactor": {
+    "adminEditable": false,
+    "default": 64
+  },
+  "limits.user.chatTurnsPerDay": {
+    "adminEditable": false,
+    "default": null
+  },
+  "limits.user.chatTurnsPerMonth": {
+    "adminEditable": false,
+    "default": null
+  },
+  "limits.user.tokensPerDay": {
+    "adminEditable": false,
+    "default": null
+  },
+  "limits.user.tokensPerMonth": {
+    "adminEditable": false,
+    "default": null
+  },
+  "llm.balanceBreakerMs": {
+    "adminEditable": false,
+    "default": 900000
+  },
+  "llm.cacheHitAlarmPct": {
+    "adminEditable": true,
+    "default": 55
+  },
+  "llm.cacheHitTargetPct": {
+    "adminEditable": true,
+    "default": 70
+  },
+  "llm.cacheProbeAutoMinPct": {
+    "adminEditable": false,
+    "default": 50
+  },
+  "llm.cacheProbeDelayMs": {
+    "adminEditable": false,
+    "default": 3000
+  },
+  "llm.cacheProbeToleranceTokens": {
+    "adminEditable": false,
+    "default": 64
+  },
+  "llm.charsPerTokenEstimate": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "llm.cjkLeakMinChars": {
+    "adminEditable": false,
+    "default": 2
+  },
+  "llm.connectTimeoutMs": {
+    "adminEditable": false,
+    "default": 10000
+  },
+  "llm.decisionSummaryMaxInputTokens": {
+    "adminEditable": false,
+    "default": 12000
+  },
+  "llm.documentBlockMaxTokens": {
+    "adminEditable": true,
+    "default": 16000
+  },
+  "llm.fileCardMaxInputTokens": {
+    "adminEditable": true,
+    "default": 8000
+  },
+  "llm.firstChunkTimeoutBatchMs": {
+    "adminEditable": false,
+    "default": 300000
+  },
+  "llm.firstChunkTimeoutMs": {
+    "adminEditable": true,
+    "default": 30000
+  },
+  "llm.idleChunkTimeoutMs": {
+    "adminEditable": false,
+    "default": 60000
+  },
+  "llm.jsonRetry": {
+    "adminEditable": false,
+    "default": 1
+  },
+  "llm.maxInFlightPerProvider": {
+    "adminEditable": true,
+    "default": 64
+  },
+  "llm.outlineMaxTokens": {
+    "adminEditable": false,
+    "default": 2000
+  },
+  "llm.proxyTimeoutSec": {
+    "adminEditable": false,
+    "default": 600
+  },
+  "llm.retryBaseMs": {
+    "adminEditable": false,
+    "default": 500
+  },
+  "llm.sameProviderRetries": {
+    "adminEditable": false,
+    "default": 1
+  },
+  "llm.searchOverviewMaxInputTokens": {
+    "adminEditable": false,
+    "default": 6000
+  },
+  "llm.titleInputMaxChars": {
+    "adminEditable": false,
+    "default": 2000
+  },
+  "llm.titleMaxWords": {
+    "adminEditable": false,
+    "default": 8
+  },
+  "llm.usageBufferMax": {
+    "adminEditable": false,
+    "default": 10000
+  },
+  "metrics.queuePollSec": {
+    "adminEditable": false,
+    "default": 15
+  },
+  "metrics.trialConversionWindowDays": {
+    "adminEditable": false,
+    "default": 14
+  },
+  "notifications.criticalAttempts": {
+    "adminEditable": false,
+    "default": 8
+  },
+  "notifications.emailPerAddressPerHour": {
+    "adminEditable": true,
+    "default": 10
+  },
+  "notifications.emailTimeoutMs": {
+    "adminEditable": false,
+    "default": 10000
+  },
+  "notifications.pollIntervalSec": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "notifications.pushDisabledPurgeDays": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "notifications.pushTtlMaxSec": {
+    "adminEditable": false,
+    "default": 86400
+  },
+  "notifications.serviceEmailExpiryHours": {
+    "adminEditable": false,
+    "default": 24
+  },
+  "notifications.sweepStaleMin": {
+    "adminEditable": false,
+    "default": 2
+  },
+  "orgClosure.freezeDays": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "orgClosure.noticeDaysBefore": {
+    "adminEditable": false,
+    "default": [14, 3]
+  },
+  "orgClosure.returnDays": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "partitions.ensureAheadMonths": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "partner.csvPerHour": {
+    "adminEditable": false,
+    "default": 20
+  },
+  "platformKey.estimatedMicroUsdPerMtok": {
+    "adminEditable": true,
+    "default": 15000000
+  },
+  "platformKey.userTokensPerDay": {
+    "adminEditable": true,
+    "default": 300000
+  },
+  "platformKey.userTurnsPerDay": {
+    "adminEditable": true,
+    "default": 50
+  },
+  "prompt.orgInstructionsMaxChars": {
+    "adminEditable": false,
+    "default": 1500
+  },
+  "prompt.systemMaxTokens": {
+    "adminEditable": false,
+    "default": 1500
+  },
+  "prompt.toolDefsMaxTokens": {
+    "adminEditable": false,
+    "default": 2000
+  },
+  "prompt.userInstructionsMaxChars": {
+    "adminEditable": false,
+    "default": 800
+  },
+  "providers.newClassNoticeDays": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "queue.maxPayloadBytes": {
+    "adminEditable": false,
+    "default": 4096
+  },
+  "quota.ocrBatchTtlSec": {
+    "adminEditable": false,
+    "default": 180
+  },
+  "quota.reservationTtlSec": {
+    "adminEditable": false,
+    "default": 300
+  },
+  "rateLimit.adminAuthPerIpPerMin": {
+    "adminEditable": true,
+    "default": 5
+  },
+  "rateLimit.adminUserWritePerMin": {
+    "adminEditable": false,
+    "default": 10
+  },
+  "rateLimit.apiPerUserPerMin": {
+    "adminEditable": true,
+    "default": 120
+  },
+  "rateLimit.authEmailPerAddressPerHour": {
+    "adminEditable": true,
+    "default": 5
+  },
+  "rateLimit.authPerIpPerMin": {
+    "adminEditable": true,
+    "default": 10
+  },
+  "rateLimit.chatPerUserPerMin": {
+    "adminEditable": true,
+    "default": 20
+  },
+  "rateLimit.kvkkPreviewPerUserPerMin": {
+    "adminEditable": true,
+    "default": 120
+  },
+  "rateLimit.stepUpPerUserPerMin": {
+    "adminEditable": true,
+    "default": 5
+  },
+  "reminders.allDayAnchorHour": {
+    "adminEditable": false,
+    "default": 9
+  },
+  "reminders.defaultMinutes": {
+    "adminEditable": true,
+    "default": [1440, 120, 15]
+  },
+  "reminders.lateNoticeMin": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "reminders.maxAttempts": {
+    "adminEditable": false,
+    "default": 6
+  },
+  "reminders.maxLateMin": {
+    "adminEditable": false,
+    "default": 120
+  },
+  "reminders.maxPerTarget": {
+    "adminEditable": false,
+    "default": 6
+  },
+  "reminders.presetMinutes": {
+    "adminEditable": false,
+    "default": [15, 60, 120, 1440, 4320]
+  },
+  "reminders.retryAfterMin": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "retention.aiUsageDetailMonths": {
+    "adminEditable": false,
+    "default": 24
+  },
+  "retention.auditLogYears": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "retention.backupContentMaxDays": {
+    "adminEditable": false,
+    "default": 35
+  },
+  "retention.billingYears": {
+    "adminEditable": false,
+    "default": 10
+  },
+  "retention.caseAfterMandateYears": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "retention.custodyYears": {
+    "adminEditable": false,
+    "default": 10
+  },
+  "retention.decisionSearchHours": {
+    "adminEditable": false,
+    "default": 24
+  },
+  "retention.emailDeliveriesDays": {
+    "adminEditable": false,
+    "default": 90
+  },
+  "retention.exportsDays": {
+    "adminEditable": false,
+    "default": 7
+  },
+  "retention.feedbackShareDays": {
+    "adminEditable": false,
+    "default": 90
+  },
+  "retention.glitchtipDays": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "retention.inboxDays": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "retention.kunyeCheckDays": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "retention.lokiDays": {
+    "adminEditable": false,
+    "default": 90
+  },
+  "retention.maxCasesPerRun": {
+    "adminEditable": true,
+    "default": 50
+  },
+  "retention.maxConversationsPerRun": {
+    "adminEditable": true,
+    "default": 2000
+  },
+  "retention.maxFilesPerRun": {
+    "adminEditable": true,
+    "default": 5000
+  },
+  "retention.noticeDays": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "retention.notificationsDays": {
+    "adminEditable": false,
+    "default": 90
+  },
+  "retention.operationalRecordDays": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "retention.pitrDays": {
+    "adminEditable": false,
+    "default": 14
+  },
+  "retention.productEventsMonths": {
+    "adminEditable": false,
+    "default": 13
+  },
+  "retention.purgeBatchPauseMs": {
+    "adminEditable": false,
+    "default": 250
+  },
+  "retention.purgeBatchSize": {
+    "adminEditable": false,
+    "default": 200
+  },
+  "retention.quarantineDays": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "retention.reasoningInactiveDays": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "retention.rejectedApplicationDays": {
+    "adminEditable": false,
+    "default": 90
+  },
+  "retention.supportTicketMonths": {
+    "adminEditable": false,
+    "default": 24
+  },
+  "retention.unlinkedChatInactiveMonths": {
+    "adminEditable": false,
+    "default": 24
+  },
+  "retention.weeklyFullWeeks": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "retrieval.archivePoolMax": {
+    "adminEditable": false,
+    "default": 200
+  },
+  "retrieval.candidatePool": {
+    "adminEditable": true,
+    "default": 30
+  },
+  "retrieval.caseMaxChunksPerFile": {
+    "adminEditable": false,
+    "default": 2
+  },
+  "retrieval.chunkTokensMax": {
+    "adminEditable": false,
+    "default": 450
+  },
+  "retrieval.chunkTokensMin": {
+    "adminEditable": false,
+    "default": 350
+  },
+  "retrieval.eagerMaxChunks": {
+    "adminEditable": true,
+    "default": 6
+  },
+  "retrieval.eagerMaxTokens": {
+    "adminEditable": true,
+    "default": 2500
+  },
+  "retrieval.eagerMinWords": {
+    "adminEditable": true,
+    "default": 6
+  },
+  "retrieval.embedQueryTimeoutMs": {
+    "adminEditable": false,
+    "default": 800
+  },
+  "retrieval.excerptMaxTokens": {
+    "adminEditable": false,
+    "default": 250
+  },
+  "retrieval.hnswEfSearch": {
+    "adminEditable": true,
+    "default": 100
+  },
+  "retrieval.hnswIterativeScan": {
+    "adminEditable": false,
+    "default": "relaxed_order"
+  },
+  "retrieval.hnswMaxScanTuples": {
+    "adminEditable": false,
+    "default": 20000
+  },
+  "retrieval.legLimit": {
+    "adminEditable": false,
+    "default": 100
+  },
+  "retrieval.liveFallbackMinResults": {
+    "adminEditable": true,
+    "default": 3
+  },
+  "retrieval.liveFallbackScore": {
+    "adminEditable": true,
+    "default": null
+  },
+  "retrieval.liveRecentDays": {
+    "adminEditable": true,
+    "default": 90
+  },
+  "retrieval.maxChunksPerDecision": {
+    "adminEditable": true,
+    "default": 2
+  },
+  "retrieval.maxDecisionsToLlm": {
+    "adminEditable": true,
+    "default": 5
+  },
+  "retrieval.minScore": {
+    "adminEditable": true,
+    "default": null
+  },
+  "retrieval.queryMaxChars": {
+    "adminEditable": false,
+    "default": 2000
+  },
+  "retrieval.rerankGateNdcgDelta": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "retrieval.rerankP95BudgetMs": {
+    "adminEditable": false,
+    "default": 300
+  },
+  "retrieval.rrfK": {
+    "adminEditable": true,
+    "default": 60
+  },
+  "retrieval.statementTimeoutMs": {
+    "adminEditable": false,
+    "default": 2000
+  },
+  "shutdown.finalizeBudgetSec": {
+    "adminEditable": false,
+    "default": 12
+  },
+  "sources.anayasa.tokenIntervalMs": {
+    "adminEditable": true,
+    "default": 2000
+  },
+  "sources.bedesten.tokenIntervalMs": {
+    "adminEditable": true,
+    "default": 3500
+  },
+  "sources.canaryFailThreshold": {
+    "adminEditable": false,
+    "default": 2
+  },
+  "sources.canaryWindowDays": {
+    "adminEditable": false,
+    "default": 7
+  },
+  "sources.decisionSectionMaxChars": {
+    "adminEditable": false,
+    "default": 6000
+  },
+  "sources.degradedErrorPct": {
+    "adminEditable": true,
+    "default": 20
+  },
+  "sources.docLruMaxEntries": {
+    "adminEditable": false,
+    "default": 200
+  },
+  "sources.docLruTtlSec": {
+    "adminEditable": false,
+    "default": 900
+  },
+  "sources.interactiveMaxWaitMs": {
+    "adminEditable": true,
+    "default": 4000
+  },
+  "sources.interactiveSharePct": {
+    "adminEditable": true,
+    "default": 70
+  },
+  "sources.maxDocChars": {
+    "adminEditable": false,
+    "default": 400000
+  },
+  "sources.mcpDocTimeoutMs": {
+    "adminEditable": true,
+    "default": 30000
+  },
+  "sources.mcpPageSizeMax": {
+    "adminEditable": false,
+    "default": 10
+  },
+  "sources.mcpSearchTimeoutMs": {
+    "adminEditable": true,
+    "default": 20000
+  },
+  "sources.mcpSlowSearchTimeoutMs": {
+    "adminEditable": true,
+    "default": 40000
+  },
+  "sources.mevzuat.tokenIntervalMs": {
+    "adminEditable": true,
+    "default": 2000
+  },
+  "sources.orgLivePerMin": {
+    "adminEditable": true,
+    "default": 6
+  },
+  "sources.perSourceConcurrency": {
+    "adminEditable": false,
+    "default": 2
+  },
+  "sources.priorityWindowMs": {
+    "adminEditable": false,
+    "default": 60000
+  },
+  "sources.retries": {
+    "adminEditable": false,
+    "default": 1
+  },
+  "sources.retryAfterDefaultSec": {
+    "adminEditable": false,
+    "default": 30
+  },
+  "sources.retryAfterMaxSec": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "sources.singleFlightLockMs": {
+    "adminEditable": false,
+    "default": 10000
+  },
+  "sources.timeoutConnectMs": {
+    "adminEditable": false,
+    "default": 5000
+  },
+  "sources.timeoutDocMs": {
+    "adminEditable": true,
+    "default": 25000
+  },
+  "sources.timeoutSearchMs": {
+    "adminEditable": true,
+    "default": 15000
+  },
+  "sources.turnMaxLiveFetches": {
+    "adminEditable": true,
+    "default": 2
+  },
+  "sources.turnMaxLiveSearches": {
+    "adminEditable": true,
+    "default": 1
+  },
+  "sources.userLivePerMin": {
+    "adminEditable": true,
+    "default": 3
+  },
+  "sources.uyusmazlik.timeoutSearchMs": {
+    "adminEditable": true,
+    "default": 35000
+  },
+  "sources.uyusmazlik.tokenIntervalMs": {
+    "adminEditable": true,
+    "default": 2000
+  },
+  "system.maintenanceMode": {
+    "adminEditable": true,
+    "default": false
+  },
+  "tools.articleRangeMax": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "tools.caseFileMaxPassages": {
+    "adminEditable": true,
+    "default": 6
+  },
+  "tools.fetchMaxTokens": {
+    "adminEditable": true,
+    "default": 2500
+  },
+  "tools.legislationMaxResults": {
+    "adminEditable": true,
+    "default": 5
+  },
+  "tools.localTimeoutMs": {
+    "adminEditable": false,
+    "default": 5000
+  },
+  "tools.queryMaxChars": {
+    "adminEditable": false,
+    "default": 300
+  },
+  "tools.searchResultMaxTokens": {
+    "adminEditable": true,
+    "default": 1500
+  },
+  "tools.snippetMaxChars": {
+    "adminEditable": false,
+    "default": 300
+  },
+  "tools.turnResultMaxTokens": {
+    "adminEditable": true,
+    "default": 12000
+  },
+  "trial.credits": {
+    "adminEditable": true,
+    "default": 30
+  },
+  "trial.days": {
+    "adminEditable": true,
+    "default": 7
+  },
+  "ui.creditLowThreshold": {
+    "adminEditable": false,
+    "default": 5
+  },
+  "ui.kunyeCheckPollMs": {
+    "adminEditable": false,
+    "default": 2000
+  },
+  "ui.liveRegionCoalesceMs": {
+    "adminEditable": false,
+    "default": 1000
+  },
+  "ui.pollExportMs": {
+    "adminEditable": false,
+    "default": 3000
+  },
+  "ui.pollFilesMs": {
+    "adminEditable": false,
+    "default": 3000
+  },
+  "ui.quoteRotateMs": {
+    "adminEditable": false,
+    "default": 8000
+  },
+  "ui.requestTimeoutMs": {
+    "adminEditable": false,
+    "default": 30000
+  },
+  "ui.resendCooldownSec": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "ui.staleTimeCalendarSec": {
+    "adminEditable": false,
+    "default": 60
+  },
+  "ui.toastDurationMs": {
+    "adminEditable": false,
+    "default": 6000
+  },
+  "upload.allowedTypes": {
+    "adminEditable": false,
+    "default": ["pdf", "docx", "udf", "png", "jpeg", "tiff", "txt"]
+  },
+  "upload.maxConcurrentApi": {
+    "adminEditable": true,
+    "default": 16
+  },
+  "upload.maxConcurrentPerUser": {
+    "adminEditable": false,
+    "default": 3
+  },
+  "upload.maxFilesPerCase": {
+    "adminEditable": true,
+    "default": 2000
+  },
+  "upload.maxMb": {
+    "adminEditable": true,
+    "default": 50
+  },
+  "upload.maxPagesPerFile": {
+    "adminEditable": true,
+    "default": 500
+  },
+  "upload.ocrBatchPages": {
+    "adminEditable": false,
+    "default": 20
+  },
+  "upload.timeoutSec": {
+    "adminEditable": false,
+    "default": 900
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@eda/email",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    "./catalog": "./src/catalog.ts",
+    "./links": "./src/links.ts",
+    "./ops-alert": "./src/ops-alert.tsx",
+    "./preview": "./src/preview.ts",
+    "./render": "./src/render.tsx",
+    "./transport": "./src/transport/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@eda/contracts": "workspace:*",
+    "@react-email/render": "catalog:",
+    "nodemailer": "catalog:",
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@eda/config": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react",
+    "@types/react-dom": "catalog:react",
+    "html-validate": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

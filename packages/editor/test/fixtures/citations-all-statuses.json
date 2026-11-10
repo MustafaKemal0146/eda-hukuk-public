@@ -1,0 +1,179 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-CT0001",
+        "rev": 1,
+        "role": "legalGrounds"
+      },
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "HUKUKİ SEBEPLER"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Biçim örneği 1: "
+            },
+            {
+              "type": "citation",
+              "attrs": {
+                "citationId": "0192f1c2-7a4b-7c3e-9d10-2b3c4d5e6f10",
+                "raw": "Örnek künye 1",
+                "sourceRef": "0192f1c2-7a4b-7c3e-9d10-2b3c4d5e6f30",
+                "status": "pending",
+                "attestKey": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Biçim örneği 2: "
+            },
+            {
+              "type": "citation",
+              "attrs": {
+                "citationId": "0192f1c2-7a4b-7c3e-9d10-2b3c4d5e6f11",
+                "raw": "Örnek künye 2",
+                "sourceRef": null,
+                "status": "verified",
+                "attestKey": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Biçim örneği 3: "
+            },
+            {
+              "type": "citation",
+              "attrs": {
+                "citationId": "0192f1c2-7a4b-7c3e-9d10-2b3c4d5e6f12",
+                "raw": "Örnek künye 3",
+                "sourceRef": "0192f1c2-7a4b-7c3e-9d10-2b3c4d5e6f32",
+                "status": "verified_user_source",
+                "attestKey": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Biçim örneği 4: "
+            },
+            {
+              "type": "citation",
+              "attrs": {
+                "citationId": "0192f1c2-7a4b-7c3e-9d10-2b3c4d5e6f13",
+                "raw": "Örnek künye 4",
+                "sourceRef": null,
+                "status": "out_of_context",
+                "attestKey": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Biçim örneği 5: "
+            },
+            {
+              "type": "citation",
+              "attrs": {
+                "citationId": "0192f1c2-7a4b-7c3e-9d10-2b3c4d5e6f14",
+                "raw": "Örnek künye 5",
+                "sourceRef": "0192f1c2-7a4b-7c3e-9d10-2b3c4d5e6f34",
+                "status": "out_of_coverage",
+                "attestKey": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Biçim örneği 6: "
+            },
+            {
+              "type": "citation",
+              "attrs": {
+                "citationId": "0192f1c2-7a4b-7c3e-9d10-2b3c4d5e6f15",
+                "raw": "Örnek künye 6",
+                "sourceRef": null,
+                "status": "source_unavailable",
+                "attestKey": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Biçim örneği 7: "
+            },
+            {
+              "type": "citation",
+              "attrs": {
+                "citationId": "0192f1c2-7a4b-7c3e-9d10-2b3c4d5e6f16",
+                "raw": "Örnek künye 7",
+                "sourceRef": "0192f1c2-7a4b-7c3e-9d10-2b3c4d5e6f36",
+                "status": "not_found",
+                "attestKey": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Biçim örneği 8: "
+            },
+            {
+              "type": "citation",
+              "attrs": {
+                "citationId": "0192f1c2-7a4b-7c3e-9d10-2b3c4d5e6f17",
+                "raw": "Örnek künye 8",
+                "sourceRef": null,
+                "status": "attested",
+                "attestKey": "ornek-anahtar"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "scenario": "default",
+  "task": "chat",
+  "delayMs": 15,
+  "steps": [
+    {
+      "parts": [
+        {
+          "type": "text-delta",
+          "delta": "Bu bir **simülasyon** ya"
+        },
+        {
+          "type": "text-delta",
+          "delta": "nıtıdır: gerçek yapay ze"
+        },
+        {
+          "type": "text-delta",
+          "delta": "kâ çağrılmadı.\n\nSorunuzu"
+        },
+        {
+          "type": "text-delta",
+          "delta": " aldım. Gerçek yanıt içi"
+        },
+        {
+          "type": "text-delta",
+          "delta": "n geliştirme ortamında `"
+        },
+        {
+          "type": "text-delta",
+          "delta": "DEV_REAL_LLM=deepseek` i"
+        },
+        {
+          "type": "text-delta",
+          "delta": "le gerçek sağlayıcıyı aç"
+        },
+        {
+          "type": "text-delta",
+          "delta": "abilir ya da mesajın baş"
+        },
+        {
+          "type": "text-delta",
+          "delta": "ına `/senaryo chat_tool_"
+        },
+        {
+          "type": "text-delta",
+          "delta": "search` yazarak araçlı a"
+        },
+        {
+          "type": "text-delta",
+          "delta": "kışı deneyebilirsiniz."
+        }
+      ],
+      "finishReason": "stop",
+      "usage": {
+        "inputTokens": 3200,
+        "outputTokens": 120
+      }
+    }
+  ]
+}

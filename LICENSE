@@ -1,0 +1,86 @@
+E.D.A. HUKUK KAYNAK GÖRÜNTÜLEME VE DEĞERLENDİRME LİSANSI (Sürüm 1.0)
+E.D.A. Hukuk Source-Available Evaluation License (v1.0) — Türkçe metin esastır; İngilizce özet için en alta bakın.
+
+Telif Hakkı (c) 2026 Mustafa Kemal Çıngıl. Tüm hakları saklıdır.
+
+Bu bir açık kaynak (open source) lisansı DEĞİLDİR. Kaynak kod, incelenebilmesi için görünür kılınmıştır;
+aşağıda açıkça verilen izinler dışındaki her hak telif hakkı sahibine aittir.
+
+1. TANIMLAR
+   "Yazılım": bu depodaki kaynak kod, betikler, yapılandırmalar, belgeler, tasarımlar, görseller, istemler
+   (prompt), veri şemaları ve bunların her türlü kopyası, bölümü veya işlenmesi.
+   "Telif Hakkı Sahibi": Mustafa Kemal Çıngıl.
+   "Siz": Yazılıma erişen gerçek veya tüzel kişi.
+   "Ticari Kullanım": doğrudan veya dolaylı olarak gelir, ticari avantaj, ücret, abonelik, reklam, danışmanlık,
+   hizmet sunumu veya bir işletmenin, kurumun, büronun ya da şirketin faaliyetlerinde (kendi iç işleri dahil)
+   kullanım; ücretsiz de olsa üçüncü kişilere hizmet olarak sunulan her kullanım.
+
+2. VERİLEN İZİNLER (yalnız şunlar)
+   2.1. Kodu ve belgeleri okumak, incelemek, öğrenme ve değerlendirme amacıyla çalışmak.
+   2.2. Yazılımı kendi bilgisayarınızda, yalnızca kişisel, ticari olmayan değerlendirme ve öğrenme amacıyla,
+        değiştirmeden kurup çalıştırmak (örneğin README'deki yerel geliştirme yığını).
+   2.3. GitHub'ın kullanım şartlarının sizin için öngördüğü ölçüde depoyu GitHub hesabınızda görüntülemek ve
+        fork etmek. Bu, fork'un başka bir yerde yayımlanmasına veya 3. maddedeki işlere izin vermez.
+   2.4. Eğitim veya değerlendirme amacıyla kısa alıntılar yapmak; alıntıda "Mustafa Kemal Çıngıl, E.D.A. Hukuk"
+        açıkça belirtilmelidir.
+
+3. YASAKLAR
+   Telif Hakkı Sahibinin önceden verilmiş YAZILI izni olmadan:
+   3.1. Ticari Kullanım yasaktır.
+   3.2. Yazılımın veya herhangi bir bölümünün (kod, mimari yapısı, veri şeması, istemler, tasarım, metin) başka
+        bir proje, ürün, hizmet, kütüphane, şablon veya eserde kullanılması, kopyalanması, uyarlanması,
+        çevrilmesi ya da bunlardan türev eser oluşturulması yasaktır. Yazılımın, benzer bir ürün geliştirmek
+        için kaynak/referans olarak kullanılması bu kapsamdadır.
+   3.3. Yazılımın kopyalanması, yeniden dağıtılması, yayımlanması, satılması, kiralanması, alt lisanslanması veya
+        kamuya açık bir depo, paket, imaj ya da arşiv olarak sunulması yasaktır.
+   3.4. Yazılımın veya bölümlerinin yapay zekâ/makine öğrenmesi modellerinin eğitimi, ince ayarı veya
+        veri seti oluşturulması amacıyla toplanması ve kullanılması yasaktır.
+   3.5. Yazılımın canlı bir hizmet olarak (SaaS, API, barındırılan çalışma alanı) üçüncü kişilere sunulması
+        yasaktır.
+   3.6. Telif Hakkı Sahibine ait atıf, telif ve lisans bildirimlerinin kaldırılması veya değiştirilmesi yasaktır.
+
+4. PROJE ADI VE İŞARETLER
+   "E.D.A. Hukuk", "EDA Hukuk", "Expert Digital Assistant", logolar, tasarım
+   dili ve ürünle ilişkilendirilen diğer ad ve işaretlerin kullanımına ilişkin haklar Telif Hakkı Sahibine
+   aittir (bu adlar tescilli marka olmak zorunda değildir; haksız rekabet ve kanunun tanıdığı diğer korumalar
+   saklıdır). Bu lisans bunları kullanma, benzerini kullanma veya ürününüzle ilişkilendirme hakkı vermez. Üçüncü
+   taraf bileşenlerin adları ilgili sahiplerine aittir.
+
+5. ATIF
+   İzin verilen her kullanımda "Mustafa Kemal Çıngıl" adı ile bu lisans ve NOTICE.md bildirimi korunmalıdır.
+
+6. FİKİRLER
+   Bu lisans fikirleri, yöntemleri, genel hukuki-teknik kavramları ve kamuya açık bilgileri korumaz; yalnız
+   Yazılımın özgün ifadesini (kod, metin, tasarım, yapı ve seçim/düzenlemesini) kapsar. Bu depodaki
+   üçüncü taraf bileşenler kendi lisanslarına tabidir; bkz. THIRD_PARTY_NOTICES.md.
+
+7. SONA ERME
+   Bu lisansın herhangi bir hükmünü ihlal ettiğinizde izinleriniz bildirim gerekmeksizin derhâl sona erer;
+   elinizdeki tüm kopyaları silmeniz gerekir. İhlal, Telif Hakkı Sahibinin kanundan doğan haklarını ve
+   tazminat taleplerini ortadan kaldırmaz.
+
+8. SORUMLULUĞUN REDDİ
+   Yazılım, "olduğu gibi" sunulur; açık veya örtülü hiçbir taahhüt verilmez. Yazılım hukuki danışmanlık veya
+   hukuki görüş değildir; üretim ortamında, gerçek müvekkil verisiyle veya hukuki iş akışlarında kullanım için
+   hazırlanmış bir ürün olarak sunulmamaktadır. Telif Hakkı Sahibi, Yazılımın kullanımından doğan doğrudan veya
+   dolaylı hiçbir zarardan, kanunun izin verdiği azami ölçüde, sorumlu değildir.
+
+9. İZİN VE TİCARİ LİSANS
+   Bu lisansın kapsamadığı kullanımlar için yazılı izin veya ticari lisans, yalnızca Telif Hakkı Sahibinden
+   alınabilir. İletişim: GitHub üzerinden (@MustafaKemal0146).
+
+10. UYGULANACAK HUKUK
+   Bu lisans Türkiye Cumhuriyeti hukukuna tabidir. Bir hükmün geçersiz sayılması diğerlerini etkilemez.
+
+---------------------------------------------------------------------------------------------------------------
+ENGLISH SUMMARY (non-binding convenience text; the Turkish text above governs)
+Copyright (c) 2026 Mustafa Kemal Çıngıl. All rights reserved. This is a source-available license, not an open
+source license. You MAY read the code and run it unmodified on your own computer for personal, non-commercial
+evaluation and learning. You MAY NOT, without prior written permission: use it commercially (including internal
+business use or offering it as a service); copy, adapt, translate or reuse any part of the code, architecture,
+schemas, prompts or design in another project or product, or use it as a reference to build a similar
+product; redistribute or republish it; use it to train or fine-tune AI models or build datasets; or use the names
+"E.D.A. Hukuk", "Expert Digital Assistant", the logo or the domain. Ideas themselves are not protected; the
+license covers the original expression of the software. Third-party components remain under their own licenses.
+The software is provided as is, is not legal advice, and is not intended for production use or real client data.
+Licensing contact: via GitHub (@MustafaKemal0146)

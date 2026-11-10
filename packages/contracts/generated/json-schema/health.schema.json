@@ -1,0 +1,23 @@
+{
+  "$comment": "URETILDI - elle duzenlemeyin; kaynak: packages/contracts/src/doc-engine/health.ts",
+  "$id": "https://schemas.eda.internal/health.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "status": {
+      "enum": [
+        "ok"
+      ],
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "version"
+  ],
+  "title": "HealthResponse",
+  "type": "object"
+}

@@ -1,0 +1,263 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PM0001",
+        "rev": 1,
+        "role": "courtHeader"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "ÖRNEK NÖBETÇİ ASLİYE HUKUK MAHKEMESİ'NE",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PM0002",
+        "rev": 1,
+        "role": "partiesGrid"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "DAVACI\t: Örnek Kişi A"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "DAVALI\t: Örnek Kişi B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PM0003",
+        "rev": 1,
+        "role": "subjectLine"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "KONU\t: Örnek alacak talebi."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PM0004",
+        "rev": 1,
+        "role": "numberedExplanations"
+      },
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "AÇIKLAMALAR"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Örnek olay anlatımı."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PM0005",
+        "rev": 1,
+        "role": "legalGrounds"
+      },
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "HUKUKİ SEBEPLER"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "İlgili mevzuat hükümleri."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PM0006",
+        "rev": 1,
+        "role": "evidenceList"
+      },
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "DELİLLER"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Örnek belge."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PM0007",
+        "rev": 1,
+        "role": "resultAndRequest"
+      },
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "SONUÇ VE İSTEM"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Yukarıda arz ve izah edilen nedenlerle; davanın kabulüne karar verilmesini saygılarımızla arz ve talep ederiz."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PM0008",
+        "rev": 1,
+        "role": "attorneySignature"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Davacı Vekili"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Av. Örnek Avukat"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "İmza – Kaşe"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

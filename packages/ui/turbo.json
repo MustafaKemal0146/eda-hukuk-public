@@ -1,0 +1,16 @@
+{
+  "$schema": "https://turborepo.dev/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "test": {
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "$TURBO_ROOT$/apps/web/src/**",
+        "$TURBO_ROOT$/apps/admin/src/**",
+        "$TURBO_ROOT$/plans/00-baslangic/001-kesin-kurallar-ve-yasaklar.md",
+        "$TURBO_ROOT$/plans/00-baslangic/003-sozluk.md",
+        "$TURBO_ROOT$/plans/05-frontend/**"
+      ]
+    }
+  }
+}

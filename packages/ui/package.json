@@ -1,0 +1,60 @@
+{
+  "name": "@eda/ui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./ai-elements": "./src/ai-elements/index.ts",
+    "./icons": "./src/icons/index.ts",
+    "./tokens": "./src/tokens/index.ts",
+    "./tokens/tokens.css": "./src/tokens/tokens.css",
+    "./styles/theme.css": "./src/styles/theme.css",
+    "./styles/base.css": "./src/styles/base.css",
+    "./styles/paper.css": "./src/styles/paper.css",
+    "./showcase": "./src/showcase/showcase.tsx"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "gen:tokens": "node scripts/gen-tokens.ts",
+    "check:ui-tokens": "node scripts/check-ui-tokens.mjs",
+    "test:e2e": "vitest run --config vitest.browser.config.ts"
+  },
+  "dependencies": {
+    "@base-ui/react": "catalog:",
+    "@eda/contracts": "workspace:*",
+    "clsx": "catalog:",
+    "lucide-react": "catalog:"
+  },
+  "peerDependencies": {
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@eda/config": "workspace:*",
+    "@fontsource-variable/geist": "catalog:",
+    "@fontsource-variable/geist-mono": "catalog:",
+    "@fontsource-variable/source-serif-4": "catalog:",
+    "@formepdf/fonts-standard": "catalog:",
+    "@tailwindcss/postcss": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react",
+    "@types/react-dom": "catalog:react",
+    "@vitest/browser-playwright": "catalog:",
+    "axe-core": "catalog:",
+    "fontkit": "catalog:",
+    "playwright": "catalog:",
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "vitest-browser-react": "catalog:",
+    "wawoff2": "catalog:"
+  }
+}

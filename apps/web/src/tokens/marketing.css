@@ -1,0 +1,137 @@
+/*
+ * Tanıtım sayfası (kök alan adı, "Ürün Sahnesi" tasarımı) belirteçleri.
+ * Sahibin onayladığı statik prototipin paleti: Gece #0A0E15 (zemin) · Grafit #141A25 (yüzey) ·
+ * Çelik #252D3C (çizgi) · Kireç #ECE8E1 (metin) · Şampanya #D8BE8A (vurgu/ışık) · Adaçayı #86C9A4
+ * (yalnız "Doğrulandı") · Kehribar #E5B27A (bekleyen doğrulama). Sayfa uygulama kabuğundan bağımsız,
+ * her zaman koyudur; uygulama tokenları (`--eda-*`) bu sayfada yalnız arayüz maketinde kullanılır.
+ *
+ * 051 §4.11 gereği ham renk, gradyan ve gölge değerleri yalnız bu belirteç dosyasındadır;
+ * sayfa stilleri (features/marketing/home/*.css) yalnız `var(--mk-*)` başvurur. Dosya
+ * `src/tokens/` altında olduğu için check-ui-tokens taraması dışındadır (tokens.css ile aynı kural).
+ */
+
+.mk {
+  color-scheme: dark;
+
+  /* ---- düz renkler ---- */
+  --mk-bg: #0a0e15;
+  --mk-bg-2: #0d121b;
+  --mk-surface: #141a25;
+  --mk-surface-2: #1a2130;
+  --mk-line: #252d3c;
+  --mk-text: #ece8e1;
+  --mk-muted: #a3abb9;
+  --mk-dim: #8c95a5;
+  --mk-gold: #d8be8a;
+  --mk-gold-2: #b99b63;
+  --mk-gold-light: #f0dcb2;
+  --mk-on-gold: #15120c;
+  --mk-ok: #86c9a4;
+  --mk-warn: #e5b27a;
+  --mk-paper-flash: #fff3c4;
+
+  /* ---- saydam tonlar ---- */
+  --mk-line-soft: rgba(236, 232, 225, 0.07);
+  --mk-text-a03: rgba(236, 232, 225, 0.03);
+  --mk-text-a025: rgba(236, 232, 225, 0.025);
+  --mk-text-a045: rgba(236, 232, 225, 0.045);
+  --mk-text-a12: rgba(236, 232, 225, 0.12);
+  --mk-text-a18: rgba(236, 232, 225, 0.18);
+  --mk-gold-soft: rgba(216, 190, 138, 0.14);
+  --mk-gold-a06: rgba(216, 190, 138, 0.06);
+  --mk-gold-a08: rgba(216, 190, 138, 0.08);
+  --mk-gold-a16: rgba(216, 190, 138, 0.16);
+  --mk-gold-a2: rgba(216, 190, 138, 0.2);
+  --mk-gold-a22: rgba(216, 190, 138, 0.22);
+  --mk-gold-a35: rgba(216, 190, 138, 0.35);
+  --mk-gold-a4: rgba(216, 190, 138, 0.4);
+  --mk-gold-a45: rgba(216, 190, 138, 0.45);
+  --mk-gold-a55: rgba(216, 190, 138, 0.55);
+  --mk-ok-soft: rgba(134, 201, 164, 0.14);
+  --mk-ok-a4: rgba(134, 201, 164, 0.4);
+  --mk-ok-a45: rgba(134, 201, 164, 0.45);
+  --mk-ok-a6: rgba(134, 201, 164, 0.6);
+  --mk-warn-soft: rgba(229, 178, 122, 0.13);
+  --mk-warn-a35: rgba(229, 178, 122, 0.35);
+  --mk-bg-a5: rgba(10, 14, 21, 0.5);
+  --mk-bg-a6: rgba(10, 14, 21, 0.6);
+  --mk-nav-bg: rgba(10, 14, 21, 0.94);
+
+  /* ---- gradyanlar ---- */
+  --mk-grad-gold-btn: linear-gradient(180deg, #e3cb9b, #d8be8a 55%, #cdb07a);
+  --mk-grad-title: linear-gradient(180deg, #f4f1eb 30%, #b9b4aa);
+  --mk-grad-title-em: linear-gradient(180deg, #f0dcb2, #d8be8a 60%, #b49860);
+  --mk-grad-mark:
+    linear-gradient(135deg, transparent 46%, #0a0e15 46% 54%, transparent 54%),
+    linear-gradient(160deg, #ead3a4, #b99b63);
+  --mk-grad-card: linear-gradient(180deg, rgba(26, 33, 48, 0.7), rgba(20, 26, 37, 0.55));
+  --mk-grad-chain:
+    radial-gradient(80% 120% at 50% 0%, rgba(216, 190, 138, 0.06), transparent 60%),
+    linear-gradient(180deg, #111723, #0d121b);
+  --mk-grad-closing: linear-gradient(180deg, #121927, #0c1119);
+  --mk-grad-src: linear-gradient(180deg, #131a26, #0f141e);
+  --mk-grad-step-on: linear-gradient(90deg, rgba(216, 190, 138, 0.08), rgba(216, 190, 138, 0));
+  --mk-grad-wire: linear-gradient(90deg, #b99b63, #f0dcb2);
+  --mk-grad-scan: linear-gradient(90deg, transparent, #d8be8a, transparent);
+  --mk-grad-hint: linear-gradient(#d8be8a, transparent);
+  --mk-grid-lines:
+    linear-gradient(rgba(236, 232, 225, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(236, 232, 225, 0.045) 1px, transparent 1px);
+  --mk-grid-glow-lines:
+    linear-gradient(rgba(216, 190, 138, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(216, 190, 138, 0.5) 1px, transparent 1px);
+  --mk-mask-grid: radial-gradient(ellipse 70% 60% at 50% 20%, #000 20%, transparent 75%);
+  --mk-mask-glow: radial-gradient(
+    220px circle at var(--mk-gx, -400px) var(--mk-gy, -400px),
+    rgba(0, 0, 0, 0.55),
+    transparent 70%
+  );
+  --mk-mask-ring: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  --mk-warm-light: radial-gradient(
+    closest-side,
+    rgba(216, 190, 138, 0.13),
+    rgba(216, 190, 138, 0.04) 55%,
+    transparent
+  );
+  --mk-glow-card: radial-gradient(
+    360px circle at var(--mk-x, 50%) var(--mk-y, 50%),
+    rgba(216, 190, 138, 0.11),
+    transparent 60%
+  );
+  --mk-glow-ring: radial-gradient(
+    240px circle at var(--mk-x, 50%) var(--mk-y, 50%),
+    rgba(216, 190, 138, 0.55),
+    transparent 65%
+  );
+  --mk-principle-glow: radial-gradient(closest-side, rgba(216, 190, 138, 0.08), transparent);
+  --mk-closing-light: radial-gradient(closest-side, rgba(216, 190, 138, 0.16), transparent);
+
+  /* ---- gölgeler ---- */
+  --mk-shadow-gold-btn:
+    0 1px 0 rgba(255, 255, 255, 0.45) inset, 0 10px 30px -10px rgba(216, 190, 138, 0.55);
+  --mk-shadow-gold-btn-hover:
+    0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 14px 44px -10px rgba(216, 190, 138, 0.75);
+  --mk-shadow-mark: 0 0 18px -2px rgba(216, 190, 138, 0.55);
+  --mk-shadow-device:
+    0 0 0 1px rgba(0, 0, 0, 0.5), 0 60px 140px -30px rgba(0, 0, 0, 0.9),
+    0 0 140px -30px rgba(216, 190, 138, 0.2);
+  --mk-shadow-node-lit: 0 0 40px -14px rgba(216, 190, 138, 0.5);
+  --mk-shadow-node-ok: 0 0 40px -14px rgba(134, 201, 164, 0.5);
+  --mk-shadow-bigk: 0 0 0 6px rgba(216, 190, 138, 0.08), 0 0 30px -4px rgba(216, 190, 138, 0.6);
+  --mk-shadow-wire: 0 0 12px #d8be8a;
+  --mk-shadow-cursor: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6));
+  --mk-chip-ok-ring-0: 0 0 0 0 rgba(34, 197, 94, 0.55);
+  --mk-chip-ok-ring-1: 0 0 0 8px rgba(34, 197, 94, 0);
+
+  /* ---- yazı aileleri ---- */
+  --mk-sans: var(--font-mk-sans-latin), var(--font-mk-sans-ext), system-ui, "Segoe UI", sans-serif;
+  --mk-serif:
+    var(--font-mk-serif-latin), var(--font-mk-serif-ext), "Iowan Old Style", Georgia, serif;
+  --mk-mono: var(--eda-font-mono);
+
+  /* ---- ölçü ve hareket ---- */
+  --mk-g: clamp(16px, 4vw, 56px);
+  --mk-nav-h: 68px;
+  --mk-r: 14px;
+  --mk-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}

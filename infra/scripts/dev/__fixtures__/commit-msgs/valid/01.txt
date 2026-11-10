@@ -1,0 +1,1 @@
+feat(kvkk): IBAN kalıbı maskeleme sözlüğüne eklendi

@@ -1,0 +1,137 @@
+{
+  "$comment": "ÜRETİLMİŞ DOSYA — elle düzenleme. Kaynak: tokens.source.json chart (051 §4.10). Slot sırası sabittir.",
+  "surface": {
+    "light": {
+      "token": "surface",
+      "value": "#FFFFFF"
+    },
+    "dark": {
+      "token": "surface",
+      "value": "#111114"
+    }
+  },
+  "slots": [
+    {
+      "token": "chart-1",
+      "hue": "mavi",
+      "light": "#2a78d6",
+      "dark": "#3987e5"
+    },
+    {
+      "token": "chart-2",
+      "hue": "turuncu",
+      "light": "#eb6834",
+      "dark": "#d95926"
+    },
+    {
+      "token": "chart-3",
+      "hue": "su yeşili",
+      "light": "#1baf7a",
+      "dark": "#199e70"
+    },
+    {
+      "token": "chart-4",
+      "hue": "sarı",
+      "light": "#eda100",
+      "dark": "#c98500"
+    },
+    {
+      "token": "chart-5",
+      "hue": "eflatun",
+      "light": "#e87ba4",
+      "dark": "#d55181"
+    },
+    {
+      "token": "chart-6",
+      "hue": "yeşil",
+      "light": "#008300",
+      "dark": "#008300"
+    },
+    {
+      "token": "chart-7",
+      "hue": "mor",
+      "light": "#4a3aa7",
+      "dark": "#9085e9"
+    },
+    {
+      "token": "chart-8",
+      "hue": "kırmızı",
+      "light": "#e34948",
+      "dark": "#e66767"
+    }
+  ],
+  "helpers": [
+    {
+      "token": "chart-grid",
+      "light": "#E6E6EA",
+      "dark": "#26262B",
+      "use": "Dekoratif, ince 1 px"
+    },
+    {
+      "token": "chart-axis",
+      "light": "#63636D",
+      "dark": "#8E8E98",
+      "use": "Eksen metni (`text-subtle`)"
+    }
+  ],
+  "sequential": [
+    {
+      "token": "chart-seq-100",
+      "value": "#cde2fb"
+    },
+    {
+      "token": "chart-seq-200",
+      "value": "#9ec5f4"
+    },
+    {
+      "token": "chart-seq-300",
+      "value": "#6da7ec"
+    },
+    {
+      "token": "chart-seq-400",
+      "value": "#3987e5"
+    },
+    {
+      "token": "chart-seq-500",
+      "value": "#256abf"
+    },
+    {
+      "token": "chart-seq-600",
+      "value": "#184f95"
+    },
+    {
+      "token": "chart-seq-700",
+      "value": "#0d366b"
+    }
+  ],
+  "sequentialNote": "Tek ton, açıktan koyuya; büyüklük kodlaması. İki temada aynı değerler; koyu yüzeyde en açık adım (chart-seq-100) kullanılmaz.",
+  "thresholds": {
+    "adjacentCvdMin": 8,
+    "adjacentCvdSecondaryBandMin": 6,
+    "normalMin": 15,
+    "darkSurfaceContrastMin": 3,
+    "allPairsSlotCount": 3
+  },
+  "documented": {
+    "light": {
+      "adjacentCvdWorst": 9.1,
+      "normalWorst": 19.6,
+      "firstThreeCvdWorst": 9.2,
+      "firstThreeNormalWorst": 24,
+      "below3to1": ["chart-3", "chart-4", "chart-5"]
+    },
+    "dark": {
+      "adjacentCvdWorst": 8.4,
+      "normalWorst": 19.3,
+      "firstThreeCvdWorst": 9.4,
+      "firstThreeNormalWorst": 20.9,
+      "below3to1": []
+    }
+  },
+  "rules": [
+    "Sabit slot sırası; dokuzuncu seri üretilmez (Diğer).",
+    "Durum renkleri (success, warning, danger, info) seri rengi olarak kullanılmaz.",
+    "Açık temada chart-3, chart-4, chart-5 yüzeyle 3:1 altındadır: etiket veya tablo görünümü zorunlu.",
+    "Her serinin her seriyle yan yana geldiği grafiklerde yalnız ilk üç slot kullanılır."
+  ]
+}

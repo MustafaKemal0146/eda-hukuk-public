@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "recorded_at": "2026-10-10T18:56:38.320Z",
+    "method": "POST",
+    "url": "https://normkararlarbilgibankasi.anayasa.gov.tr/api/core/public/search",
+    "request_body": "{\"query\":\"qxzvbnwmrtpl\",\"page\":\"0\",\"size\":\"3\"}",
+    "status": 200,
+    "synthetic": false,
+    "note": "Sonuçsuz arama, karar türü süzgeci yok"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json"
+    },
+    "body": "{\"total\":0,\"page\":1,\"data\":[],\"page_size\":3}"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "corpus-yargitay-ceza",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. Yargıtay ceza: temyiz edenler künye bloğunda, gereği düşünüldü, sonuç, karşı oy.",
+  "courtType": "yargitay",
+  "lines": [
+    "T.C. YARGITAY",
+    "ÖRNEK 3. CEZA DAİRESİ",
+    "Temyiz Edenler : Örnek Sanık",
+    "İNCELENEN KARARIN",
+    "Örnek Ağır Ceza Mahkemesi kararı.",
+    "TEMYİZ İSTEMİNİN ÖZETİ",
+    "Sanık müdafii hükmün bozulmasını istemiştir.",
+    "GEREĞİ DÜŞÜNÜLDÜ:",
+    "Örnek gerekçe: delillerin takdirinde hata yoktur.",
+    "SONUÇ: Hükmün onanmasına oy çokluğuyla karar verildi.",
+    "KARŞI OY",
+    "Çoğunluk görüşüne katılmıyorum."
+  ],
+  "roles": ["kunye", "istem", "taraf_iddiasi", "gerekce", "hukum", "karsi_oy"],
+  "outcome": "patterned",
+  "gerekceExcludes": ["bozulmasını istemiştir"]
+}

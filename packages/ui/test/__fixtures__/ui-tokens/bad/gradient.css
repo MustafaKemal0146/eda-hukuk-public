@@ -1,0 +1,4 @@
+/* Negatif fixture (KK-P05-3): gradyan. */
+.fixture {
+  background-image: linear-gradient(var(--eda-bg), var(--eda-surface));
+}

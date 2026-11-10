@@ -1,0 +1,180 @@
+{
+  "$comment": "URETILDI - elle duzenlemeyin; kaynak: packages/contracts/src/doc-engine/export.ts",
+  "$defs": {
+    "DocEngineError": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "enum": [
+            "unauthorized",
+            "invalid_docast",
+            "forbidden_phrase",
+            "payload_too_large",
+            "not_found",
+            "export_failed",
+            "extract_failed",
+            "timeout"
+          ],
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ],
+      "title": "DocEngineError",
+      "type": "object"
+    },
+    "ExportReport": {
+      "additionalProperties": false,
+      "properties": {
+        "degraded": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "count": {
+                "maximum": 9007199254740991,
+                "minimum": -9007199254740991,
+                "type": "integer"
+              },
+              "feature": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "feature",
+              "count"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "docEngineVersion": {
+          "type": "string"
+        },
+        "gotenbergVersion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pageCount": {
+          "anyOf": [
+            {
+              "maximum": 9007199254740991,
+              "minimum": -9007199254740991,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "degraded",
+        "pageCount",
+        "docEngineVersion",
+        "gotenbergVersion"
+      ],
+      "title": "ExportReport",
+      "type": "object"
+    },
+    "ExportRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "docAst": {
+          "$ref": "docast.schema.json"
+        },
+        "format": {
+          "enum": [
+            "udf",
+            "docx",
+            "pdf"
+          ],
+          "type": "string"
+        },
+        "jobId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "options": {
+          "additionalProperties": false,
+          "properties": {
+            "fixedTimestamp": {
+              "anyOf": [
+                {
+                  "format": "date-time",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "pageNumbers": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "pageNumbers",
+            "fixedTimestamp"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "jobId",
+        "format",
+        "docAst",
+        "options"
+      ],
+      "title": "ExportRequest",
+      "type": "object"
+    },
+    "ExportResult": {
+      "additionalProperties": false,
+      "properties": {
+        "format": {
+          "enum": [
+            "udf",
+            "docx",
+            "pdf"
+          ],
+          "type": "string"
+        },
+        "jobId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "report": {
+          "$ref": "#/$defs/ExportReport"
+        },
+        "sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "sizeBytes": {
+          "maximum": 9007199254740991,
+          "minimum": -9007199254740991,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "jobId",
+        "format",
+        "sizeBytes",
+        "sha256",
+        "report"
+      ],
+      "title": "ExportResult",
+      "type": "object"
+    }
+  },
+  "$id": "https://schemas.eda.internal/export.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExportSchemas"
+}

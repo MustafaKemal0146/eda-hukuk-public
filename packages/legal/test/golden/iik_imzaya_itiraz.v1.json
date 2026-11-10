@@ -1,0 +1,29 @@
+{
+  "ruleCode": "iik_imzaya_itiraz",
+  "ruleVersion": 1,
+  "source": "083 §9 tablosu; beklenen son gün tablodan aynen, stepKinds/warnings §5.2 algoritma izinden elle (P22.3). Hukuk onayı bekliyor (AS-0205).",
+  "cases": [
+    {
+      "id": "G14",
+      "title": "Pazara rastlayan son gün",
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2026-06-16",
+        "serviceMethod": "postal",
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-06-22",
+        "dueAt": "2026-06-22T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period", "weekend_shift"],
+        "warnings": []
+      },
+      "rationale": "5 gün -> 21.06 Pazar -> tatili takip eden gün (İİK m.19)",
+      "reviewedBy": null
+    }
+  ]
+}

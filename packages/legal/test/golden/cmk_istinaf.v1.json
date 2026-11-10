@@ -1,0 +1,51 @@
+{
+  "ruleCode": "cmk_istinaf",
+  "ruleVersion": 1,
+  "source": "083 §9 tablosu; beklenen son gün tablodan aynen, stepKinds/warnings §5.2 algoritma izinden elle (P22.3). Hukuk onayı bekliyor (AS-0205).",
+  "cases": [
+    {
+      "id": "G16",
+      "title": "CMK adli tatil uzaması",
+      "input": {
+        "startEvent": "pronouncement",
+        "eventDate": "2026-07-15",
+        "serviceMethod": null,
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-09-03",
+        "dueAt": "2026-09-03T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": true,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period", "recess_extension"],
+        "warnings": []
+      },
+      "rationale": "ham 22.07 adli tatil içinde; 31.08 + 3 gün (CMK m.331/4) (T-4)",
+      "reviewedBy": null
+    },
+    {
+      "id": "G18",
+      "title": "Adli tatil dışında CMK süresi",
+      "input": {
+        "startEvent": "pronouncement",
+        "eventDate": "2026-07-06",
+        "serviceMethod": null,
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-07-13",
+        "dueAt": "2026-07-13T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period"],
+        "warnings": []
+      },
+      "rationale": "7 gün; tatil dışı",
+      "reviewedBy": null
+    }
+  ]
+}

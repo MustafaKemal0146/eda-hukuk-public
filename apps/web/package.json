@@ -1,0 +1,42 @@
+{
+  "name": "@eda/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev --port 3000",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@ai-sdk/react": "catalog:",
+    "@base-ui/react": "catalog:",
+    "@eda/api-client": "workspace:*",
+    "@eda/contracts": "workspace:*",
+    "@eda/editor": "workspace:*",
+    "@eda/legal": "workspace:*",
+    "@eda/ui": "workspace:*",
+    "@tailwindcss/postcss": "catalog:",
+    "@tiptap/core": "catalog:tiptap",
+    "@tiptap/pm": "catalog:tiptap",
+    "@tiptap/react": "catalog:tiptap",
+    "ai": "catalog:",
+    "next": "catalog:react",
+    "next-intl": "catalog:",
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "streamdown": "catalog:",
+    "tailwindcss": "catalog:",
+    "uqr": "catalog:"
+  },
+  "devDependencies": {
+    "@eda/config": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react",
+    "@types/react-dom": "catalog:react",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

@@ -1,0 +1,824 @@
+# E.D.A. Hukuk — compose tabanı (070 §3-§4). Ortam-nötr: port yayını, kaynak sınırı ve restart
+# politikası ortam katmanlarındadır (dev/test/prod/beta). Adlar, portlar ve sırlar 002'den.
+# Proje dizini: infra/compose (göreli yollar buna göre). Doğrudan çağırmayın: make / infra/scripts/dev/dc.sh.
+name: eda
+
+x-hardened: &hardened
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: ["no-new-privileges:true"]
+  init: true
+  pids_limit: 256
+  logging: { driver: json-file, options: { max-size: "10m", max-file: "5" } }
+
+x-hc: &hc { interval: 10s, timeout: 3s, retries: 5, start_period: 20s }
+
+x-no-proxy: &no-proxy "localhost,127.0.0.1,api,api-admin,web,admin,worker,jobs,yargi-mcp,doc-engine,gotenberg,postgres,valkey,valkey-cache,embed-query,embed-batch,rerank,objstore,mailpit,clamav,backup"
+
+x-env-common: &env-common
+  EDA_ENV: ${EDA_ENV:?EDA_ENV zorunlu}
+  LOG_LEVEL: ${LOG_LEVEL:-info}
+  TZ: UTC
+  OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT:-}
+  GLITCHTIP_DSN: ${GLITCHTIP_DSN:-}
+
+x-env-node: &env-node
+  <<: *env-common
+  NODE_ENV: ${NODE_ENV:-production}
+  SECRETS_DIR: /run/secrets
+
+x-env-urls: &env-urls
+  APP_DOMAIN: ${APP_DOMAIN:?}
+  APP_URL: ${APP_URL:?}
+  ADMIN_URL: ${ADMIN_URL:?}
+  MARKETING_URL: ${MARKETING_URL:?}
+
+x-env-proxy-llm: &env-proxy-llm
+  HTTPS_PROXY: http://egress-llm:4750
+  HTTP_PROXY: http://egress-llm:4750
+  NODE_USE_ENV_PROXY: "1"
+  NO_PROXY: *no-proxy
+
+x-env-s3: &env-s3
+  S3_ENDPOINT: http://objstore:8333
+  S3_REGION: tr-1
+  S3_BUCKET_FILES: eda-files
+  S3_BUCKET_EXPORTS: eda-exports
+  S3_ACCESS_KEY_ID_FILE: /run/secrets/s3_access_key_id
+  S3_SECRET_ACCESS_KEY_FILE: /run/secrets/s3_secret_access_key
+
+x-env-embed: &env-embed
+  EMBED_PROVIDER: ${EMBED_PROVIDER:-tei}
+  EMBED_QUERY_URL: http://embed-query:8080
+  TEI_API_KEY_FILE: /run/secrets/tei_api_key
+  EMBED_MODEL_ID: BAAI/bge-m3
+  EMBED_MODEL_REVISION: ${EMBED_MODEL_REVISION:?}
+  EMBED_DIM: "1024"
+  RERANK_ENABLED: ${RERANK_ENABLED:-false}
+  RERANK_URL: http://rerank:8081
+
+x-env-llm: &env-llm
+  MOCK_LLM: ${MOCK_LLM:-false}
+  DEV_REAL_LLM: ${DEV_REAL_LLM:-}
+
+x-env-valkey: &env-valkey
+  VALKEY_URL: redis://valkey:6379
+  VALKEY_CACHE_URL: redis://valkey-cache:6379
+
+x-env-iyzico: &env-iyzico
+  IYZICO_BASE_URL: ${IYZICO_BASE_URL:-https://api.iyzipay.com}
+  IYZICO_API_KEY_FILE: /run/secrets/iyzico_api_key
+  IYZICO_SECRET_KEY_FILE: /run/secrets/iyzico_secret_key
+
+x-egress: &egress
+  <<: *hardened
+  build: { context: ../.., dockerfile: infra/docker/egress.Dockerfile }
+  image: ${EDA_IMAGE_PREFIX:-eda}/egress:${EDA_TAG:-dev}
+  user: "10002:10002"
+  pids_limit: 128
+  stop_grace_period: 10s
+  healthcheck: { <<: *hc, test: ["CMD", "nc", "-z", "127.0.0.1", "4750"] }
+
+x-valkey: &valkey
+  <<: *hardened
+  image: valkey/valkey:9.1.2-alpine@sha256:48332870af354a799964c0012ae1194a0bf2bf894eb508f945810596dc2d8d11
+  user: "999:999"
+  entrypoint: ["/opt/eda/valkey-entrypoint.sh"]
+  pids_limit: 128
+  healthcheck:
+    <<: *hc
+    test: ["CMD-SHELL", "valkey-cli --user eda_health --pass health --no-auth-warning ping | grep -q PONG"]
+
+x-tei: &tei                           # embed-query, embed-batch, rerank (014 §3.10)
+  <<: *hardened
+  build:
+    context: ../..
+    dockerfile: infra/docker/embed.Dockerfile
+    args: { MODEL_ID: BAAI/bge-m3, MODEL_REVISION: "${EMBED_MODEL_REVISION:?}" }
+  user: "10005:10005"
+  networks: [data]
+  secrets: [tei_api_key]
+  tmpfs: ["/tmp:size=64m"]
+  stop_grace_period: 30s
+  healthcheck: { <<: *hc, start_period: 120s, test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8080/health"] }
+
+services:
+  # ---------------------------------------------------------------- kenar ve sunum
+  caddy:
+    <<: *hardened
+    profiles: [core]
+    build: { context: ../.., dockerfile: infra/docker/caddy.Dockerfile }
+    image: ${EDA_IMAGE_PREFIX:-eda}/caddy:${EDA_TAG:-dev}
+    user: "10004:10004"
+    sysctls: { net.ipv4.ip_unprivileged_port_start: 0 }
+    networks:
+      public: { ipv4_address: 172.30.20.2 }
+      edge: {}
+      admin-edge: { ipv4_address: 172.30.10.3 }
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:?}
+      APP_URL: ${APP_URL:?}
+      ADMIN_ALLOWED_CIDRS: ${ADMIN_ALLOWED_CIDRS:?}
+      ACME_EMAIL: ${ACME_EMAIL:-ops@localhost}
+      ACME_DNS_PROVIDER: ${ACME_DNS_PROVIDER:-cloudflare}
+      CADDY_TLS_MODE: ${CADDY_TLS_MODE:?}
+      WEB_UPSTREAM: ${WEB_UPSTREAM:-web:3000}
+      ADMIN_UPSTREAM: ${ADMIN_UPSTREAM:-admin:3001}
+    secrets: [acme_dns_api_token]
+    volumes:
+      - caddydata:/data
+      - caddyconfig:/config
+      - ../caddy:/etc/caddy:ro
+    tmpfs: ["/tmp:size=16m"]
+    stop_grace_period: 30s
+    healthcheck: { <<: *hc, test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:2019/config/"] }
+    depends_on:
+      web: { condition: service_healthy }
+      api: { condition: service_healthy }
+      admin: { condition: service_healthy, required: false }
+
+  web:
+    <<: *hardened
+    profiles: [core]
+    build:
+      context: ../..
+      dockerfile: infra/docker/node-app.Dockerfile
+      target: web
+      args: { APP: "@eda/web" }
+    image: ${EDA_IMAGE_PREFIX:-eda}/web:${EDA_TAG:-dev}
+    user: "10001:10001"
+    networks: [edge]
+    environment:
+      <<: [*env-node, *env-urls]
+      OTEL_SERVICE_NAME: eda-web
+      PORT: "3000"
+      HOSTNAME: 0.0.0.0
+      API_INTERNAL_URL: http://api:8000
+      NEXT_TELEMETRY_DISABLED: "1"
+      NODE_OPTIONS: --max-old-space-size=448
+    tmpfs: ["/tmp:size=32m", "/app/apps/web/.next/cache:size=128m,uid=10001,gid=10001"]
+    healthcheck: { <<: *hc, test: ["CMD", "node", "/opt/eda/healthcheck.mjs", "http://127.0.0.1:3000/healthz.txt"] }
+    depends_on:
+      api: { condition: service_healthy }
+
+  admin:
+    <<: *hardened
+    profiles: [admin]
+    build:
+      context: ../..
+      dockerfile: infra/docker/node-app.Dockerfile
+      target: admin
+      args: { APP: "@eda/admin" }
+    image: ${EDA_IMAGE_PREFIX:-eda}/admin:${EDA_TAG:-dev}
+    user: "10001:10001"
+    networks:
+      edge: {}
+      admin-edge: { ipv4_address: 172.30.10.4 }
+    environment:
+      <<: [*env-node, *env-urls]
+      OTEL_SERVICE_NAME: eda-admin
+      PORT: "3001"
+      HOSTNAME: 0.0.0.0
+      API_INTERNAL_URL: http://api-admin:8010
+      NEXT_TELEMETRY_DISABLED: "1"
+      NODE_OPTIONS: --max-old-space-size=320
+    tmpfs: ["/tmp:size=32m", "/app/apps/admin/.next/cache:size=64m,uid=10001,gid=10001"]
+    healthcheck: { <<: *hc, test: ["CMD", "node", "/opt/eda/healthcheck.mjs", "http://127.0.0.1:3001/healthz.txt"] }
+    depends_on:
+      api: { condition: service_healthy }
+
+  # ---------------------------------------------------------------- uygulama çekirdeği
+  api:
+    <<: *hardened
+    profiles: [core]
+    build:
+      context: ../..
+      dockerfile: infra/docker/node-app.Dockerfile
+      target: api
+      args: { APP: "@eda/api" }
+    image: ${EDA_IMAGE_PREFIX:-eda}/api:${EDA_TAG:-dev}
+    user: "10001:10001"
+    pids_limit: 512
+    stop_grace_period: 120s
+    networks:
+      edge: {}
+      admin-edge: { ipv4_address: 172.30.10.2, aliases: [api-admin] }
+      data: {}
+      mcp: {}
+      egress-llm-net: {}
+    environment:
+      <<: [*env-node, *env-urls, *env-proxy-llm, *env-s3, *env-embed, *env-llm, *env-valkey, *env-iyzico]
+      OTEL_SERVICE_NAME: eda-api
+      # Platform ortak anahtarı düşüşü: varsayılan KAPALI; yalnız development/test/beta-synthetic.
+      PLATFORM_AI_KEY_FALLBACK: ${PLATFORM_AI_KEY_FALLBACK:-false}
+      API_PORT: "8000"
+      API_ADMIN_PORT: "8010"
+      API_ADMIN_LISTEN_HOST: ${API_ADMIN_LISTEN_HOST:-172.30.10.2}
+      NODE_OPTIONS: --max-old-space-size=768
+      PG_HOST: postgres
+      PG_PORT: "5432"
+      PG_DATABASE: eda
+      PG_USER: eda_app
+      PG_PASSWORD_FILE: /run/secrets/pg_app_password
+      PG_POOL_MAX: "20"
+      PG_AUTH_USER: eda_auth
+      PG_AUTH_PASSWORD_FILE: /run/secrets/pg_auth_password
+      PG_AUTH_POOL_MAX: "5"
+      PG_ADMIN_RO_USER: eda_readonly_admin
+      PG_ADMIN_RO_PASSWORD_FILE: /run/secrets/pg_readonly_admin_password
+      PG_ADMIN_RO_POOL_MAX: "3"
+      VALKEY_USERNAME: eda_api
+      VALKEY_PASSWORD_FILE: /run/secrets/valkey_api_password
+      VALKEY_CACHE_USERNAME: eda_api
+      VALKEY_CACHE_PASSWORD_FILE: /run/secrets/valkey_cache_api_password
+      BETTER_AUTH_URL: ${APP_URL:?}
+      BETTER_AUTH_SECRET_FILE: /run/secrets/better_auth_secret
+      BETTER_AUTH_ADMIN_URL: ${ADMIN_URL:?}
+      BETTER_AUTH_ADMIN_SECRET_FILE: /run/secrets/better_auth_admin_secret
+      PASSKEY_RP_ID: ${APP_DOMAIN:?}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+      GOOGLE_CLIENT_SECRET_FILE: /run/secrets/google_client_secret
+      KEK_MASTER_FILE: /run/secrets/kek_master
+      HMAC_PSEUDONYM_KEY_FILE: /run/secrets/hmac_pseudonym_key
+      INTERNAL_JWT_PRIVATE_KEY_FILE: /run/secrets/internal_jwt_private_key
+      YARGI_MCP_URL: http://yargi-mcp:8001/mcp
+      VAPID_PUBLIC_KEY: ${VAPID_PUBLIC_KEY:?}
+    secrets: [pg_app_password, pg_auth_password, pg_readonly_admin_password, valkey_api_password,
+              valkey_cache_api_password, better_auth_secret, better_auth_admin_secret, kek_master,
+              hmac_pseudonym_key, internal_jwt_private_key, tei_api_key, s3_access_key_id,
+              s3_secret_access_key, deepseek_api_key, anthropic_api_key, anthropic_eu_api_key, azure_eu_api_key, vertex_credentials,
+              local_llm_api_key, iyzico_api_key, iyzico_secret_key, google_client_secret]
+    tmpfs: ["/tmp:size=64m"]
+    healthcheck: { <<: *hc, test: ["CMD", "node", "/opt/eda/healthcheck.mjs", "http://127.0.0.1:8000/ready"] }
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+      postgres: { condition: service_healthy }
+      valkey: { condition: service_healthy }
+      egress-llm: { condition: service_healthy }
+      valkey-cache: { condition: service_started, required: false }
+      yargi-mcp: { condition: service_started, required: false }
+
+  worker:
+    <<: *hardened
+    profiles: [core]
+    build:
+      context: ../..
+      dockerfile: infra/docker/node-app.Dockerfile
+      target: worker
+      args: { APP: "@eda/worker" }
+    image: ${EDA_IMAGE_PREFIX:-eda}/worker:${EDA_TAG:-dev}
+    user: "10001:10001"
+    pids_limit: 512
+    stop_grace_period: 120s
+    networks: [data, docproc, mcp, egress-llm-net]
+    environment:
+      <<: [*env-node, *env-urls, *env-proxy-llm, *env-s3, *env-embed, *env-llm, *env-valkey, *env-iyzico]
+      OTEL_SERVICE_NAME: eda-worker
+      NODE_OPTIONS: --max-old-space-size=1152
+      PG_HOST: postgres
+      PG_PORT: "5432"
+      PG_DATABASE: eda
+      PG_USER: eda_worker
+      PG_PASSWORD_FILE: /run/secrets/pg_worker_password
+      PG_POOL_MAX: "10"
+      VALKEY_USERNAME: eda_worker
+      VALKEY_PASSWORD_FILE: /run/secrets/valkey_worker_password
+      VALKEY_CACHE_USERNAME: eda_worker
+      VALKEY_CACHE_PASSWORD_FILE: /run/secrets/valkey_cache_worker_password
+      KEK_MASTER_FILE: /run/secrets/kek_master
+      HMAC_PSEUDONYM_KEY_FILE: /run/secrets/hmac_pseudonym_key
+      INTERNAL_JWT_PRIVATE_KEY_FILE: /run/secrets/internal_jwt_private_key
+      YARGI_MCP_URL: http://yargi-mcp:8001/mcp
+      DOC_ENGINE_URL: http://doc-engine:8002
+      DOC_ENGINE_TOKEN_FILE: /run/secrets/doc_engine_token
+      EMBED_BATCH_URL: ${EMBED_BATCH_URL:-http://embed-batch:8080}
+      EMAIL_TRANSPORT: ${EMAIL_TRANSPORT:?}
+      SMTP_URL: ${SMTP_URL:-}
+      EMAIL_API_URL: ${EMAIL_API_URL:-}
+      EMAIL_API_KEY_FILE: /run/secrets/email_api_key
+      EMAIL_FROM: "E.D.A. Hukuk <bildirim@${APP_DOMAIN}>"
+      VAPID_PUBLIC_KEY: ${VAPID_PUBLIC_KEY:?}
+      VAPID_PRIVATE_KEY_FILE: /run/secrets/vapid_private_key
+      VAPID_SUBJECT: mailto:destek@${APP_DOMAIN}
+      CLAMAV_ENABLED: ${CLAMAV_ENABLED:-true}
+      CLAMAV_HOST: clamav
+      CLAMAV_PORT: "3310"
+      WORKER_QUEUES: files-interactive,files-batch,exports,corpus,citations,notifications,chat,billing
+      WORKER_METRICS_PORT: "9464"
+    secrets: [pg_worker_password, valkey_worker_password, valkey_cache_worker_password, kek_master,
+              hmac_pseudonym_key, internal_jwt_private_key, doc_engine_token, tei_api_key,
+              s3_access_key_id, s3_secret_access_key, deepseek_api_key, anthropic_api_key, anthropic_eu_api_key, azure_eu_api_key,
+              vertex_credentials, local_llm_api_key, email_api_key, vapid_private_key,
+              iyzico_api_key, iyzico_secret_key]
+    tmpfs: ["/tmp:size=64m"]
+    healthcheck: { <<: *hc, test: ["CMD", "node", "/opt/eda/healthcheck.mjs", "http://127.0.0.1:9464/health"] }
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+      postgres: { condition: service_healthy }
+      valkey: { condition: service_healthy }
+      egress-llm: { condition: service_healthy }
+      valkey-cache: { condition: service_started, required: false }
+      yargi-mcp: { condition: service_started, required: false }
+
+  jobs:
+    <<: *hardened
+    profiles: [core]
+    build:
+      context: ../..
+      dockerfile: infra/docker/node-app.Dockerfile
+      target: worker
+      args: { APP: "@eda/worker" }
+    image: ${EDA_IMAGE_PREFIX:-eda}/worker:${EDA_TAG:-dev}
+    command: ["node", "dist/jobs.js"]
+    user: "10001:10001"
+    stop_grace_period: 60s
+    networks: [data]
+    environment:
+      <<: [*env-node, *env-urls]
+      OTEL_SERVICE_NAME: eda-jobs
+      NODE_OPTIONS: --max-old-space-size=384
+      PG_HOST: postgres
+      PG_PORT: "5432"
+      PG_DATABASE: eda
+      PG_JOBS_USER: eda_jobs
+      PG_JOBS_PASSWORD_FILE: /run/secrets/pg_jobs_password
+      VALKEY_URL: redis://valkey:6379
+      VALKEY_USERNAME: eda_jobs
+      VALKEY_PASSWORD_FILE: /run/secrets/valkey_jobs_password
+      S3_ENDPOINT: http://objstore:8333
+      S3_REGION: tr-1
+      S3_BUCKET_FILES: eda-files
+      S3_BUCKET_EXPORTS: eda-exports
+      S3_BUCKET_AUDIT: eda-audit-seals
+      S3_ACCESS_KEY_ID_FILE: /run/secrets/s3_access_key_id
+      S3_SECRET_ACCESS_KEY_FILE: /run/secrets/s3_secret_access_key
+      S3_AUDIT_ACCESS_KEY_ID_FILE: /run/secrets/s3_audit_access_key_id
+      S3_AUDIT_SECRET_ACCESS_KEY_FILE: /run/secrets/s3_audit_secret_access_key
+      WORKER_QUEUES: maintenance
+      WORKER_METRICS_PORT: "9464"
+      BACKUP_STATUS_URL: ${BACKUP_STATUS_URL:-}
+      BACKUP_STATUS_TOKEN_FILE: /run/secrets/backup_status_token
+    secrets: [pg_jobs_password, valkey_jobs_password, s3_access_key_id, s3_secret_access_key,
+              s3_audit_access_key_id, s3_audit_secret_access_key, backup_status_token]
+    tmpfs: ["/tmp:size=32m"]
+    healthcheck: { <<: *hc, test: ["CMD", "node", "/opt/eda/healthcheck.mjs", "http://127.0.0.1:9464/health"] }
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+      postgres: { condition: service_healthy }
+      valkey: { condition: service_healthy }
+      objstore: { condition: service_healthy }
+
+  yargi-mcp:
+    <<: *hardened
+    profiles: [mcp]
+    build:
+      context: ../..
+      dockerfile: infra/docker/node-app.Dockerfile
+      target: yargi-mcp
+      args: { APP: "@eda/yargi-mcp" }
+    image: ${EDA_IMAGE_PREFIX:-eda}/yargi-mcp:${EDA_TAG:-dev}
+    user: "10001:10001"
+    stop_grace_period: 30s
+    networks: [mcp]
+    environment:
+      <<: *env-node
+      OTEL_SERVICE_NAME: eda-yargi-mcp
+      NODE_OPTIONS: --max-old-space-size=288
+      MCP_PORT: "8001"
+      INTERNAL_JWT_PUBLIC_KEY_FILE: /run/secrets/internal_jwt_public_key
+      INTERNAL_JWT_AUDIENCE: yargi-mcp
+      VALKEY_CACHE_URL: redis://valkey-cache:6379
+      VALKEY_CACHE_USERNAME: eda_mcp
+      VALKEY_CACHE_PASSWORD_FILE: /run/secrets/valkey_cache_mcp_password
+      YARGI_SOURCES_ENABLED: bedesten,anayasa,uyusmazlik,mevzuat
+      SOURCE_USER_AGENT: "EDA-Hukuk-Kaynak-Istemcisi/1.0 (+https://${APP_DOMAIN}/guvenlik)"
+      HTTPS_PROXY: http://egress-portal:4750
+      HTTP_PROXY: http://egress-portal:4750
+      NODE_USE_ENV_PROXY: "1"
+      NO_PROXY: *no-proxy
+    secrets: [internal_jwt_public_key, valkey_cache_mcp_password]
+    tmpfs: ["/tmp:size=32m"]
+    healthcheck: { <<: *hc, test: ["CMD", "node", "/opt/eda/healthcheck.mjs", "http://127.0.0.1:8001/health"] }
+    depends_on:
+      valkey-cache: { condition: service_healthy }
+      egress-portal: { condition: service_healthy }
+
+  # ---------------------------------------------------------------- veri katmanı
+  postgres:
+    <<: *hardened
+    profiles: [core]
+    build: { context: ../.., dockerfile: infra/docker/postgres.Dockerfile }
+    image: ${EDA_IMAGE_PREFIX:-eda}/postgres:${EDA_TAG:-dev}
+    user: "999:999"
+    entrypoint: ["/usr/local/bin/entrypoint-wrapper.sh"]
+    command: ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf", "-c", "hba_file=/etc/postgresql/pg_hba.conf"]
+    stop_signal: SIGINT
+    stop_grace_period: 60s
+    shm_size: 1g
+    pids_limit: 512
+    networks: [data]
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/pg_superuser_password
+      POSTGRES_DB: eda
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C.UTF-8 --auth-local=peer --auth-host=scram-sha-256"
+      TZ: UTC
+    secrets: [pg_superuser_password, pg_owner_password, pg_auth_password, pg_app_password,
+              pg_worker_password, pg_jobs_password, pg_readonly_admin_password, pg_backup_password,
+              pg_monitor_password, pgbackrest_cipher_pass, pgbackrest_ca_crt, pgbackrest_pg_crt,
+              pgbackrest_pg_key]
+    volumes:
+      - pgdata:/var/lib/postgresql
+      - ${PG_SIZE_CONF:?PG_SIZE_CONF zorunlu}:/etc/postgresql/size.conf:ro
+    tmpfs: ["/tmp:size=256m", "/var/run/postgresql:size=1m,uid=999,gid=999"]
+    healthcheck:
+      <<: *hc
+      start_period: 30s
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -p 5432 -d eda -U eda_monitor && pgbackrest --tls-server-address=127.0.0.1 --tls-server-port=8432 server-ping"]
+
+  valkey:
+    <<: *valkey
+    profiles: [core]
+    command: ["/etc/valkey/valkey.conf", "--maxmemory", "1gb"]
+    stop_grace_period: 30s
+    networks: [data]
+    secrets: [valkey_api_password, valkey_worker_password, valkey_jobs_password]
+    volumes:
+      - valkeydata:/data
+      - ../valkey/valkey.conf:/etc/valkey/valkey.conf:ro
+      - ../valkey/entrypoint.sh:/opt/eda/valkey-entrypoint.sh:ro
+    tmpfs: ["/run/eda:size=1m,mode=0700,uid=999,gid=999", "/tmp:size=16m"]
+
+  valkey-cache:
+    <<: *valkey
+    profiles: [core]
+    command: ["/etc/valkey/valkey-cache.conf", "--maxmemory", "512mb"]
+    stop_grace_period: 10s
+    networks: [data, mcp]
+    secrets: [valkey_cache_api_password, valkey_cache_worker_password, valkey_cache_mcp_password]
+    volumes:
+      - ../valkey/valkey-cache.conf:/etc/valkey/valkey-cache.conf:ro
+      - ../valkey/entrypoint.sh:/opt/eda/valkey-entrypoint.sh:ro
+    tmpfs: ["/run/eda:size=1m,mode=0700,uid=999,gid=999", "/tmp:size=16m"]
+
+  objstore:
+    <<: *hardened
+    profiles: [core]
+    build: { context: ../.., dockerfile: infra/docker/objstore.Dockerfile }
+    image: ${EDA_IMAGE_PREFIX:-eda}/objstore:${EDA_TAG:-dev}
+    user: "10003:10003"
+    pids_limit: 1024
+    stop_grace_period: 30s
+    networks: [data]
+    secrets: [s3_access_key_id, s3_secret_access_key, s3_audit_access_key_id,
+              s3_audit_secret_access_key, s3_admin_access_key_id, s3_admin_secret_access_key]
+    volumes: [objdata:/data]
+    tmpfs: ["/run/eda:size=1m,mode=0700,uid=10003,gid=10003", "/tmp:size=64m"]
+    healthcheck:
+      <<: *hc
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:9333/cluster/healthz"]
+
+  # ---------------------------------------------------------------- yapay zeka (ai profili)
+  embed-query:
+    <<: *tei
+    profiles: [ai]
+    image: ${EDA_IMAGE_PREFIX:-eda}/embed:${EDA_TAG:-dev}
+    environment:
+      MODEL_ID: BAAI/bge-m3
+      REVISION: ${EMBED_MODEL_REVISION:?}
+      PORT: "8080"
+      API_KEY_FILE: /run/secrets/tei_api_key
+      AUTO_TRUNCATE: "false"
+      MAX_BATCH_TOKENS: "2048"
+      HF_HUB_OFFLINE: "1"
+      HF_HOME: /opt/hf
+      OMP_NUM_THREADS: "2"
+      RAYON_NUM_THREADS: "2"
+      TOKENIZATION_WORKERS: "2"
+
+  embed-batch:
+    <<: *tei
+    profiles: [ai]
+    image: ${EDA_IMAGE_PREFIX:-eda}/embed:${EDA_TAG:-dev}
+    cpu_shares: 256
+    environment:
+      MODEL_ID: BAAI/bge-m3
+      REVISION: ${EMBED_MODEL_REVISION:?}
+      PORT: "8080"
+      API_KEY_FILE: /run/secrets/tei_api_key
+      AUTO_TRUNCATE: "false"
+      HF_HUB_OFFLINE: "1"
+      HF_HOME: /opt/hf
+      OMP_NUM_THREADS: "2"
+      RAYON_NUM_THREADS: "2"
+      TOKENIZATION_WORKERS: "2"
+
+  rerank:
+    <<: *tei
+    profiles: [gpu]
+    build:
+      context: ../..
+      dockerfile: infra/docker/rerank.Dockerfile
+      args: { MODEL_ID: BAAI/bge-reranker-v2-m3, MODEL_REVISION: "${RERANK_MODEL_REVISION:?}" }
+    image: ${EDA_IMAGE_PREFIX:-eda}/rerank:${EDA_TAG:-dev}
+    gpus: [{ driver: nvidia, count: 1, capabilities: [gpu] }]
+    environment:
+      MODEL_ID: BAAI/bge-reranker-v2-m3
+      REVISION: ${RERANK_MODEL_REVISION:?}
+      PORT: "8081"
+      API_KEY_FILE: /run/secrets/tei_api_key
+      AUTO_TRUNCATE: "false"
+      HF_HUB_OFFLINE: "1"
+      HF_HOME: /opt/hf
+    healthcheck: { <<: *hc, start_period: 120s, test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8081/health"] }
+
+  # ---------------------------------------------------------------- belge işleme (docs profili)
+  doc-engine:
+    <<: *hardened
+    profiles: [docs]
+    build: { context: ../.., dockerfile: infra/docker/python-service.Dockerfile, target: runtime }
+    image: ${EDA_IMAGE_PREFIX:-eda}/doc-engine:${EDA_TAG:-dev}
+    runtime: ${EDA_DOCENGINE_RUNTIME:-runc}
+    user: "10006:10006"
+    pids_limit: 1024
+    cpu_shares: 512
+    stop_grace_period: 30s
+    networks: [docproc]
+    environment:
+      <<: *env-common
+      OTEL_SERVICE_NAME: eda-doc-engine
+      DOC_ENGINE_PORT: "8002"
+      DOC_ENGINE_TOKEN_FILE: /run/secrets/doc_engine_token
+      GOTENBERG_URL: http://gotenberg:3000
+      OCR_LANGS: tur+eng
+      MAX_UPLOAD_MB: "50"
+      MAX_PAGES: "500"
+      OCR_BATCH_PAGES: "20"
+      DOCLING_ARTIFACTS_PATH: /opt/models
+      HF_HUB_OFFLINE: "1"
+      DOC_ENGINE_CONCURRENCY: "1"
+      SUBPROCESS_TIMEOUT_SEC: "300"
+      HOME: /tmp/home
+      PYTHONDONTWRITEBYTECODE: "1"
+      OMP_THREAD_LIMIT: "1"
+      OMP_NUM_THREADS: "2"
+    secrets: [doc_engine_token]
+    tmpfs: ["/tmp:size=2g,mode=0700,uid=10006,gid=10006,noexec,nosuid,nodev"]
+    healthcheck:
+      <<: *hc
+      start_period: 60s
+      test: ["CMD", "python", "-c", "import sys,urllib.request as u; sys.exit(0 if u.urlopen('http://127.0.0.1:8002/health',timeout=2).status==200 else 1)"]
+    depends_on:
+      gotenberg: { condition: service_healthy }
+
+  gotenberg:
+    <<: *hardened
+    profiles: [docs]
+    image: gotenberg/gotenberg:8.37.0@sha256:f29984bd1e226bf1b93ba90af06000afa8b315853e99d27b9aaa41b93f15c769
+    user: "1001:1001"
+    pids_limit: 512
+    stop_grace_period: 30s
+    networks: [docproc]
+    command: ["gotenberg", "--chromium-disable-routes=true", "--webhook-disable=true", "--api-disable-download-from=true",
+              "--libreoffice-restart-after=10", "--api-timeout=120s", "--log-format=json"]
+    tmpfs: ["/tmp:size=512m"]
+    healthcheck: { <<: *hc, test: ["CMD", "curl", "-fsS", "http://127.0.0.1:3000/health"] }
+
+  # ---------------------------------------------------------------- antivirüs (av profili)
+  clamav:
+    <<: *hardened
+    profiles: [av]
+    image: clamav/clamav:1.4@sha256:57deb108fc4c72778aa83eafbca7bb7153e28c3f57c005afd38d31f16da86f23
+    user: "100:101"
+    entrypoint: ["clamd", "--foreground", "-c", "/etc/clamav/clamd.conf"]
+    pids_limit: 128
+    networks: [docproc]
+    environment: { CLAMAV_NO_FRESHCLAMD: "true" }
+    volumes:
+      - clamavdb:/var/lib/clamav:ro
+      - ${CLAMD_CONF:-../clamav/clamd.conf}:/etc/clamav/clamd.conf:ro
+    tmpfs: ["/tmp:size=256m", "/run/clamav:size=1m,uid=100,gid=101"]
+    healthcheck: { <<: *hc, test: ["CMD", "clamdcheck.sh"] }
+    depends_on:
+      freshclam: { condition: service_healthy }
+
+  freshclam:
+    <<: *hardened
+    profiles: [av]
+    image: clamav/clamav:1.4@sha256:57deb108fc4c72778aa83eafbca7bb7153e28c3f57c005afd38d31f16da86f23
+    user: "100:101"
+    entrypoint: ["freshclam", "-d", "-c", "12", "--foreground", "--stdout", "--config-file=/etc/clamav/freshclam.conf"]
+    pids_limit: 64
+    networks: [egress-av-net]
+    environment: { CLAMAV_NO_CLAMD: "true" }
+    volumes:
+      - clamavdb:/var/lib/clamav
+      - ../clamav/freshclam.conf:/etc/clamav/freshclam.conf:ro
+    tmpfs: ["/tmp:size=64m", "/run/clamav:size=1m,uid=100,gid=101"]
+    healthcheck:
+      <<: *hc
+      test: ["CMD-SHELL", "[ -s /var/lib/clamav/daily.cvd ] || [ -s /var/lib/clamav/daily.cld ]"]
+    depends_on:
+      egress-av: { condition: service_healthy }
+
+  # ---------------------------------------------------------------- yedekleme (backup profili)
+  backup:
+    <<: *hardened
+    profiles: [backup]
+    build: { context: ../.., dockerfile: infra/docker/backup.Dockerfile }
+    image: ${EDA_IMAGE_PREFIX:-eda}/backup:${EDA_TAG:-dev}
+    user: "10007:10007"
+    stop_grace_period: 60s
+    networks: [data, egress-backup-net]
+    environment:
+      <<: *env-common
+      PGBACKREST_STANZA: eda
+      PGBACKREST_REPO1_PATH: /var/lib/pgbackrest
+      PGBACKREST_REPO1_RETENTION_FULL: "5"
+      PGBACKREST_REPO1_RETENTION_ARCHIVE: "2"
+      PGBACKREST_REPO1_CIPHER_TYPE: aes-256-cbc
+      EDA_PGBACKREST_CIPHER_PASS_FILE: /run/secrets/pgbackrest_cipher_pass
+      PGBACKREST_TLS_SERVER_PORT: "8432"
+      PGBACKREST_CONFIG: /etc/eda-backup/pgbackrest.conf
+      PGBACKREST_CONFIG_INCLUDE_PATH: /run/eda/pgbackrest.d
+      RESTIC_REPOSITORY: s3:https://${BACKUP_S3_HOST:-backup-s3.local}/${BACKUP_S3_BUCKET:-eda-backups}/restic
+      RESTIC_PASSWORD_FILE: /run/secrets/restic_password
+      BACKUP_S3_HOST: ${BACKUP_S3_HOST:-backup-s3.local}
+      BACKUP_S3_BUCKET: ${BACKUP_S3_BUCKET:-eda-backups}
+      BACKUP_S3_ACCESS_KEY_ID_FILE: /run/secrets/backup_s3_access_key_id
+      BACKUP_S3_SECRET_ACCESS_KEY_FILE: /run/secrets/backup_s3_secret_access_key
+      BACKUP_SCHEDULE_FULL: "0 2 * * 0"
+      BACKUP_SCHEDULE_INCR: "0 2 * * 1-6"
+      BACKUP_SCHEDULE_WAL_SYNC: "*/5 * * * *"
+      BACKUP_SCHEDULE_OBJ_SYNC: "*/15 * * * *"
+      BACKUP_SCHEDULE_CHECK: "0 4 * * 3"
+      BACKUP_OFFSITE_LOCK_DAYS: "7"
+      BACKUP_STATUS_PORT: "8433"
+      BACKUP_STATUS_TOKEN_FILE: /run/secrets/backup_status_token
+      HTTPS_PROXY: http://egress-backup:4750
+      HTTP_PROXY: http://egress-backup:4750
+      NO_PROXY: *no-proxy
+    secrets: [pgbackrest_cipher_pass, pgbackrest_ca_crt, pgbackrest_repo_crt, pgbackrest_repo_key,
+              restic_password, backup_s3_access_key_id, backup_s3_secret_access_key, backup_status_token]
+    volumes:
+      - pgbackrest:/var/lib/pgbackrest
+      - objdata:/srv/objdata:ro
+    tmpfs: ["/tmp:size=256m", "/run/eda:size=1m,mode=0700,uid=10007,gid=10007"]
+    healthcheck: { <<: *hc, test: ["CMD", "pgbackrest", "server-ping"] }
+
+  migrate:
+    <<: *hardened
+    profiles: [core]
+    build:
+      context: ../..
+      dockerfile: infra/docker/node-app.Dockerfile
+      target: migrate
+      args: { APP: "@eda/db" }
+    image: ${EDA_IMAGE_PREFIX:-eda}/migrate:${EDA_TAG:-dev}
+    command: ["node", "dist/bin/migrate.js"]
+    user: "10001:10001"
+    restart: "no"
+    pids_limit: 128
+    networks: [data]
+    environment:
+      <<: *env-node
+      OTEL_SERVICE_NAME: eda-migrate
+      PG_HOST: postgres
+      PG_PORT: "5432"
+      PG_DATABASE: eda
+      PG_USER: eda_owner
+      PG_PASSWORD_FILE: /run/secrets/pg_owner_password
+      S3_ENDPOINT: http://objstore:8333
+      S3_REGION: tr-1
+      S3_BUCKET_FILES: eda-files
+      S3_BUCKET_EXPORTS: eda-exports
+      S3_BUCKET_AUDIT: eda-audit-seals
+      S3_ADMIN_ACCESS_KEY_ID_FILE: /run/secrets/s3_admin_access_key_id
+      S3_ADMIN_SECRET_ACCESS_KEY_FILE: /run/secrets/s3_admin_secret_access_key
+      SEED_PROFILE: ${SEED_PROFILE:-prod}
+    secrets: [pg_owner_password, s3_admin_access_key_id, s3_admin_secret_access_key]
+    tmpfs: ["/tmp:size=32m"]
+    depends_on:
+      postgres: { condition: service_healthy }
+      objstore: { condition: service_healthy }
+
+  # ---------------------------------------------------------------- çıkış vekilleri
+  egress-llm:
+    <<: *egress
+    profiles: [core]
+    command: ["--listen-ip", "0.0.0.0", "--listen-port", "4750", "--egress-acl-file", "/etc/smokescreen/egress-llm.yaml"]
+    networks: { public: { ipv4_address: 172.30.20.3 }, egress-llm-net: {} }
+    volumes: ["${EGRESS_LLM_ACL:-../egress/egress-llm.yaml}:/etc/smokescreen/egress-llm.yaml:ro"]
+
+  egress-portal:
+    <<: *egress
+    profiles: [mcp]
+    command: ["--listen-ip", "0.0.0.0", "--listen-port", "4750", "--egress-acl-file", "/etc/smokescreen/egress-portal.yaml"]
+    networks: { public: { ipv4_address: 172.30.20.4 }, mcp: {} }
+    volumes: ["../egress/egress-portal.yaml:/etc/smokescreen/egress-portal.yaml:ro"]
+
+  egress-backup:
+    <<: *egress
+    profiles: [backup]
+    command: ["--listen-ip", "0.0.0.0", "--listen-port", "4750", "--egress-acl-file", "/etc/smokescreen/egress-backup.yaml"]
+    networks: { public: { ipv4_address: 172.30.20.5 }, egress-backup-net: {} }
+    volumes: ["../egress/egress-backup.yaml:/etc/smokescreen/egress-backup.yaml:ro"]
+
+  egress-av:
+    <<: *egress
+    profiles: [av]
+    command: ["--listen-ip", "0.0.0.0", "--listen-port", "4750", "--egress-acl-file", "/etc/smokescreen/egress-av.yaml"]
+    networks: { public: { ipv4_address: 172.30.20.6 }, egress-av-net: {} }
+    volumes: ["../egress/egress-av.yaml:/etc/smokescreen/egress-av.yaml:ro"]
+
+networks:
+  public:
+    ipam: { config: [{ subnet: 172.30.20.0/28, gateway: 172.30.20.1 }] }
+  # Alt ağsız bırakılan ağlara Docker kendi havuzundan /16 verir (örn. 172.30.0.0/16) ve bu, sabit
+  # alt ağlı `public`/`admin-edge` ile çakışır (invalid pool request). Bu yüzden her ağ açık /24 alır.
+  edge:
+    internal: true
+    ipam: { config: [{ subnet: 172.30.1.0/24, gateway: 172.30.1.1 }] }
+  admin-edge:
+    internal: true
+    ipam: { config: [{ subnet: 172.30.10.0/29, gateway: 172.30.10.1 }] }
+  data:
+    internal: true
+    ipam: { config: [{ subnet: 172.30.30.0/24, gateway: 172.30.30.1 }] }
+  docproc:
+    internal: true
+    ipam: { config: [{ subnet: 172.30.40.0/24, gateway: 172.30.40.1 }] }
+  mcp:
+    internal: true
+    ipam: { config: [{ subnet: 172.30.50.0/24, gateway: 172.30.50.1 }] }
+  egress-llm-net:
+    internal: true
+    ipam: { config: [{ subnet: 172.30.60.0/24, gateway: 172.30.60.1 }] }
+  egress-backup-net:
+    internal: true
+    ipam: { config: [{ subnet: 172.30.70.0/24, gateway: 172.30.70.1 }] }
+  egress-av-net:
+    internal: true
+    ipam: { config: [{ subnet: 172.30.80.0/24, gateway: 172.30.80.1 }] }
+
+volumes:
+  pgdata: {}
+  valkeydata: {}
+  objdata: {}
+  caddydata: {}
+  caddyconfig: {}
+  pgbackrest: {}
+  clamavdb: {}
+
+secrets:
+  pg_superuser_password: { file: "${EDA_SECRETS_DIR:?}/pg_superuser_password" }
+  pg_owner_password: { file: "${EDA_SECRETS_DIR:?}/pg_owner_password" }
+  pg_auth_password: { file: "${EDA_SECRETS_DIR:?}/pg_auth_password" }
+  pg_app_password: { file: "${EDA_SECRETS_DIR:?}/pg_app_password" }
+  pg_worker_password: { file: "${EDA_SECRETS_DIR:?}/pg_worker_password" }
+  pg_jobs_password: { file: "${EDA_SECRETS_DIR:?}/pg_jobs_password" }
+  pg_readonly_admin_password: { file: "${EDA_SECRETS_DIR:?}/pg_readonly_admin_password" }
+  pg_backup_password: { file: "${EDA_SECRETS_DIR:?}/pg_backup_password" }
+  pg_monitor_password: { file: "${EDA_SECRETS_DIR:?}/pg_monitor_password" }
+  valkey_api_password: { file: "${EDA_SECRETS_DIR:?}/valkey_api_password" }
+  valkey_worker_password: { file: "${EDA_SECRETS_DIR:?}/valkey_worker_password" }
+  valkey_jobs_password: { file: "${EDA_SECRETS_DIR:?}/valkey_jobs_password" }
+  valkey_cache_api_password: { file: "${EDA_SECRETS_DIR:?}/valkey_cache_api_password" }
+  valkey_cache_worker_password: { file: "${EDA_SECRETS_DIR:?}/valkey_cache_worker_password" }
+  valkey_cache_mcp_password: { file: "${EDA_SECRETS_DIR:?}/valkey_cache_mcp_password" }
+  better_auth_secret: { file: "${EDA_SECRETS_DIR:?}/better_auth_secret" }
+  better_auth_admin_secret: { file: "${EDA_SECRETS_DIR:?}/better_auth_admin_secret" }
+  kek_master: { file: "${EDA_SECRETS_DIR:?}/kek_master" }
+  hmac_pseudonym_key: { file: "${EDA_SECRETS_DIR:?}/hmac_pseudonym_key" }
+  internal_jwt_private_key: { file: "${EDA_SECRETS_DIR:?}/internal_jwt_private_key" }
+  internal_jwt_public_key: { file: "${EDA_SECRETS_DIR:?}/internal_jwt_public_key" }
+  doc_engine_token: { file: "${EDA_SECRETS_DIR:?}/doc_engine_token" }
+  tei_api_key: { file: "${EDA_SECRETS_DIR:?}/tei_api_key" }
+  s3_access_key_id: { file: "${EDA_SECRETS_DIR:?}/s3_access_key_id" }
+  s3_secret_access_key: { file: "${EDA_SECRETS_DIR:?}/s3_secret_access_key" }
+  s3_audit_access_key_id: { file: "${EDA_SECRETS_DIR:?}/s3_audit_access_key_id" }
+  s3_audit_secret_access_key: { file: "${EDA_SECRETS_DIR:?}/s3_audit_secret_access_key" }
+  s3_admin_access_key_id: { file: "${EDA_SECRETS_DIR:?}/s3_admin_access_key_id" }
+  s3_admin_secret_access_key: { file: "${EDA_SECRETS_DIR:?}/s3_admin_secret_access_key" }
+  deepseek_api_key: { file: "${EDA_SECRETS_DIR:?}/deepseek_api_key" }
+  anthropic_api_key: { file: "${EDA_SECRETS_DIR:?}/anthropic_api_key" }
+  anthropic_eu_api_key: { file: "${EDA_SECRETS_DIR:?}/anthropic_eu_api_key" }
+  azure_eu_api_key: { file: "${EDA_SECRETS_DIR:?}/azure_eu_api_key" }
+  vertex_credentials: { file: "${EDA_SECRETS_DIR:?}/vertex_credentials" }
+  local_llm_api_key: { file: "${EDA_SECRETS_DIR:?}/local_llm_api_key" }
+  google_client_secret: { file: "${EDA_SECRETS_DIR:?}/google_client_secret" }
+  email_api_key: { file: "${EDA_SECRETS_DIR:?}/email_api_key" }
+  vapid_private_key: { file: "${EDA_SECRETS_DIR:?}/vapid_private_key" }
+  iyzico_api_key: { file: "${EDA_SECRETS_DIR:?}/iyzico_api_key" }
+  iyzico_secret_key: { file: "${EDA_SECRETS_DIR:?}/iyzico_secret_key" }
+  pgbackrest_cipher_pass: { file: "${EDA_SECRETS_DIR:?}/pgbackrest_cipher_pass" }
+  pgbackrest_ca_crt: { file: "${EDA_SECRETS_DIR:?}/pgbackrest_ca_crt" }
+  pgbackrest_repo_crt: { file: "${EDA_SECRETS_DIR:?}/pgbackrest_repo_crt" }
+  pgbackrest_repo_key: { file: "${EDA_SECRETS_DIR:?}/pgbackrest_repo_key" }
+  pgbackrest_pg_crt: { file: "${EDA_SECRETS_DIR:?}/pgbackrest_pg_crt" }
+  pgbackrest_pg_key: { file: "${EDA_SECRETS_DIR:?}/pgbackrest_pg_key" }
+  restic_password: { file: "${EDA_SECRETS_DIR:?}/restic_password" }
+  backup_status_token: { file: "${EDA_SECRETS_DIR:?}/backup_status_token" }
+  backup_s3_access_key_id: { file: "${EDA_SECRETS_DIR:?}/backup_s3_access_key_id" }
+  backup_s3_secret_access_key: { file: "${EDA_SECRETS_DIR:?}/backup_s3_secret_access_key" }
+  acme_dns_api_token: { file: "${EDA_SECRETS_DIR:?}/acme_dns_api_token" }

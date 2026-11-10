@@ -1,0 +1,116 @@
+/*
+ * Temel stiller (051 §6, §10.2, §13; P05.6). theme.css'ten SONRA içe aktarılır.
+ * Kurallar @layer base içindedir; bileşen yardımcı sınıfları her zaman üstün gelir.
+ * Ham renk yoktur: yalnız var(--eda-*) ve forced-colors sistem renkleri (Highlight, CanvasText).
+ * Yoğunluk değişkenleri ([data-density]) ve azaltılmış harekette süre tokenlarının 0ms'e inmesi
+ * tokens.css içinde üretilir (tek kaynak: tokens.source.json).
+ * Görsel olarak gizli metin için Tailwind'in sr-only / not-sr-only yardımcıları kullanılır.
+ */
+
+@layer base {
+  /* Reset tamamlayıcıları (Tailwind preflight üzerine). */
+  html {
+    text-size-adjust: 100%;
+    /* Kök font-size piksele sabitlenmez; tarayıcı ayarına uyar (051 §6.2). */
+    /* Yapışkan üst çubuk ve istem kutusu odaklanan öğeyi örtmez (051 §13.2, WCAG 2.4.11). */
+    scroll-padding-top: calc(var(--eda-topbar-height) + 1rem);
+    scroll-padding-bottom: var(--eda-composer-h, 0px);
+    /* Kaydırma çubuğu gizlenmez (051 §13.4). */
+    scrollbar-gutter: stable;
+  }
+
+  /* Tema kökü veya alt ağacı: metin rengi ve kaydırma çubuğu rengi o temanın değerleriyle çözülür. */
+  :where(:root, [data-theme]) {
+    color: var(--eda-text);
+    scrollbar-color: var(--eda-border-strong) transparent;
+  }
+
+  body {
+    min-height: 100dvh;
+    background-color: var(--eda-bg);
+    font-family: var(--eda-font-sans);
+    font-size: var(--eda-type-body-size);
+    line-height: var(--eda-type-body-line-height);
+    font-weight: var(--eda-type-body-weight);
+    text-wrap: pretty;
+    hyphens: manual;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Başlıklar arayüz ailesindedir; serif (font-display) yalnız display ve heading-lg'de açıkça verilir. */
+  :where(h1, h2, h3, h4, h5, h6) {
+    text-wrap: balance;
+  }
+
+  :where(code, kbd, samp, pre) {
+    font-family: var(--eda-font-mono);
+  }
+
+  :where(code, samp, pre) {
+    font-size: var(--eda-type-code-size);
+    line-height: var(--eda-type-code-line-height);
+  }
+
+  /* Sayısal değerler hizalı (051 §6.3/3); tablo sütunu ve sayaçlar tabular-nums yardımcısını alır. */
+  :where(time, data, output, kbd) {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Odak: yalnız klavye odağında halka (051 §13.2); taşma kırpan kapta focus-ring-inset. */
+  :focus-visible {
+    outline: 2px solid var(--eda-focus-ring);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: var(--eda-selection-bg);
+    color: var(--eda-text);
+  }
+
+  /* Devre dışı öğede opaklık yok; renk tokenları ve imleç (051 §13.1). */
+  :where(button, input, select, textarea):disabled,
+  :where([aria-disabled="true"]) {
+    cursor: not-allowed;
+  }
+
+  /* Azaltılmış hareket (051 §10.2): animasyon yok, geçiş en çok 0.01ms, yumuşak kaydırma yok. */
+  @media (prefers-reduced-motion: reduce) {
+    /* biome-ignore-start lint/complexity/noImportantStyles: 051 §10.2 kuralı bileşen sınıflarını ezer */
+    *,
+    *::before,
+    *::after {
+      animation-name: none !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    /* biome-ignore-end lint/complexity/noImportantStyles: 051 §10.2 */
+  }
+
+  /*
+   * Zorunlu renk kipi (051 §13.3): ayrı tema yok, sistem renkleri. Düğme, çip ve rozet 1 px sınır
+   * taşır (bileşen kendi sınır sınıfını verirse o geçerlidir); odak halkası Highlight.
+   * forced-color-adjust: none yalnız kâğıttadır (paper.css).
+   */
+  @media (forced-colors: active) {
+    :where(button, [role="button"], [data-slot="button"], [data-slot="badge"], [data-slot="chip"]) {
+      border-width: 1px;
+      border-style: solid;
+    }
+
+    :focus-visible {
+      outline-color: Highlight;
+    }
+  }
+}
+
+/*
+ * Büyük harf yalnız CSS text-transform ile ve yalnız Türkçe dil bağlamında yapılır (051 §6.2,
+ * §6.3/2): lang="tr" altında i -> İ doğru dönüşür. Türkçe olmayan alt ağaçta dönüşüm kapatılır;
+ * yardımcı sınıfı ezmesi için katman dışıdır.
+ */
+.uppercase:not(:lang(tr)) {
+  text-transform: none;
+}

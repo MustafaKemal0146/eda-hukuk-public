@@ -1,0 +1,28 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "gen:schemas": {
+      "dependsOn": ["@eda/contracts#gen:schemas"],
+      "inputs": [
+        "$TURBO_ROOT$/packages/contracts/generated/json-schema/**",
+        "pyproject.toml",
+        "src/**",
+        "scripts/gen_openapi.py"
+      ],
+      "outputs": ["src/eda_doc_engine/models/generated/**", "openapi.json"]
+    },
+    "lint": { "inputs": ["src/**", "tests/**", "scripts/**", "pyproject.toml"] },
+    "typecheck": { "inputs": ["src/**", "pyproject.toml", "$TURBO_ROOT$/uv.lock"] },
+    "test": {
+      "inputs": [
+        "src/**",
+        "tests/**",
+        "scripts/**",
+        "openapi.json",
+        "pyproject.toml",
+        "$TURBO_ROOT$/uv.lock",
+        "$TURBO_ROOT$/infra/docker/python-service.Dockerfile"
+      ]
+    }
+  }
+}

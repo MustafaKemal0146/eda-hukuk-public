@@ -1,0 +1,491 @@
+/*
+ * ÜRETİLMİŞ DOSYA — elle düzenleme.
+ * Kaynak: packages/ui/src/tokens/tokens.source.json (değerler 051 §4-§12).
+ * Üretici: packages/ui/scripts/gen-tokens.ts — `pnpm --filter @eda/ui gen:tokens`;
+ * denetim: `pnpm --filter @eda/ui gen:tokens -- --check`.
+ */
+
+/* Tema bağımsız ölçekler: tipografi, yerleşim, kâğıt, yarıçap, z-index, hareket, hedef. */
+
+:root {
+  --eda-font-sans: var(--font-ui, "Geist"), system-ui, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --eda-font-display: var(--font-serif, "Source Serif 4"), Georgia, "Times New Roman", serif;
+  --eda-font-mono:
+    var(--font-mono-face, "Geist Mono"), ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
+  --eda-type-display-size: 2.5rem;
+  --eda-type-display-line-height: 3rem;
+  --eda-type-display-weight: 500;
+  --eda-type-display-tracking: -0.02em;
+  --eda-type-heading-lg-size: 1.75rem;
+  --eda-type-heading-lg-line-height: 2.25rem;
+  --eda-type-heading-lg-weight: 500;
+  --eda-type-heading-lg-tracking: -0.015em;
+  --eda-type-heading-md-size: 1.375rem;
+  --eda-type-heading-md-line-height: 1.875rem;
+  --eda-type-heading-md-weight: 600;
+  --eda-type-heading-md-tracking: -0.01em;
+  --eda-type-heading-sm-size: 1.125rem;
+  --eda-type-heading-sm-line-height: 1.625rem;
+  --eda-type-heading-sm-weight: 600;
+  --eda-type-heading-sm-tracking: -0.005em;
+  --eda-type-title-size: 1rem;
+  --eda-type-title-line-height: 1.5rem;
+  --eda-type-title-weight: 600;
+  --eda-type-body-size: 1rem;
+  --eda-type-body-line-height: 1.5rem;
+  --eda-type-body-weight: 400;
+  --eda-type-prose-size: 1rem;
+  --eda-type-prose-line-height: 1.625rem;
+  --eda-type-prose-weight: 400;
+  --eda-type-body-sm-size: 0.875rem;
+  --eda-type-body-sm-line-height: 1.25rem;
+  --eda-type-body-sm-weight: 400;
+  --eda-type-label-size: 0.875rem;
+  --eda-type-label-line-height: 1.25rem;
+  --eda-type-label-weight: 500;
+  --eda-type-label-tracking: 0.005em;
+  --eda-type-caption-size: 0.75rem;
+  --eda-type-caption-line-height: 1rem;
+  --eda-type-caption-weight: 400;
+  --eda-type-overline-size: 0.75rem;
+  --eda-type-overline-line-height: 1rem;
+  --eda-type-overline-weight: 600;
+  --eda-type-overline-tracking: 0.04em;
+  --eda-type-code-size: 0.8125rem;
+  --eda-type-code-line-height: 1.25rem;
+  --eda-type-code-weight: 400;
+  --eda-sidebar-width: 16.5rem;
+  --eda-rail-width: 4rem;
+  --eda-topbar-height: 3rem;
+  --eda-chat-max: 52.5rem;
+  --eda-doc-max: 71.25rem;
+  --eda-panel-sources: 23rem;
+  --eda-panel-preview: 40rem;
+  --eda-studio-chat-min: 25rem;
+  --eda-studio-chat-max: 30rem;
+  --eda-form-max: 40rem;
+  --eda-gutter: 1.5rem;
+  --eda-content-max: 90rem;
+  --eda-paper-width: 210mm;
+  --eda-paper-min-height: 297mm;
+  --eda-paper-margin-top: 20mm;
+  --eda-paper-margin-bottom: 20mm;
+  --eda-paper-margin-left: 25mm;
+  --eda-paper-margin-right: 20mm;
+  --eda-page-gap: 8mm;
+  --eda-paper-font:
+    var(--font-liberation-serif, "Liberation Serif"), "Times New Roman", Times, serif;
+  --eda-paper-font-size: 12pt;
+  --eda-paper-note-size: 10pt;
+  --eda-paper-line-height: 1.5;
+  --eda-paper-indent: 1.25cm;
+  --eda-radius-none: 0;
+  --eda-radius-sm: 0.25rem;
+  --eda-radius-md: 0.5rem;
+  --eda-radius-lg: 0.75rem;
+  --eda-radius-xl: 1rem;
+  --eda-radius-2xl: 1.5rem;
+  --eda-radius-full: 9999px;
+  --eda-z-base: 0;
+  --eda-z-sticky: 10;
+  --eda-z-sidebar: 30;
+  --eda-z-topbar: 35;
+  --eda-z-dropdown: 40;
+  --eda-z-overlay: 50;
+  --eda-z-dialog: 60;
+  --eda-z-toast: 70;
+  --eda-z-tooltip: 80;
+  --eda-z-skip-link: 100;
+  --eda-duration-instant: 0ms;
+  --eda-duration-fast: 120ms;
+  --eda-duration-base: 200ms;
+  --eda-duration-slow: 320ms;
+  --eda-duration-highlight: 1500ms;
+  --eda-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --eda-ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1);
+  --eda-target-min: 24px;
+  --eda-target-coarse: 44px;
+  --eda-target-gap-coarse: 8px;
+  --eda-chart-seq-100: #cde2fb;
+  --eda-chart-seq-200: #9ec5f4;
+  --eda-chart-seq-300: #6da7ec;
+  --eda-chart-seq-400: #3987e5;
+  --eda-chart-seq-500: #256abf;
+  --eda-chart-seq-600: #184f95;
+  --eda-chart-seq-700: #0d366b;
+  --eda-shadow-paper: 0 1px 3px rgba(17, 17, 20, 0.12), 0 8px 24px rgba(17, 17, 20, 0.08);
+}
+
+/* Dar ekran (< md 48rem). */
+
+@media (width < 48rem) {
+  :root {
+    --eda-type-display-size: 1.875rem;
+    --eda-type-display-line-height: 2.375rem;
+    --eda-topbar-height: 3rem;
+    --eda-gutter: 1rem;
+  }
+}
+
+/* Yoğunluk (051 §7.3); varsayılan comfortable. */
+
+:root,
+[data-density="comfortable"] {
+  --eda-control-h-sm: 32px;
+  --eda-control-h-md: 36px;
+  --eda-control-h-lg: 44px;
+  --eda-row-h: 44px;
+  --eda-sidebar-item-h: 32px;
+  --eda-card-padding-min: 16px;
+  --eda-card-padding-max: 24px;
+}
+
+[data-density="compact"] {
+  --eda-control-h-sm: 28px;
+  --eda-control-h-md: 32px;
+  --eda-control-h-lg: 40px;
+  --eda-row-h: 36px;
+  --eda-sidebar-item-h: 28px;
+  --eda-card-padding-min: 12px;
+  --eda-card-padding-max: 16px;
+}
+
+/* Azaltılmış hareket (051 §10.2): süre tokenları 0ms. */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --eda-duration-instant: 0ms;
+    --eda-duration-fast: 0ms;
+    --eda-duration-base: 0ms;
+    --eda-duration-slow: 0ms;
+    --eda-duration-highlight: 0ms;
+  }
+}
+
+/* Açık tema (varsayılan ve alt ağaç). */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+  --eda-bg: #f7f7f8;
+  --eda-surface: #ffffff;
+  --eda-surface-raised: #ffffff;
+  --eda-surface-sunken: #f2f2f4;
+  --eda-primary-soft: #ededf0;
+  --eda-text: #111114;
+  --eda-text-muted: #4b4b55;
+  --eda-text-subtle: #63636d;
+  --eda-text-on-primary: #ffffff;
+  --eda-border: #e6e6ea;
+  --eda-border-strong: #8a8a94;
+  --eda-primary: #18181b;
+  --eda-primary-hover: #2e2e34;
+  --eda-primary-active: #3f3f46;
+  --eda-primary-soft-fg: #111114;
+  --eda-primary-soft-border: #d4d4da;
+  --eda-focus-ring: #2b4acb;
+  --eda-success: #15803d;
+  --eda-success-soft: #f0fdf4;
+  --eda-success-on-soft: #166534;
+  --eda-success-border: #16a34a;
+  --eda-warning: #b45309;
+  --eda-warning-soft: #fffbeb;
+  --eda-warning-on-soft: #92400e;
+  --eda-warning-border: #d97706;
+  --eda-danger: #b91c1c;
+  --eda-danger-hover: #991b1b;
+  --eda-danger-soft: #fef2f2;
+  --eda-danger-on-soft: #991b1b;
+  --eda-danger-border: #dc2626;
+  --eda-info: #2b4acb;
+  --eda-info-soft: #eef1fc;
+  --eda-info-on-soft: #1e3a8a;
+  --eda-info-border: #5a74db;
+  --eda-neutral-soft: #f1f1f3;
+  --eda-neutral-on-soft: #3f3f46;
+  --eda-neutral-border: #8a8a94;
+  --eda-violet-soft: #f5f3ff;
+  --eda-violet-on-soft: #5b21b6;
+  --eda-violet-border: #7c3aed;
+  --eda-teal-soft: #f0fdfa;
+  --eda-teal-on-soft: #115e59;
+  --eda-teal-border: #0d9488;
+  --eda-inverse-bg: #18181b;
+  --eda-inverse-fg: #ffffff;
+  --eda-selection-bg: #d9e0fa;
+  --eda-disabled-fg: #71717a;
+  --eda-disabled-bg: #ededf0;
+  --eda-diff-add-bg: #ecfdf5;
+  --eda-diff-add-fg: #065f46;
+  --eda-diff-del-bg: #fef2f2;
+  --eda-diff-del-fg: #991b1b;
+  --eda-paper-bg: #ffffff;
+  --eda-paper-ink: #000000;
+  --eda-chart-1: #2a78d6;
+  --eda-chart-2: #eb6834;
+  --eda-chart-3: #1baf7a;
+  --eda-chart-4: #eda100;
+  --eda-chart-5: #e87ba4;
+  --eda-chart-6: #008300;
+  --eda-chart-7: #4a3aa7;
+  --eda-chart-8: #e34948;
+  --eda-chart-grid: #e6e6ea;
+  --eda-chart-axis: #63636d;
+  --eda-shadow-1: 0 1px 2px rgba(17, 17, 20, 0.06);
+  --eda-shadow-2: 0 4px 12px rgba(17, 17, 20, 0.1);
+  --eda-shadow-3: 0 12px 32px rgba(17, 17, 20, 0.16);
+  --eda-scrim: rgba(17, 17, 20, 0.4);
+  --eda-citation-pending-bg: var(--eda-info-soft);
+  --eda-citation-pending-fg: var(--eda-info-on-soft);
+  --eda-citation-pending-border: var(--eda-info-border);
+  --eda-citation-verified-bg: var(--eda-success-soft);
+  --eda-citation-verified-fg: var(--eda-success-on-soft);
+  --eda-citation-verified-border: var(--eda-success-border);
+  --eda-citation-verified-user-source-bg: var(--eda-success-soft);
+  --eda-citation-verified-user-source-fg: var(--eda-success-on-soft);
+  --eda-citation-verified-user-source-border: var(--eda-success-border);
+  --eda-citation-out-of-context-bg: var(--eda-warning-soft);
+  --eda-citation-out-of-context-fg: var(--eda-warning-on-soft);
+  --eda-citation-out-of-context-border: var(--eda-warning-border);
+  --eda-citation-source-unavailable-bg: var(--eda-warning-soft);
+  --eda-citation-source-unavailable-fg: var(--eda-warning-on-soft);
+  --eda-citation-source-unavailable-border: var(--eda-warning-border);
+  --eda-citation-not-found-bg: var(--eda-danger-soft);
+  --eda-citation-not-found-fg: var(--eda-danger-on-soft);
+  --eda-citation-not-found-border: var(--eda-danger-border);
+  --eda-citation-out-of-coverage-bg: var(--eda-neutral-soft);
+  --eda-citation-out-of-coverage-fg: var(--eda-neutral-on-soft);
+  --eda-citation-out-of-coverage-border: var(--eda-neutral-border);
+  --eda-citation-attested-bg: var(--eda-inverse-bg);
+  --eda-citation-attested-fg: var(--eda-inverse-fg);
+  --eda-citation-attested-border: var(--eda-inverse-bg);
+  --eda-data-class-public-bg: var(--eda-neutral-soft);
+  --eda-data-class-public-fg: var(--eda-neutral-on-soft);
+  --eda-data-class-public-border: var(--eda-neutral-border);
+  --eda-data-class-client-bg: var(--eda-primary-soft);
+  --eda-data-class-client-fg: var(--eda-primary-soft-fg);
+  --eda-data-class-client-border: var(--eda-primary);
+  --eda-data-class-case-bg: var(--eda-violet-soft);
+  --eda-data-class-case-fg: var(--eda-violet-on-soft);
+  --eda-data-class-case-border: var(--eda-violet-border);
+}
+
+/* Koyu tema. */
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --eda-bg: #0b0b0d;
+  --eda-surface: #111114;
+  --eda-surface-raised: #18181c;
+  --eda-surface-sunken: #09090b;
+  --eda-primary-soft: #222228;
+  --eda-text: #f4f4f5;
+  --eda-text-muted: #b4b4bc;
+  --eda-text-subtle: #8e8e98;
+  --eda-text-on-primary: #111114;
+  --eda-border: #26262b;
+  --eda-border-strong: #6e6e78;
+  --eda-primary: #f4f4f5;
+  --eda-primary-hover: #d9d9de;
+  --eda-primary-active: #b4b4bc;
+  --eda-primary-soft-fg: #f4f4f5;
+  --eda-primary-soft-border: #3a3a42;
+  --eda-focus-ring: #9db4ff;
+  --eda-success: #4ade80;
+  --eda-success-soft: #052e16;
+  --eda-success-on-soft: #bbf7d0;
+  --eda-success-border: #22c55e;
+  --eda-warning: #fbbf24;
+  --eda-warning-soft: #451a03;
+  --eda-warning-on-soft: #fde68a;
+  --eda-warning-border: #f59e0b;
+  --eda-danger: #f87171;
+  --eda-danger-hover: #fca5a5;
+  --eda-danger-soft: #450a0a;
+  --eda-danger-on-soft: #fecaca;
+  --eda-danger-border: #ef4444;
+  --eda-info: #9db4ff;
+  --eda-info-soft: #141a33;
+  --eda-info-on-soft: #c9d5ff;
+  --eda-info-border: #6f87e3;
+  --eda-neutral-soft: #1c1c21;
+  --eda-neutral-on-soft: #d4d4d8;
+  --eda-neutral-border: #74747e;
+  --eda-violet-soft: #2e1065;
+  --eda-violet-on-soft: #ddd6fe;
+  --eda-violet-border: #a78bfa;
+  --eda-teal-soft: #042f2e;
+  --eda-teal-on-soft: #99f6e4;
+  --eda-teal-border: #2dd4bf;
+  --eda-inverse-bg: #f4f4f5;
+  --eda-inverse-fg: #111114;
+  --eda-selection-bg: #2a3766;
+  --eda-disabled-fg: #8e8e98;
+  --eda-disabled-bg: #1c1c21;
+  --eda-diff-add-bg: #052e16;
+  --eda-diff-add-fg: #bbf7d0;
+  --eda-diff-del-bg: #450a0a;
+  --eda-diff-del-fg: #fecaca;
+  --eda-paper-bg: #ffffff;
+  --eda-paper-ink: #000000;
+  --eda-chart-1: #3987e5;
+  --eda-chart-2: #d95926;
+  --eda-chart-3: #199e70;
+  --eda-chart-4: #c98500;
+  --eda-chart-5: #d55181;
+  --eda-chart-6: #008300;
+  --eda-chart-7: #9085e9;
+  --eda-chart-8: #e66767;
+  --eda-chart-grid: #26262b;
+  --eda-chart-axis: #8e8e98;
+  --eda-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --eda-shadow-2: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --eda-shadow-3: 0 12px 32px rgba(0, 0, 0, 0.6);
+  --eda-scrim: rgba(0, 0, 0, 0.64);
+  --eda-citation-pending-bg: var(--eda-info-soft);
+  --eda-citation-pending-fg: var(--eda-info-on-soft);
+  --eda-citation-pending-border: var(--eda-info-border);
+  --eda-citation-verified-bg: var(--eda-success-soft);
+  --eda-citation-verified-fg: var(--eda-success-on-soft);
+  --eda-citation-verified-border: var(--eda-success-border);
+  --eda-citation-verified-user-source-bg: var(--eda-success-soft);
+  --eda-citation-verified-user-source-fg: var(--eda-success-on-soft);
+  --eda-citation-verified-user-source-border: var(--eda-success-border);
+  --eda-citation-out-of-context-bg: var(--eda-warning-soft);
+  --eda-citation-out-of-context-fg: var(--eda-warning-on-soft);
+  --eda-citation-out-of-context-border: var(--eda-warning-border);
+  --eda-citation-source-unavailable-bg: var(--eda-warning-soft);
+  --eda-citation-source-unavailable-fg: var(--eda-warning-on-soft);
+  --eda-citation-source-unavailable-border: var(--eda-warning-border);
+  --eda-citation-not-found-bg: var(--eda-danger-soft);
+  --eda-citation-not-found-fg: var(--eda-danger-on-soft);
+  --eda-citation-not-found-border: var(--eda-danger-border);
+  --eda-citation-out-of-coverage-bg: var(--eda-neutral-soft);
+  --eda-citation-out-of-coverage-fg: var(--eda-neutral-on-soft);
+  --eda-citation-out-of-coverage-border: var(--eda-neutral-border);
+  --eda-citation-attested-bg: var(--eda-inverse-bg);
+  --eda-citation-attested-fg: var(--eda-inverse-fg);
+  --eda-citation-attested-border: var(--eda-inverse-bg);
+  --eda-data-class-public-bg: var(--eda-neutral-soft);
+  --eda-data-class-public-fg: var(--eda-neutral-on-soft);
+  --eda-data-class-public-border: var(--eda-neutral-border);
+  --eda-data-class-client-bg: var(--eda-primary-soft);
+  --eda-data-class-client-fg: var(--eda-primary-soft-fg);
+  --eda-data-class-client-border: var(--eda-primary);
+  --eda-data-class-case-bg: var(--eda-violet-soft);
+  --eda-data-class-case-fg: var(--eda-violet-on-soft);
+  --eda-data-class-case-border: var(--eda-violet-border);
+  --eda-shadow-paper:
+    0 0 0 1px #26262b, 0 1px 3px rgba(17, 17, 20, 0.12), 0 8px 24px rgba(17, 17, 20, 0.08);
+}
+
+/* Sistem teması: işletim sistemi koyu tercihindeyse koyu değerler. */
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="system"] {
+    color-scheme: dark;
+    --eda-bg: #0b0b0d;
+    --eda-surface: #111114;
+    --eda-surface-raised: #18181c;
+    --eda-surface-sunken: #09090b;
+    --eda-primary-soft: #222228;
+    --eda-text: #f4f4f5;
+    --eda-text-muted: #b4b4bc;
+    --eda-text-subtle: #8e8e98;
+    --eda-text-on-primary: #111114;
+    --eda-border: #26262b;
+    --eda-border-strong: #6e6e78;
+    --eda-primary: #f4f4f5;
+    --eda-primary-hover: #d9d9de;
+    --eda-primary-active: #b4b4bc;
+    --eda-primary-soft-fg: #f4f4f5;
+    --eda-primary-soft-border: #3a3a42;
+    --eda-focus-ring: #9db4ff;
+    --eda-success: #4ade80;
+    --eda-success-soft: #052e16;
+    --eda-success-on-soft: #bbf7d0;
+    --eda-success-border: #22c55e;
+    --eda-warning: #fbbf24;
+    --eda-warning-soft: #451a03;
+    --eda-warning-on-soft: #fde68a;
+    --eda-warning-border: #f59e0b;
+    --eda-danger: #f87171;
+    --eda-danger-hover: #fca5a5;
+    --eda-danger-soft: #450a0a;
+    --eda-danger-on-soft: #fecaca;
+    --eda-danger-border: #ef4444;
+    --eda-info: #9db4ff;
+    --eda-info-soft: #141a33;
+    --eda-info-on-soft: #c9d5ff;
+    --eda-info-border: #6f87e3;
+    --eda-neutral-soft: #1c1c21;
+    --eda-neutral-on-soft: #d4d4d8;
+    --eda-neutral-border: #74747e;
+    --eda-violet-soft: #2e1065;
+    --eda-violet-on-soft: #ddd6fe;
+    --eda-violet-border: #a78bfa;
+    --eda-teal-soft: #042f2e;
+    --eda-teal-on-soft: #99f6e4;
+    --eda-teal-border: #2dd4bf;
+    --eda-inverse-bg: #f4f4f5;
+    --eda-inverse-fg: #111114;
+    --eda-selection-bg: #2a3766;
+    --eda-disabled-fg: #8e8e98;
+    --eda-disabled-bg: #1c1c21;
+    --eda-diff-add-bg: #052e16;
+    --eda-diff-add-fg: #bbf7d0;
+    --eda-diff-del-bg: #450a0a;
+    --eda-diff-del-fg: #fecaca;
+    --eda-paper-bg: #ffffff;
+    --eda-paper-ink: #000000;
+    --eda-chart-1: #3987e5;
+    --eda-chart-2: #d95926;
+    --eda-chart-3: #199e70;
+    --eda-chart-4: #c98500;
+    --eda-chart-5: #d55181;
+    --eda-chart-6: #008300;
+    --eda-chart-7: #9085e9;
+    --eda-chart-8: #e66767;
+    --eda-chart-grid: #26262b;
+    --eda-chart-axis: #8e8e98;
+    --eda-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --eda-shadow-2: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --eda-shadow-3: 0 12px 32px rgba(0, 0, 0, 0.6);
+    --eda-scrim: rgba(0, 0, 0, 0.64);
+    --eda-citation-pending-bg: var(--eda-info-soft);
+    --eda-citation-pending-fg: var(--eda-info-on-soft);
+    --eda-citation-pending-border: var(--eda-info-border);
+    --eda-citation-verified-bg: var(--eda-success-soft);
+    --eda-citation-verified-fg: var(--eda-success-on-soft);
+    --eda-citation-verified-border: var(--eda-success-border);
+    --eda-citation-verified-user-source-bg: var(--eda-success-soft);
+    --eda-citation-verified-user-source-fg: var(--eda-success-on-soft);
+    --eda-citation-verified-user-source-border: var(--eda-success-border);
+    --eda-citation-out-of-context-bg: var(--eda-warning-soft);
+    --eda-citation-out-of-context-fg: var(--eda-warning-on-soft);
+    --eda-citation-out-of-context-border: var(--eda-warning-border);
+    --eda-citation-source-unavailable-bg: var(--eda-warning-soft);
+    --eda-citation-source-unavailable-fg: var(--eda-warning-on-soft);
+    --eda-citation-source-unavailable-border: var(--eda-warning-border);
+    --eda-citation-not-found-bg: var(--eda-danger-soft);
+    --eda-citation-not-found-fg: var(--eda-danger-on-soft);
+    --eda-citation-not-found-border: var(--eda-danger-border);
+    --eda-citation-out-of-coverage-bg: var(--eda-neutral-soft);
+    --eda-citation-out-of-coverage-fg: var(--eda-neutral-on-soft);
+    --eda-citation-out-of-coverage-border: var(--eda-neutral-border);
+    --eda-citation-attested-bg: var(--eda-inverse-bg);
+    --eda-citation-attested-fg: var(--eda-inverse-fg);
+    --eda-citation-attested-border: var(--eda-inverse-bg);
+    --eda-data-class-public-bg: var(--eda-neutral-soft);
+    --eda-data-class-public-fg: var(--eda-neutral-on-soft);
+    --eda-data-class-public-border: var(--eda-neutral-border);
+    --eda-data-class-client-bg: var(--eda-primary-soft);
+    --eda-data-class-client-fg: var(--eda-primary-soft-fg);
+    --eda-data-class-client-border: var(--eda-primary);
+    --eda-data-class-case-bg: var(--eda-violet-soft);
+    --eda-data-class-case-fg: var(--eda-violet-on-soft);
+    --eda-data-class-case-border: var(--eda-violet-border);
+    --eda-shadow-paper:
+      0 0 0 1px #26262b, 0 1px 3px rgba(17, 17, 20, 0.12), 0 8px 24px rgba(17, 17, 20, 0.08);
+  }
+}

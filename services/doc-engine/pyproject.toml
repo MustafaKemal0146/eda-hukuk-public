@@ -1,0 +1,57 @@
+[project]
+name = "eda-doc-engine"
+version = "0.0.0"
+description = "E.D.A. Hukuk belge motoru: DOCX/UDF/PDF üretimi, metin çıkarma, OCR"
+requires-python = "==3.14.*"
+dependencies = [
+  "defusedxml==0.7.1",
+  "fastapi==0.143.0",
+  "httpx2==2.13.1",
+  "pydantic==2.14.0",
+  "pypdf==6.20.0",
+  "python-docx==1.2.0",
+  "uvicorn==0.54.0",
+]
+
+[dependency-groups]
+dev = [
+  "datamodel-code-generator==0.83.0",
+  "hypothesis==6.168.5",
+  "mypy==2.4.0",
+  "pdfminer.six==20260107",
+  "pytest==9.1.1",
+  "ruff==0.17.0",
+  "types-defusedxml==0.7.0.20260504",
+]
+
+[build-system]
+requires = ["uv_build==0.12.24"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+extend-exclude = ["src/eda_doc_engine/models/generated"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "PT", "RUF"]
+ignore = ["S101"]
+# Türkçe metin: noktasız ı ve noktalı İ belirsiz karakter sayılmaz.
+allowed-confusables = ["ı", "İ"]
+
+[tool.mypy]
+strict = true
+mypy_path = "src"
+packages = ["eda_doc_engine"]
+
+# Üretilmiş modeller (gen:schemas): DocAST `Align` StrEnum üyesi `center`, `str.center` adını
+# gölgeler; üretici çıktısı elle düzenlenmez (013 §17.2 adım 7).
+[[tool.mypy.overrides]]
+module = "eda_doc_engine.models.generated.*"
+disable_error_code = ["assignment"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider -m 'not l6'"
+markers = ["l6: gerçek Gotenberg ile PDF ölçümleri (doc-engine-run.sh l6)"]

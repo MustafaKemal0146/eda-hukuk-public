@@ -1,0 +1,21 @@
+{
+  "id": "corpus-uyusmazlik-1",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. Uyuşmazlık: künye (K A R A R), gerekçe, hüküm.",
+  "courtType": "uyusmazlik",
+  "lines": [
+    "T.C. UYUŞMAZLIK MAHKEMESİ",
+    "ÖRNEK HUKUK BÖLÜMÜ",
+    "Esas No : 2020/900701",
+    "K A R A R",
+    "Örnek görev uyuşmazlığı.",
+    "GEREKÇE",
+    "Örnek gerekçe paragrafı.",
+    "HÜKÜM",
+    "Adli yargının görevli olduğuna karar verildi."
+  ],
+  "roles": ["kunye", "gerekce", "hukum"],
+  "outcome": "patterned",
+  "gerekceExcludes": []
+}

@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "recorded_at": "2026-10-10T17:24:02.060Z",
+    "method": "POST",
+    "url": "https://bedesten.adalet.gov.tr/emsal-karar/searchDocuments",
+    "request_body": "{\"data\":{\"pageSize\":5,\"pageNumber\":1,\"itemTypeList\":[\"YARGITAYKARARI\"],\"phrase\":\"\\\"tahliye taahhüdü\\\"\",\"birimAdi\":\"3. Hukuk Dairesi\",\"kararTarihiStart\":\"2023-01-01T00:00:00.000Z\",\"kararTarihiEnd\":\"2023-12-31T23:59:59.999Z\"},\"applicationName\":\"UyapMevzuat\",\"paging\":true}",
+    "status": 200,
+    "synthetic": false,
+    "note": "Tırnaklı ifade + daire (H3) + tarih aralığı 2023"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json"
+    },
+    "body": "{\"data\":{\"emsalKararList\":[{\"documentId\":\"979779300\",\"itemType\":{\"name\":\"YARGITAYKARARI\",\"description\":\"Yargıtay Kararı\"},\"birimId\":null,\"birimAdi\":\"3. Hukuk Dairesi\",\"esasNoYil\":2022,\"esasNoSira\":8302,\"kararNoYil\":2023,\"kararNoSira\":167,\"kararTuru\":null,\"kararTarihi\":\"2023-02-20T21:00:00.000+00:00\",\"kararTarihiStr\":\"21.02.2023\",\"kesinlesmeDurumu\":null,\"kararNo\":\"2023/167\",\"esasNo\":\"2022/8302\"},{\"documentId\":\"979779900\",\"itemType\":{\"name\":\"YARGITAYKARARI\",\"description\":\"Yargıtay Kararı\"},\"birimId\":null,\"birimAdi\":\"3. Hukuk Dairesi\",\"esasNoYil\":2022,\"esasNoSira\":8307,\"kararNoYil\":2023,\"kararNoSira\":168,\"kararTuru\":null,\"kararTarihi\":\"2023-02-20T21:00:00.000+00:00\",\"kararTarihiStr\":\"21.02.2023\",\"kesinlesmeDurumu\":null,\"kararNo\":\"2023/168\",\"esasNo\":\"2022/8307\"}],\"total\":2,\"start\":0},\"metadata\":{\"FMTY\":\"SUCCESS\",\"FMC\":\"ADALET_SUCCESS\",\"FMTE\":\"İşlem başarıyla gerçekleştirildi!\",\"FMU\":\"İşlem başarıyla gerçekleştirildi!\",\"PTID\":null,\"TID\":\"14dbd86b322670cc4661ebfef778e6e6\",\"SID\":\"dd7d9529efcd79d6\"}}"
+  }
+}

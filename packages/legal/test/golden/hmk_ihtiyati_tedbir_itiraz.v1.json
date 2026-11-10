@@ -1,0 +1,29 @@
+{
+  "ruleCode": "hmk_ihtiyati_tedbir_itiraz",
+  "ruleVersion": 1,
+  "source": "083 §9 tablosu; beklenen son gün tablodan aynen, stepKinds/warnings §5.2 algoritma izinden elle (P22.3). Hukuk onayı bekliyor (AS-0205).",
+  "cases": [
+    {
+      "id": "G30",
+      "title": "Adli tatile tabi olmayan iş",
+      "input": {
+        "startEvent": "pronouncement",
+        "eventDate": "2026-07-21",
+        "serviceMethod": null,
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-07-28",
+        "dueAt": "2026-07-28T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period"],
+        "warnings": []
+      },
+      "rationale": "1 hafta; adli tatilde ama recess_applies = false (HMK m.103)",
+      "reviewedBy": null
+    }
+  ]
+}

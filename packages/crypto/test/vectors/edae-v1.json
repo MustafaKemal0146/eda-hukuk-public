@@ -1,0 +1,118 @@
+{
+  "note": "Sentetik bilinen-cevap vektörleri (033 §4.6); anahtarlar ardışık bayt desenidir, gerçek sır değildir. Düz metin: bayt i = (i*31+7) mod 256. Bağımsız doğrulama: tests/crypto-xcheck/verify.py.",
+  "fileKey": "404142434445464748494a4b4c4d4e4f505152535455565758595a5b5c5d5e5f",
+  "orgId": "00000000-0000-7000-8000-00000000000a",
+  "fileId": "00000000-0000-7000-8000-0000000000f1",
+  "keyVersion": 1,
+  "noncePrefix": "9091929394959697",
+  "vectors": [
+    {
+      "variant": "orig",
+      "plainBytes": 1,
+      "objectBytes": 41,
+      "header": "454441450101100000000001909192939495969700000000",
+      "firstSegmentTail": "33d955ae520bbe481e06e15e56570d110b",
+      "objectSha256": "396ae51acdf73d8eaf9b77305ef2261613aac976b50d6d297982b8cc931c4bab",
+      "plainSha256": "ca358758f6d27e6cf45272937977a748fd88391db679ceda7dc7bf1f005ee879"
+    },
+    {
+      "variant": "orig",
+      "plainBytes": 65535,
+      "objectBytes": 65575,
+      "header": "454441450101100000000001909192939495969700000000",
+      "firstSegmentTail": "3362e0a48ed3d53965dd3622508f11c79f848e74c3ad1520ef0b4a28514cd772",
+      "objectSha256": "b1659c370c7fcd0dc9322ffb1ae5818803229ff2c145ce8cf00cc29e89cc6e73",
+      "plainSha256": "91d0a03af0efeeb5568bbdcf2bd7fe1c9d932c4d22db3643c7586c1bd1afbeb1"
+    },
+    {
+      "variant": "orig",
+      "plainBytes": 65536,
+      "objectBytes": 65576,
+      "header": "454441450101100000000001909192939495969700000000",
+      "firstSegmentTail": "3362e0a48ed3d53965dd3622508f11c79f848e74c3ad1520ef0b4a28514cd772",
+      "objectSha256": "17453875e2de74650aad86bbcd6f508c9250c5845219858d91166717f24bfd80",
+      "plainSha256": "ef4636928161808e87035fa51983821677527ccd9661991c5d0126a778b2268a"
+    },
+    {
+      "variant": "orig",
+      "plainBytes": 65537,
+      "objectBytes": 65593,
+      "header": "454441450101100000000001909192939495969700000000",
+      "firstSegmentTail": "3362e0a48ed3d53965dd3622508f11c79f848e74c3ad1520ef0b4a28514cd772",
+      "objectSha256": "00e85c985f6cdec6b3894bca90d36b75f0396c8c3b8b4460dd16c3be66c6fc8f",
+      "plainSha256": "74f3260f4a9adaf7271c910ba2d111dbae7a176afb487e1b7f655897eadf1093"
+    },
+    {
+      "variant": "orig",
+      "plainBytes": 131072,
+      "objectBytes": 131128,
+      "header": "454441450101100000000001909192939495969700000000",
+      "firstSegmentTail": "3362e0a48ed3d53965dd3622508f11c79f848e74c3ad1520ef0b4a28514cd772",
+      "objectSha256": "41683b404a4029d3042c068828d3bd95615a4be834f86e3505857ce45f5bcc83",
+      "plainSha256": "2af5d3dffc8442daccee445639ed726c2148eb693ee20407214076bc65c14fc3"
+    },
+    {
+      "variant": "orig",
+      "plainBytes": 131073,
+      "objectBytes": 131145,
+      "header": "454441450101100000000001909192939495969700000000",
+      "firstSegmentTail": "3362e0a48ed3d53965dd3622508f11c79f848e74c3ad1520ef0b4a28514cd772",
+      "objectSha256": "8d50a041b24ddfb9898e6a8d1dbc01d36b01e9ff95a357c94014cc06fbf8c557",
+      "plainSha256": "6f9244c4018eeb50e08d057865b9ac4c3df58fbd9362e8cbb74546f3501fa660"
+    },
+    {
+      "variant": "searchable",
+      "plainBytes": 1,
+      "objectBytes": 41,
+      "header": "454441450101100000000001909192939495969700000000",
+      "firstSegmentTail": "060f7f7461a82f24eeefca2660e733d6b8",
+      "objectSha256": "2e378e9e71b8314381824259a6e2c32eee7c1cae093a3a3a10e0d4bd67b8c311",
+      "plainSha256": "ca358758f6d27e6cf45272937977a748fd88391db679ceda7dc7bf1f005ee879"
+    },
+    {
+      "variant": "searchable",
+      "plainBytes": 65535,
+      "objectBytes": 65575,
+      "header": "454441450101100000000001909192939495969700000000",
+      "firstSegmentTail": "06ee0f8c1031817d9c06f74564113192b9673de08cf319d163815137fd5712ab",
+      "objectSha256": "4bf8eecfb2b04b7801033b34bf08d8382c2d7e8a05d2fb3bbd51e3848eca94b5",
+      "plainSha256": "91d0a03af0efeeb5568bbdcf2bd7fe1c9d932c4d22db3643c7586c1bd1afbeb1"
+    },
+    {
+      "variant": "searchable",
+      "plainBytes": 65536,
+      "objectBytes": 65576,
+      "header": "454441450101100000000001909192939495969700000000",
+      "firstSegmentTail": "06ee0f8c1031817d9c06f74564113192b9673de08cf319d163815137fd5712ab",
+      "objectSha256": "65886355f85501d4bae0a14f3191590e55d13265600930b1df885cba1bf42e24",
+      "plainSha256": "ef4636928161808e87035fa51983821677527ccd9661991c5d0126a778b2268a"
+    },
+    {
+      "variant": "searchable",
+      "plainBytes": 65537,
+      "objectBytes": 65593,
+      "header": "454441450101100000000001909192939495969700000000",
+      "firstSegmentTail": "06ee0f8c1031817d9c06f74564113192b9673de08cf319d163815137fd5712ab",
+      "objectSha256": "32e974d65a7918af20c86dedc282171dd9b6b2da0933c33871fdf9d1a0bd9453",
+      "plainSha256": "74f3260f4a9adaf7271c910ba2d111dbae7a176afb487e1b7f655897eadf1093"
+    },
+    {
+      "variant": "searchable",
+      "plainBytes": 131072,
+      "objectBytes": 131128,
+      "header": "454441450101100000000001909192939495969700000000",
+      "firstSegmentTail": "06ee0f8c1031817d9c06f74564113192b9673de08cf319d163815137fd5712ab",
+      "objectSha256": "8444942dd0e241d4649740f0633bd4ec12ca4d2bd0166b07cee1d84983b1a9a7",
+      "plainSha256": "2af5d3dffc8442daccee445639ed726c2148eb693ee20407214076bc65c14fc3"
+    },
+    {
+      "variant": "searchable",
+      "plainBytes": 131073,
+      "objectBytes": 131145,
+      "header": "454441450101100000000001909192939495969700000000",
+      "firstSegmentTail": "06ee0f8c1031817d9c06f74564113192b9673de08cf319d163815137fd5712ab",
+      "objectSha256": "aaffed64847c8e81f9ba49b7cf53276d9ba8f875e1e3bdd1a84d165a6ba5a9f9",
+      "plainSha256": "6f9244c4018eeb50e08d057865b9ac4c3df58fbd9362e8cbb74546f3501fa660"
+    }
+  ]
+}

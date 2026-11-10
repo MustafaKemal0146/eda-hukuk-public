@@ -1,0 +1,79 @@
+{
+  "description": "Sentetik d\u00fc\u015fmanca girdiler: bidi, s\u0131f\u0131r geni\u015flikli, denetim karakterleri, ayr\u0131\u015f\u0131k \u0130, betik etiketi metni.",
+  "cases": [
+    {
+      "name": "bidi_override",
+      "input": "\u00d6deme \u202e\u0130ADE\u202c tutar\u0131",
+      "expected": "\u00d6deme \u0130ADE tutar\u0131"
+    },
+    {
+      "name": "zero_width",
+      "input": "dava\u200b\u200c\u200d\u2060\ufeff dilek\u00e7esi",
+      "expected": "dava dilek\u00e7esi"
+    },
+    {
+      "name": "soft_hyphen",
+      "input": "h\u00fc\u00adk\u00fcm",
+      "expected": "h\u00fck\u00fcm"
+    },
+    {
+      "name": "c0_c1",
+      "input": "a\u0000b\u0007c\u001fd\u007fe\u0085f\u009fg",
+      "expected": "abcdefg"
+    },
+    {
+      "name": "decomposed_i",
+      "input": "I\u0307STANBUL",
+      "expected": "\u0130STANBUL"
+    },
+    {
+      "name": "nbsp_kept",
+      "input": "m.\u00a05",
+      "expected": "m.\u00a05"
+    },
+    {
+      "name": "isolates",
+      "input": "x\u2066y\u2067z\u2068w\u2069",
+      "expected": "xyzw"
+    },
+    {
+      "name": "tag_chars",
+      "input": "talimat\udb40\udc41\udb40\udc42",
+      "expected": "talimat"
+    },
+    {
+      "name": "script_text",
+      "input": "<script>alert(1)</script>",
+      "expected": "<script>alert(1)</script>"
+    },
+    {
+      "name": "crlf",
+      "input": "sat\u0131r1\r\nsat\u0131r2",
+      "expected": "sat\u0131r1\nsat\u0131r2"
+    }
+  ],
+  "doc": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "section",
+        "attrs": {
+          "blockId": "b-HS0001",
+          "rev": 1,
+          "role": "generic"
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "Gizli\u200b karakter \u202edenemesi\u202c"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "corpus-ilk-derece-fallback",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. İlk derece standart başlıksız: ilk paragraf künye ipucu taşır, gövde diger; fallback.",
+  "courtType": "ilk_derece_hukuk",
+  "lines": [
+    "ÖRNEK ASLİYE TİCARET MAHKEMESİ ESAS NO 2023/900402",
+    "",
+    "Taraflar arasındaki örnek uyuşmazlıkta dosya incelendi.",
+    "Örnek değerlendirme metni devam eder."
+  ],
+  "roles": ["kunye", "diger"],
+  "outcome": "fallback",
+  "gerekceExcludes": []
+}

@@ -1,0 +1,2 @@
+# CADDY_TLS_MODE=internal (dev/test): Caddy yerel CA'sı (caddydata biriminde; make dev-ca).
+tls internal

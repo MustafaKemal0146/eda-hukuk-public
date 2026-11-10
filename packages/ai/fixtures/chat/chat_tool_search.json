@@ -1,0 +1,184 @@
+{
+  "scenario": "chat_tool_search",
+  "task": "chat",
+  "delayMs": 20,
+  "steps": [
+    {
+      "parts": [
+        {
+          "type": "text-delta",
+          "delta": "Önce ilgili emsal kararları ve kanun maddesini getiriyorum."
+        },
+        {
+          "type": "tool-call",
+          "toolCallId": "call_1",
+          "toolName": "search_decisions",
+          "input": "{\"query\": \"tahliye taahhüdü geçerlilik şartları\", \"court_types\": [\"yargitay\"], \"chamber\": null, \"date_from\": null, \"date_to\": null, \"esas_no\": null, \"karar_no\": null, \"live\": false, \"page\": null}"
+        },
+        {
+          "type": "tool-call",
+          "toolCallId": "call_2",
+          "toolName": "get_legislation_article",
+          "input": "{\"ref\": null, \"law_no\": \"6098\", \"article_no\": \"352\", \"as_of\": null}"
+        }
+      ],
+      "finishReason": "tool-calls",
+      "usage": {
+        "inputTokens": 5400,
+        "outputTokens": 90
+      }
+    },
+    {
+      "parts": [
+        {
+          "type": "tool-call",
+          "toolCallId": "call_3",
+          "toolName": "get_decision",
+          "input": "{\"ref\": \"K1\", \"section\": null, \"role\": \"gerekce\"}"
+        }
+      ],
+      "finishReason": "tool-calls",
+      "usage": {
+        "inputTokens": 7900,
+        "outputTokens": 40
+      }
+    },
+    {
+      "parts": [
+        {
+          "type": "text-delta",
+          "delta": "## Kısa cevap\n\nKira sözl"
+        },
+        {
+          "type": "text-delta",
+          "delta": "eşmesinden **sonra** alı"
+        },
+        {
+          "type": "text-delta",
+          "delta": "nan tahliye taahhüdü; ya"
+        },
+        {
+          "type": "text-delta",
+          "delta": "zılı olması, kiralananın"
+        },
+        {
+          "type": "text-delta",
+          "delta": " tesliminden sonra veril"
+        },
+        {
+          "type": "text-delta",
+          "delta": "mesi ve belirli bir tahl"
+        },
+        {
+          "type": "text-delta",
+          "delta": "iye tarihi içermesi hâli"
+        },
+        {
+          "type": "text-delta",
+          "delta": "nde geçerlidir (TBK m. 3"
+        },
+        {
+          "type": "text-delta",
+          "delta": "52/1). Kiraya veren, taa"
+        },
+        {
+          "type": "text-delta",
+          "delta": "hhüt edilen tarihten iti"
+        },
+        {
+          "type": "text-delta",
+          "delta": "baren bir ay içinde icra"
+        },
+        {
+          "type": "text-delta",
+          "delta": " takibi başlatmalı veya "
+        },
+        {
+          "type": "text-delta",
+          "delta": "dava açmalıdır.\n\n## Daya"
+        },
+        {
+          "type": "text-delta",
+          "delta": "naklar\n\n- Getirilen emsa"
+        },
+        {
+          "type": "text-delta",
+          "delta": "l karar ve madde metni: "
+        },
+        {
+          "type": "text-delta",
+          "delta": "[K1]\n- Kararın incelenen"
+        },
+        {
+          "type": "text-delta",
+          "delta": " bölümünde, taahhüdün te"
+        },
+        {
+          "type": "text-delta",
+          "delta": "slimden önce alındığı id"
+        },
+        {
+          "type": "text-delta",
+          "delta": "diasının iddia edene isp"
+        },
+        {
+          "type": "text-delta",
+          "delta": "at yükü getirdiği belirt"
+        },
+        {
+          "type": "text-delta",
+          "delta": "ilir [K1].\n\n## Kontrol e"
+        },
+        {
+          "type": "text-delta",
+          "delta": "dilmesi gerekenler\n\n- Ta"
+        },
+        {
+          "type": "text-delta",
+          "delta": "ahhütnamenin düzenlenme "
+        },
+        {
+          "type": "text-delta",
+          "delta": "tarihi ile teslim tarihi"
+        },
+        {
+          "type": "text-delta",
+          "delta": "\n- Tahliye tarihinin açı"
+        },
+        {
+          "type": "text-delta",
+          "delta": "kça yazılıp yazılmadığı\n"
+        },
+        {
+          "type": "text-delta",
+          "delta": "- Bir aylık sürenin kaçı"
+        },
+        {
+          "type": "text-delta",
+          "delta": "rılıp kaçırılmadığı (sür"
+        },
+        {
+          "type": "text-delta",
+          "delta": "e motoruyla hesaplayın)\n"
+        },
+        {
+          "type": "text-delta",
+          "delta": "\n*Simülasyon: bu metin ö"
+        },
+        {
+          "type": "text-delta",
+          "delta": "rnek senaryodan üretildi"
+        },
+        {
+          "type": "text-delta",
+          "delta": ".*"
+        }
+      ],
+      "finishReason": "stop",
+      "usage": {
+        "inputTokens": 10400,
+        "outputTokens": 420
+      }
+    }
+  ]
+}

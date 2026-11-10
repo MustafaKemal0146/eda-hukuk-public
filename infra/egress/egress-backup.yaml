@@ -1,0 +1,12 @@
+# egress-backup izin listesi (backup; 002 §3, 070 §11) - yalnız BACKUP_S3_HOST.
+# ÜRETİLMİŞTİR: infra/scripts/egress-backup-render.sh --write (BACKUP_S3_HOST değerinden). Elle düzenlenmez.
+# BACKUP_S3_HOST boş veya yer tutucuyken liste boştur ve vekil her hedefi reddeder; bu durumda off-site kopya
+# alınmaz (backup-run.sh/offsite-sync.sh bunu "offsite=disabled" olarak bildirir, prod'da hata sayar).
+# Gerçek host eklenen değişiklik CODEOWNERS PR'ından geçer; check-egress-allowlist boşken boş, doluyken birebir eşleşme arar.
+version: v1
+services: []
+default:
+  name: default
+  project: eda
+  action: enforce
+  allowed_domains: []

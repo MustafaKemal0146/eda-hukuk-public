@@ -1,0 +1,163 @@
+{
+  "$comment": "URETILDI - elle duzenlemeyin; kaynak: packages/contracts/src/doc-engine/extract.ts",
+  "$id": "https://schemas.eda.internal/extract.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "extractorVersion": {
+      "maxLength": 64,
+      "minLength": 1,
+      "type": "string"
+    },
+    "fileType": {
+      "enum": [
+        "pdf",
+        "docx",
+        "txt"
+      ],
+      "type": "string"
+    },
+    "hasTextLayer": {
+      "type": "boolean"
+    },
+    "hiddenContent": {
+      "additionalProperties": false,
+      "properties": {
+        "excludedFromText": {
+          "type": "boolean"
+        },
+        "found": {
+          "type": "boolean"
+        },
+        "items": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "charCount": {
+                "maximum": 9007199254740991,
+                "minimum": -9007199254740991,
+                "type": "integer"
+              },
+              "excerpt": {
+                "maxLength": 200,
+                "type": "string"
+              },
+              "kind": {
+                "enum": [
+                  "white_text",
+                  "tiny_text",
+                  "offpage_text",
+                  "hidden_layer",
+                  "docx_hidden_run",
+                  "docx_comment",
+                  "docx_tracked_deletion",
+                  "pdf_annotation_text",
+                  "pdf_active_content"
+                ],
+                "type": "string"
+              },
+              "page": {
+                "anyOf": [
+                  {
+                    "maximum": 9007199254740991,
+                    "minimum": -9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "page",
+              "charCount",
+              "excerpt"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "found",
+        "excludedFromText",
+        "items"
+      ],
+      "type": "object"
+    },
+    "jobId": {
+      "format": "uuid",
+      "type": "string"
+    },
+    "pageCount": {
+      "anyOf": [
+        {
+          "maximum": 9007199254740991,
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "pageOffsets": {
+      "items": {
+        "maximum": 9007199254740991,
+        "minimum": 0,
+        "type": "integer"
+      },
+      "type": "array"
+    },
+    "rejectReason": {
+      "anyOf": [
+        {
+          "enum": [
+            "zip_bomb",
+            "zip_slip",
+            "xxe_blocked",
+            "macro_detected",
+            "encrypted_pdf",
+            "corrupt",
+            "unsupported_structure",
+            "page_limit"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "text": {
+      "type": "string"
+    },
+    "textTruncated": {
+      "type": "boolean"
+    },
+    "verdict": {
+      "enum": [
+        "ok",
+        "reject"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "jobId",
+    "verdict",
+    "rejectReason",
+    "fileType",
+    "pageCount",
+    "hasTextLayer",
+    "text",
+    "textTruncated",
+    "pageOffsets",
+    "hiddenContent",
+    "extractorVersion"
+  ],
+  "title": "ExtractResult",
+  "type": "object"
+}

@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "recorded_at": "2026-10-10T17:24:05.805Z",
+    "method": "POST",
+    "url": "https://bedesten.adalet.gov.tr/emsal-karar/searchDocuments",
+    "request_body": "{\"data\":{\"pageSize\":3,\"pageNumber\":1,\"itemTypeList\":[\"DANISTAYKARAR\"],\"phrase\":\"\\\"imar planı\\\"\"},\"applicationName\":\"UyapMevzuat\",\"paging\":true}",
+    "status": 200,
+    "synthetic": false,
+    "note": "Danıştay itemType DANISTAYKARAR"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json"
+    },
+    "body": "{\"data\":{\"emsalKararList\":[{\"documentId\":\"18143100\",\"itemType\":{\"name\":\"DANISTAYKARAR\",\"description\":\"Danıştay Kararı\"},\"birimId\":null,\"birimAdi\":\"6. Daire\",\"esasNoYil\":1991,\"esasNoSira\":2825,\"kararNoYil\":1992,\"kararNoSira\":542,\"kararTuru\":null,\"kararTarihi\":\"1992-02-11T22:00:00.000+00:00\",\"kararTarihiStr\":\"12.02.1992\",\"kesinlesmeDurumu\":\"İMAR İŞLERİ,\",\"kararNo\":\"1992/542\",\"esasNo\":\"1991/2825\"},{\"documentId\":\"886264200\",\"itemType\":{\"name\":\"DANISTAYKARAR\",\"description\":\"Danıştay Kararı\"},\"birimId\":null,\"birimAdi\":\"6. Daire\",\"esasNoYil\":2019,\"esasNoSira\":1560,\"kararNoYil\":2022,\"kararNoSira\":9054,\"kararTuru\":\"1\",\"kararTarihi\":\"2022-10-26T21:00:00.000+00:00\",\"kararTarihiStr\":\"27.10.2022\",\"kesinlesmeDurumu\":null,\"kararNo\":\"2022/9054\",\"esasNo\":\"2019/1560\"},{\"documentId\":\"860851700\",\"itemType\":{\"name\":\"DANISTAYKARAR\",\"description\":\"Danıştay Kararı\"},\"birimId\":null,\"birimAdi\":\"6. Daire\",\"esasNoYil\":2022,\"esasNoSira\":244,\"kararNoYil\":2022,\"kararNoSira\":9666,\"kararTuru\":\"1\",\"kararTarihi\":\"2022-11-14T21:00:00.000+00:00\",\"kararTarihiStr\":\"15.11.2022\",\"kesinlesmeDurumu\":null,\"kararNo\":\"2022/9666\",\"esasNo\":\"2022/244\"}],\"total\":22010,\"start\":0},\"metadata\":{\"FMTY\":\"SUCCESS\",\"FMC\":\"ADALET_SUCCESS\",\"FMTE\":\"İşlem başarıyla gerçekleştirildi!\",\"FMU\":\"İşlem başarıyla gerçekleştirildi!\",\"PTID\":null,\"TID\":\"35bcd9516481d12d38169b9bac48b558\",\"SID\":\"f825d19518b7c7dc\"}}"
+  }
+}

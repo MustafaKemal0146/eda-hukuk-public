@@ -1,0 +1,20 @@
+{
+  "id": "corpus-kyb-2",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. Kanun yararına bozma: hukuk dairesi, istem ve sonuç.",
+  "courtType": "kyb",
+  "lines": [
+    "T.C. YARGITAY",
+    "ÖRNEK 2. HUKUK DAİRESİ",
+    "İSTEM",
+    "Örnek kanun yararına bozma istemi.",
+    "DEĞERLENDİRME",
+    "Örnek değerlendirme.",
+    "SONUÇ",
+    "İstemin kabulüne."
+  ],
+  "roles": ["kunye", "istem", "gerekce", "hukum"],
+  "outcome": "patterned",
+  "gerekceExcludes": []
+}

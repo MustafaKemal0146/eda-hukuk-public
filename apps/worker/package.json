@@ -1,0 +1,38 @@
+{
+  "name": "@eda/worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsdown",
+    "dev": "node --watch src/main.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --project unit",
+    "test:int": "vitest run --project integration"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "catalog:",
+    "@eda/ai": "workspace:*",
+    "@eda/contracts": "workspace:*",
+    "@eda/crypto": "workspace:*",
+    "@eda/db": "workspace:*",
+    "@eda/email": "workspace:*",
+    "@eda/observability": "workspace:*",
+    "@react-email/render": "catalog:",
+    "bullmq": "catalog:",
+    "ioredis": "catalog:",
+    "nodemailer": "catalog:",
+    "pg": "catalog:",
+    "react": "catalog:react",
+    "react-dom": "catalog:react",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@eda/config": "workspace:*",
+    "@types/node": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

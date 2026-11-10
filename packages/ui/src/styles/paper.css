@@ -1,0 +1,161 @@
+/*
+ * A4 kâğıt (051 §4.9, §6.4; P05.6). Kâğıt kökü: class="eda-paper" data-theme="light"; böylece kâğıt
+ * içindeki tüm semantik tokenlar açık tema değerlerini alır, kâğıt koyu kabukta da beyaz kalır.
+ * Kâğıt içinde rem kullanılmaz (yalnız pt/mm/cm ve birimsiz oran). Yakınlaştırma CSS zoom ile
+ * (--eda-zoom; transform: scale yasak). Editörde `data-paged` sayfa görünümü açılır (aşağıda): sayfalar
+ * arasında boşluk çizilir, blok yerleşimini apps/web/.../studio/pagination.ts yapar. Kenar boşlukları: üst 20 mm,
+ * sağ 20 mm, alt 20 mm, sol 25 mm (cilt payı). Koyu kabukta 1 px halka --eda-shadow-paper kabuk
+ * tokenından gelir (tokens.css).
+ * admin uygulaması bu dosyayı içe aktarmaz.
+ */
+
+@layer components {
+  .eda-paper {
+    box-sizing: border-box;
+    width: var(--eda-paper-width);
+    min-height: var(--eda-paper-min-height);
+    padding: var(--eda-paper-margin-top) var(--eda-paper-margin-right)
+      var(--eda-paper-margin-bottom) var(--eda-paper-margin-left);
+    zoom: var(--eda-zoom, 1);
+    border-radius: 0;
+    box-shadow: var(--eda-shadow-paper);
+    background-color: var(--eda-paper-bg);
+    color: var(--eda-paper-ink);
+    font-family: var(--eda-paper-font);
+    font-size: var(--eda-paper-font-size);
+    font-weight: 400;
+    line-height: var(--eda-paper-line-height);
+    text-align: justify;
+    text-wrap: wrap;
+    hyphens: none;
+    overflow-wrap: break-word;
+    /* Yazdırılacak çıktının temsili: zorunlu renk kipinde de beyaz/siyah kalır (051 §4.9). */
+    forced-color-adjust: none;
+  }
+
+  /*
+   * Sayfa görünümü (editör): kâğıt, aralarında boşluk olan A4 sayfalar olarak boyanır. Sayfa
+   * yüzeyleri `.eda-page-sheet` öğeleriyle çizilir; sayfa sayısı --eda-pages değişkeninden gelir.
+   * Sayfa sonuna sığmayan blok, aralık öğesiyle (.eda-page-break) sonraki sayfaya itilir.
+   */
+  .eda-paper[data-paged] {
+    position: relative;
+    isolation: isolate;
+    min-height: calc(
+      var(--eda-pages, 1) *
+      var(--eda-paper-min-height) +
+      (var(--eda-pages, 1) - 1) *
+      var(--eda-page-gap)
+    );
+    background-color: transparent;
+    box-shadow: none;
+  }
+  /* Sayfa yüzeyi: sayfa başına bir öğe (pagination.ts ekler); --eda-page 0 tabanlı sayfa sırasıdır. */
+  .eda-page-sheet {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    top: calc(var(--eda-page, 0) * (var(--eda-paper-min-height) + var(--eda-page-gap)));
+    height: var(--eda-paper-min-height);
+    background-color: var(--eda-paper-bg);
+    box-shadow: var(--eda-shadow-paper);
+    pointer-events: none;
+  }
+  .eda-page-break {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+  }
+
+  /*
+   * Hizalama (`data-align`, editör şeması): sola/ortaya/sağa hizalı blok girintisizdir; iki yana yaslı
+   * ve hizası verilmemiş (rol varsayılanı) paragraf paragraf başı girintisini korur.
+   */
+  .eda-paper [data-align="left"] {
+    text-align: left;
+    text-indent: 0;
+  }
+  .eda-paper [data-align="center"] {
+    text-align: center;
+    text-indent: 0;
+  }
+  .eda-paper [data-align="right"] {
+    text-align: right;
+    text-indent: 0;
+  }
+  .eda-paper [data-align="justify"] {
+    text-align: justify;
+  }
+
+  /* Gövde paragrafı: ilk satır girintisi 1.25 cm. */
+  .eda-paper p {
+    margin: 0;
+    text-indent: var(--eda-paper-indent);
+  }
+
+  /* Başlıklar gövde boyutunda ve kalın (051 §4.9: gövde ve başlık 12 pt). */
+  .eda-paper :where(h1, h2, h3, h4, h5, h6) {
+    margin: 0;
+    font-family: inherit;
+    font-size: var(--eda-paper-font-size);
+    font-weight: 700;
+    line-height: var(--eda-paper-line-height);
+    letter-spacing: normal;
+    text-indent: 0;
+    text-wrap: wrap;
+  }
+
+  /* Blok aralığı ve listeler: yazı tipi/boyut kâğıttan; Tailwind sıfırlaması listeyi düzleştirir. */
+  .eda-paper :where(p, ul, ol, blockquote, table) {
+    margin: 0 0 2.5mm;
+  }
+  .eda-paper :where(h3, h4, h5) {
+    margin: 4mm 0 1.5mm;
+  }
+  .eda-paper :where(ul, ol) {
+    padding-left: var(--eda-paper-indent);
+  }
+  .eda-paper ul {
+    list-style: disc;
+  }
+  .eda-paper ol {
+    list-style: decimal;
+  }
+  .eda-paper blockquote {
+    padding-left: var(--eda-paper-indent);
+  }
+  /* Liste öğesi paragrafı ilk satır girintisi almaz (madde numarası/işareti ile hizalı). */
+  .eda-paper li > p {
+    text-indent: 0;
+    margin-bottom: 0;
+  }
+  .eda-paper table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .eda-paper :where(th, td) {
+    border: 0.25pt solid currentcolor;
+    padding: 1mm 2mm;
+    text-align: left;
+    vertical-align: top;
+  }
+  .eda-paper :where(th) {
+    font-weight: 700;
+  }
+
+  /* Dipnot ve künye: 10 pt. */
+  .eda-paper :where(small, .eda-paper-note) {
+    font-size: var(--eda-paper-note-size);
+    line-height: var(--eda-paper-line-height);
+  }
+
+  /* Zorunlu renk kipinde kâğıt içi odak halkası sistem vurgusuyla görünür kalır. */
+  @media (forced-colors: active) {
+    .eda-paper :focus-visible {
+      outline-color: Highlight;
+    }
+  }
+}

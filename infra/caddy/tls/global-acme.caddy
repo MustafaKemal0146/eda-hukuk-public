@@ -1,0 +1,1 @@
+# CADDY_TLS_MODE=acme: global ek ayar yok (80 -> 443 yönlendirmesi ve HTTP-01 açık).

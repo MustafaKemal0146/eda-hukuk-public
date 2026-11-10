@@ -1,0 +1,30 @@
+{
+  "name": "@eda/legal",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    "./courts": "./src/courts/index.ts",
+    "./deadline-engine": "./src/deadline-engine/index.ts",
+    "./holidays": "./src/holidays/index.ts",
+    "./intent": "./src/intent/index.ts",
+    "./kunye": "./src/kunye/index.ts",
+    "./text": "./src/text/index.ts",
+    "./sections": "./src/sections/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@eda/contracts": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@eda/config": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

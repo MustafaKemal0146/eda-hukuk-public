@@ -1,0 +1,435 @@
+{
+  "source": "042 §8.2 (büro rolleri) ve §8.4 (platform rolleri); hücre: E = evet, - = hayır, harf = §8.3 koşulu",
+  "org": {
+    "research:use": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "-"
+    },
+    "chat:use": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "a"
+    },
+    "chat:supervise": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "b",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "conversation:export": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "a"
+    },
+    "client:read": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "E"
+    },
+    "client:write": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "-"
+    },
+    "client:delete": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "-",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "case:read": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "E"
+    },
+    "case:write": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "-"
+    },
+    "case:team": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "case:policy": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "file:read": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "E"
+    },
+    "file:upload": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "E"
+    },
+    "file:delete": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "file:bulk_download": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "document:read": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "-"
+    },
+    "document:write": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "-"
+    },
+    "document:export": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "d",
+      "assistant": "-"
+    },
+    "document:approve": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "template:manage": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "prompt:manage_org": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "calendar:read": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "E"
+    },
+    "calendar:write": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "E"
+    },
+    "case_ai_log:read": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "case_ai_log:export": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "org:read": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "E"
+    },
+    "org:settings_write": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "-",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "org:ai_policy_write": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "-",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "org:public_mode_enable": {
+      "owner": "E",
+      "admin": "-",
+      "senior_lawyer": "-",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "org:member_read": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "-"
+    },
+    "org:member_invite": {
+      "owner": "E",
+      "admin": "c",
+      "senior_lawyer": "-",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "org:member_manage": {
+      "owner": "E",
+      "admin": "c",
+      "senior_lawyer": "-",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "org:ownership_transfer": {
+      "owner": "E",
+      "admin": "-",
+      "senior_lawyer": "-",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "org:audit_read": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "-",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "org:usage_read": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "-",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "org:billing_read": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "-",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "org:billing_manage": {
+      "owner": "E",
+      "admin": "-",
+      "senior_lawyer": "-",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "org:data_subject_search": {
+      "owner": "E",
+      "admin": "-",
+      "senior_lawyer": "-",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "org:delete": {
+      "owner": "E",
+      "admin": "-",
+      "senior_lawyer": "-",
+      "lawyer": "-",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "poa:write": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "file:write": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "E",
+      "assistant": "-"
+    },
+    "document:delete": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "citation:attest": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "-",
+      "assistant": "-"
+    },
+    "deadline:approve": {
+      "owner": "E",
+      "admin": "E",
+      "senior_lawyer": "E",
+      "lawyer": "E",
+      "trainee": "-",
+      "assistant": "-"
+    }
+  },
+  "platform": {
+    "platform:application_review": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:org_suspend": {
+      "support": "E",
+      "super_admin": "E"
+    },
+    "platform:user_suspend": {
+      "support": "E",
+      "super_admin": "E"
+    },
+    "platform:session_revoke": {
+      "support": "E",
+      "super_admin": "E"
+    },
+    "platform:audit_read": {
+      "support": "E",
+      "super_admin": "E"
+    },
+    "platform:ai_catalog_read": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:ai_catalog_write": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:sources_read": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:usage_read": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:system_settings_read": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:system_settings_write": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:flags_write": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:maintenance": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:coupon_manage": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:payout_report": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:recovery_approve": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:billing_read": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:billing_write": {
+      "support": "-",
+      "super_admin": "E"
+    },
+    "platform:break_glass": {
+      "support": "-",
+      "super_admin": "E"
+    }
+  }
+}

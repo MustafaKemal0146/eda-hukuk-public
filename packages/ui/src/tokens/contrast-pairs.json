@@ -1,0 +1,379 @@
+{
+  "$comment": "ÜRETİLMİŞ DOSYA — elle düzenleme. Kaynak: tokens.source.json contrastPairs (051 §5.1-§5.2; iki temada aynı satırlar). min 0 + exempt: WCAG muafiyeti.",
+  "themes": ["light", "dark"],
+  "pairs": [
+    {
+      "fg": "text",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Gövde metni / uygulama zemini"
+    },
+    {
+      "fg": "text",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Gövde metni / kart"
+    },
+    {
+      "fg": "text",
+      "bg": "surface-sunken",
+      "min": 4.5,
+      "use": "Metin / gömülü alan, kod, alıntı kutusu"
+    },
+    {
+      "fg": "text",
+      "bg": "primary-soft",
+      "min": 4.5,
+      "use": "Metin / seçili satır"
+    },
+    {
+      "fg": "text-muted",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Etiket, yardımcı metin"
+    },
+    {
+      "fg": "text-muted",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Etiket, yardımcı metin"
+    },
+    {
+      "fg": "text-muted",
+      "bg": "surface-sunken",
+      "min": 4.5,
+      "use": "Yardımcı metin / gömülü alan"
+    },
+    {
+      "fg": "text-muted",
+      "bg": "primary-soft",
+      "min": 4.5,
+      "use": "Yardımcı metin / seçili satır"
+    },
+    {
+      "fg": "text-subtle",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Zaman damgası, yer tutucu, ipucu"
+    },
+    {
+      "fg": "text-subtle",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Zaman damgası, yer tutucu"
+    },
+    {
+      "fg": "text-subtle",
+      "bg": "surface-sunken",
+      "min": 4.5,
+      "use": "Zaman damgası / gömülü alan"
+    },
+    {
+      "fg": "text-subtle",
+      "bg": "primary-soft",
+      "min": 4.5,
+      "use": "İpucu / seçili satır"
+    },
+    {
+      "fg": "text-on-primary",
+      "bg": "primary",
+      "min": 4.5,
+      "use": "Birincil düğme metni"
+    },
+    {
+      "fg": "text-on-primary",
+      "bg": "primary-hover",
+      "min": 4.5,
+      "use": "Birincil düğme (hover)"
+    },
+    {
+      "fg": "text-on-primary",
+      "bg": "primary-active",
+      "min": 4.5,
+      "use": "Birincil düğme (basılı)"
+    },
+    {
+      "fg": "text-on-primary",
+      "bg": "danger",
+      "min": 4.5,
+      "use": "Yıkıcı düğme metni"
+    },
+    {
+      "fg": "text-on-primary",
+      "bg": "danger-hover",
+      "min": 4.5,
+      "use": "Yıkıcı düğme (hover)"
+    },
+    {
+      "fg": "primary",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Bağlantı, seçili sekme metni"
+    },
+    {
+      "fg": "primary",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Bağlantı, seçili sekme metni"
+    },
+    {
+      "fg": "primary-hover",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Bağlantı (hover)"
+    },
+    {
+      "fg": "primary-soft-fg",
+      "bg": "primary-soft",
+      "min": 4.5,
+      "use": "Çip / etkin süzgeç metni"
+    },
+    {
+      "fg": "border-strong",
+      "bg": "bg",
+      "min": 3,
+      "use": "Girdi, onay kutusu sınırı"
+    },
+    {
+      "fg": "border-strong",
+      "bg": "surface",
+      "min": 3,
+      "use": "Girdi, onay kutusu sınırı"
+    },
+    {
+      "fg": "border-strong",
+      "bg": "surface-sunken",
+      "min": 3,
+      "use": "Sınır / gömülü alan"
+    },
+    {
+      "fg": "border-strong",
+      "bg": "surface-raised",
+      "min": 3,
+      "use": "Sınır / yükseltilmiş yüzey"
+    },
+    {
+      "fg": "focus-ring",
+      "bg": "bg",
+      "min": 3,
+      "use": "Odak halkası"
+    },
+    {
+      "fg": "focus-ring",
+      "bg": "surface",
+      "min": 3,
+      "use": "Odak halkası"
+    },
+    {
+      "fg": "focus-ring",
+      "bg": "surface-sunken",
+      "min": 3,
+      "use": "Odak halkası"
+    },
+    {
+      "fg": "focus-ring",
+      "bg": "surface-raised",
+      "min": 3,
+      "use": "Odak halkası"
+    },
+    {
+      "fg": "success",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Başarı simgesi ve metni"
+    },
+    {
+      "fg": "success",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Başarı simgesi ve metni"
+    },
+    {
+      "fg": "warning",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Uyarı simgesi ve metni"
+    },
+    {
+      "fg": "warning",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Uyarı simgesi ve metni"
+    },
+    {
+      "fg": "danger",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Hata simgesi ve metni"
+    },
+    {
+      "fg": "danger",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Hata simgesi ve metni"
+    },
+    {
+      "fg": "info",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Bilgi simgesi ve metni"
+    },
+    {
+      "fg": "info",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Bilgi simgesi ve metni"
+    },
+    {
+      "fg": "success-on-soft",
+      "bg": "success-soft",
+      "min": 4.5,
+      "use": "Başarı bandı / çip metni"
+    },
+    {
+      "fg": "warning-on-soft",
+      "bg": "warning-soft",
+      "min": 4.5,
+      "use": "Uyarı bandı / çip metni"
+    },
+    {
+      "fg": "danger-on-soft",
+      "bg": "danger-soft",
+      "min": 4.5,
+      "use": "Hata bandı / çip metni"
+    },
+    {
+      "fg": "info-on-soft",
+      "bg": "info-soft",
+      "min": 4.5,
+      "use": "Bilgi bandı / çip metni"
+    },
+    {
+      "fg": "neutral-on-soft",
+      "bg": "neutral-soft",
+      "min": 4.5,
+      "use": "Nötr çip metni"
+    },
+    {
+      "fg": "violet-on-soft",
+      "bg": "violet-soft",
+      "min": 4.5,
+      "use": "Dosya sınıfı çipi metni"
+    },
+    {
+      "fg": "success-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Durum çipi / bant sınırı (bileşen tanıma)"
+    },
+    {
+      "fg": "warning-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Durum çipi / bant sınırı"
+    },
+    {
+      "fg": "danger-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Durum çipi / bant sınırı"
+    },
+    {
+      "fg": "info-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Durum çipi / bant sınırı"
+    },
+    {
+      "fg": "neutral-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Nötr çip sınırı"
+    },
+    {
+      "fg": "violet-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Dosya sınıfı çipi sınırı"
+    },
+    {
+      "fg": "teal-on-soft",
+      "bg": "teal-soft",
+      "min": 4.5,
+      "use": "Arabuluculuk etkinliği metni"
+    },
+    {
+      "fg": "teal-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Arabuluculuk etkinliği sınırı"
+    },
+    {
+      "fg": "text",
+      "bg": "surface-raised",
+      "min": 4.5,
+      "use": "Metin / açılır menü, diyalog, kaldırılmış kart"
+    },
+    {
+      "fg": "text-muted",
+      "bg": "surface-raised",
+      "min": 4.5,
+      "use": "Yardımcı metin / yükseltilmiş yüzey"
+    },
+    {
+      "fg": "text-subtle",
+      "bg": "surface-raised",
+      "min": 4.5,
+      "use": "Yer tutucu / yükseltilmiş yüzey"
+    },
+    {
+      "fg": "primary",
+      "bg": "surface-raised",
+      "min": 4.5,
+      "use": "Bağlantı / yükseltilmiş yüzey"
+    },
+    {
+      "fg": "danger",
+      "bg": "surface-raised",
+      "min": 4.5,
+      "use": "Alan hatası / yükseltilmiş yüzey"
+    },
+    {
+      "fg": "text",
+      "bg": "selection-bg",
+      "min": 4.5,
+      "use": "Seçili metin (::selection)"
+    },
+    {
+      "fg": "inverse-fg",
+      "bg": "inverse-bg",
+      "min": 4.5,
+      "use": "Dolu nötr çip (Avukat beyanı), toast"
+    },
+    {
+      "fg": "diff-add-fg",
+      "bg": "diff-add-bg",
+      "min": 4.5,
+      "use": "Eklenen metin"
+    },
+    {
+      "fg": "diff-del-fg",
+      "bg": "diff-del-bg",
+      "min": 4.5,
+      "use": "Silinen metin"
+    },
+    {
+      "fg": "disabled-fg",
+      "bg": "disabled-bg",
+      "min": 0,
+      "use": "Devre dışı (WCAG muaf; yine de okunur)",
+      "exempt": true
+    },
+    {
+      "fg": "paper-ink",
+      "bg": "paper-bg",
+      "min": 4.5,
+      "use": "A4 kâğıt metni"
+    }
+  ]
+}

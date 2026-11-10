@@ -1,0 +1,42 @@
+{
+  "verify_email": {
+    "version": "2026-10-12.2",
+    "sha256": "9b527f4ab523a98f139e9a54a88fceedfeb872e2b9f8a7d5be83cec18ffe2b26"
+  },
+  "password_reset": {
+    "version": "2026-10-12.2",
+    "sha256": "35b31d99348b3360703cf9d18800abf2006e74bd25cc33bb3395487d88a1a13d"
+  },
+  "invitation": {
+    "version": "2026-10-12.2",
+    "sha256": "b311c7d727cbfb2ed59eee472c45e0c0ef842c34f2d32515685812ba815cf62b"
+  },
+  "password_changed": {
+    "version": "2026-10-12.2",
+    "sha256": "6c82e3a54c13fe10d88cb9b74b619b8c64405227f5bdf0d6c99c8801949cade2"
+  },
+  "factor_changed": {
+    "version": "2026-10-12.2",
+    "sha256": "dd06b5bea355a2510518f8c4efd98d7eac7cc1a3ef0d4cde0dcb7d79158ba6bc"
+  },
+  "backup_codes_changed": {
+    "version": "2026-10-12.2",
+    "sha256": "9c5fecfd8500066f421caae62148fe30b95b3cde4c801ae70f88c170eaa6ef2f"
+  },
+  "lawyer_application_received": {
+    "version": "2026-10-12.2",
+    "sha256": "06b3fc8ca4d96b423151a02c0cd8a56f7c0fb4afe6dea801472631b06ae538e3"
+  },
+  "verification_approved": {
+    "version": "2026-10-12.2",
+    "sha256": "b28be759b05383337071d41f30a9856593bcb552a5a9f48e13795a2675a1564b"
+  },
+  "verification_rejected": {
+    "version": "2026-10-12.2",
+    "sha256": "74913bac5f6ca6ef4d59293538a7d01b2063ed0afc37ad2dcc65d99f8eada25c"
+  },
+  "registration_attempt": {
+    "version": "2026-10-12.2",
+    "sha256": "d87a827a18283258f96d2cddb12fd3b8074da9fa316184d4f67f158005014710"
+  }
+}

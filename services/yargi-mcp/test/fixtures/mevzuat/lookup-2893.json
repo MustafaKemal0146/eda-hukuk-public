@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "recorded_at": "2026-10-10T17:24:24.358Z",
+    "method": "POST",
+    "url": "https://bedesten.adalet.gov.tr/mevzuat/searchDocuments",
+    "request_body": "{\"data\":{\"pageSize\":10,\"pageNumber\":1,\"mevzuatNo\":\"2893\",\"mevzuatTurList\":[\"KANUN\"]},\"applicationName\":\"UyapMevzuat\",\"paging\":true}",
+    "status": 200,
+    "synthetic": false,
+    "note": "2893 Türk Bayrağı Kanunu numara araması; ardından konsolide metin"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json"
+    },
+    "body": "{\"data\":{\"mevzuatList\":[{\"mevzuatId\":\"104859\",\"mevzuatNo\":2893,\"mevzuatAdi\":\"TÜRK BAYRAĞI KANUNU\",\"mevzuatTur\":{\"id\":1,\"name\":\"KANUN\",\"description\":\"Kanunlar\",\"maddeSonuRegex\":\".*Bu.*Kanun.*hükümlerini.*yürütür\\\\.\"},\"mevzuatTertip\":5,\"kayitTarihi\":\"2024-07-11T11:18:16.953\",\"guncellemeTarihi\":null,\"resmiGazeteTarihi\":\"1983-09-24T00:00:00\",\"resmiGazeteSayisi\":\"18171\",\"url\":\"https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2893&MevzuatTur=1&MevzuatTertip=5\",\"mukerrer\":\"HAYIR\",\"ekler\":null,\"gerekceId\":null}],\"total\":1,\"start\":0},\"metadata\":{\"FMTY\":\"SUCCESS\",\"FMC\":\"ADALET_SUCCESS\",\"FMTE\":\"İşlem başarıyla gerçekleştirildi!\",\"FMU\":\"İşlem başarıyla gerçekleştirildi!\",\"PTID\":null,\"TID\":\"6a5f84f7a87f6c5d0f0a5844c7215517\",\"SID\":\"a67dfffda37f056b\"}}"
+  }
+}

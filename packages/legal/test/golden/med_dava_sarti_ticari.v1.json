@@ -1,0 +1,29 @@
+{
+  "ruleCode": "med_dava_sarti_ticari",
+  "ruleVersion": 1,
+  "source": "083 §9 tablosu; beklenen son gün tablodan aynen, stepKinds/warnings §5.2 algoritma izinden elle (P22.3). Hukuk onayı bekliyor (AS-0205).",
+  "cases": [
+    {
+      "id": "G23",
+      "title": "Arabuluculuk süreci (ticari)",
+      "input": {
+        "startEvent": "learning",
+        "eventDate": "2026-03-05",
+        "serviceMethod": null,
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-04-16",
+        "dueAt": "2026-04-16T23:59:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period", "mediation_extension"],
+        "warnings": []
+      },
+      "rationale": "6 hafta (+2); bilgi: uzatma ile 30.04.2026",
+      "reviewedBy": null
+    }
+  ]
+}

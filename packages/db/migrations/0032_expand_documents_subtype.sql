@@ -1,0 +1,7 @@
+-- eda:kind expand
+-- P17b (054 §2.7, 041 §2.3; AS-0231): belge ve şablon alt türü. Yalnız ekleme: NULL olabilen kolon ve
+-- NULL'a izin veren CHECK; mevcut satırlar etkilenmez, geri alma kolonu düşürmektir.
+ALTER TABLE "app"."documents" ADD COLUMN "subtype" text;--> statement-breakpoint
+ALTER TABLE "app"."templates" ADD COLUMN "subtype" text;--> statement-breakpoint
+ALTER TABLE "app"."documents" ADD CONSTRAINT "documents_subtype_chk" CHECK ("subtype" IN ('claim', 'answer', 'reply', 'rejoinder', 'claim_correction', 'expert_report_objection', 'interim_injunction_objection', 'excuse', 'general_statement', 'appeal_regional', 'appeal_cassation', 'enforcement_request', 'enforcement_objection', 'enforcement_complaint', 'mediation_application', 'administrative_claim', 'tax_claim', 'criminal_complaint', 'criminal_objection', 'notice_general', 'memo_legal_opinion', 'free_blank')) NOT VALID;--> statement-breakpoint
+ALTER TABLE "app"."templates" ADD CONSTRAINT "templates_subtype_chk" CHECK ("subtype" IN ('claim', 'answer', 'reply', 'rejoinder', 'claim_correction', 'expert_report_objection', 'interim_injunction_objection', 'excuse', 'general_statement', 'appeal_regional', 'appeal_cassation', 'enforcement_request', 'enforcement_objection', 'enforcement_complaint', 'mediation_application', 'administrative_claim', 'tax_claim', 'criminal_complaint', 'criminal_objection', 'notice_general', 'memo_legal_opinion', 'free_blank')) NOT VALID;

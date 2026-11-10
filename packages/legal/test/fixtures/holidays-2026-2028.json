@@ -1,0 +1,469 @@
+{
+  "source": "083 §8 ve 032 §10.4 tablolarından üretildi; elle değiştirilmez. Hukuk onayı bekliyor (AS-0204).",
+  "holidays": [
+    {
+      "date": "2026-01-01",
+      "code": "new_year",
+      "name": "Yılbaşı",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2026-03-19",
+      "code": "ramazan_bayrami_arife",
+      "name": "Ramazan Bayramı arifesi",
+      "kind": "religious",
+      "isHalfDay": true,
+      "startsAtLocal": "13:00"
+    },
+    {
+      "date": "2026-03-20",
+      "code": "ramazan_bayrami_1",
+      "name": "Ramazan Bayramı 1. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2026-03-21",
+      "code": "ramazan_bayrami_2",
+      "name": "Ramazan Bayramı 2. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2026-03-22",
+      "code": "ramazan_bayrami_3",
+      "name": "Ramazan Bayramı 3. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2026-04-23",
+      "code": "national_sovereignty_day",
+      "name": "23 Nisan",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2026-05-01",
+      "code": "labour_day",
+      "name": "1 Mayıs",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2026-05-19",
+      "code": "youth_sports_day",
+      "name": "19 Mayıs",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2026-05-26",
+      "code": "kurban_bayrami_arife",
+      "name": "Kurban Bayramı arifesi",
+      "kind": "religious",
+      "isHalfDay": true,
+      "startsAtLocal": "13:00"
+    },
+    {
+      "date": "2026-05-27",
+      "code": "kurban_bayrami_1",
+      "name": "Kurban Bayramı 1. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2026-05-28",
+      "code": "kurban_bayrami_2",
+      "name": "Kurban Bayramı 2. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2026-05-29",
+      "code": "kurban_bayrami_3",
+      "name": "Kurban Bayramı 3. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2026-05-30",
+      "code": "kurban_bayrami_4",
+      "name": "Kurban Bayramı 4. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2026-07-15",
+      "code": "democracy_day",
+      "name": "15 Temmuz",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2026-08-30",
+      "code": "victory_day",
+      "name": "30 Ağustos",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2026-10-28",
+      "code": "republic_day_eve",
+      "name": "Cumhuriyet Bayramı (28 Ekim, yarım gün)",
+      "kind": "official",
+      "isHalfDay": true,
+      "startsAtLocal": "13:00"
+    },
+    {
+      "date": "2026-10-29",
+      "code": "republic_day",
+      "name": "Cumhuriyet Bayramı (29 Ekim)",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-01-01",
+      "code": "new_year",
+      "name": "Yılbaşı",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-03-08",
+      "code": "ramazan_bayrami_arife",
+      "name": "Ramazan Bayramı arifesi",
+      "kind": "religious",
+      "isHalfDay": true,
+      "startsAtLocal": "13:00"
+    },
+    {
+      "date": "2027-03-09",
+      "code": "ramazan_bayrami_1",
+      "name": "Ramazan Bayramı 1. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-03-10",
+      "code": "ramazan_bayrami_2",
+      "name": "Ramazan Bayramı 2. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-03-11",
+      "code": "ramazan_bayrami_3",
+      "name": "Ramazan Bayramı 3. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-04-23",
+      "code": "national_sovereignty_day",
+      "name": "23 Nisan",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-05-01",
+      "code": "labour_day",
+      "name": "1 Mayıs",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-05-15",
+      "code": "kurban_bayrami_arife",
+      "name": "Kurban Bayramı arifesi",
+      "kind": "religious",
+      "isHalfDay": true,
+      "startsAtLocal": "13:00"
+    },
+    {
+      "date": "2027-05-16",
+      "code": "kurban_bayrami_1",
+      "name": "Kurban Bayramı 1. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-05-17",
+      "code": "kurban_bayrami_2",
+      "name": "Kurban Bayramı 2. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-05-18",
+      "code": "kurban_bayrami_3",
+      "name": "Kurban Bayramı 3. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-05-19",
+      "code": "kurban_bayrami_4",
+      "name": "Kurban Bayramı 4. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-05-19",
+      "code": "youth_sports_day",
+      "name": "19 Mayıs",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-07-15",
+      "code": "democracy_day",
+      "name": "15 Temmuz",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-08-30",
+      "code": "victory_day",
+      "name": "30 Ağustos",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2027-10-28",
+      "code": "republic_day_eve",
+      "name": "Cumhuriyet Bayramı (28 Ekim, yarım gün)",
+      "kind": "official",
+      "isHalfDay": true,
+      "startsAtLocal": "13:00"
+    },
+    {
+      "date": "2027-10-29",
+      "code": "republic_day",
+      "name": "Cumhuriyet Bayramı (29 Ekim)",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-01-01",
+      "code": "new_year",
+      "name": "Yılbaşı",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-02-25",
+      "code": "ramazan_bayrami_arife",
+      "name": "Ramazan Bayramı arifesi",
+      "kind": "religious",
+      "isHalfDay": true,
+      "startsAtLocal": "13:00"
+    },
+    {
+      "date": "2028-02-26",
+      "code": "ramazan_bayrami_1",
+      "name": "Ramazan Bayramı 1. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-02-27",
+      "code": "ramazan_bayrami_2",
+      "name": "Ramazan Bayramı 2. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-02-28",
+      "code": "ramazan_bayrami_3",
+      "name": "Ramazan Bayramı 3. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-04-23",
+      "code": "national_sovereignty_day",
+      "name": "23 Nisan",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-05-01",
+      "code": "labour_day",
+      "name": "1 Mayıs",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-05-04",
+      "code": "kurban_bayrami_arife",
+      "name": "Kurban Bayramı arifesi",
+      "kind": "religious",
+      "isHalfDay": true,
+      "startsAtLocal": "13:00"
+    },
+    {
+      "date": "2028-05-05",
+      "code": "kurban_bayrami_1",
+      "name": "Kurban Bayramı 1. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-05-06",
+      "code": "kurban_bayrami_2",
+      "name": "Kurban Bayramı 2. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-05-07",
+      "code": "kurban_bayrami_3",
+      "name": "Kurban Bayramı 3. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-05-08",
+      "code": "kurban_bayrami_4",
+      "name": "Kurban Bayramı 4. gün",
+      "kind": "religious",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-05-19",
+      "code": "youth_sports_day",
+      "name": "19 Mayıs",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-07-15",
+      "code": "democracy_day",
+      "name": "15 Temmuz",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-08-30",
+      "code": "victory_day",
+      "name": "30 Ağustos",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    },
+    {
+      "date": "2028-10-28",
+      "code": "republic_day_eve",
+      "name": "Cumhuriyet Bayramı (28 Ekim, yarım gün)",
+      "kind": "official",
+      "isHalfDay": true,
+      "startsAtLocal": "13:00"
+    },
+    {
+      "date": "2028-10-29",
+      "code": "republic_day",
+      "name": "Cumhuriyet Bayramı (29 Ekim)",
+      "kind": "official",
+      "isHalfDay": false,
+      "startsAtLocal": null
+    }
+  ],
+  "recesses": [
+    {
+      "branch": "hmk",
+      "year": 2026,
+      "start": "2026-07-20",
+      "endExclusive": "2026-09-01"
+    },
+    {
+      "branch": "cmk",
+      "year": 2026,
+      "start": "2026-07-20",
+      "endExclusive": "2026-09-01"
+    },
+    {
+      "branch": "iyuk",
+      "year": 2026,
+      "start": "2026-07-20",
+      "endExclusive": "2026-09-01"
+    },
+    {
+      "branch": "hmk",
+      "year": 2027,
+      "start": "2027-07-20",
+      "endExclusive": "2027-09-01"
+    },
+    {
+      "branch": "cmk",
+      "year": 2027,
+      "start": "2027-07-20",
+      "endExclusive": "2027-09-01"
+    },
+    {
+      "branch": "iyuk",
+      "year": 2027,
+      "start": "2027-07-20",
+      "endExclusive": "2027-09-01"
+    },
+    {
+      "branch": "hmk",
+      "year": 2028,
+      "start": "2028-07-20",
+      "endExclusive": "2028-09-01"
+    },
+    {
+      "branch": "cmk",
+      "year": 2028,
+      "start": "2028-07-20",
+      "endExclusive": "2028-09-01"
+    },
+    {
+      "branch": "iyuk",
+      "year": 2028,
+      "start": "2028-07-20",
+      "endExclusive": "2028-09-01"
+    }
+  ]
+}

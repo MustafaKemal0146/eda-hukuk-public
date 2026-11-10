@@ -1,0 +1,51 @@
+{
+  "ruleCode": "hmk_cevap_dilekcesi",
+  "ruleVersion": 1,
+  "source": "083 §9 tablosu; beklenen son gün tablodan aynen, stepKinds/warnings §5.2 algoritma izinden elle (P22.3). Hukuk onayı bekliyor (AS-0205).",
+  "cases": [
+    {
+      "id": "G01",
+      "title": "Temel iki haftalık süre",
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2026-02-26",
+        "serviceMethod": "postal",
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-03-12",
+        "dueAt": "2026-03-12T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period"],
+        "warnings": []
+      },
+      "rationale": "26.02 + 2 hafta; başlangıç günü sayılmaz (m.92); tatil yok. (053-07 V1 '23:59' yazıyordu: 083 17:00 esas alır, T-3/T-11)",
+      "reviewedBy": null
+    },
+    {
+      "id": "G04",
+      "title": "Cumartesi kaydırması",
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2026-02-28",
+        "serviceMethod": "postal",
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-03-16",
+        "dueAt": "2026-03-16T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period", "weekend_shift"],
+        "warnings": ["saturday_shift"]
+      },
+      "rationale": "ham 14.03 Cmt; Cumartesi kaydırması (T-2) saturday_shift",
+      "reviewedBy": null
+    }
+  ]
+}

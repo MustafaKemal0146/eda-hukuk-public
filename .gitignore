@@ -1,0 +1,50 @@
+# Bağımlılıklar ve derleme çıktıları
+node_modules/
+.pnpm-store/
+.turbo/
+dist/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Sırlar ve yerel ortam (sır değeri asla commit edilmez)
+infra/secrets/dev/
+.env
+.env.*
+!.env.example
+infra/compose/env/*.env
+!infra/compose/env/*.env.example
+infra/compose/compose.dev.local.yaml
+*.local.*
+.claude/settings.local.json
+# Paralel ajan çalışma ağaçları (git worktree); depo dosyası değildir
+.claude/worktrees/
+
+# Test ve eval çıktıları
+evals/results/
+tests/e2e/test-results/
+tests/e2e/playwright-report/
+tests/e2e/reports/
+.tmp/
+reports/
+
+# Repoya hiçbir zaman girmeyen eski arşivler
+/eda-hukuk-döküman/
+/stitch_eda_hukuk_ai_assistant/
+/eda-arsiv/
+
+# Editör ve işletim sistemi
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.vitest/

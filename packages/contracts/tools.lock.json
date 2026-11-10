@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "canonicalization": "eda-canon-v1",
+  "algorithm": "sha256",
+  "tools": [
+    {
+      "name": "search_decisions",
+      "sha256": "c5ed586c4357db224496295cb75bc3638829fb1342fe2c1d611a716b8a236701",
+      "chars": 1840
+    },
+    {
+      "name": "get_decision",
+      "sha256": "113a3d6f4ca6cddbefbb10b091b9f1633470c494ad48354c5a9d06ee494554ab",
+      "chars": 767
+    },
+    {
+      "name": "search_legislation",
+      "sha256": "67f8ee305a107cc04054123eaf998419769ee006a87edc6e6e8f0a47873b5185",
+      "chars": 541
+    },
+    {
+      "name": "get_legislation_article",
+      "sha256": "2806d86e7c5c2d9aba3dc9bd61b130c5e0ad30a18b70a7a5dfc922d07882749c",
+      "chars": 913
+    },
+    {
+      "name": "search_case_files",
+      "sha256": "79ec644871c9047ef7ca0795bc6342e4dd78cc6e383aed09f41d2f2d95aaca40",
+      "chars": 700
+    },
+    {
+      "name": "calculate_deadline",
+      "sha256": "aa0fe0357717be20f6f726319ec91f6fd842291cbe7ca392152ce447891c3b02",
+      "chars": 1022
+    },
+    {
+      "name": "create_document",
+      "sha256": "bbb4b999567ae65bfd2c451644930d2b150601c2419ad4ba7b07f459b8b0db06",
+      "chars": 1050
+    },
+    {
+      "name": "edit_document",
+      "sha256": "68b9e48015ddb6ace9f118b9b7045c20e31f93aa4f657b84d929dbfa716c7c06",
+      "chars": 1833
+    },
+    {
+      "name": "submit_outline",
+      "sha256": "4d20142df76f20f44ed5643ffd181fedd75c99ac41f12134df3b426d5c6932df",
+      "chars": 1637
+    }
+  ],
+  "set_sha256": "6d65d7c2ac9d6ac31f053a9ef4edba432af0db343ff1461eb213e8a0343cf706",
+  "approx_tokens": 3438
+}

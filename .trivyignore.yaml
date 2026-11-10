@@ -1,0 +1,11 @@
+# Trivy istisnaları (072 §4.3 adım 2; 061 CTL-SUP-04; KK-072-18). Her girdi: CVE kimliği, gerekçe
+# (`statement`) ve bitiş (`expired_at`); süresi dolan veya gerekçesiz girdi
+# `check-scan-exceptions.ts` ile kırmızıdır. Gotenberg/LibreOffice HIGH bulguları için geçici istisna
+# 011 §2.10 risk kabul yordamına bağlıdır. CODEOWNERS iki-onay gerektirir. Şu an istisna yoktur.
+#
+# Biçim:
+# vulnerabilities:
+#   - id: CVE-2026-00000
+#     statement: "Gerekçe; dayanak AS-NNNN"
+#     expired_at: 2026-12-31
+vulnerabilities: []

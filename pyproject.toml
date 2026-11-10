@@ -1,0 +1,6 @@
+# uv çalışma alanı kökü (013 §17.1). [project] tablosu YOK; tek üye services/doc-engine.
+[tool.uv]
+required-version = "==0.12.24"
+
+[tool.uv.workspace]
+members = ["services/doc-engine"]

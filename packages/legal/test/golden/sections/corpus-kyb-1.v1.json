@@ -1,0 +1,19 @@
+{
+  "id": "corpus-kyb-1",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. Kanun yararına bozma: istem, gereği düşünüldü, sonuç.",
+  "courtType": "kyb",
+  "lines": [
+    "T.C. YARGITAY",
+    "ÖRNEK 4. CEZA DAİRESİ",
+    "KANUN YARARINA BOZMA İSTEMİ",
+    "Örnek bakanlık yazısıyla kanun yararına bozma istenmiştir.",
+    "GEREĞİ DÜŞÜNÜLDÜ:",
+    "Örnek gerekçe paragrafı.",
+    "SONUÇ: Kararın kanun yararına bozulmasına karar verildi."
+  ],
+  "roles": ["kunye", "istem", "gerekce", "hukum"],
+  "outcome": "patterned",
+  "gerekceExcludes": []
+}

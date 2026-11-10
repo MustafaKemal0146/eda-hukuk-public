@@ -1,0 +1,3396 @@
+{
+  "common": {
+    "brand": "E.D.A. Hukuk",
+    "brandShort": "E.D.A",
+    "tagline": "Avukatlar için yapay zekâ çalışma alanı",
+    "close": "Kapat",
+    "cancel": "Vazgeç",
+    "save": "Kaydet",
+    "comingSoon": "Bu bölüm bir sonraki sürüm adımında etkinleşir.",
+    "skipToContent": "İçeriğe geç",
+    "skipToNav": "Gezinmeye geç"
+  },
+  "nav": {
+    "label": "Ana gezinme",
+    "newChat": "Yeni sohbet",
+    "chat": "Sohbetler",
+    "decisions": "Karar Arşivi",
+    "legislation": "Mevzuat",
+    "files": "Dosyalar",
+    "documents": "Belgeler",
+    "calendar": "Takvim",
+    "settings": "Ayarlar",
+    "support": "Destek",
+    "recent": "Son sohbetler",
+    "recentEmpty": "Henüz sohbet yok. İlk sorunuzu sorduğunuzda burada listelenir.",
+    "recentError": "Son sohbetler yüklenemedi.",
+    "recentRetry": "Yeniden dene",
+    "openMenu": "Menüyü aç",
+    "collapse": "Kenar çubuğunu daralt",
+    "expand": "Kenar çubuğunu genişlet",
+    "search": "Ara",
+    "groups": {
+      "work": "Çalışma",
+      "research": "Araştırma",
+      "office": "Büro"
+    },
+    "untitledChat": "Adsız sohbet",
+    "deleteChat": "Sohbeti sil",
+    "deleteDialog": {
+      "title": "Sohbet silinsin mi?",
+      "description": "“{title}” sohbeti silinecek.",
+      "impact": "Sohbetteki tüm mesajlar ve kaynaklar kalıcı olarak kaldırılır. Bu işlem geri alınamaz.",
+      "cancel": "Vazgeç",
+      "confirm": "Sil"
+    },
+    "deleteError": {
+      "blocked": "Yasal saklama nedeniyle bu sohbet silinemez.",
+      "streaming": "Yanıt sürerken sohbet silinemez. Önce yanıtı durdurun.",
+      "failed": "Sohbet silinemedi. Yeniden deneyin."
+    },
+    "converter": "Dönüştürücü"
+  },
+  "topbar": {
+    "search": "Karar, mevzuat veya konu ara",
+    "searchShortcut": "Ctrl K",
+    "notifications": "Bildirimler",
+    "notificationsEmpty": "Yeni bildiriminiz yok.",
+    "account": "Hesap menüsü",
+    "signIn": "Giriş yap",
+    "location": "Konum",
+    "workspace": "Çalışma alanı",
+    "signInHint": "Oturum bulunamadı",
+    "signOut": "Çıkış yap"
+  },
+  "theme": {
+    "label": "Tema: {current}",
+    "light": "Aydınlık",
+    "dark": "Karanlık",
+    "system": "Sistem"
+  },
+  "palette": {
+    "title": "Komut paleti",
+    "placeholder": "Sayfa veya komut arayın",
+    "empty": "Eşleşen sonuç yok.",
+    "groupPages": "Sayfalar",
+    "groupActions": "Eylemler",
+    "hint": "Gezinmek için ok tuşları, açmak için Enter"
+  },
+  "chat": {
+    "title": "Sohbet",
+    "greeting": "Bugün ne üzerinde çalışıyoruz?",
+    "greetings": {
+      "morning": [
+        "Günaydın. Bugün ne üzerinde çalışıyoruz?",
+        "Günaydın. Güne hangi dosyayla başlıyoruz?",
+        "Günaydın. Sabahın ilk işi ne olsun?"
+      ],
+      "afternoon": [
+        "İyi günler. Bugün ne üzerinde çalışıyoruz?",
+        "İyi günler. Hangi dosyaya bakıyoruz?",
+        "İyi günler. Şimdi neyi araştıralım?"
+      ],
+      "evening": [
+        "İyi akşamlar. Bugün ne üzerinde çalışıyoruz?",
+        "İyi akşamlar. Günü kapatmadan önce neye bakalım?",
+        "İyi akşamlar. Yarına hazır olması gereken ne var?"
+      ],
+      "night": [
+        "İyi geceler. Geç saatte hangi dosyaya bakıyoruz?",
+        "İyi geceler. Sabaha hazır olması gereken ne var?",
+        "İyi geceler. Şimdi ne üzerinde çalışıyoruz?"
+      ]
+    },
+    "intro": "Mevzuat ve içtihat araştırması yapın, dilekçe taslağı hazırlayın, dosyanızdaki belgeleri inceleyin. Kaynaklar her yanıtın yanında künyesiyle gösterilir.",
+    "composerLabel": "Mesajınız",
+    "composerPlaceholder": "Hukuki uyuşmazlığı, kanun maddesini veya sorunuzu yazın",
+    "send": "Gönder",
+    "attach": "Dosya ekle",
+    "attachments": {
+      "listLabel": "Ekler",
+      "hint": "Yalnız metin içeren PDF ve Word (.docx) dosyaları eklenebilir; taranmış belgeler bu sürümde okunamaz.",
+      "remove": "Eki kaldır: {name}",
+      "waiting": "Ekler hazırlanınca gönderebilirsiniz.",
+      "scanWaiting": "Virüs taraması şu anda yapılamıyor; ek, tarama tamamlanana kadar kullanılamaz.",
+      "status": {
+        "uploaded": "Yükleniyor",
+        "scanning": "Virüs taraması",
+        "extracting": "Metin çıkarılıyor",
+        "processing": "İşleniyor",
+        "ready": "Hazır",
+        "failed": "Okunamadı",
+        "quarantined": "Karantinada",
+        "noText": "Metin yok"
+      },
+      "errors": {
+        "noText": "Metin içermeyen PDF: taranmış belgeler bu sürümde okunamıyor. Metin içeren bir PDF veya Word dosyası ekleyin.",
+        "pageLimit": "Belge sayfa sınırını aşıyor; bölerek daha kısa bir dosya ekleyin.",
+        "encrypted": "Parola korumalı PDF okunamaz; korumayı kaldırıp yeniden ekleyin.",
+        "failed": "Dosya okunamadı; bozuk olmadığını kontrol edip yeniden ekleyin.",
+        "quarantined": "Güvenlik taramasında sorun bulundu; bu ek kullanılamaz.",
+        "tooLarge": "Dosya boyut sınırını aşıyor (en çok {maxMb} MB).",
+        "type": "Yalnız PDF ve Word (.docx) dosyaları eklenebilir.",
+        "disabled": "Bu ortamda dosya yükleme kapalı.",
+        "upload": "Dosya yüklenemedi; bağlantınızı kontrol edip yeniden ekleyin.",
+        "timeout": "Dosya işleme uzun sürdü; eki kaldırıp yeniden ekleyin.",
+        "tooMany": "Bir mesaja en çok {max} dosya eklenebilir."
+      }
+    },
+    "modeLabel": "Yanıt modu",
+    "modeFast": "Hızlı",
+    "modeDeep": "Derin",
+    "suggestions": {
+      "petition": {
+        "title": "Dilekçe hazırla",
+        "body": "Haksız feshedilen işçi için kıdem tazminatı dava dilekçesi taslağı"
+      },
+      "precedent": {
+        "title": "Emsal karar bul",
+        "body": "Kat karşılığı inşaat sözleşmesinde gecikme cezası ve nama ifa izni"
+      },
+      "statute": {
+        "title": "Kanun incele",
+        "body": "Beş yılı aşan kira sözleşmesinde kira bedelinin belirlenmesi"
+      },
+      "contract": {
+        "title": "Sözleşme analizi",
+        "body": "İş sözleşmesindeki rekabet yasağı ve cezai şart hükümleri"
+      }
+    },
+    "eyebrow": "Yeni sohbet",
+    "startersLabel": "Hızlı başlangıçlar",
+    "pillars": {
+      "sources": {
+        "title": "Kaynağıyla yanıt",
+        "body": "Künyeler kayıttan gelir ve resmî kaynakta doğrulanır."
+      },
+      "deadlines": {
+        "title": "Süreler kurallarla",
+        "body": "Süreleri yapay zekâ değil süre motoru hesaplar."
+      },
+      "privacy": {
+        "title": "Müvekkil verisi korunur",
+        "body": "Kişisel veriler sağlayıcıya gitmeden önce maskelenir."
+      }
+    },
+    "stop": "Durdur",
+    "loading": "Sohbet yükleniyor",
+    "untitled": "Yeni sohbet",
+    "conversationLabel": "Sohbet",
+    "scrollToLatest": "En son yanıta git",
+    "locked": "Önceki yanıt üretiliyor — Durdur ve yeni mesaj gönder",
+    "notFound": {
+      "title": "Sohbet bulunamadı",
+      "body": "Sohbet silinmiş olabilir veya bu sohbete erişiminiz yok.",
+      "newChat": "Yeni sohbet başlat"
+    },
+    "loadError": {
+      "title": "Sohbet yüklenemedi"
+    },
+    "error": {
+      "generic": "Yanıt alınamadı. Yeniden deneyin; sorun sürerse destek koduyla bize yazın.",
+      "network": "Sunucuya ulaşılamadı. Bağlantınızı kontrol edip yeniden deneyin.",
+      "createFailed": "Sohbet başlatılamadı. Yeniden deneyin; sorun sürerse destek koduyla bize yazın.",
+      "retry": "Yeniden dene",
+      "supportCode": "Destek kodu: {code}",
+      "supportCodeLabel": "Destek kodu",
+      "copyCode": "Destek kodunu kopyala",
+      "copiedCode": "Kopyalandı",
+      "openSettings": "Ayarları aç"
+    },
+    "status": {
+      "completed": "Yanıt tamamlandı",
+      "stopped": "Yanıt durduruldu",
+      "error": "Yanıt üretilirken bir sorun oluştu"
+    },
+    "environment": {
+      "simulation": {
+        "title": "SİMÜLASYON",
+        "body": "Yanıtlar örnek senaryodan üretilir; gerçek yapay zekâ kullanılmaz."
+      },
+      "beta_synthetic": {
+        "title": "Pilot sürüm",
+        "body": "Gerçek müvekkil bilgisi girmeyin; yalnız sentetik (uydurma) veri kullanın."
+      }
+    },
+    "copy": {
+      "sourcesHeading": "Kaynaklar",
+      "done": "Yanıt kopyalandı",
+      "failed": "Yanıt kopyalanamadı. Tarayıcının pano iznini kontrol edin.",
+      "userDone": "Mesaj kopyalandı",
+      "userFailed": "Mesaj kopyalanamadı. Tarayıcının pano iznini kontrol edin."
+    },
+    "chip": {
+      "label": "Kaynak: {kunye}. Durum: {status}.",
+      "labelNoStatus": "Kaynak: {kunye}",
+      "labelMeta": "Kaynak: {kunye} ({meta}). Durum: {status}.",
+      "labelMetaNoStatus": "Kaynak: {kunye} ({meta})",
+      "meta": "{portal}, erişim {date}",
+      "unresolved": "Kaynak etiketi çözülemedi"
+    },
+    "citationStatus": {
+      "pending": "Doğrulanıyor",
+      "verified": "Doğrulandı",
+      "verified_user_source": "Eklediğiniz kaynakla doğrulandı",
+      "out_of_context": "Bu sohbette getirilmedi",
+      "out_of_coverage": "E.D.A. kapsamı dışında",
+      "source_unavailable": "Kaynağa şu an ulaşılamıyor",
+      "not_found": "Resmî kaynakta bulunamadı",
+      "attested": "Avukat beyanı"
+    },
+    "citationReason": {
+      "quote_mismatch": "Alıntı kaynakta bulunamadı"
+    },
+    "document": {
+      "untitled": "Belge taslağı",
+      "meta": "Belge taslağı · {count} sözcük",
+      "writing": "Yazılıyor · {count} sözcük",
+      "open": "Belgeyi görüntüle",
+      "panelLabel": "Belge",
+      "streaming": "Taslak yazılıyor",
+      "draftNote": "Taslaktır; kaynakları ve doldurulacak alanları kontrol edin.",
+      "copy": "Belgeyi kopyala",
+      "downloadWord": "Word olarak indir (.docx)",
+      "downloadPdf": "PDF olarak kaydet",
+      "close": "Belge panelini kapat",
+      "copied": "Belge kopyalandı",
+      "tabDocument": "Belge",
+      "tabSources": "Kaynaklar",
+      "openStudio": "Stüdyoda aç",
+      "openingStudio": "Açılıyor",
+      "studioError": "Belge stüdyoya aktarılamadı. Yeniden deneyin.",
+      "applyToDocument": "Belgeye uygula",
+      "selectionGone": "Seçili kısım belgede artık bulunamadı; belge değiştirilmedi. Belgeyi açıp yeniden seçin."
+    },
+    "message": {
+      "userLabel": "Mesajınız",
+      "assistantLabel": "E.D.A. yanıtı",
+      "assistantLabelAt": "E.D.A. yanıtı, {time}",
+      "author": "E.D.A",
+      "stopped": "Durduruldu",
+      "actions": "Mesaj eylemleri",
+      "copy": "Kopyala",
+      "regenerate": "Yeniden dene",
+      "like": "Beğen",
+      "dislike": "Beğenme",
+      "export": "Dışa aktar",
+      "exportWord": "Word'e aktar (.docx)",
+      "exportTitle": "E.D.A. yanıtı",
+      "exportFileName": "eda yaniti {date}",
+      "exportSourceLine": "{hasTitle, select, yes {{kunye} — {title}} other {{kunye}}}. {portal}, erişim tarihi {date}",
+      "exportSourceLineNoDate": "{hasTitle, select, yes {{kunye} — {title}} other {{kunye}}}. {portal}",
+      "exportDone": "Yanıt Word belgesi olarak indirildi",
+      "exportFailed": "Word belgesi oluşturulamadı. Yeniden deneyin.",
+      "exportBlocked": "Bu yanıtta kaynağı bulunamayan bir atıf var; Word'e aktarılamaz. Atfı kaynak panelinden kontrol edin, gerekirse yanıtı yeniden üretin.",
+      "workNotes": "Çalışma notları",
+      "masked": "{count} kişisel veri maskelenerek gönderildi.",
+      "userActions": "Mesaj eylemleri",
+      "copied": "Kopyalandı",
+      "edit": "Düzenle",
+      "editLabel": "Mesajı düzenle",
+      "editHint": "Enter gönderir; Shift+Enter yeni satır; Esc iptal eder. Gönderince bu mesajdan sonraki yanıtlar silinir ve yanıt yeniden üretilir.",
+      "editCancel": "İptal",
+      "editSend": "Gönder ve yeniden yanıtla",
+      "attachment": "Ek: {name}",
+      "attachmentsLabel": "Mesaj ekleri"
+    },
+    "provider": {
+      "location": "İşlem yeri: {region} ({provider})",
+      "locationAlias": "{alias} · İşlem yeri: {region}",
+      "locationAliasOnly": "{alias}",
+      "simulation": "SİMÜLASYON",
+      "regions": {
+        "TR": "TR",
+        "EU": "AB",
+        "US": "ABD",
+        "CN": "Çin",
+        "NONE": "Simülasyon"
+      },
+      "alias": {
+        "edai-flash": "Hızlı model",
+        "edai-pro": "Derin model"
+      },
+      "names": {
+        "deepseek": "DeepSeek",
+        "azure-eu": "Azure",
+        "vertex-eu": "Vertex AI",
+        "anthropic": "Anthropic",
+        "anthropic-eu": "Anthropic",
+        "local": "Yerel model",
+        "mock": "Simülasyon"
+      },
+      "locationOnly": "İşlem yeri: {region}",
+      "keySource": {
+        "platform": "Ortak anahtar",
+        "platformHint": "Bu yanıt platformun ortak anahtarıyla üretildi (günlük sınırlı); kendi anahtarınızı Ayarlar bölümünden ekleyebilirsiniz."
+      }
+    },
+    "pipeline": {
+      "label": "Yanıt hazırlık adımları",
+      "preparing": "Hazırlanıyor",
+      "parallel": "{count} işlem paralel yürütülüyor",
+      "meta": "{steps} adım · {seconds} sn",
+      "seconds": "{value} sn",
+      "rowFailed": "tamamlanamadı",
+      "failedCount": "{count} işlem tamamlanamadı",
+      "stepsDone": "{count} adım tamamlandı",
+      "sourcesFetched": "{count} kaynak getirildi",
+      "tools": {
+        "search_decisions": "{count} emsal araması",
+        "get_decision": "{count} karar incelemesi",
+        "search_legislation": "{count} mevzuat araması",
+        "get_legislation_article": "{count} mevzuat getirme",
+        "search_case_files": "{count} evrak araması",
+        "calculate_deadline": "{count} süre hesabı",
+        "create_document": "{count} belge planı",
+        "edit_document": "{count} düzenleme önerisi",
+        "submit_outline": "{count} dilekçe planı",
+        "other": "{count} araç işlemi"
+      },
+      "skippedCount": "{count} işlem durduruldu"
+    },
+    "sources": {
+      "title": "Kaynaklar",
+      "count": "{count, plural, =0 {Henüz kaynak getirilmedi} other {# kaynak getirildi}}",
+      "showCount": "{count} kaynak",
+      "close": "Kaynak panelini kapat",
+      "emptyTitle": "Henüz kaynak yok",
+      "emptyBody": "Yanıtta kullanılan kararlar ve mevzuat burada künyesiyle listelenir.",
+      "meta": "{portal} · erişim {date} · {relevance}",
+      "metaNoDate": "{portal} · {relevance}",
+      "relevance": {
+        "high": "Alaka: yüksek",
+        "medium": "Alaka: orta"
+      },
+      "read": {
+        "text": "Metni okundu",
+        "kunye": "Yalnız künye: metin okunmadı, resmî portalda açılabilir"
+      },
+      "preview": {
+        "open": "Önizle",
+        "title": "Karar metni",
+        "back": "Önizlemeyi kapat, kaynak listesine dön",
+        "loading": "Karar metni getiriliyor",
+        "errorTitle": "Karar metni getirilemedi",
+        "errorBody": "Metin şu an getirilemedi. Resmî portalda açabilirsiniz.",
+        "retry": "Tekrar dene",
+        "unavailable": "Bu kararın metni kaynaktan çıkarılamadı; resmî portalda açılabilir.",
+        "sections": "Karar bölümleri"
+      },
+      "passage": {
+        "quote": "Yanıttaki alıntı kaynakta birebir bulundu",
+        "overlap": "Yanıtın dayandığı pasaj işaretlendi",
+        "none": "Bu cümle için okunan metinde pasaj eşleşmedi",
+        "notVerbatim": "Tırnak içindeki ifade kaynak metinde birebir yok; resmî kaynaktan kontrol edin."
+      },
+      "openOfficial": "Resmî portalda aç",
+      "opensNewTab": "(yeni sekmede açılır)",
+      "portals": {
+        "bedesten": "UYAP",
+        "anayasa": "Anayasa Mahkemesi",
+        "uyusmazlik": "Uyuşmazlık Mahkemesi",
+        "mevzuat": "Mevzuat Bilgi Sistemi",
+        "other": "Resmî kaynak",
+        "caseFile": "Eklenen evrak"
+      }
+    }
+  },
+  "archive": {
+    "title": "Karar Arşivi",
+    "intro": "Resmî karar kaynaklarında arayın. Künye kaynak kaydından gösterilir; yapay zekâ künye yazmaz.",
+    "betaBadge": "Beta",
+    "betaNote": "Yerel karar korpusu henüz yüklenmedi. Arama, yalnız siz istediğinizde resmî kaynakta yapılır.",
+    "queryLabel": "Arama metni",
+    "queryPlaceholder": "Hukuki uyuşmazlık, anahtar kelimeler veya esas/karar numarası (örn. 2024/1234 E.)",
+    "queryHint": "Enter ile arayın, Shift+Enter ile yeni satır. Kişisel veri (T.C. kimlik no, telefon, e-posta, IBAN) yazmayın; kişisel veri içeren sorgu resmî kaynağa gönderilmez.",
+    "queryCounter": "{count} / {max} karakter",
+    "scopeLabel": "Kapsam",
+    "filtersLabel": "Süzgeçler",
+    "chamber": "Daire",
+    "chamberAll": "Tüm daireler",
+    "chamberHint": "Daire seçimi yalnız kapsamda tek başına Yargıtay veya Danıştay seçiliyken kullanılabilir.",
+    "chamberName": {
+      "H": "{n}. Hukuk Dairesi",
+      "C": "{n}. Ceza Dairesi",
+      "D": "{n}. Daire",
+      "HGK": "Hukuk Genel Kurulu",
+      "CGK": "Ceza Genel Kurulu",
+      "IDDK": "İdari Dava Daireleri Kurulu",
+      "VDDK": "Vergi Dava Daireleri Kurulu"
+    },
+    "dateFrom": "Karar tarihi (başlangıç)",
+    "dateTo": "Karar tarihi (bitiş)",
+    "submit": "Ara",
+    "submitting": "Aranıyor",
+    "errors": {
+      "validation": "Arama metni en az 2 karakter olmalı; tarih aralığını ve daire seçimini kontrol edin.",
+      "network": "Sunucuya ulaşılamadı. Bağlantınızı kontrol edip tekrar deneyin.",
+      "generic": "Arama başlatılamadı. Lütfen tekrar deneyin."
+    },
+    "source": {
+      "bedesten": "UYAP (Adalet Bakanlığı)",
+      "anayasa": "Anayasa Mahkemesi",
+      "uyusmazlik": "Uyuşmazlık Mahkemesi"
+    },
+    "results": {
+      "title": "Sonuçlar",
+      "queryHeading": "Aranan metin",
+      "research": "Yeniden ara",
+      "newSearch": "Yeni arama",
+      "scopeAll": "Kapsam: tüm kaynaklar",
+      "scopeSome": "Kapsam: {list}",
+      "dateRange": "Tarih: {from} – {to}",
+      "dateOpen": "belirtilmedi",
+      "chamberSel": "Daire: {name}",
+      "sortLabel": "Sıralama",
+      "sort": {
+        "alaka": "Önce ilgili",
+        "yeni": "Önce yeni",
+        "eski": "Önce eski"
+      },
+      "count": "{total} karar listeleniyor",
+      "pageOf": "Sayfa {page} / {count}",
+      "pageHeading": "Sonuçlar, sayfa {page}",
+      "pageLoaded": "Sayfa {page} yüklendi",
+      "pagesNav": "Sonuç sayfaları",
+      "previous": "Önceki",
+      "next": "Sonraki",
+      "loading": "Yükleniyor",
+      "poolNote": "Aramanız çok sayıda karar buldu; ilk {max} karar listeleniyor. Süzgeç ekleyerek daraltabilirsiniz.",
+      "localEmpty": "Yerel korpus henüz yüklenmediği için yerel sonuç yok. Resmî kaynakta aramak için düğmeyi kullanın.",
+      "coverageNote": "Canlı sonuçlar resmî kaynağın döndürdüğü ilk sonuçlardır. Bulunamayan bir karar kaynakta olmadığı anlamına gelmez.",
+      "emptyTitle": "Eşleşen karar bulunamadı",
+      "emptyBody": "Resmî kaynak bu aramayla eşleşen karar döndürmedi. Farklı ifadelerle veya daha geniş kapsamla yeniden arayın.",
+      "loadError": "Sonuçlar yüklenemedi.",
+      "expiredTitle": "Arama açılamıyor",
+      "expiredBody": "Bu aramanın süresi doldu veya kayıt artık yok. Yeni bir arama yapın."
+    },
+    "live": {
+      "title": "Resmî kaynakta arama",
+      "reason": {
+        "few_local_results": "Yerel korpusta az sayıda sonuç bulundu.",
+        "recent_date_filter": "Seçtiğiniz tarih aralığı son günleri kapsıyor; yeni kararlar henüz yerel korpusta olmayabilir.",
+        "specific_kunye": "Aradığınız künye yerel korpusta bulunamadı.",
+        "user_requested": "Resmî kaynakta arama istediniz.",
+        "low_score": "Yerel sonuçların eşleşmesi düşük."
+      },
+      "ctaBody": "Arama yalnız bu düğmeye bastığınızda resmî kaynakta yapılır.",
+      "button": "Resmî kaynakta ara",
+      "loading": "Resmî kaynakta aranıyor...",
+      "more": "Resmî kaynaktan sonraki sonuçlar",
+      "done": "Resmî kaynaktan {n} sonuç eklendi.",
+      "stale": "Önbellekteki canlı sonuçlar ({date} tarihli).",
+      "busy": "Canlı kaynak yoğun. {sec} sn sonra tekrar deneyin.",
+      "rateLimited": "Resmî kaynakta arama hakkınız şu an dolu. {sec} sn sonra tekrar deneyin.",
+      "unavailable": "Resmî kaynağa şu an ulaşılamıyor. Bu, kaydın bulunmadığı anlamına gelmez.",
+      "pii": "Kişisel veri algılandığı için resmî kaynakta arama yapılmadı. Kişisel veriyi çıkarıp yeni arama yapın.",
+      "notInCoverage": "Seçili kurum için resmî kaynakta arama desteklenmiyor.",
+      "expired": "Bu aramanın süresi doldu. Yeni bir arama yapın.",
+      "network": "Sunucuya ulaşılamadı. Bağlantınızı kontrol edip tekrar deneyin.",
+      "generic": "Resmî kaynakta arama yapılamadı. Lütfen tekrar deneyin.",
+      "noLiveSource": "Seçili kapsamda canlı aranabilen resmî kaynak yok.",
+      "sourcesTitle": "Kaynak durumu",
+      "sourceStatus": {
+        "done": "{n} sonuç",
+        "stale": "{n} sonuç (önbellek)",
+        "notInCoverage": "Bu kaynakta canlı arama henüz desteklenmiyor; bu, sonuç olmadığı anlamına gelmez.",
+        "busy": "Kaynak yoğun; biraz sonra tekrar deneyin.",
+        "unavailable": "Kaynağa ulaşılamadı; bu, sonuç olmadığı anlamına gelmez."
+      }
+    },
+    "card": {
+      "live": "Canlı: {source}",
+      "retrieved": "Erişim: {date}",
+      "open": "Kararı incele",
+      "openLabel": "Kararı incele: {kunye}",
+      "copy": "Karar no kopyala",
+      "copyLabel": "Karar no kopyala: {kunye}",
+      "copied": "{kunye} panoya kopyalandı",
+      "copyFailed": "Panoya kopyalanamadı; künyeyi seçerek kopyalayın.",
+      "portal": "Resmî portalda aç",
+      "portalLabel": "Resmî portalda aç: {kunye}",
+      "noSnippet": "Özet için kararı açın.",
+      "relevance": {
+        "high": "Alaka: yüksek",
+        "medium": "Alaka: orta"
+      },
+      "local": "Yerel korpus"
+    },
+    "decision": {
+      "back": "Geri",
+      "breadcrumb": "Konum",
+      "live": "Canlı: {source}",
+      "retrieved": "Erişim: {date}",
+      "court": "Mahkeme",
+      "chamberLabel": "Daire",
+      "esasNo": "Esas no",
+      "kararNo": "Karar no",
+      "date": "Karar tarihi",
+      "copyFull": "Tam künyeyi kopyala",
+      "copyShort": "Karar no kopyala",
+      "copied": "Panoya kopyalandı",
+      "copyFailed": "Panoya kopyalanamadı; künyeyi seçerek kopyalayın.",
+      "portal": "Resmî portalda aç",
+      "portalHint": "Bağlantı sizi kaynağın kendi sayfasına götürür.",
+      "discuss": "Sohbette tartış",
+      "discussLocked": "Bu eylem, sohbet kayıtları kalıcı hâle geldiğinde açılır.",
+      "sectionsNav": "Bölümler",
+      "role": {
+        "kunye": "Künye",
+        "istem": "İstem",
+        "taraf_iddiasi": "Taraf iddiası",
+        "gerekce": "Gerekçe",
+        "hukum": "Hüküm",
+        "karsi_oy": "Karşı oy",
+        "tetkik_hakimi": "Tetkik hâkimi görüşü",
+        "diger": "Diğer"
+      },
+      "notCourtOpinion": "Mahkeme görüşü değildir",
+      "sectionHeading": "Bölüm {n}: {role}",
+      "sectionLoading": "Bölüm yükleniyor",
+      "sectionError": "Bu bölüm yüklenemedi.",
+      "textUnavailable": "Bu kararın metni kaynaktan alınamadı. Resmî portalda açarak inceleyebilirsiniz.",
+      "metadataPartial": "Künye bilgileri kaynakta eksik geldi; künyeyi resmî portaldan doğrulayın.",
+      "truncated": "Karar metni çok uzun olduğu için kısaltılmış olarak gösteriliyor.",
+      "loadError": "Karar yüklenemedi.",
+      "notFoundTitle": "Karar bulunamadı",
+      "notFoundBody": "Kaynak bu kararı bulamadı. Bağlantıyı kontrol edin veya yeniden arayın.",
+      "unavailable": "Resmî kaynağa şu an ulaşılamıyor. Bu, kararın bulunmadığı anlamına gelmez.",
+      "busy": "Canlı kaynak yoğun. {sec} sn sonra tekrar deneyin."
+    },
+    "states": {
+      "retry": "Tekrar dene",
+      "retrying": "Yeniden deneniyor",
+      "supportCode": "Destek kodu",
+      "copy": "Kopyala",
+      "copied": "Kopyalandı"
+    }
+  },
+  "legislation": {
+    "title": "Mevzuat",
+    "intro": "Kanunlarda ve maddelerde arayın. Güncel konsolide metin resmî kaynaktan gösterilir.",
+    "searchLabel": "Arama",
+    "searchPlaceholder": "Kanun adı, numarası veya madde atfı yazın (örn. TBK m. 49, 6098, kıdem tazminatı)",
+    "searchHint": "Madde atfı ve kanun numarası doğrudan açılır; diğer metinler resmî kaynakta maddelerde aranır.",
+    "clear": "Temizle",
+    "search": "Maddelerde ara",
+    "searching": "Aranıyor",
+    "featuredTitle": "Sık kullanılan kanunlar",
+    "featuredChip": "{abbr} ({no})",
+    "lawNoLabel": "{no} sayılı Kanun",
+    "typeLabel": "Tür",
+    "types": {
+      "all": "Tümü",
+      "constitution": "Anayasa",
+      "law": "Kanun",
+      "decree_law": "KHK",
+      "presidential_decree": "CBK",
+      "regulation": "Yönetmelik"
+    },
+    "disclaimer": "Bu sayfadaki metin resmî kaynaktan alınan konsolide metindir; hukuki işlemlerde resmî kaynaktaki güncel metni kontrol ediniz.",
+    "live": "Canlı: Mevzuat",
+    "retrieved": "Erişim: {date}",
+    "sourceLink": "Resmî kaynakta aç",
+    "hits": {
+      "title": "Madde sonuçları",
+      "note": "En alakalı en çok 5 sonuç gösteriliyor. Aradığınız madde yoksa sorguyu daraltın veya madde atfıyla gidin.",
+      "empty": "Bu aramayla eşleşen madde bulunamadı. Kanun adıyla veya madde atfıyla (örn. TBK m. 49) deneyin.",
+      "openArticle": "Maddeyi aç: {label}",
+      "openLaw": "Kanunu aç: {title}",
+      "lawLevel": "Kanun",
+      "found": "{n} sonuç bulundu"
+    },
+    "errors": {
+      "validation": "Arama metni en az 2 karakter olmalı.",
+      "busy": "Mevzuat kaynağı yoğun. {sec} sn sonra tekrar deneyin.",
+      "rateLimited": "Mevzuat kaynağında arama hakkınız şu an dolu. {sec} sn sonra tekrar deneyin.",
+      "unavailable": "Mevzuat kaynağına şu an ulaşılamıyor. Bu, kaydın bulunmadığı anlamına gelmez.",
+      "network": "Sunucuya ulaşılamadı. Bağlantınızı kontrol edip tekrar deneyin.",
+      "generic": "İşlem tamamlanamadı. Lütfen tekrar deneyin."
+    },
+    "law": {
+      "breadcrumb": "Konum",
+      "lawNo": "Kanun no",
+      "type": "Tür",
+      "lastAmended": "Son değişiklik",
+      "lastAmendedMissing": "Son değişiklik tarihi kaynakta belirtilmemiş",
+      "liveBand": "Kanun bilgisi resmî kaynaktan canlı getirildi.",
+      "gotoLabel": "Madde numarasına git",
+      "gotoPlaceholder": "örn. 352, 49/A, geçici 5, ek 3",
+      "goto": "Git",
+      "gotoInvalid": "Geçerli bir madde numarası yazın (örn. 352, 49/A, geçici 5, ek 3).",
+      "searchInLaw": "Bu kanunda ara",
+      "searchInLawPlaceholder": "Maddelerde aranacak kelimeler",
+      "indexNote": "Madde dizini, yerel mevzuat korpusu yüklendiğinde gösterilir. Şimdilik madde numarasıyla gidebilir veya bu kanunda arayabilirsiniz.",
+      "firstArticle": "İlk maddeyi aç",
+      "loadError": "Kanun bilgisi yüklenemedi.",
+      "notFoundTitle": "Kanun bulunamadı",
+      "notFoundBody": "Resmî kaynakta bu numarayla kanun bulunamadı. Numarayı ve türü kontrol edin."
+    },
+    "article": {
+      "nav": "Madde gezintisi",
+      "prev": "Önceki madde: {label}",
+      "next": "Sonraki madde: {label}",
+      "repealed": "Mülga",
+      "repealedBand": "Bu madde mülgadır. Metin bilgi amacıyla gösterilir.",
+      "mvpNote": "Bu sayfa güncel metni gösterir. Olay tarihindeki (eski) metin için resmî kaynağa veya Resmî Gazete'ye bakın.",
+      "asOfUnverified": "İstenen tarihteki metin doğrulanamadı; güncel metin gösteriliyor.",
+      "invalidDate": "Geçersiz tarih.",
+      "copyCitation": "Madde atfını kopyala",
+      "copyText": "Madde metnini kopyala",
+      "copied": "Panoya kopyalandı",
+      "copyFailed": "Panoya kopyalanamadı; metni seçerek kopyalayın.",
+      "textSource": "Kaynak: {host}, erişim tarihi: {date}",
+      "searchDecisions": "Bu maddeye atıf yapan kararları ara",
+      "searchDecisionsBusy": "Arama başlatılıyor",
+      "loadError": "Madde yüklenemedi.",
+      "notFoundTitle": "Madde bulunamadı",
+      "notFoundBody": "Bu kanunda istenen madde numarası resmî kaynakta bulunamadı.",
+      "textHeading": "Madde metni"
+    },
+    "states": {
+      "retry": "Tekrar dene",
+      "retrying": "Yeniden deneniyor",
+      "supportCode": "Destek kodu",
+      "copy": "Kopyala",
+      "copied": "Kopyalandı"
+    }
+  },
+  "files": {
+    "title": "Dosyalar",
+    "intro": "Dava klasörlerinizi oluşturun ve yönetin. Klasörler büro içinde paylaşılır ya da yalnız size açık tutulur.",
+    "newCase": "Yeni dava klasörü",
+    "casesTitle": "Dava klasörleri",
+    "casesEmptyTitle": "Henüz dava klasörü yok",
+    "casesEmptyBody": "İlk dava klasörünüzü oluşturun; künye bilgileri ve bağlantılı işler burada toplanır.",
+    "columns": {
+      "name": "Klasör",
+      "code": "Büro kodu",
+      "docket": "Esas no",
+      "status": "Durum",
+      "updated": "Son işlem"
+    },
+    "search": "Klasör ara",
+    "searchPlaceholder": "Başlık, büro kodu veya esas no ile ara",
+    "statusFilter": "Durum",
+    "statusAll": "Tüm durumlar",
+    "loading": "Yükleniyor",
+    "loadError": "Dava klasörleri yüklenemedi.",
+    "retry": "Yeniden dene",
+    "more": "Daha fazla göster",
+    "noMatchTitle": "Eşleşen klasör yok",
+    "noMatchBody": "Aramayı ya da durum süzgecini değiştirin.",
+    "visibilityRestrictedShort": "(yalnız size açık)",
+    "uploadNote": "Evrak yükleme (virüs taraması ve şifreli saklama ile) bir sonraki sürümde açılacak.",
+    "status": {
+      "active": "Etkin",
+      "on_hold": "Beklemede",
+      "closed": "Kapandı",
+      "archived": "Arşivde"
+    },
+    "caseMissing": "Dava klasörü bulunamadı veya erişiminiz yok.",
+    "back": "Dosyalara dön",
+    "edit": "Düzenle",
+    "save": "Kaydet",
+    "esasLine": "Esas no {esas}",
+    "noEsas": "Esas numarası girilmedi",
+    "facts": {
+      "status": "Durum",
+      "code": "Büro dosya kodu",
+      "visibility": "Görünürlük",
+      "opened": "Açılış tarihi"
+    },
+    "evidenceTitle": "Evrak",
+    "evidenceSoon": "Bu klasöre evrak yükleme bir sonraki sürümde açılacak. Yüklenen evrak virüs taramasından geçip şifreli saklanacak.",
+    "linksTitle": "Bağlantılı işler",
+    "linkCalendar": "Takvimde duruşma ve süreler",
+    "linkDocuments": "Belgeler ve dilekçeler",
+    "newCaseForm": {
+      "title": "Yeni dava klasörü",
+      "body": "Klasörü oluşturduktan sonra künye bilgilerini düzenleyebilirsiniz.",
+      "close": "Kapat",
+      "cancel": "Vazgeç",
+      "create": "Klasörü oluştur",
+      "saving": "Kaydediliyor",
+      "name": "Klasör adı",
+      "nameHint": "Örn. “Yılmaz – işçilik alacağı”. Müvekkilin T.C. kimlik numarasını yazmayın.",
+      "code": "Büro dosya kodu",
+      "codeHint": "İsteğe bağlı iç kodunuz.",
+      "esas": "Esas no",
+      "esasHint": "YYYY/sıra biçiminde, örn. 2026/1234.",
+      "opened": "Açılış tarihi",
+      "visibility": "Görünürlük",
+      "visibilityOrg": "Büro geneli",
+      "visibilityRestricted": "Yalnız ben",
+      "visibilityOrgHint": "Bürodaki tüm üyeler görebilir.",
+      "visibilityRestrictedHint": "Yalnız siz görürsünüz; ekip ekleme sonraki sürümde.",
+      "errors": {
+        "title": "Klasör adı en az 2 karakter olmalı.",
+        "esas": "Esas no YYYY/sıra biçiminde olmalı (örn. 2026/1234).",
+        "role": "Rolünüz dava klasörü açmaya yetkili değil.",
+        "save": "Klasör kaydedilemedi. Yeniden deneyin."
+      }
+    }
+  },
+  "documents": {
+    "title": "Belgeler",
+    "intro": "Dilekçe ve sözleşme taslaklarınız. Dilekçe stüdyosunda A4 görünümünde düzenleyip UDF, DOCX veya PDF olarak dışa aktarın.",
+    "new": "Yeni belge",
+    "emptyTitle": "Henüz belge yok",
+    "emptyBody": "Sohbetten dilekçe isteyin veya boş bir belgeyle başlayın.",
+    "templatesTitle": "Şablonla başlayın",
+    "templates": {
+      "blank": "Boş belge",
+      "lawsuit": "Dava dilekçesi",
+      "response": "Cevap dilekçesi",
+      "appeal": "İstinaf dilekçesi",
+      "notice": "İhtarname",
+      "contract": "Sözleşme"
+    },
+    "recentTitle": "Son belgeler",
+    "columns": {
+      "name": "Belge",
+      "type": "Tür",
+      "case": "Dosya",
+      "status": "Durum",
+      "updated": "Güncellendi",
+      "actions": "İşlemler"
+    },
+    "untitled": "Başlıksız belge",
+    "blank": "Boş belge",
+    "creating": "Belge oluşturuluyor",
+    "open": "Aç",
+    "retry": "Yeniden dene",
+    "loadError": "Belgeler yüklenemedi. Bağlantınızı kontrol edip yeniden deneyin.",
+    "createError": "Belge oluşturulamadı. Yeniden deneyin.",
+    "loading": "Belgeler yükleniyor",
+    "loadMore": "Daha fazla göster",
+    "lockedTitle": "Belgeler henüz açık değil",
+    "lockedBody": "Belge stüdyosu, meslek bilgileriniz doğrulandıktan sonra kullanılabilir.",
+    "mfaTitle": "İki adımlı doğrulama gerekiyor",
+    "mfaBody": "Belge oluşturmadan önce hesabınızı iki adımlı doğrulamayla korumanız gerekir.",
+    "mfaAction": "Doğrulamayı kur",
+    "kinds": {
+      "petition": "Dilekçe",
+      "notice": "İhtarname",
+      "memo": "Mütalaa",
+      "free": "Serbest belge"
+    },
+    "status": {
+      "draft": "Taslak",
+      "review_pending": "İncelemede",
+      "approved": "Onaylandı",
+      "exported": "Dışa aktarıldı",
+      "filed_declared": "Dosyalandı (beyan)",
+      "archived": "Arşivlendi"
+    },
+    "delete": {
+      "action": "Sil",
+      "title": "Belge silinsin mi?",
+      "description": "“{title}” belgesi silinecek.",
+      "impact": "Belge ve tüm sürümleri kalıcı olarak kaldırılır. Bu işlem geri alınamaz.",
+      "cancel": "Vazgeç",
+      "confirm": "Sil",
+      "error": "Belge silinemedi. Yeniden deneyin.",
+      "forbidden": "Bu belgeyi silme yetkiniz yok."
+    }
+  },
+  "calendar": {
+    "title": "Takvim",
+    "intro": "Duruşma, süre ve görüşmeleriniz. Süreleri yapay zekâ değil kural tabanlı süre motoru hesaplar; takvime yalnız sizin onayınızla eklenir.",
+    "today": "Bugün",
+    "prev": "Önceki ay",
+    "next": "Sonraki ay",
+    "view": "Görünüm",
+    "month": "Ay",
+    "week": "Hafta",
+    "agenda": "Ajanda",
+    "add": "Etkinlik ekle",
+    "todaySummary": "Günün özeti",
+    "todayEmpty": "Bugün için kayıtlı etkinlik yok.",
+    "criticalTitle": "Yaklaşan kritik süreler",
+    "criticalEmpty": "Yaklaşan kritik süre yok.",
+    "legend": "Etkinlik türleri",
+    "types": {
+      "hearing": "Duruşma",
+      "deadline": "Hak düşürücü süre",
+      "expert": "Bilirkişi",
+      "meeting": "Müvekkil görüşmesi",
+      "task": "Görev",
+      "discovery": "Keşif",
+      "mediation": "Arabuluculuk"
+    },
+    "weekdays": ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"],
+    "weekdaysShort": ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
+    "engineNote": "Süreler kural tabanlı süre motoruyla hesaplanır ve takvime yalnız onayınızla eklenir.",
+    "daySummary": "Seçili gün",
+    "dayEmpty": "Bu gün için kayıtlı etkinlik yok.",
+    "addToDay": "Bu güne etkinlik ekle",
+    "allDay": "Tüm gün",
+    "more": "+{count} daha",
+    "complete": "Tamamla",
+    "reopen": "Yeniden aç",
+    "edit": "Düzenle",
+    "agendaEmpty": "Bu aralıkta etkinlik yok.",
+    "loading": "Yükleniyor",
+    "retry": "Yeniden dene",
+    "loadError": "Takvim yüklenemedi.",
+    "locked": "Takvimi görüntüleme yetkiniz yok.",
+    "actionError": "İşlem tamamlanamadı. Yeniden deneyin.",
+    "delete": {
+      "action": "Sil",
+      "title": "Etkinlik silinsin mi?",
+      "description": "“{title}” etkinliği silinecek.",
+      "impact": "Etkinlik ve hatırlatıcıları kaldırılır. Bu işlem geri alınamaz.",
+      "cancel": "Vazgeç",
+      "confirm": "Sil"
+    },
+    "form": {
+      "addTitle": "Etkinlik ekle",
+      "editTitle": "Etkinliği düzenle",
+      "close": "Kapat",
+      "cancel": "Vazgeç",
+      "save": "Kaydet",
+      "saving": "Kaydediliyor",
+      "type": "Tür",
+      "title": "Başlık",
+      "date": "Tarih",
+      "allDay": "Tüm gün",
+      "start": "Başlangıç",
+      "end": "Bitiş",
+      "location": "Yer",
+      "notes": "Not",
+      "reminder": "Hatırlatma",
+      "derivedNote": "Süre motorundan gelen etkinliğin zamanı değiştirilemez.",
+      "reminders": {
+        "15": "15 dakika önce",
+        "60": "1 saat önce",
+        "1440": "1 gün önce",
+        "none": "Hatırlatma yok"
+      },
+      "errors": {
+        "title": "Başlık gerekli.",
+        "time": "Saat geçersiz.",
+        "range": "Bitiş, başlangıçtan sonra olmalı.",
+        "save": "Etkinlik kaydedilemedi. Yeniden deneyin."
+      }
+    }
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "intro": "Profilinizi, görünüm tercihlerinizi ve yapay zekâ çalışma tercihlerinizi yönetin.",
+    "profile": {
+      "title": "Hukuki kimlik ve antet",
+      "body": "Dilekçe ve yazışmalara basılacak bilgiler. Hesabınızla giriş yaptığınızda düzenlenebilir.",
+      "name": "Ad soyad",
+      "email": "E-posta",
+      "bar": "Baro ve sicil numarası",
+      "office": "Büro adı",
+      "professionTitle": "Meslek bilgileri",
+      "baroName": "Baro",
+      "sicilNo": "Sicil numarası",
+      "traineeRegistryNo": "Staj sicil numarası",
+      "professionNone": "Meslek bilgisi henüz yok.",
+      "readOnly": "Doğrulanmış bilgiler salt okunurdur; düzeltme için destek talebi açın.",
+      "unverifiedEmail": "E-posta doğrulanmadı",
+      "verification": {
+        "verified": "Doğrulandı",
+        "rejected": "Başvuru reddedildi",
+        "suspended": "Hesap askıda",
+        "pending_verification": "Başvuru inceleniyor"
+      }
+    },
+    "appearance": {
+      "title": "Görünüm",
+      "body": "Tema ve yoğunluk bu cihazda hemen uygulanır.",
+      "theme": "Tema",
+      "density": "Yoğunluk",
+      "comfortable": "Rahat",
+      "compact": "Sıkı",
+      "densityHint": "Okuma metni her iki yoğunlukta da 16 px kalır."
+    },
+    "ai": {
+      "title": "Yapay zekâ tercihleri",
+      "body": "Varsayılan yanıt modu ve müvekkil verisi koruması.",
+      "defaultMode": "Varsayılan yanıt modu",
+      "masking": "Müvekkil verisi maskeleme",
+      "maskingHint": "Kişisel veriler (ad, T.C. kimlik no, adres, telefon vb.) yapay zekâ sağlayıcısına gitmeden önce yer tutucularla değiştirilir; yanıt size dönerken geri yerleştirilir.",
+      "defaultModeHint": "Hızlı yanıt günlük sorular, Derin yanıt kapsamlı araştırma içindir.",
+      "maskingAlways": "Her zaman açık"
+    },
+    "notifications": {
+      "title": "Bildirim tercihleri",
+      "body": "Hangi bildirimleri hangi kanaldan alacağınızı seçin.",
+      "matrixLabel": "Bildirim türü ve kanal tercihleri",
+      "kindColumn": "Bildirim",
+      "loading": "Bildirim tercihleri yükleniyor",
+      "mandatory": "Bu kanal kapatılamaz.",
+      "mandatoryError": "Bu kanal kapatılamaz.",
+      "saveFailed": "Tercih kaydedilemedi. Lütfen yeniden deneyin.",
+      "emailUnverified": "E-posta adresiniz doğrulanmadığı için e-posta gönderilemez.",
+      "pushHint": "Web Push bildirimlerinin gelmesi için en az bir cihazda Web Push açık olmalıdır.",
+      "mandatoryInfo": "Güvenlik ve hesap bildirimleri, meslek doğrulama sonucu, davet, ödeme ve abonelik bildirimleri ile KVKK başvuru yanıtları her zaman gönderilir ve kapatılamaz.",
+      "channels": {
+        "in_app": "Uygulama içi",
+        "email": "E-posta",
+        "push": "Web Push"
+      },
+      "kinds": {
+        "reminder": {
+          "label": "Etkinlik hatırlatıcıları",
+          "hint": "Duruşma, keşif, bilirkişi, müvekkil görüşmesi, arabuluculuk ve iş hatırlatıcıları"
+        },
+        "deadline_due": {
+          "label": "Süre hatırlatıcıları",
+          "hint": "Onaylı süreler"
+        },
+        "file_ready": {
+          "label": "Evrak işleme tamamlandı",
+          "hint": "Yüklediğiniz evrakın işlenmesi bittiğinde"
+        },
+        "file_failed": {
+          "label": "Evrak işlenemedi veya karantinaya alındı",
+          "hint": "Evrak işlenemediğinde veya güvenlik nedeniyle ayrıldığında"
+        },
+        "export_ready": {
+          "label": "Dışa aktarım hazır",
+          "hint": "Dışa aktarma dosyanız indirilmeye hazır olduğunda"
+        },
+        "kunye_check_ready": {
+          "label": "Künye Kontrolü tamamlandı",
+          "hint": "Künye kontrolü sonuçlandığında"
+        },
+        "credit_low": {
+          "label": "Kredi azaldı",
+          "hint": "Yalnız büro sahibi ve yöneticiler görür"
+        }
+      },
+      "error": {
+        "title": "Bildirim tercihleri yüklenemedi",
+        "body": "Bağlantınızı denetleyip yeniden deneyin.",
+        "retry": "Yeniden dene",
+        "retrying": "Yeniden deneniyor",
+        "supportCode": "Destek kodu",
+        "copy": "Kopyala",
+        "copied": "Kopyalandı"
+      }
+    },
+    "signInRequired": "Bu ayarlar hesabınızla giriş yaptığınızda kaydedilir.",
+    "sectionsLabel": "Ayar bölümleri",
+    "tabsLabel": "Ayarlar sekmeleri",
+    "tabs": {
+      "profile": "Profil",
+      "security": "Güvenlik",
+      "appearance": "Görünüm",
+      "ai": "Yapay zekâ",
+      "notifications": "Bildirimler",
+      "org": "Büro bilgisi",
+      "sessions": "Oturumlar"
+    },
+    "loading": "Ayarlar yükleniyor",
+    "signedOut": {
+      "title": "Ayarlar için giriş gerekli",
+      "body": "Hesabınızla giriş yaptığınızda profil, güvenlik ve görünüm tercihlerinizi buradan yönetebilirsiniz.",
+      "action": "Giriş yap"
+    },
+    "error": {
+      "title": "Ayarlar yüklenemedi",
+      "body": "Bağlantınızı denetleyip yeniden deneyin.",
+      "retry": "Yeniden dene",
+      "retrying": "Yeniden deneniyor",
+      "supportCode": "Destek kodu",
+      "copy": "Kopyala",
+      "copied": "Kopyalandı"
+    },
+    "org": {
+      "title": "Büro bilgisi",
+      "body": "Büro adı, türü ve bu bürodaki rolünüz.",
+      "name": "Büro adı",
+      "kind": "Tür",
+      "role": "Rol",
+      "none": "Etkin büro seçili değil.",
+      "readOnly": "Büro ayarlarını büro yöneticileri değiştirir.",
+      "kinds": {
+        "individual": "Bireysel",
+        "firm": "Büro"
+      },
+      "roles": {
+        "owner": "Yönetici Ortak",
+        "admin": "Büro Yöneticisi",
+        "senior_lawyer": "Kıdemli Avukat",
+        "lawyer": "Avukat",
+        "trainee": "Stajyer Avukat",
+        "assistant": "Hukuk Asistanı"
+      }
+    },
+    "security": {
+      "title": "Güvenlik",
+      "body": "Parola, iki adımlı doğrulama ve oturum güvenliği.",
+      "passwordTitle": "Parolayı değiştir",
+      "passwordBody": "Yeni parola en az {min} karakter olmalıdır. Değişiklik diğer cihazlardaki oturumları kapatır.",
+      "current": "Mevcut parola",
+      "new": "Yeni parola",
+      "confirm": "Yeni parola (tekrar)",
+      "submit": "Parolayı değiştir",
+      "saving": "Kaydediliyor",
+      "saved": "Parolanız değiştirildi. Diğer cihazlardaki oturumlar kapatıldı.",
+      "showPassword": "Parolayı göster",
+      "hidePassword": "Parolayı gizle",
+      "tooShort": "Yeni parola en az {min} karakter olmalıdır.",
+      "mismatch": "Yeni parola ve tekrarı aynı olmalıdır.",
+      "failed": "Parola değiştirilemedi. Mevcut parolanızı denetleyin.",
+      "stepUpTitle": "Kimliğinizi yeniden doğrulayın",
+      "stepUpBody": "Bu işlem iki adımlı doğrulama gerektiriyor. Doğrulama ekranında kimliğinizi doğrulayıp buraya dönün.",
+      "stepUpAction": "Doğrulama ekranını aç",
+      "totp": "Doğrulama uygulaması",
+      "passkey": "Geçiş anahtarı",
+      "on": "Açık",
+      "off": "Kapalı",
+      "backupTitle": "Yedek kodlar",
+      "backupBody": "Yedek kodlar iki adımlı doğrulama ekranında yeniden üretilir; kodlar yalnız bir kez gösterilir.",
+      "manage": "İki adımlı doğrulama ekranı",
+      "stepUpState": "Kimlik tazeleme",
+      "stepUpValid": "Geçerli",
+      "stepUpExpired": "Yok",
+      "totpHint": "Kimlik doğrulama uygulamasıyla altı haneli kod.",
+      "totpSetup": "Kur"
+    },
+    "apiKeys": {
+      "title": "Yapay zekâ API anahtarı",
+      "body": "Sohbetin hangi Claude API anahtarıyla çalışacağını seçin. Anahtar şifreli saklanır; ekranda yalnız son 4 karakteri görünür.",
+      "loading": "API anahtarı ayarları yükleniyor",
+      "sourceTitle": "Hangi anahtar kullanılsın?",
+      "useOrg": "Büro/barodan çek",
+      "useOwn": "Kendi anahtarım",
+      "platformInUse": "Şu an platformun ortak anahtarı kullanılıyor; kendi anahtarınızı girerek değiştirebilirsiniz. Ortak anahtarın günlük kullanım sınırı vardır.",
+      "platformInUseNamed": "Şu an {name} kullanılıyor; kendi anahtarınızı girerek değiştirebilirsiniz. Ortak anahtarın günlük kullanım sınırı vardır.",
+      "orgNone": "Büro/baroya tanımlanmış API key yok.",
+      "missing": {
+        "org": "Büro/baroya tanımlanmış API key yok. Büro yöneticisinden anahtar tanımlamasını isteyin veya kendi anahtarınızı ekleyin.",
+        "own": "Kendi API anahtarınız tanımlı değil. Aşağıdan ekleyin veya büro/baro anahtarını seçin."
+      },
+      "orgTitle": "Büro/baro anahtarı",
+      "ownTitle": "Kendi anahtarım",
+      "orgKeyLabel": "Büro/baro API anahtarı",
+      "ownKeyLabel": "Kendi API anahtarım",
+      "keyHint": "Anthropic Console’dan aldığınız anahtarı yapıştırın. Kaydederken Anthropic’e küçük bir doğrulama isteği gönderilir.",
+      "showKey": "Anahtarı göster",
+      "hideKey": "Anahtarı gizle",
+      "save": "Doğrula ve kaydet",
+      "replace": "Anahtarı değiştir",
+      "verifying": "Doğrulanıyor",
+      "removeOrg": "Büro/baro anahtarını kaldır",
+      "removeOwn": "Kendi anahtarımı kaldır",
+      "connected": "Bağlı",
+      "notConnected": "Tanımlı değil",
+      "currentKey": "Kayıtlı anahtar",
+      "orgReadOnly": "Büro/baro anahtarını yalnız büro sahibi ve yöneticileri değiştirebilir.",
+      "problems": {
+        "format": "Anahtar biçimi geçersiz. Anthropic anahtarları “sk-ant-” ile başlar.",
+        "rejected": "Anahtar Anthropic tarafından kabul edilmedi. Anahtarı kontrol edip yeniden deneyin.",
+        "forbidden": "Bu anahtarı değiştirme yetkiniz yok.",
+        "step_up": "Bu işlem için kimliğinizi yeniden doğrulamanız gerekiyor.",
+        "unavailable": "Anthropic’e şu an ulaşılamıyor. Biraz sonra yeniden deneyin.",
+        "failed": "Anahtar kaydedilemedi. Yeniden deneyin."
+      },
+      "error": {
+        "title": "API anahtarı ayarları yüklenemedi",
+        "body": "Bağlantınızı denetleyip yeniden deneyin.",
+        "retry": "Yeniden dene",
+        "retrying": "Yeniden deneniyor",
+        "supportCode": "Destek kodu",
+        "copied": "Kopyalandı",
+        "copy": "Kopyala"
+      }
+    },
+    "groups": {
+      "account": "Hesap",
+      "preferences": "Tercihler",
+      "workspace": "Büro"
+    },
+    "sessions": {
+      "title": "Etkin oturumlar",
+      "body": "Hesabınızın açık olduğu cihazlar. Tanımadığınız bir oturumu hemen kapatın ve parolanızı değiştirin.",
+      "revokeOthers": "Diğer tüm oturumları kapat",
+      "revoke": "Oturumu kapat",
+      "revoking": "Kapatılıyor",
+      "thisDevice": "Bu cihaz",
+      "unknownDevice": "Bilinmeyen cihaz",
+      "lastActive": "Son etkinlik {when}",
+      "since": "{date} tarihinden beri",
+      "loading": "Oturumlar yükleniyor",
+      "error": "Oturumlar yüklenemedi.",
+      "retry": "Yeniden dene",
+      "failed": "Oturum kapatılamadı. Yeniden deneyin.",
+      "confirmTitle": "Diğer oturumlar kapatılsın mı?",
+      "confirmBody": "Bu cihaz dışındaki {count} oturum kapatılacak; o cihazlarda yeniden giriş gerekir.",
+      "cancel": "Vazgeç"
+    }
+  },
+  "orgSettings": {
+    "apiKeyGuide": {
+      "title": "Anahtarı nasıl alırım?",
+      "intro": "Kurumunuz kendi Anthropic hesabını bağlar. Anahtarı Anthropic Console'dan kendiniz alıp buradaki alana girebilirsiniz.",
+      "consoleLink": "Anthropic Console'u aç",
+      "steps": {
+        "account": {
+          "title": "Hesap açın",
+          "body": "console.anthropic.com adresine gidin, e-posta ile hesap oluşturun veya giriş yapın. (Claude sohbet aboneliği ile API hesabı ayrıdır.)"
+        },
+        "billing": {
+          "title": "Ödeme yöntemi ekleyin",
+          "body": "Console'da Billing (Faturalama) bölümünden kart ekleyin ve bakiye yükleyin. API kullanımı kullandığınız kadar ücretlendirilir."
+        },
+        "limit": {
+          "title": "Aylık harcama sınırı koyun",
+          "body": "Console'da Limits (Sınırlar) bölümünden aylık harcama limitini belirleyin. (Beklenmedik masrafı önler.)"
+        },
+        "create": {
+          "title": "Anahtar oluşturun",
+          "body": "API Keys bölümünde Create Key düğmesine basın, anahtara bir ad verin (örnek: \"EDA Hukuk\")."
+        },
+        "copy": {
+          "title": "Anahtarı kopyalayın",
+          "body": "Anahtar yalnız bir kez gösterilir. Kopyalayıp güvenli bir yere de kaydedin."
+        },
+        "save": {
+          "title": "EDA Hukuk'a girin",
+          "body": "Bu sayfadaki alana yapıştırıp Doğrula ve kaydet düğmesine basın."
+        }
+      },
+      "warning": {
+        "title": "Güvenlik ve ücretlendirme",
+        "items": {
+          "share": "Anahtarı kimseyle paylaşmayın ve e-posta ile göndermeyin.",
+          "storage": "EDA Hukuk anahtarı şifreli saklar; kaydedildikten sonra ekranda yalnız son 4 karakteri görünür.",
+          "billing": "Kullanım bedeli doğrudan Anthropic hesabınıza yansır; EDA Hukuk bu bedeli sizden almaz.",
+          "revoke": "Anahtarı iptal etmek için Console'daki API Keys bölümünden silebilirsiniz; ardından buradan yenisini girin."
+        }
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Hesabınıza giriş yapın",
+      "intro": "Hukuki çalışma alanınıza, içtihat aramalarınıza ve dosyalarınıza erişin.",
+      "email": "E-posta",
+      "password": "Parola",
+      "forgot": "Parolamı unuttum",
+      "remember": "Bu cihazda oturumu açık tut",
+      "submit": "Giriş yap",
+      "submitting": "Giriş yapılıyor",
+      "showPassword": "Parolayı göster",
+      "hidePassword": "Parolayı gizle",
+      "noAccount": "Henüz hesabınız yok mu?",
+      "apply": "Meslek başvurusu yapın",
+      "emailPlaceholder": "avukat@ornek.com",
+      "resend": "Doğrulama bağlantısını yeniden gönder",
+      "resent": "Doğrulama bağlantısı gönderildi.",
+      "retryIn": "{n} sn sonra yeniden deneyin",
+      "reasons": {
+        "expired": "Oturumunuz sona erdi. Devam etmek için yeniden giriş yapın.",
+        "signedOut": "Oturumunuz kapatıldı.",
+        "passwordUpdated": "Parolanız güncellendi. Yeni parolanızla giriş yapın."
+      }
+    },
+    "footer": {
+      "tls": "Bağlantılar TLS ile şifrelenir; evrak ayrıca şifreli saklanır.",
+      "terms": "Kullanım Koşulları",
+      "kvkk": "KVKK Aydınlatma",
+      "trust": "Güven Merkezi",
+      "legal": "Yasal bağlantılar"
+    },
+    "quotes": {
+      "label": "Hukuk felsefesinden alıntılar",
+      "pause": "Alıntıları durdur",
+      "play": "Alıntıları başlat",
+      "source": "Kaynak",
+      "paraphrase": "Serbest aktarım: ifade özgün metinden çeviri veya özetle alınmıştır.",
+      "slide": "{current} / {total}",
+      "eyebrow": "Hukuk felsefesinden"
+    },
+    "errors": {
+      "invalidCredentials": "E-posta veya parola hatalı.",
+      "emailNotVerified": "E-posta adresiniz henüz doğrulanmamış.",
+      "rateLimited": "Çok fazla deneme yapıldı. {n} saniye sonra yeniden deneyin.",
+      "rateLimitedNoWait": "Çok fazla deneme yapıldı. Biraz sonra yeniden deneyin.",
+      "suspended": "Hesabınız askıya alınmıştır. Ayrıntı için destek ekibiyle iletişime geçin.",
+      "orgSuspended": "Bağlı olduğunuz büro askıya alınmıştır. Büro yöneticinizle iletişime geçin.",
+      "maintenance": "Bakım çalışması sürüyor. Kısa süre sonra yeniden deneyin.",
+      "network": "Sunucuya ulaşılamıyor. Bağlantınızı kontrol edip yeniden deneyin.",
+      "invalidCode": "Kod hatalı veya süresi dolmuş. Yeniden deneyin.",
+      "invalidLink": "Bağlantı geçersiz veya süresi dolmuş.",
+      "weakPassword": "Parola çok yaygın veya e-posta adresinizi ya da adınızı içeriyor; farklı bir parola seçin.",
+      "validation": "Gönderilen bilgilerde düzeltilmesi gereken alanlar var.",
+      "mfaRequired": "Bu işlem için iki adımlı doğrulamayı etkinleştirmeniz gerekiyor.",
+      "invitationInvalid": "Bu davet artık geçerli değil. Büro yöneticinizden yeni bir davet isteyin.",
+      "invitationEmailMismatch": "Bu davet başka bir e-posta adresi için oluşturulmuş. Doğru hesapla giriş yapın.",
+      "seatLimit": "Bu büronun koltuk sınırına ulaşıldı. Büro yöneticisiyle iletişime geçin.",
+      "generic": "Bir sorun oluştu. Bilgilerinizi kontrol edip yeniden deneyin; sorun sürerse destek ekibine yazın.",
+      "supportCode": "Destek kodu: {code}",
+      "summaryTitle": "Formda düzeltilmesi gerekenler var"
+    },
+    "twoFactor": {
+      "title": "İki adımlı doğrulama",
+      "subtitleVerify": "Hesabınızı korumak için ikinci doğrulama adımını tamamlayın.",
+      "subtitleSetup": "Hesabınızı korumak için iki adımlı doğrulamayı kurun.",
+      "totpTab": "Doğrulama uygulaması",
+      "backupTab": "Yedek kod",
+      "codeLabel": "6 haneli kod",
+      "codeHelp": "Kodu telefonunuzdaki doğrulama uygulamasında bulun.",
+      "verify": "Doğrula",
+      "verifying": "Doğrulanıyor",
+      "backupLabel": "Yedek kod",
+      "backupHelp": "Her yedek kod yalnız bir kez kullanılabilir.",
+      "backupUsed": "Bu yedek kod kullanıldı. Kalan yedek kod sayısı Ayarlar → Güvenlik sayfasında görünür.",
+      "cantAccess": "Cihazıma erişemiyorum",
+      "cantAccessBody": "Yedek kodunuz yoksa iki adımlı doğrulama sıfırlama talebi için destek ekibine yazın. Talep büro yöneticisi onayı gerektirir ve {hours} saatlik bekleme süresi uygulanır; hesabınıza ve büro yöneticilerine bildirim gönderilir.",
+      "requiredNotice": "Rolünüz için iki adımlı doğrulama zorunludur.",
+      "firstClientDataNotice": "Müvekkil verisi eklemeden önce hesabınızı iki adımlı doğrulamayla korumanız gerekir.",
+      "setup": {
+        "totpTitle": "Doğrulama uygulaması",
+        "stepsLabel": "Kurulum adımları",
+        "stepCounter": "Adım {n}/{total}",
+        "stepStatus": {
+          "complete": "Tamamlandı",
+          "current": "Şu an",
+          "pending": "Bekliyor",
+          "error": "Hata"
+        },
+        "stepNames": {
+          "install": "Uygulamayı yükleyin",
+          "scan": "Hesabı ekleyin",
+          "code": "Kodu girin"
+        },
+        "installTitle": "Doğrulama uygulamasını telefonunuza yükleyin",
+        "installBody": "İki adımlı doğrulama için telefonunuzda her 30 saniyede bir yeni kod üreten bir doğrulama uygulaması gerekir. Örneğin şunlardan birini kullanabilirsiniz:",
+        "apps": {
+          "google": "Google Authenticator",
+          "microsoft": "Microsoft Authenticator",
+          "authy": "Authy",
+          "onepassword": "1Password",
+          "bitwarden": "Bitwarden Authenticator"
+        },
+        "appsLabel": "Örnek doğrulama uygulamaları",
+        "installStore": "Uygulamayı telefonunuzun uygulama mağazasından adıyla arayıp yükleyin.",
+        "alreadyHave": "Zaten bir doğrulama uygulamanız varsa yeniden yüklemeniz gerekmez; aşağıdan 2. adıma geçin.",
+        "passwordStepTitle": "Devam etmek için parolanızı girin",
+        "passwordLabel": "Parola",
+        "passwordHelp": "Güvenliğiniz için parolanızı bir kez daha doğrulamanız gerekir.",
+        "start": "2. adıma geç",
+        "qrStepTitle": "Kodu doğrulama uygulamanızla tarayın",
+        "qrSteps": "Uygulamayı açın, \"+\" veya \"Hesap ekle\" düğmesine dokunun, ardından \"QR kodu tara\" seçeneğini seçip telefonunuzu aşağıdaki koda tutun.",
+        "qrLabel": "Doğrulama uygulaması için QR kodu",
+        "sameDevice": "Bu sayfayı doğrulama uygulamasının bulunduğu telefonda açtıysanız QR kodu tarayamazsınız. Bunun yerine aşağıdaki anahtarı kopyalayın; uygulamada \"Kurulum anahtarı gir\" veya \"Elle gir\" seçeneğini seçip yapıştırın.",
+        "manualTitle": "QR kodu tarayamıyor musunuz?",
+        "manualKey": "Uygulamada hesap adı olarak dilediğiniz adı (örneğin E.D.A. Hukuk) yazın, aşağıdaki anahtarı girin ve anahtar türünü \"Zaman tabanlı\" bırakın.",
+        "manualKeyLabel": "Kurulum anahtarı",
+        "keyType": "Tür: zaman tabanlı (TOTP)",
+        "copyKey": "Anahtarı kopyala",
+        "keyCopied": "Anahtar panoya kopyalandı.",
+        "copyFailed": "Anahtar kopyalanamadı; anahtarı seçip elle kopyalayın.",
+        "next": "3. adıma geç",
+        "back": "Geri",
+        "codeStepTitle": "Uygulamadaki 6 haneli kodu yazın",
+        "codeStepBody": "Uygulamada az önce eklediğiniz hesabın altında 6 haneli bir kod görünür. Kodu boşluksuz yazın ve \"Kodu doğrula\" düğmesine basın.",
+        "codeRefresh": "Kod 30 saniyede bir yenilenir; süresi dolmak üzereyse yeni kodu bekleyin.",
+        "codeHelp": "Yalnız rakam yazın; boşluk gerekmez.",
+        "clockHelp": "Kod sürekli yanlış çıkıyorsa telefonunuzun saatinin otomatik ayarlı olduğunu kontrol edin.",
+        "codeWrong": "Kod yanlış ya da süresi dolmuş; uygulamadaki yeni kodu yazın.",
+        "confirm": "Kodu doğrula",
+        "backupTitle": "Yedek kodlarınızı kaydedin",
+        "backupIntro": "Telefonunuzu kaybeder veya doğrulama uygulamasına erişemezseniz hesabınıza bu kodlarla girebilirsiniz. Kodları şimdi kaydedin; kurulum bittikten sonra tekrar gösterilmez.",
+        "backupWarning": "Her kod yalnız bir kez kullanılabilir. Kodları telefonunuzdan ayrı, güvenli bir yerde (örneğin parola yöneticinizde veya çıktısını alıp kilitli bir yerde) saklayın; başkalarıyla paylaşmayın.",
+        "copy": "Panoya kopyala",
+        "copied": "Yedek kodlar panoya kopyalandı.",
+        "download": "Metin dosyası olarak indir",
+        "ack": "Yedek kodlarımı güvenli bir yere kaydettim",
+        "finish": "Bitir",
+        "done": "İki adımlı doğrulama etkinleştirildi.",
+        "later": "Daha sonra",
+        "alreadyOn": "İki adımlı doğrulama bu hesapta zaten etkin."
+      }
+    },
+    "register": {
+      "title": "Meslek başvurusu yapın",
+      "subtitle": "Hesap bilgilerinizi girin; e-postanızı doğruladıktan sonra meslek bilgilerinizi tamamlarsınız.",
+      "inviteTitle": "Daveti kabul etmek için hesap oluşturun",
+      "inviteSubtitle": "Büro davetini kabul etmek için hesap bilgilerinizi girin.",
+      "name": "Ad soyad",
+      "email": "E-posta adresi",
+      "password": "Parola",
+      "passwordHelp": "En az {min} karakter. Parola yöneticinizin önerdiği parolayı kullanabilirsiniz.",
+      "terms": "Kullanım Koşulları'nı ve Veri İşleme Sözleşmesi özetini okudum, kabul ediyorum.",
+      "pilotNote": "Bu pilot sürümde gerçek müvekkil verisi işlenmez.",
+      "privacy": "KVKK Aydınlatma Metni'ni okudum.",
+      "privacyHelp": "Bu işaret, aydınlatma metninin size sunulduğunu belgeler; bir rıza beyanı değildir.",
+      "submit": "Başvuruyu gönder",
+      "submitting": "Gönderiliyor",
+      "haveAccount": "Zaten hesabınız var mı?",
+      "login": "Giriş yapın",
+      "errors": {
+        "name": "Ad soyad en az 2 karakter olmalıdır.",
+        "email": "Geçerli bir e-posta adresi yazın.",
+        "emailAscii": "E-posta adresinde Türkçe karakter (ı, İ, ş, ğ, ü, ö, ç) bulunamaz.",
+        "password": "Parola en az {min} karakter olmalıdır.",
+        "required": "Devam etmek için bu kutuyu işaretleyin."
+      },
+      "success": {
+        "title": "Başvurunuz alındı",
+        "body": "{email} adresine bir doğrulama bağlantısı gönderdik. Bağlantıya tıklayarak e-postanızı doğrulayın.",
+        "step1": "E-postanızı doğrulayın",
+        "step2": "Meslek bilgileriniz incelenir (hedef: {n} iş saati; en geç 1 iş günü)",
+        "step3": "Doğrulama tamamlanınca sohbet, dosyalar ve belgeler açılır.",
+        "note": "E-postanızı doğruladığınızda Karar Arşivi, Mevzuat, süre hesaplayıcı ve Künye Kontrolü hemen kullanılabilir.",
+        "resend": "Bağlantıyı yeniden gönder",
+        "resendWait": "Yeniden göndermek için {n} sn bekleyin.",
+        "resent": "Yeni bir doğrulama bağlantısı gönderdik.",
+        "spam": "Gelen kutunuzda göremiyorsanız önemsiz e-posta klasörünü kontrol edin."
+      }
+    },
+    "profession": {
+      "title": "Meslek bilgileriniz",
+      "subtitle": "Başvuru, baro kayıt bilgilerinizle karşılaştırılarak doğrulanır.",
+      "kind": "Meslek",
+      "lawyer": "Avukat",
+      "trainee": "Stajyer avukat",
+      "baro": "Baro",
+      "baroPlaceholder": "Baro adı yazın",
+      "baroEmpty": "Sonuç yok",
+      "baroToggle": "Baro listesini aç",
+      "sicil": "Baro sicil numarası",
+      "traineeNo": "Stajyer sicil numarası",
+      "sicilHelp": "Başvuru, baro kayıt bilgilerinizle karşılaştırılarak doğrulanır.",
+      "referral": "Referans kodunuz var mı?",
+      "referralLabel": "Referans kodu (isteğe bağlı)",
+      "referralUnknown": "Bu referans kodu tanınmıyor.",
+      "declare": "Baroya kayıtlı bir avukat veya stajyer avukat olduğumu ve hesabı yalnızca mesleki amaçla kullanacağımı beyan ederim.",
+      "submit": "Başvuruyu tamamla",
+      "submitting": "Gönderiliyor",
+      "errors": {
+        "kind": "Meslek seçin.",
+        "baro": "Listeden bir baro seçin.",
+        "sicil": "Sicil numarası yalnızca harf, rakam, / ve - içerebilir (en çok 20 karakter).",
+        "partnerCode": "Referans kodu büyük harf, rakam ve - içermeli (4–32 karakter).",
+        "required": "Devam etmek için bu kutuyu işaretleyin."
+      }
+    },
+    "verifyEmail": {
+      "title": "E-postanızı doğrulayın",
+      "intro": "Gelen kutunuzdaki bağlantıya tıklayın. Bağlantıyı bulamadıysanız yeni bir tane isteyebilirsiniz.",
+      "email": "E-posta adresi",
+      "resend": "Doğrulama bağlantısını yeniden gönder",
+      "neutral": "Bu e-posta adresiyle bekleyen bir kayıt varsa yeni bir bağlantı gönderdik.",
+      "checking": "Bağlantı doğrulanıyor",
+      "success": "E-posta adresiniz doğrulandı.",
+      "continue": "Devam et",
+      "already": "Bu e-posta adresi zaten doğrulanmış. Giriş yapabilirsiniz.",
+      "login": "Giriş yap",
+      "error": "Doğrulama bağlantısı geçersiz veya süresi dolmuş."
+    },
+    "reset": {
+      "title": "Parolanızı sıfırlayın",
+      "intro": "Hesabınızın e-posta adresini yazın; varsa size bir sıfırlama bağlantısı göndeririz.",
+      "email": "E-posta adresi",
+      "submit": "Sıfırlama bağlantısı gönder",
+      "submitting": "Gönderiliyor",
+      "neutral": "Bu e-posta adresiyle kayıtlı bir hesap varsa, parola sıfırlama bağlantısı gönderildi. Bağlantı sınırlı bir süre geçerlidir.",
+      "newTitle": "Yeni parolanızı belirleyin",
+      "newPassword": "Yeni parola",
+      "confirm": "Yeni parola (tekrar)",
+      "mismatch": "Parolalar eşleşmiyor.",
+      "save": "Parolayı güncelle",
+      "saving": "Güncelleniyor",
+      "invalid": "Bağlantı geçersiz veya süresi dolmuş.",
+      "requestNew": "Yeni bağlantı iste",
+      "backToLogin": "Giriş ekranına dön"
+    },
+    "invite": {
+      "title": "Bir büro sizi E.D.A. Hukuk'a davet etti.",
+      "notice": "Daveti yalnızca davet edilen e-posta adresiyle kabul edebilirsiniz.",
+      "haveAccount": "Hesabım var, giriş yap",
+      "createAccount": "Hesap oluştur",
+      "loading": "Davet bilgisi yükleniyor",
+      "firm": "Büro",
+      "role": "Rol",
+      "invitedBy": "Davet eden",
+      "accept": "Daveti kabul et",
+      "accepting": "Kabul ediliyor",
+      "reject": "Reddet",
+      "rejectTitle": "Daveti reddetmek istediğinize emin misiniz?",
+      "rejectConfirm": "Reddet",
+      "rejectCancel": "Vazgeç",
+      "rejected": "Davet reddedildi.",
+      "professionNotice": "Bu rol için meslek bilgilerinizi beyan etmeniz gerekir.",
+      "roles": {
+        "owner": "Büro sahibi",
+        "admin": "Yönetici",
+        "senior_lawyer": "Kıdemli avukat",
+        "lawyer": "Avukat",
+        "trainee": "Stajyer avukat",
+        "assistant": "Asistan"
+      }
+    }
+  },
+  "marketing": {
+    "nav": {
+      "label": "Site gezinmesi",
+      "skip": "İçeriğe geç",
+      "homeLabel": "E.D.A. Hukuk ana sayfa",
+      "brandA": "E.D.A.",
+      "brandB": "Hukuk",
+      "links": {
+        "product": "Ürün",
+        "kunye": "Künye Kilidi",
+        "sources": "Kaynaklar",
+        "security": "Güvenlik",
+        "faq": "SSS"
+      },
+      "signIn": "Giriş yap",
+      "open": "Uygulamayı aç"
+    },
+    "hero": {
+      "eyebrow": "Avukatlar için yapay zekâ çalışma alanı",
+      "title": "Kaynağıyla *doğrulanan* hukuki araştırma",
+      "intro": "Araştırma, dilekçe hazırlama ve süre takibi tek bir yerde. Atıf yapılan her karar, resmî kaynağı üzerinden doğrulanır.",
+      "signIn": "Giriş yapın",
+      "signUp": "Kayıt olun",
+      "note": "Hukuki değerlendirme sizde. Kaynak kontrolü E.D.A.’da."
+    },
+    "stage": {
+      "label": "Ürün tanıtımı",
+      "deviceLabel": "E.D.A. Hukuk arayüzünün canlandırılmış örneği: soru yazılır, yanıt hazırlık adımları ilerler, yanıt künye çipleriyle gelir ve künyeler resmî kaynakta doğrulanır.",
+      "replay": "Yeniden oynat",
+      "replayLabel": "Arayüz canlandırmasını yeniden oynat",
+      "scrollHint": "Kaydırın",
+      "progress": ["Araştırma", "Dilekçe", "Süreler"],
+      "how": {
+        "eyebrow": "Sorudan kaynağa",
+        "title": "Nasıl *çalışır*",
+        "steps": [
+          {
+            "title": "Sorunuzu yazın",
+            "body": "Hukuki sorunuzu ve araştırmanın kapsamını belirtin."
+          },
+          {
+            "title": "Kaynaklar canlı taranır",
+            "body": "Yargıtay, Danıştay, istinaf, ilk derece, Anayasa Mahkemesi ve mevzuat."
+          },
+          {
+            "title": "Yanıt künyeleriyle gelir",
+            "body": "Her atıf, erişilen kaynak kaydıyla eşleşir."
+          },
+          {
+            "title": "Künyeler resmî kaynakta doğrulanır",
+            "body": "Doğrulama durumu her atıfın yanında görünür."
+          }
+        ]
+      },
+      "studio": {
+        "eyebrow": "Dilekçe stüdyosu",
+        "title": "Araştırmanız, taslağınızdan *kopmasın.*",
+        "lead": "Kaynakları ayrı bir yerde, metni başka bir yerde takip etmeyin. Araştırmadan gelen atıfları A4 editörde taslağınızla birlikte inceleyin; Word ya da PDF olarak dışa aktarın.",
+        "ticks": [
+          "Kaynaklarıyla birlikte taslak hazırlayın.",
+          "Her atıfın doğrulama durumunu görün.",
+          "Doğrulanmayan künyeler için dışa aktarım durur."
+        ]
+      },
+      "deadlines": {
+        "eyebrow": "Süre takibi",
+        "title": "Süreleri yapay zekâ değil, *motor* hesaplar.",
+        "lead": "Süreleri model tahmin etmez. Kural motoru hesaplar; dayanağı ve hesap adımları her sürenin yanında gösterilir.",
+        "ticks": [
+          "Başlangıç, dayanak ve tatil kontrolü tek ekranda.",
+          "Hatırlatıcılar bir güvenlik ağıdır; süre kontrolü avukatta kalır."
+        ]
+      }
+    },
+    "mock": {
+      "chrome": {
+        "host": "app.example.com"
+      },
+      "side": {
+        "brand": "E.D.A. Hukuk",
+        "newChat": "Yeni sohbet",
+        "search": "Ara",
+        "kbd": "Ctrl K",
+        "work": "Çalışma",
+        "chats": "Sohbetler",
+        "converter": "Dönüştürücü",
+        "research": "Araştırma",
+        "decisions": "Karar Arşivi",
+        "legislation": "Mevzuat",
+        "office": "Büro",
+        "files": "Dosyalar",
+        "documents": "Belgeler",
+        "calendar": "Takvim",
+        "recent": "Son sohbetler",
+        "recentItems": [
+          "Kira tespit davası emsalleri",
+          "TBK 352 tahliye taahhüdü",
+          "İdari işlemin iptali dava süresi"
+        ],
+        "settings": "Ayarlar",
+        "support": "Destek",
+        "accountInitials": "AK",
+        "accountName": "Av. Ada Kaya",
+        "accountMail": "ada.kaya@buro.example"
+      },
+      "top": {
+        "workspace": "Çalışma alanı"
+      },
+      "chat": {
+        "greetCap": "Yeni sohbet",
+        "greet": "İyi günler. Bugün ne üzerinde çalışıyoruz?",
+        "placeholder": "Hukuki uyuşmazlığı, kanun maddesini veya sorunuzu yazın",
+        "question": "İş sözleşmesinin feshinde ispat yüküne ilişkin Yargıtay kararlarını araştır.",
+        "scopeLabel": "Kaynak kapsamı: ",
+        "scopeValue": "Akıllı otomatik seçim",
+        "fast": "Hızlı",
+        "deep": "Derin",
+        "starters": ["Dilekçe hazırla", "Emsal karar bul", "Kanun incele", "Sözleşme analizi"],
+        "pillars": [
+          {
+            "title": "Kaynağıyla yanıt",
+            "body": "Künyeler kayıttan gelir ve resmî kaynakta doğrulanır."
+          },
+          {
+            "title": "Süreler kurallarla",
+            "body": "Süreleri yapay zekâ değil süre motoru hesaplar."
+          },
+          {
+            "title": "Müvekkil verisi korunur",
+            "body": "Kişisel veriler sağlayıcıya gitmeden önce maskelenir."
+          }
+        ],
+        "disclaimer": "E.D.A. Hukuk mesleki araştırma ve taslak aracıdır; nihai hukuki tavsiye yerine geçmez. Emsal ve mevzuat sonuçlarını kontrol ediniz.",
+        "author": "E.D.A",
+        "time": "14:32",
+        "badge": "Hızlı model · İşlem yeri: AB",
+        "pipeTitle": "Hazırlanıyor",
+        "pipeMeta0": "0 adım · 0 sn",
+        "pipeParallel": "2 işlem paralel yürütülüyor",
+        "pipeParallelRest": " · Resmî kaynakta aranıyor (UYAP), Madde metni getiriliyor",
+        "pipeMeta": [
+          "2 adım · 0,4 sn",
+          "2 adım · 1,3 sn",
+          "3 adım · 2,1 sn",
+          "4 adım · 3,4 sn",
+          "5 adım · 6,6 sn",
+          "5 adım · 7,8 sn"
+        ],
+        "pipeDone": "1 emsal araması, 1 mevzuat getirme, 1 karar incelemesi",
+        "rows": [
+          {
+            "label": "Resmî kaynakta aranıyor (UYAP)",
+            "cap": "3 karar"
+          },
+          {
+            "label": "Madde metni getiriliyor",
+            "det": "İş K. m. 20"
+          },
+          {
+            "label": "Emsal karar analiz ediliyor",
+            "det": "Yargıtay 9. Hukuk Dairesi, E. 2023/••••, K. 2024/••••, T. ••.••.2024"
+          },
+          {
+            "label": "Cevap oluşturuluyor"
+          },
+          {
+            "label": "Künyeler doğrulanıyor"
+          }
+        ],
+        "times": ["1,7 sn", "0,9 sn", "", "3,1 sn", ""],
+        "note": "Önce ilgili emsal kararları ve kanun maddesini getiriyorum.",
+        "sourcesAction": "4 kaynak",
+        "answer": [
+          {
+            "h3": "Kısa cevap"
+          },
+          {
+            "p": [
+              {
+                "t": "İş Kanunu m. 20 uyarınca feshin "
+              },
+              {
+                "b": "geçerli bir sebebe"
+              },
+              {
+                "t": " dayandığını ispat yükü işverene aittir. İşçi, feshin başka bir sebebe dayandığını ileri sürerse bu iddiasını ispatla yükümlüdür."
+              }
+            ]
+          },
+          {
+            "h3": "Dayanaklar"
+          },
+          {
+            "ul": [
+              [
+                {
+                  "t": "Getirilen kanun maddesi: "
+                },
+                {
+                  "chip": "K4"
+                }
+              ],
+              [
+                {
+                  "t": "Kararda, işverenin fesih bildiriminde gösterdiği sebeple bağlı olduğu ve bu sebebi ispatla yükümlü olduğu belirtilir "
+                },
+                {
+                  "chip": "K1"
+                },
+                {
+                  "t": "."
+                }
+              ]
+            ]
+          },
+          {
+            "h3": "Kontrol edilmesi gerekenler"
+          },
+          {
+            "ul": [
+              [
+                {
+                  "t": "Fesih bildiriminin yazılı ve gerekçeli olup olmadığı"
+                }
+              ],
+              [
+                {
+                  "t": "Fesihten önce işçinin savunmasının alınıp alınmadığı"
+                }
+              ],
+              [
+                {
+                  "t": "Arabulucuya başvuru süresi (süre motoruyla hesaplayın)"
+                }
+              ]
+            ]
+          }
+        ],
+        "chips": {
+          "K1": {
+            "k": "Y. 9. HD 2023/•••• E.",
+            "meta": "UYAP, erişim 17.10.2026"
+          },
+          "K4": {
+            "k": "İş K. m. 20",
+            "meta": "Mevzuat Bilgi Sistemi, erişim 17.10.2026"
+          }
+        },
+        "sources": {
+          "title": "Kaynaklar",
+          "none": "Henüz kaynak getirilmedi",
+          "found": "4 kaynak getirildi",
+          "emptyTitle": "Henüz kaynak yok",
+          "emptyBody": "Yanıtta kullanılan kararlar ve mevzuat burada künyesiyle listelenir.",
+          "read": "Metni okundu",
+          "onlyKunye": "Yalnız künye: metin okunmadı, resmî portalda açılabilir",
+          "passage": "Yanıtın dayandığı pasaj işaretlendi",
+          "preview": "Önizle",
+          "open": "Resmî portalda aç",
+          "cards": [
+            {
+              "ref": "K1",
+              "kind": "Y",
+              "chip": "Y. 9. HD 2023/•••• E.",
+              "kn": "Yargıtay 9. Hukuk Dairesi, E. 2023/••••, K. 2024/••••, T. ••.••.2024",
+              "meta": "UYAP · erişim 17.10.2026 · Alaka: yüksek",
+              "read": true,
+              "quote": [
+                "Davacı işçi, iş sözleşmesinin geçerli bir neden olmaksızın feshedildiğini ileri sürerek feshin geçersizliğinin tespiti ile işe iadesine karar verilmesini talep etmiştir.",
+                "Davalı işveren, feshin performans düşüklüğü nedeniyle yapıldığını savunmuştur. ",
+                "4857 sayılı İş Kanunu'nun 20/2. maddesi uyarınca feshin geçerli bir sebebe dayandığını ispat yükü işverene aittir. İşveren, fesih bildiriminde gösterdiği sebeple bağlı olup yargılama sırasında farklı bir sebebe dayanamaz.",
+                " İşçi, feshin başka bir sebebe dayandığını iddia ettiği takdirde bu iddiasını ispatla yükümlüdür.",
+                "Dosya kapsamına göre fesih bildiriminde gösterilen sebebin işverence somut olgularla kanıtlanamadığı anlaşılmaktadır."
+              ]
+            },
+            {
+              "ref": "K2",
+              "kind": "Y",
+              "chip": "Y. 9. HD 2022/•••• E.",
+              "kn": "Yargıtay 9. Hukuk Dairesi, E. 2022/••••, K. 2022/••••, T. ••.••.2022",
+              "meta": "UYAP · erişim 17.10.2026 · Alaka: yüksek",
+              "read": false
+            },
+            {
+              "ref": "K3",
+              "kind": "Y",
+              "chip": "Y. HGK 2019/•••• E.",
+              "kn": "Yargıtay Hukuk Genel Kurulu, E. 2019/••••, K. 2021/••••, T. ••.••.2021",
+              "meta": "UYAP · erişim 17.10.2026 · Alaka: orta",
+              "read": false
+            },
+            {
+              "ref": "K4",
+              "kind": "§",
+              "chip": "İş K. m. 20",
+              "kn": "4857 sayılı İŞ KANUNU m. 20",
+              "meta": "Mevzuat Bilgi Sistemi · erişim 17.10.2026 · Alaka: yüksek",
+              "read": true,
+              "short": "Madde 20 — Fesih bildirimine itiraz ve usulü\nFeshin geçerli bir sebebe dayandığını ispat yükü işverene aittir. İşçi, feshin başka bir sebebe dayandığını iddia ettiği takdirde, bu iddiasını ispatla yükümlüdür."
+            }
+          ]
+        }
+      },
+      "studio": {
+        "back": "Belgeler",
+        "title": "İşe iade dava dilekçesi",
+        "saved": "Kaydedildi",
+        "unsaved": "Değişiklikler kaydedilecek",
+        "zoom": "Sığdır",
+        "buttons": ["Odak modu", "Sürümler", "Word (.docx)", "PDF", "Sil", "Sohbet"],
+        "edit": "Sohbetle düzenle",
+        "notice": "Bu taslak yapay zekâ desteğiyle üretilmiştir; kaynakları ve süreleri kontrol ediniz.",
+        "style": "Gövde metni",
+        "font": "Times New Roman",
+        "size": "12 pt",
+        "spacing": "1,5",
+        "addSection": "Bölüm ekle",
+        "comments": "Açıklamalar",
+        "fills": "{count} doldurulacak alan",
+        "words": "{count} sözcük",
+        "pages": "1 sayfa",
+        "find": "Bul ve değiştir",
+        "lines": [
+          {
+            "a": "center",
+            "text": "İSTANBUL ( ). İŞ MAHKEMESİ SAYIN HÂKİMLİĞİ'NE"
+          },
+          {
+            "a": "left",
+            "text": ""
+          },
+          {
+            "a": "left",
+            "bold": "DAVACI",
+            "pad": 6,
+            "text": ": [[Doldurulacak: davacı adı soyadı]]"
+          },
+          {
+            "a": "left",
+            "bold": "VEKİLİ",
+            "pad": 7,
+            "text": ": [[Doldurulacak: vekil adı soyadı]]"
+          },
+          {
+            "a": "left",
+            "bold": "DAVALI",
+            "pad": 6,
+            "text": ": [[Doldurulacak: işveren unvanı]]"
+          },
+          {
+            "a": "left",
+            "bold": "KONU",
+            "pad": 9,
+            "text": ": Feshin geçersizliğinin tespiti ile işe iade talebimizdir."
+          },
+          {
+            "a": "left",
+            "text": ""
+          },
+          {
+            "h": "AÇIKLAMALAR"
+          },
+          {
+            "text": "1. Müvekkil, davalı işyerinde belirsiz süreli iş sözleşmesiyle çalışmakta iken iş sözleşmesi geçerli bir sebep gösterilmeksizin feshedilmiştir."
+          },
+          {
+            "parts": [
+              {
+                "t": "2. 4857 sayılı İş Kanunu'nun 20. maddesi uyarınca feshin geçerli bir sebebe dayandığını ispat yükü işverene aittir "
+              },
+              {
+                "ref": "K4",
+                "full": "(İş K. m. 20)"
+              },
+              {
+                "t": ". İşveren, fesih bildiriminde gösterdiği sebeple bağlıdır "
+              },
+              {
+                "ref": "K1",
+                "full": "(Y. 9. HD 2023/•••• E.)"
+              },
+              {
+                "t": "."
+              }
+            ]
+          },
+          {
+            "text": "3. Fesih bildiriminde sebep açık ve kesin biçimde gösterilmemiş, fesihten önce müvekkilin savunması alınmamıştır."
+          },
+          {
+            "a": "left",
+            "text": ""
+          },
+          {
+            "h": "HUKUKİ SEBEPLER"
+          },
+          {
+            "text": "4857 sayılı İş Kanunu m. 18, 19, 20, 21; 7036 sayılı İş Mahkemeleri Kanunu ve ilgili mevzuat."
+          },
+          {
+            "a": "left",
+            "text": ""
+          },
+          {
+            "h": "SONUÇ VE İSTEM"
+          },
+          {
+            "text": "Yukarıda açıklanan nedenlerle feshin geçersizliğine ve müvekkilin işe iadesine karar verilmesini saygıyla arz ve talep ederiz."
+          }
+        ]
+      },
+      "cal": {
+        "eyebrow": "Takvim",
+        "month": "Ekim 2026",
+        "today": "Bugün",
+        "views": ["Ay", "Hafta", "Ajanda"],
+        "add": "Etkinlik ekle",
+        "daysLong": ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"],
+        "daysShort": ["Pzt", "Sal", "Çar", "Per", "Cum", "Cmt", "Paz"],
+        "events": [
+          {
+            "d": 2,
+            "kind": "task",
+            "t": "Gerekçeli karar tebliği"
+          },
+          {
+            "d": 8,
+            "kind": "meeting",
+            "t": "Müvekkil görüşmesi"
+          },
+          {
+            "d": 16,
+            "kind": "deadline",
+            "t": "İstinaf süresi son gün"
+          },
+          {
+            "d": 21,
+            "kind": "hearing",
+            "t": "Duruşma · İş Mahkemesi"
+          },
+          {
+            "d": 27,
+            "kind": "info",
+            "t": "Bilirkişi incelemesi"
+          }
+        ],
+        "sumCap": "Günün özeti",
+        "sumCapSel": "Seçili gün",
+        "sumDay": "9 Ekim Cuma",
+        "sumDaySel": "16 Ekim Cuma",
+        "sumEmpty": "Bu gün için kayıtlı etkinlik yok.",
+        "rowTitle": "İstinaf süresi son gün",
+        "rowSub": "Hak düşürücü süre · Tüm gün",
+        "rowNote": "HMK m. 345 · Tebliğ 02.10.2026 · 2 hafta",
+        "rowDone": "Tamamla",
+        "rowEdit": "Düzenle",
+        "addDay": "Bu güne etkinlik ekle",
+        "critTitle": "Yaklaşan kritik süreler",
+        "critEmpty": "Yaklaşan kritik süre yok.",
+        "critDate": "16 Eki",
+        "critText": "İstinaf süresi son gün",
+        "critNote": "Süreler kural tabanlı süre motoruyla hesaplanır ve takvime yalnız onayınızla eklenir.",
+        "legendTitle": "Etkinlik türleri",
+        "legend": [
+          {
+            "kind": "hearing",
+            "label": "Duruşma"
+          },
+          {
+            "kind": "deadline",
+            "label": "Hak düşürücü süre"
+          },
+          {
+            "kind": "info",
+            "label": "Keşif"
+          },
+          {
+            "kind": "info",
+            "label": "Bilirkişi"
+          },
+          {
+            "kind": "meeting",
+            "label": "Müvekkil görüşmesi"
+          },
+          {
+            "kind": "meeting",
+            "label": "Arabuluculuk"
+          },
+          {
+            "kind": "task",
+            "label": "Görev"
+          }
+        ]
+      }
+    },
+    "features": {
+      "eyebrow": "Tek bir çalışma alanı",
+      "title": "Araştırmadan taslağa, *kontrollü* bir iş akışı",
+      "items": [
+        {
+          "title": "Künye doğrulama",
+          "body": "Künyeler kaynak kaydından oluşturulur, resmî kaynaktan kontrol edilir."
+        },
+        {
+          "title": "Müvekkil verisi korunur",
+          "body": "Kişisel veriler, ortamınızdan çıkmadan önce maskelenir."
+        },
+        {
+          "title": "Süreleri yapay zekâ değil motor hesaplar",
+          "body": "Süreleri model tahmin etmez. Kural motoru hesaplar."
+        },
+        {
+          "title": "Dilekçe stüdyosu",
+          "body": "Kaynaklarıyla taslak hazırlayın. Doğrulanan atıflarla dışa aktarın."
+        }
+      ]
+    },
+    "kunye": {
+      "eyebrow": "Künye Kilidi",
+      "title": "Bir atıf değil,\nbir *kaynak* zinciri.",
+      "lead": "Akıcı bir yanıt, doğru bir kaynak anlamına gelmez. E.D.A. Hukuk, metin üretimi ile künye oluşturmayı birbirinden ayırır.",
+      "chain": {
+        "label": "Künye Kilidi akışı: etiket, künye oluşturma, resmî kaynakta doğrulama",
+        "tag": "Atıftan önce kaynak.",
+        "replay": "Akışı yeniden oynat",
+        "n1": {
+          "k": "Etiket",
+          "b": "Model künyeyi yazmaz. Yalnızca etiketi üretir."
+        },
+        "n2": {
+          "k": "Künye oluşturulur",
+          "b": "Mahkeme, daire, E./K. ve tarih kaynak kaydından alınır.",
+          "chip": "Y. 9. HD 2023/•••• E.",
+          "kn": "Yargıtay 9. Hukuk Dairesi, E. 2023/••••, K. 2024/••••, T. ••.••.2024",
+          "meta": "UYAP · erişim 17.10.2026"
+        },
+        "n3": {
+          "k": "Resmî kaynakta doğrulanır",
+          "b": "Künye, resmî kaynak kaydıyla karşılaştırılır.",
+          "chip": "Y. 9. HD 2023/•••• E.",
+          "chipMeta": "· UYAP, erişim 17.10.2026",
+          "wait": "Durum: Doğrulanıyor",
+          "ok": "Durum: Doğrulandı"
+        },
+        "foot": "Doğrulanmayan künye dışa aktarımı durdurur."
+      },
+      "items": [
+        {
+          "title": "Model yalnızca etiketi üretir",
+          "body": "Mahkeme, daire, esas ve karar numarası model tarafından yazılmaz. Yanıttaki [K1] etiketi, erişilen kayda bağlanır."
+        },
+        {
+          "title": "Künye kayıttan gelir",
+          "body": "Atıf bilgileri kaynak kaydından alınır. Resmî kaynak kontrolü tamamlanmadan doğrulandı işareti gösterilmez."
+        },
+        {
+          "title": "Kontrol, dışa aktarımdan önce gelir",
+          "body": "Doğrulanmamış bir atıf varsa dışa aktarım durur. Kaynağı inceleyin, ardından taslağınıza devam edin."
+        }
+      ],
+      "gate": {
+        "tag": "Örnek iş akışı · Dışa aktarım kapısı",
+        "k1": {
+          "chip": "Y. 9. HD 2023/•••• E.",
+          "st": "Doğrulandı"
+        },
+        "k2": {
+          "chip": "BAM 9. HD 2024/•••• E.",
+          "wait": "Doğrulanıyor",
+          "ok": "Doğrulandı"
+        },
+        "export": "Word (.docx)",
+        "msgWait": "Dışa aktarım durdu: K2 henüz doğrulanmadı.",
+        "msgOk": "Tüm atıflar doğrulandı. Dışa aktarım açık.",
+        "switch": "K2 için resmî kaynak kontrolünü tamamla"
+      }
+    },
+    "sources": {
+      "eyebrow": "Araştırmanın kapsamı",
+      "title": "Sorunuzdan ilgili\n*resmî* kaynağa.",
+      "lead": "Karar ve mevzuat kaynakları araştırma sırasında canlı taranır. Yanıttaki atıflar, erişilen kayıtlarla ilişkilendirilir.",
+      "aside": "Kaynağa erişmek ve kaynağı doğrulamak ayrı adımlardır.",
+      "scanned": " · tarandı",
+      "items": [
+        {
+          "k": "Yüksek mahkeme",
+          "b": "Yargıtay"
+        },
+        {
+          "k": "Yüksek mahkeme",
+          "b": "Danıştay"
+        },
+        {
+          "k": "Bölge adliye",
+          "b": "İstinaf"
+        },
+        {
+          "k": "Yerel mahkeme",
+          "b": "İlk derece"
+        },
+        {
+          "k": "Anayasa yargısı",
+          "b": "Anayasa Mahkemesi"
+        },
+        {
+          "k": "Mevzuat",
+          "b": "Mevzuat"
+        }
+      ]
+    },
+    "audience": {
+      "eyebrow": "Mesleğinizin yanında",
+      "title": "Kimler *için*",
+      "items": [
+        {
+          "k": "Bireysel çalışma",
+          "title": "Avukat",
+          "body": "Dosyanız için araştırın, kaynakları inceleyin ve taslak hazırlayın."
+        },
+        {
+          "k": "Staj dönemi",
+          "title": "Stajyer avukat",
+          "body": "Araştırmanızı kaynaklarıyla kurun, taslağınızı gözden geçirin."
+        },
+        {
+          "k": "Ekip",
+          "title": "Hukuk bürosu",
+          "body": "Ekibinizin araştırma ve taslak çalışmalarını aynı alanda yürütün."
+        },
+        {
+          "k": "Kurum",
+          "title": "Baro",
+          "body": "Mesleki araştırma ve bilgi çalışmalarını kaynak temelli yürütün."
+        }
+      ]
+    },
+    "security": {
+      "eyebrow": "Verinin sınırı belli",
+      "title": "Veri ve *güvenlik*",
+      "lead": "KVKK gerekliliklerine göre tasarlandı; ayrıntılar Güven Merkezi’nde.",
+      "flowLabel": "Veri akışı: ortamınız, maskeleme, veri sınıfı kapısı, izinli sağlayıcı",
+      "flow": [
+        {
+          "k": "Ortamınız",
+          "v": "Müvekkil: A. Yılmaz"
+        },
+        {
+          "k": "Maskeleme",
+          "v": "Müvekkil: [Kişi 1]"
+        },
+        {
+          "k": "Veri sınıfı kapısı",
+          "v": "İzinli sağlayıcı"
+        },
+        {
+          "k": "Yanıt",
+          "v": "İşlem yeri görünür"
+        }
+      ],
+      "items": [
+        {
+          "title": "KVKK gerekliliklerine göre işleme",
+          "body": "Kişisel veriler maskelenerek işlenir."
+        },
+        {
+          "title": "Veri sınıfı kapısı",
+          "body": "Müvekkil verisi, izinli olmayan sağlayıcıya gönderilmez."
+        },
+        {
+          "title": "Görünür işlem yeri",
+          "body": "Verinin işlem yeri her yanıtta görünür."
+        }
+      ]
+    },
+    "principle": {
+      "eyebrow": "Çalışma ilkemiz",
+      "title": "Metni yapay zekâ hazırlar.\nHukuki değerlendirmeyi *avukat* yapar.",
+      "lead": "E.D.A. Hukuk araştırmayı ve taslak hazırlamayı destekler. Mesleki muhakemenin ve kaynak incelemesinin yerine geçmez."
+    },
+    "faq": {
+      "eyebrow": "Açık yanıtlar",
+      "title": "Sık sorulan *sorular*",
+      "items": [
+        {
+          "q": "Künye Kilidi neyi kontrol eder?",
+          "a": "Model yalnızca [K1] gibi bir etiket üretir. Mahkeme, daire, esas ve karar numarası ile tarih, erişilen kayıttan oluşturulur ve resmî kaynakta doğrulanır. Kontrol tamamlandığında yeşil doğrulama işareti görünür."
+        },
+        {
+          "q": "Doğrulanmayan bir atıf olduğunda ne olur?",
+          "a": "Atıfın doğrulanmadığı görünür biçimde belirtilir. Doğrulanmayan künyeler dışa aktarımı durdurur. Kaynakları her zaman resmî metinden inceleyin."
+        },
+        {
+          "q": "Müvekkil verisi nasıl işlenir?",
+          "a": "Kişisel veriler ortamınızdan çıkmadan önce maskelenir. Veri sınıfı kapısı, müvekkil verisinin izinli olmayan sağlayıcıya gönderilmesini engeller. İşlem yeri her yanıtta görünür."
+        },
+        {
+          "q": "Süreleri yapay zekâ mı hesaplar?",
+          "a": "Hayır. Süreleri model tahmin etmez; kural motoru hesaplar. Hukuki değerlendirme ve nihai kontrol avukatın sorumluluğundadır."
+        },
+        {
+          "q": "Hazırlanan taslak doğrudan kullanılabilir mi?",
+          "a": "E.D.A. Hukuk bir araştırma ve taslak aracıdır. Taslağı somut olay, güncel mevzuat ve resmî kaynaklar bakımından incelemek avukatın sorumluluğundadır."
+        },
+        {
+          "q": "Nasıl kullanmaya başlarım?",
+          "a": "Hesabınızla giriş yapın. Hesabınız yoksa kayıt sayfasından meslek bilgilerinizle başvurabilirsiniz."
+        }
+      ]
+    },
+    "closing": {
+      "eyebrow": "E.D.A. Hukuk",
+      "title": "Bir sonraki araştırmanız,\n*kaynağıyla* birlikte.",
+      "lead": "Araştırma, dilekçe hazırlama ve süre takibi. Avukat denetiminde, tek bir çalışma alanında."
+    }
+  },
+  "scope": {
+    "title": "Kaynak kapsamı",
+    "description": "Cevapta hangi kurumların kararları ve mevzuatın aranacağını seçin.",
+    "close": "Kapat",
+    "reset": "Otomatik seçime dön",
+    "trigger": {
+      "label": "Kaynak kapsamı",
+      "count": "{count} kaynak"
+    },
+    "presetsTitle": "Hazır ayarlar",
+    "presets": {
+      "auto": {
+        "label": "Akıllı otomatik seçim",
+        "short": "Akıllı otomatik seçim",
+        "hint": "Açık olan tüm kaynaklarda arar."
+      },
+      "private_law": {
+        "label": "Özel hukuk (Yargıtay + istinaf)",
+        "short": "Yargıtay + istinaf"
+      },
+      "admin_tax": {
+        "label": "İdare ve vergi (Danıştay)",
+        "short": "Danıştay"
+      },
+      "constitutional_dispute": {
+        "label": "Anayasa ve uyuşmazlık",
+        "short": "Anayasa ve uyuşmazlık"
+      }
+    },
+    "groups": {
+      "adli": "Adli yargı",
+      "idari": "İdari yargı",
+      "anayasa": "Anayasa yargısı",
+      "yargi_yolu": "Yargı yolu",
+      "mevzuat": "Mevzuat"
+    },
+    "items": {
+      "yargitay": {
+        "label": "Yargıtay",
+        "hint": "Hukuk ve ceza daireleri, genel kurullar"
+      },
+      "kyb": {
+        "label": "Kanun yararına bozma",
+        "hint": "Yargıtay kanun yararına bozma kararları"
+      },
+      "istinaf": {
+        "label": "İstinaf",
+        "hint": "Bölge adliye mahkemeleri"
+      },
+      "ilk_derece": {
+        "label": "İlk derece",
+        "hint": "İlk derece hukuk mahkemeleri"
+      },
+      "danistay": {
+        "label": "Danıştay",
+        "hint": "Daireler ve kurullar"
+      },
+      "aym": {
+        "label": "Anayasa Mahkemesi",
+        "hint": "Bireysel başvuru ve norm denetimi"
+      },
+      "uyusmazlik": {
+        "label": "Uyuşmazlık Mahkemesi",
+        "hint": "Görev ve hüküm uyuşmazlıkları"
+      },
+      "mevzuat": {
+        "label": "Mevzuat",
+        "hint": "Kanun, KHK, CBK, yönetmelik"
+      }
+    },
+    "outOfCoverage": {
+      "title": "Kapsamda değil",
+      "hint": "Bu kurumun kararları E.D.A. kapsamında değil; resmî kaynakta kendiniz arayın.",
+      "items": {
+        "sayistay": "Sayıştay",
+        "kik": "Kamu İhale Kurumu",
+        "rekabet": "Rekabet Kurumu",
+        "gib": "Gelir İdaresi özelgeleri",
+        "kvkk_kurulu": "KVKK Kurulu",
+        "bddk": "BDDK",
+        "sigorta_tahkim": "Sigorta Tahkim Komisyonu"
+      }
+    }
+  },
+  "studio": {
+    "back": "Belgeler",
+    "titleLabel": "Belge başlığı",
+    "editorLabel": "Belge düzenleyici",
+    "loading": "Belge yükleniyor",
+    "notFoundTitle": "Belge bulunamadı",
+    "notFoundBody": "Belge silinmiş veya erişiminiz olmayabilir.",
+    "loadError": "Belge yüklenemedi. Yeniden deneyin.",
+    "retry": "Yeniden dene",
+    "save": {
+      "clean": "Değişiklik yok",
+      "dirty": "Değişiklikler kaydedilecek",
+      "saving": "Kaydediliyor",
+      "saved": "Kaydedildi",
+      "retry": "Bağlantı sorunu, yeniden deneniyor",
+      "conflict": "Çakışma: belge başka bir yerde değişti",
+      "error": "Kaydedilemedi"
+    },
+    "toolbar": {
+      "label": "Biçimlendirme",
+      "bold": "Kalın",
+      "italic": "İtalik",
+      "underline": "Altı çizili",
+      "heading": "Başlık",
+      "bulletList": "Madde işaretli liste",
+      "orderedList": "Numaralı liste",
+      "alignLeft": "Sola hizala",
+      "alignCenter": "Ortala",
+      "alignJustify": "İki yana yasla",
+      "undo": "Geri al",
+      "redo": "Yinele",
+      "addSection": "Bölüm ekle",
+      "role": "Bölüm türü",
+      "style": "Paragraf stili",
+      "styleParagraph": "Gövde metni",
+      "styleHeading1": "Başlık 1",
+      "styleHeading2": "Başlık 2",
+      "align": {
+        "left": "Sola hizala (girintisiz)",
+        "center": "Ortala",
+        "right": "Sağa hizala",
+        "justify": "İki yana yasla (paragraf başı girintili)"
+      }
+    },
+    "roles": {
+      "courtHeader": "Mahkeme başlığı",
+      "partiesGrid": "Taraflar",
+      "subjectLine": "Konu",
+      "numberedExplanations": "Açıklamalar",
+      "legalGrounds": "Hukuki sebepler",
+      "evidenceList": "Deliller",
+      "resultAndRequest": "Sonuç ve istem",
+      "attorneySignature": "Vekil imzası",
+      "generic": "Metin",
+      "freeSection": "Serbest bölüm"
+    },
+    "zoom": {
+      "label": "Yakınlaştırma",
+      "fit": "Sığdır"
+    },
+    "versions": {
+      "button": "Sürümler",
+      "title": "Sürümler",
+      "empty": "Henüz sürüm yok.",
+      "note": "Otomatik kayıt sürüm oluşturmaz; sürümler çalışma oturumu bitince veya sizin isteğinizle kaydedilir.",
+      "save": "Sürüm kaydet",
+      "nameLabel": "Sürüm adı (isteğe bağlı)",
+      "saved": "Sürüm kaydedildi.",
+      "restore": "Geri yükle",
+      "restoreTitle": "Bu sürüm geri yüklensin mi?",
+      "restoreBody": "Geçerli taslağınız yeni bir sürüm olarak saklanır, ardından seçilen sürüm taslak olur.",
+      "restoreDone": "Sürüm geri yüklendi.",
+      "compare": "Taslakla karşılaştır",
+      "noDiff": "Fark yok.",
+      "added": "Eklendi",
+      "removed": "Silindi",
+      "modified": "Değişti",
+      "moved": "Taşındı",
+      "sourceLabel": "Kaynak",
+      "sources": {
+        "user": "Kullanıcı",
+        "ai": "Yapay zekâ",
+        "import": "İçe aktarma"
+      },
+      "versionNo": "Sürüm {no}"
+    },
+    "conflict": {
+      "title": "Belge başka bir yerde değişti",
+      "body": "Bu belgenin sunucudaki sürümü sizin açtığınız sürümden daha yeni. Yerel değişiklikleriniz henüz kaydedilmedi.",
+      "reload": "Sunucu sürümünü yükle",
+      "keepLocal": "Yerel kopyayı yeni sürüm olarak kaydet",
+      "copy": "Yerel metni panoya kopyala",
+      "copied": "Yerel metin panoya kopyalandı."
+    },
+    "status": {
+      "lockedTitle": "Belge düzenlenemiyor",
+      "generationInProgress": "Belge şu an üretiliyor; tamamlanınca düzenleyebilirsiniz.",
+      "archived": "Belge arşivlendi. Düzenlemek için arşivden çıkarın.",
+      "statusLocked": "Bu durumdaki belge düzenlenemez."
+    },
+    "notice": "Taslaktır; kaynakları ve doldurulacak alanları kontrol edin. Hukuki değerlendirme avukata aittir.",
+    "citations": "{count} atıf",
+    "placeholders": "{count} doldurulacak alan",
+    "unsaved": "Kaydedilmemiş değişiklikleriniz var.",
+    "chat": {
+      "button": "Sohbet",
+      "title": "Sohbet",
+      "close": "Sohbet panelini kapat",
+      "viewsLabel": "Görünüm",
+      "tabDocument": "Belge",
+      "tabChat": "Sohbet"
+    },
+    "layout": {
+      "font": "Yazı tipi",
+      "size": "Punto",
+      "spacing": "Satır aralığı",
+      "fonts": {
+        "times-new-roman": "Times New Roman",
+        "liberation-serif": "Liberation Serif",
+        "source-serif": "Source Serif",
+        "arial": "Arial"
+      }
+    },
+    "counts": {
+      "words": "{count} sözcük",
+      "pages": "{count} sayfa"
+    },
+    "find": {
+      "label": "Bul ve değiştir",
+      "query": "Aranan",
+      "replacement": "Yerine",
+      "count": "{current} / {total}",
+      "none": "Eşleşme yok",
+      "next": "Sonraki eşleşme",
+      "prev": "Önceki eşleşme",
+      "replace": "Değiştir",
+      "replaceAll": "Tümünü değiştir",
+      "close": "Bul panelini kapat",
+      "placeholderNext": "Sonraki doldurulacak alana git"
+    },
+    "focus": {
+      "enter": "Odak modu",
+      "exit": "Odak modundan çık",
+      "hint": "Odak modu: Ctrl+Shift+F; çıkmak için Esc. Ctrl+S kaydeder."
+    },
+    "export": {
+      "word": "Word (.docx)",
+      "pdf": "PDF",
+      "menu": "Dışa aktar",
+      "chat": "Sohbetle düzenle",
+      "selectionButton": "Bu kısmı düzenle",
+      "selectionTitle": "Seçili kısmı sohbetle düzenle",
+      "selectionIntro": "Yalnız seçili parça sohbete gider; yanıt \"Belgeye uygula\" ile yalnız bu parçanın yerine yazılır.",
+      "selectionNote": "Bölüm: {section} · Seçili metin: “{excerpt}”",
+      "selectionPrompt": "Aşağıdaki belge parçasını şu isteğime göre düzenle ve yalnız bu parçanın yeni hâlini belge bloğunda ver; parçanın dışına çıkma. İsteğim: ",
+      "selectionContext": "Bağlam: dilekçenin “{section}” bölümünden bir parça",
+      "requestIntro": "İsteğinizi yazın veya hazır komut seçin; belge sohbete taşınır, yanıt \"Belgeye uygula\" ile geri döner.",
+      "requestClose": "İstek kutusunu kapat",
+      "requestLabel": "İsteğiniz",
+      "requestHint": "Hazır komutlar isteğe eklenir; dilediğiniz gibi düzenleyebilirsiniz.",
+      "requestPlaceholder": "Örn. Açıklamalar bölümünü daha kısa yaz.",
+      "send": "Sohbete gönder",
+      "commandsLabel": "Hazır komutlar",
+      "commands": {
+        "formal": "Daha resmî yaz",
+        "shorten": "Kısalt",
+        "grounds": "Dayanak ekle (mevzuat/karar)",
+        "petitionFormat": "Dilekçe biçimine uydur",
+        "markPlaceholders": "Doldurulacak alanları işaretle",
+        "proofread": "Yazım ve dil bilgisini düzelt"
+      },
+      "commandPrompts": {
+        "formal": "Metni, anlamını değiştirmeden daha resmî ve kurumsal bir hukuk diliyle yeniden yaz.",
+        "shorten": "Metni, hukuki içeriği ve zorunlu unsurları koruyarak kısalt; tekrarları kaldır.",
+        "grounds": "İlgili mevzuat maddelerini ve emsal kararları dayanak olarak ekle; her kaynağı künye etiketiyle göster, doğrulayamadığın kaynağı ekleme.",
+        "petitionFormat": "Metni dilekçe biçimine uydur: mahkeme başlığı, taraflar, konu, açıklamalar, hukuki sebepler, deliller, sonuç ve istem, vekil imzası sırasıyla düzenle.",
+        "markPlaceholders": "Eksik veya doğrulanması gereken bilgileri [[Doldurulacak: ...]] biçiminde işaretle; bilgi uydurma.",
+        "proofread": "Yazım, noktalama ve dil bilgisi hatalarını düzelt; içeriği ve anlamı değiştirme."
+      },
+      "chatPrompt": "Aşağıdaki belgeyi şu isteğime göre düzenle ve tam metnini belge bloğunda ver. İsteğim: ",
+      "chatError": "Belge sohbete aktarılamadı. Belge çok uzun olabilir; bölümlere ayırarak deneyin."
+    },
+    "delete": {
+      "action": "Sil",
+      "title": "Belge silinsin mi?",
+      "description": "“{title}” belgesi silinecek.",
+      "impact": "Belge ve tüm sürümleri kalıcı olarak kaldırılır. Bu işlem geri alınamaz.",
+      "cancel": "Vazgeç",
+      "confirm": "Sil",
+      "error": "Belge silinemedi. Yeniden deneyin.",
+      "forbidden": "Bu belgeyi silme yetkiniz yok."
+    }
+  },
+  "converter": {
+    "title": "Dönüştürücü",
+    "intro": "UYAP'tan indirdiğiniz .udf dosyalarını Word veya PDF'e, Word (.docx) dosyalarını UDF veya PDF'e çevirin.",
+    "local": "Sunucuya yüklenmez",
+    "reading": "Okunuyor",
+    "drop": {
+      "title": "Dosyayı buraya bırakın",
+      "hint": ".udf veya .docx dosyası, en çok 20 MB. Dosya yalnız tarayıcınızda işlenir; sunucuya gönderilmez.",
+      "choose": "Dosya seç"
+    },
+    "routes": {
+      "udfWord": "UDF → Word",
+      "udfPdf": "UDF → PDF",
+      "wordUdf": "Word → UDF",
+      "wordPdf": "Word → PDF"
+    },
+    "kind": {
+      "udf": "UYAP belgesi (.udf)",
+      "docx": "Word belgesi (.docx)"
+    },
+    "stats": "{paragraphs} paragraf · {words} sözcük",
+    "to": {
+      "docx": "Word'e çevir (.docx)",
+      "udf": "UDF'ye çevir (.udf)",
+      "pdf": "PDF'e çevir"
+    },
+    "another": "Başka dosya seç",
+    "pdfHint": "Açılan yazdırma penceresinde “PDF olarak kaydet” seçin.",
+    "udfUnverifiedTitle": "UDF çıktısı doğrulanmadı",
+    "udfUnverified": "Üretilen UDF, UYAP Doküman Editörü'nde gerçek örneklerle henüz sınanmadı. UYAP'a yüklemeden önce editörde açıp kontrol edin.",
+    "notesTitle": "Aktarımda kaybolanlar",
+    "notes": {
+      "tableFlattened": "Tablolar düz paragraf olarak aktarıldı.",
+      "imagesDropped": "Görseller aktarılmadı.",
+      "headerFooterDropped": "Üst ve alt bilgi aktarılmadı."
+    },
+    "error": {
+      "unsupportedType": "Yalnız .udf ve .docx dosyaları dönüştürülebilir.",
+      "oldDoc": ".doc (eski Word) biçimi desteklenmez. Dosyayı Word'de .docx olarak kaydedip yeniden deneyin.",
+      "tooLarge": "Dosya 20 MB sınırını aşıyor.",
+      "unreadable": "Dosya okunamadı. Bozuk olabilir veya UDF/DOCX biçiminde değil.",
+      "empty": "Dosyada aktarılabilir metin bulunamadı."
+    }
+  },
+  "announcements": {
+    "region": "Platform duyuruları",
+    "dismiss": "Duyuruyu kapat"
+  },
+  "notifications": {
+    "title": "Bildirimler",
+    "close": "Kapat",
+    "bell": "Bildirimler",
+    "bellWithCount": "Bildirimler, {count} okunmamış",
+    "unread": "{count} okunmamış",
+    "allRead": "Tüm bildirimler okundu",
+    "readAll": "Tümünü okundu yap",
+    "unreadMark": "(okunmadı)",
+    "loading": "Yükleniyor",
+    "loadMore": "Daha eski bildirimler",
+    "empty": "Yeni bildiriminiz yok.",
+    "error": "Bildirimler yüklenemedi. Lütfen yeniden deneyin.",
+    "types": {
+      "reminder": "Hatırlatıcınız var",
+      "deadline_due": "Süre yaklaşıyor",
+      "file_ready": "Dosya hazır",
+      "file_failed": "Dosya işlenemedi",
+      "export_ready": "Dışa aktarma hazır",
+      "kunye_check_ready": "Künye kontrolü tamamlandı",
+      "invitation": "Büro daveti aldınız",
+      "verification_approved": "Meslek başvurunuz onaylandı",
+      "verification_rejected": "Meslek başvurunuz sonuçlandı",
+      "credit_low": "Kullanım hakkınız azaldı",
+      "provider_change_notice": "Yapay zekâ sağlayıcı değişikliği",
+      "announcement": "Duyuru",
+      "retention_due": "Saklama süresi dolmak üzere"
+    }
+  },
+  "notFound": {
+    "title": "Sayfa bulunamadı",
+    "message": "Aradığınız adres yok veya taşınmış olabilir.",
+    "home": "Ana sayfaya dön"
+  },
+  "legal": {
+    "mandatory": {
+      "y86": "E.D.A. Hukuk mesleki araştırma ve taslak aracıdır; nihai hukuki tavsiye yerine geçmez. Emsal ve mevzuat sonuçlarını kontrol ediniz.",
+      "y87": "E.D.A. Hukuk, Avukatlık Kanunu m. 35 uyarınca münhasıran avukata ait olan hukuki değerlendirme yetkisini ikame etmez; araştırma ve taslak oluşturma desteği sağlar.",
+      "y88": "Bu taslak yapay zekâ desteğiyle üretilmiştir; kaynakları ve süreleri kontrol ediniz.",
+      "y89": "Hatırlatıcılar güvenlik ağıdır, garanti değildir.",
+      "y90": "SHA-256 özeti e-imza değildir.",
+      "y92": "Uygulama ve panel üzerinden içerik erişimi yoktur; kök erişimi iki kişiyle sınırlıdır ve oturumları kayıtlıdır.",
+      "y93": "Bu liste bir sonuç tahmini değildir."
+    },
+    "draftNotice": "TASLAK – hukuk onayı bekliyor. Bu metin yayımlanmadan önce hukuk onayından geçmelidir; çift süslü ayraç içindeki alanlar doldurulacak şirket bilgileridir.",
+    "chrome": {
+      "skip": "İçeriğe geç",
+      "nav": "Yasal sayfalar gezintisi",
+      "mainNav": "Ana gezinme",
+      "home": "Ana sayfa",
+      "product": "Ürün",
+      "legalHeading": "Yasal",
+      "contactHeading": "İletişim",
+      "footerTagline": "Avukatlar için yapay zekâ çalışma alanı",
+      "companyLine": "© {{YIL}} {{SIRKET_UNVANI}} · MERSİS: {{MERSIS_NO}} · {{ADRES}}",
+      "supportMail": "destek@{{ALAN}}",
+      "links": {
+        "kvkk": "KVKK Aydınlatma Metni",
+        "terms": "Kullanım Koşulları",
+        "privacy": "Gizlilik Politikası",
+        "cookies": "Çerez Politikası",
+        "trust": "Güven Merkezi"
+      },
+      "brand": "E.D.A. Hukuk"
+    },
+    "doc": {
+      "version": "Sürüm {version} · Yürürlük {date}",
+      "toc": "Bu sayfada",
+      "tableRegion": "Kaydırılabilir tablo: {caption}"
+    },
+    "signup": {
+      "termsLink": "Kullanım Koşulları'nı okuyun",
+      "kvkkLink": "KVKK Aydınlatma Metni'ni okuyun",
+      "openNote": "Bağlantılar yeni sayfada açılır."
+    },
+    "pages": {
+      "kvkk": {
+        "title": "KVKK Aydınlatma Metni",
+        "description": "Kişisel verilerin işlenmesine ilişkin aydınlatma metni.",
+        "intro": "6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 10. maddesi uyarınca hazırlanmıştır.",
+        "sections": [
+          {
+            "id": "veri-sorumlusunun-kimligi",
+            "title": "Veri sorumlusunun kimliği",
+            "paragraphs": [
+              "Veri sorumlusu {{SIRKET_UNVANI}}'dir (MERSİS: {{MERSIS_NO}}; adres: {{ADRES}}; KEP: {{KEP_ADRESI}}; e-posta: destek@{{ALAN}}). Bu metin, E.D.A. Hukuk hesabı açan avukat ve stajyer avukatların (kullanıcılar) ve tanıtım sitesi ziyaretçilerinin kişisel verilerine ilişkin işlemleri kapsar."
+            ]
+          },
+          {
+            "id": "muvekkil-ve-dava-verileri",
+            "title": "Müvekkil ve dava verileri",
+            "paragraphs": [
+              "Kullanıcının büro adına yüklediği veya yazdığı müvekkil, dava, evrak ve sohbet verileri bakımından veri sorumlusu ilgili avukat veya hukuk bürosudur. {{SIRKET_UNVANI}} bu veriler bakımından veri işleyen sıfatıyla, büroyla yapılan Veri İşleme Sözleşmesi çerçevesinde ve büronun talimatıyla hareket eder. Bu veriler için ilgili kişilere aydınlatma yapma yükümlülüğü büroya aittir; ürün, büroların müvekkillerine verebileceği bilgilendirme şablonlarını sunar."
+            ]
+          },
+          {
+            "id": "islenen-kisisel-veriler",
+            "title": "İşlenen kişisel veriler",
+            "table": {
+              "caption": "İşlenen kişisel veri kategorileri",
+              "head": ["Kategori", "Örnekler", "Not"],
+              "rows": [
+                ["Kimlik", "Ad soyad", "Kayıtta T.C. kimlik numarası toplanmaz"],
+                ["İletişim", "E-posta adresi; isteğe bağlı telefon (antet/imza bloğu)", ""],
+                [
+                  "Meslek",
+                  "Baro, sicil numarası veya stajyer sicil numarası, büro adı, antet ve imza bloğu bilgileri, meslek doğrulama başvurusu ve sonucu (gerekçe kodu)",
+                  ""
+                ],
+                [
+                  "Hesap ve işlem güvenliği",
+                  "Parola özeti, oturum kayıtları (kısaltılmış IP adresi, tarayıcı bilgisi), iki adımlı doğrulama ve geçiş anahtarı kayıtları, güvenlik olayları",
+                  "Parola düz metin saklanmaz"
+                ],
+                [
+                  "Müşteri işlem",
+                  "Paket, kredi hareketleri, fatura bilgileri (büro unvanı, vergi bilgileri), ödeme işlem durumu",
+                  "Kart bilgisi E.D.A. sistemlerinde tutulmaz"
+                ],
+                ["Talep ve şikâyet", "Destek yazışmaları, KVKK başvuruları", ""],
+                [
+                  "Bildirim",
+                  "Web Push abonelik uç noktası ve cihaz etiketi (yalnız abone olunursa)",
+                  ""
+                ],
+                [
+                  "Ürün kullanımı",
+                  "İçeriksiz kullanım olayları (ör. özellik kullanım sayıları)",
+                  "Mesaj, belge veya sorgu içeriği içermez"
+                ]
+              ]
+            }
+          },
+          {
+            "id": "isleme-amaclari-ve-hukuki-sebepler",
+            "title": "İşleme amaçları ve hukuki sebepler",
+            "table": {
+              "caption": "İşleme amaçları ve hukuki sebepler (KVKK m. 5/2)",
+              "head": ["Amaç", "Hukuki sebep"],
+              "rows": [
+                [
+                  "Hesap açma, meslek doğrulaması, hizmetin sunulması",
+                  "Sözleşmenin kurulması veya ifası (m. 5/2-c); meşru menfaat (m. 5/2-f: hizmetin yalnız avukatlara sunulması)"
+                ],
+                [
+                  "Güvenlik, kötüye kullanımın önlenmesi, denetim kaydı",
+                  "Meşru menfaat (m. 5/2-f)"
+                ],
+                [
+                  "Ücretlendirme, faturalama, muhasebe ve vergi yükümlülükleri",
+                  "Hukuki yükümlülük (m. 5/2-ç); sözleşme (m. 5/2-c)"
+                ],
+                [
+                  "Destek ve başvuruların yanıtlanması",
+                  "Sözleşme (m. 5/2-c); hukuki yükümlülük (m. 5/2-ç)"
+                ],
+                [
+                  "İşlemsel bildirimler (doğrulama, güvenlik, süre hatırlatıcıları, hizmet bildirimleri)",
+                  "Sözleşme (m. 5/2-c)"
+                ],
+                ["Hakkın tesisi, kullanılması veya korunması", "m. 5/2-e"]
+              ]
+            },
+            "note": "Ticari elektronik ileti gönderilmez; açık rızaya dayalı bir işleme yapılmaz. Bu durum değişirse ayrı bir onayla ve ayrı bir metinle bildirilir."
+          },
+          {
+            "id": "kisisel-verilerin-aktarilmasi",
+            "title": "Kişisel verilerin aktarılması",
+            "table": {
+              "caption": "Kişisel verilerin aktarıldığı alıcı grupları",
+              "head": ["Alıcı grubu", "Amaç", "Ülke"],
+              "rows": [
+                [
+                  "Barındırma ve yedek hizmet sağlayıcısı ({{VERI_MERKEZI_SAGLAYICISI}})",
+                  "Hizmetin barındırılması",
+                  "Türkiye"
+                ],
+                [
+                  "İşlemsel e-posta sağlayıcısı ({{EPOSTA_SAGLAYICISI}})",
+                  "E-posta gönderimi (alıcı adresi, görünen ad, işlemsel metin)",
+                  "{{EPOSTA_BOLGESI}} (yurt dışı ise KVKK m. 9 kapsamında standart sözleşme)"
+                ],
+                ["Ödeme kuruluşu (iyzico)", "Abonelik ödemesi", "Türkiye"],
+                ["Muhasebe ve e-belge hizmeti (kullanıldığında)", "Faturalama", "Türkiye"],
+                ["Yetkili kamu kurum ve kuruluşları", "Hukuki yükümlülük", "Türkiye"],
+                [
+                  "Yapay zekâ model sağlayıcıları",
+                  "Yalnız büro verisi işlemleri (veri işleyen sıfatıyla) ve kamuya açık içerik işleri; hesap tanımlayıcı veriler gönderilmez",
+                  "Güven Merkezi'ndeki listeye göre AB, Türkiye veya Çin (kamuya açık içerik işleri)"
+                ]
+              ]
+            },
+            "note": "Yurt dışına aktarımlar KVKK m. 9'a uygun olarak yapılır; yeterlilik kararı olmayan ülkeler için standart sözleşme yöntemi kullanılır ve Kurum'a bildirim yapılır."
+          },
+          {
+            "id": "toplama-yontemi",
+            "title": "Toplama yöntemi",
+            "paragraphs": [
+              "Kişisel veriler; kayıt ve başvuru formları, hesap ve ayar ekranları, ürün kullanımı sırasında oluşan teknik kayıtlar, destek yazışmaları ve ödeme kuruluşundan dönen işlem bilgisi yoluyla, elektronik ortamda otomatik veya kısmen otomatik yöntemlerle toplanır."
+            ]
+          },
+          {
+            "id": "saklama-sureleri",
+            "title": "Saklama süreleri",
+            "table": {
+              "caption": "Saklama süreleri",
+              "head": ["Veri", "Süre"],
+              "rows": [
+                [
+                  "Hesap ve meslek profili",
+                  "Hesap yaşadığı sürece; silme isteğinden {{kvkk.accountErasureGraceDays}} gün sonra silinir"
+                ],
+                ["Oturum kayıtları", "{{retention.operationalRecordDays}} gün"],
+                ["Uygulama içi bildirimler", "{{retention.notificationsDays}} gün"],
+                ["Reddedilen meslek başvurusu", "{{retention.rejectedApplicationDays}} gün"],
+                ["Destek talepleri", "Kapanıştan sonra {{retention.supportTicketMonths}} ay"],
+                ["Denetim kayıtları ve KVKK başvuru kayıtları", "{{retention.auditLogYears}} yıl"],
+                [
+                  "Fatura ve ödeme kayıtları",
+                  "Yasal süre; en az 5 yıl (başlangıç varsayılanı {{retention.billingYears}} yıl)"
+                ],
+                [
+                  "Silinen içeriğin yedeklerden çıkması",
+                  "En çok {{retention.backupContentMaxDays}} gün"
+                ]
+              ]
+            }
+          },
+          {
+            "id": "yapay-zeka-ozellikleri-ve-maskeleme",
+            "title": "Yapay zekâ özellikleri ve maskeleme",
+            "paragraphs": [
+              "Yapay zekâ özellikleri kullanıldığında büro verisi, sağlayıcıya iletilmeden önce kişisel veriler maskelenerek (takma adlaştırma) gönderilir; maskelenmiş veri de kişisel veri sayılır. Kullanıcı hesabını tanımlayan veriler (ad, e-posta, baro ve sicil bilgisi) yapay zekâ istemlerine eklenmez. Sağlayıcılar ve işlem yerleri Güven Merkezi'nde listelenir (/guvenlik)."
+            ]
+          },
+          {
+            "id": "ilgili-kisinin-haklari",
+            "title": "İlgili kişinin hakları",
+            "paragraphs": [
+              "KVKK m. 11 uyarınca: kişisel verilerinizin işlenip işlenmediğini öğrenme; işlenmişse bilgi talep etme; işleme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme; yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme; eksik veya yanlış işlenmişse düzeltilmesini isteme; KVKK m. 7 çerçevesinde silinmesini veya yok edilmesini isteme; bu işlemlerin aktarılan üçüncü kişilere bildirilmesini isteme; işlenen verilerin münhasıran otomatik sistemlerle analiz edilmesi suretiyle aleyhinize bir sonuç çıkmasına itiraz etme; kanuna aykırı işlenmesi sebebiyle zarara uğramanız halinde zararın giderilmesini talep etme haklarına sahipsiniz."
+            ]
+          },
+          {
+            "id": "basvuru-yolu",
+            "title": "Başvuru yolu",
+            "paragraphs": [
+              "Başvurunuzu destek@{{ALAN}} adresine, {{KEP_ADRESI}} KEP adresine veya {{ADRES}} adresine yazılı olarak iletebilirsiniz. Hesap verilerinizi Ayarlar → Veri bölümünden dışa aktarabilir veya silme talebi başlatabilirsiniz. Başvurular en geç {{kvkk.requestDueDays}} gün içinde sonuçlandırılır (KVKK m. 13). Kimliğinizi doğrulamak için ek bilgi isteyebiliriz. Yanıttan memnun kalmazsanız KVKK m. 14 uyarınca Kişisel Verileri Koruma Kurulu'na şikâyet hakkınız saklıdır. Büroların müvekkil verilerine ilişkin başvuruları ilgili büroya yapılır."
+            ]
+          },
+          {
+            "id": "verbis",
+            "title": "VERBİS",
+            "paragraphs": ["{{VERBIS_DURUMU}}"]
+          },
+          {
+            "id": "cerezler",
+            "title": "Çerezler",
+            "paragraphs": ["Ayrıntılar için Çerez Politikası'na bakın (/cerez-politikasi)."]
+          },
+          {
+            "id": "degisiklikler",
+            "title": "Değişiklikler",
+            "paragraphs": [
+              "Metin değiştiğinde sürüm ve yürürlük tarihi güncellenir; önemli değişiklikler hesabınızdaki e-posta adresine ve uygulama içinde bildirilir."
+            ]
+          }
+        ]
+      },
+      "terms": {
+        "title": "Kullanım Koşulları",
+        "description": "Hizmetin kullanım koşulları ve Veri İşleme Sözleşmesi özeti.",
+        "intro": "Bu koşullar, {{SIRKET_UNVANI}} ile hizmeti kullanan avukat veya hukuk bürosu arasındaki ilişkiyi düzenler.",
+        "sections": [
+          {
+            "id": "taraflar-ve-tanimlar",
+            "title": "Taraflar ve tanımlar",
+            "paragraphs": [
+              "Hizmet sağlayıcı {{SIRKET_UNVANI}}'dir. Kullanıcı, baroya kayıtlı avukat veya stajyer avukattır; büro, kullanıcının bağlı olduğu hukuk bürosudur. Hizmet, E.D.A. Hukuk web uygulamasıdır."
+            ]
+          },
+          {
+            "id": "hizmetin-niteligi",
+            "title": "Hizmetin niteliği",
+            "paragraphs": [
+              "E.D.A. Hukuk mesleki araştırma ve taslak aracıdır; nihai hukuki tavsiye yerine geçmez. E.D.A. Hukuk, Avukatlık Kanunu m. 35 uyarınca münhasıran avukata ait olan hukuki değerlendirme yetkisini ikame etmez; araştırma ve taslak oluşturma desteği sağlar. Emsal ve mevzuat sonuçlarını kontrol ediniz."
+            ]
+          },
+          {
+            "id": "kimler-kullanabilir",
+            "title": "Kimler kullanabilir",
+            "paragraphs": [
+              "Hizmet yalnızca avukatlar, stajyer avukatlar ve hukuk büroları içindir. Kayıt, baro ve sicil bilgisinin doğrulanmasıyla etkinleşir; doğrulama sonucuna göre başvuru reddedilebilir veya hesap askıya alınabilir. Hesabı yalnızca mesleki amaçla kullanacağınızı beyan edersiniz. Hizmet vatandaşlara hukuki hizmet sunmaz. [HK: B2B kabulü ve tüketici mevzuatının uygulanmaması]"
+            ]
+          },
+          {
+            "id": "hesap-ve-guvenlik",
+            "title": "Hesap ve güvenlik",
+            "paragraphs": [
+              "Kimlik bilgilerinizin gizliliğinden siz sorumlusunuz. Büro sahibi ve yöneticiler için iki adımlı doğrulama zorunludur. Hesabınızda yetkisiz kullanım şüphesini gecikmeksizin destek@{{ALAN}} adresine bildirirsiniz. Parolanızı kimseyle paylaşmazsınız; E.D.A. personeli parolanızı sormaz ve görmez."
+            ]
+          },
+          {
+            "id": "avukatin-sorumlulugu",
+            "title": "Avukatın sorumluluğu",
+            "paragraphs": [
+              "Yapay zekâ çıktıları öneridir. Tüm çıktıları, atıfları ve süreleri denetlemek; belgeleri imzalamak ve UYAP'ta sunmak; 'Dosyalandı' işaretini yalnızca gerçeği yansıtacak şekilde kullanmak sizin sorumluluğunuzdadır. Hatırlatıcılar güvenlik ağıdır, garanti değildir; süreyi ve dosyayı kendiniz de doğrulayın. Belgeye imza E.D.A. içinde atılmaz; UYAP ile otomatik gönderim yapılmaz."
+            ]
+          },
+          {
+            "id": "muvekkil-verisi-ve-buro-politikasi",
+            "title": "Müvekkil verisi ve büro politikası",
+            "paragraphs": [
+              "Müvekkil ve dava verilerini hizmete yalnızca hukuka uygun biçimde ve gerekli bilgilendirme/yetki alınarak yüklersiniz. Yapay zekâ özelliklerinin kapsamı büronun yapay zekâ politikasına, veri yerleşimi ayarına ve dosya bazlı seçimlere göre belirlenir. Müvekkilin yapay zekâ kullanımını reddettiği dosyada özellik kapatılır; bu seçimi kayıt altında tutmak büronun sorumluluğundadır."
+            ]
+          },
+          {
+            "id": "kabul-edilebilir-kullanim",
+            "title": "Kabul edilebilir kullanım",
+            "paragraphs": [
+              "Şunları yapmazsınız: hizmeti avukat olmayan kişilere hukuki hizmet sunmak için kullanmak; hesabı devretmek veya paylaşmak; hizmeti tersine mühendislikle çözmek, otomatik sorgu/tarama yapmak veya kamu kaynaklarına yük bindirmek; sonuç tahmini, hâkim profilleme veya avukat tanıtım/yönlendirme içeriği üretmek; mevzuata veya meslek kurallarına aykırı kullanmak."
+            ]
+          },
+          {
+            "id": "yapay-zeka-ozellikleri",
+            "title": "Yapay zekâ özellikleri",
+            "paragraphs": [
+              "Yanıtlar maskeleme ve veri sınıfı kapısından geçen istemlerle üretilir; kullanılan model, sağlayıcı ve işlem yeri her yanıtta gösterilir. Yapay zekâ çıktıları hatalı veya eksik olabilir. E.D.A. müşteri verisini model eğitiminde kullanmaz."
+            ]
+          },
+          {
+            "id": "kaynaklar-ve-ucuncu-taraf-icerik",
+            "title": "Kaynaklar ve üçüncü taraf içerik",
+            "paragraphs": [
+              "Karar ve mevzuat içeriği resmî kaynaklardan alınır; her sonuçta kaynak ve erişim tarihi gösterilir. Kaynak içerik üçüncü tarafa aittir; hizmet resmî belge niteliğinde çıktı üretmez. Karar çıktıları 'araştırma çıktısı' niteliğindedir."
+            ]
+          },
+          {
+            "id": "ucretler-deneme-ve-abonelik",
+            "title": "Ücretler, deneme ve abonelik",
+            "paragraphs": [
+              "Fiyatlar KDV dahildir. Deneme, meslek doğrulamasının onaylandığı anda başlar ({{trial.days}} gün, {{trial.credits}} kredi). Kredi tarifesi sabittir ve fiyat sayfasında yayımlanır. Abonelik seçilen dönem sonunda yenilenir; dönem sonuna kadar iptal edilebilir. Ücret değişiklikleri yürürlüğe girmeden önce en az {{billing.priceChangeNoticeDays}} gün bildirilir. [HK: iade, cayma, otomatik yenileme ve 046 ile uyum]"
+            ]
+          },
+          {
+            "id": "fikr-mulkiyet",
+            "title": "Fikrî mülkiyet",
+            "paragraphs": [
+              "Hizmetin yazılımı ve markası {{SIRKET_UNVANI}}'ne aittir. Sizin içeriğinizin ve ürettiğiniz belgelerin hakları size aittir; hizmeti sunmak için gerekli sınırlı kullanım lisansı verirsiniz. Müşteri içeriği model eğitiminde kullanılmaz."
+            ]
+          },
+          {
+            "id": "kisisel-veriler",
+            "title": "Kişisel veriler",
+            "paragraphs": [
+              "Kişisel veriler KVKK Aydınlatma Metni ve Gizlilik Politikası uyarınca işlenir. Büro verisi bakımından taraflar arasındaki ilişki Ek-1'deki Veri İşleme Sözleşmesi özetine tabidir."
+            ]
+          },
+          {
+            "id": "hizmet-seviyesi-ve-kesintiler",
+            "title": "Hizmet seviyesi ve kesintiler",
+            "paragraphs": [
+              "Hizmet makul özenle sunulur; planlı bakım ve kesintiler uygulama içinde duyurulur. Kamu kaynaklarındaki erişim sorunları nedeniyle canlı arama kullanılamayabilir; bu durumda yerel sonuç gösterilir ve durum belirtilir. [HK: hizmet seviyesi taahhüdü]"
+            ]
+          },
+          {
+            "id": "sorumlulugun-sinirlanmasi",
+            "title": "Sorumluluğun sınırlanması",
+            "paragraphs": [
+              "[HK: yürürlükteki mevzuatın izin verdiği ölçüde sorumluluk sınırı, dolaylı zararlar, azami tutar; yapay zekâ çıktısı ve kaynak kesintisi hariç tutmaları]"
+            ]
+          },
+          {
+            "id": "askiya-alma-ve-sona-erdirme",
+            "title": "Askıya alma ve sona erdirme",
+            "paragraphs": [
+              "Koşullara aykırılık, doğrulama uyuşmazlığı veya güvenlik riski halinde hesap askıya alınabilir. Abonelik iptalinde veya büro kapanışında verileriniz iade (dışa aktarma), dondurma ve silme aşamalarından geçer; yasal saklama yükümlülükleri saklıdır."
+            ]
+          },
+          {
+            "id": "degisiklikler",
+            "title": "Değişiklikler",
+            "paragraphs": [
+              "Koşullar değiştiğinde sürüm ve yürürlük tarihi güncellenir; önemli değişiklikler önceden e-posta ve uygulama içi bildirimle duyurulur. Yeni sürümü uygulamada kabul etmeniz istenebilir."
+            ]
+          },
+          {
+            "id": "uygulanacak-hukuk-ve-yetki",
+            "title": "Uygulanacak hukuk ve yetki",
+            "paragraphs": [
+              "Türk hukuku uygulanır. Uyuşmazlıklarda {{YETKILI_MAHKEME}} yetkilidir. [HK]"
+            ]
+          },
+          {
+            "id": "iletisim",
+            "title": "İletişim",
+            "paragraphs": ["destek@{{ALAN}}; {{ADRES}}; KEP: {{KEP_ADRESI}}."]
+          },
+          {
+            "id": "veri-isleme-sozlesmesi",
+            "title": "Ek-1: Veri İşleme Sözleşmesi (özet)",
+            "unnumbered": true,
+            "paragraphs": [
+              "Bu özet, {{SIRKET_UNVANI}}'nin büro verileri bakımından veri işleyen sıfatıyla üstlendiği temel taahhütleri gösterir. Sözleşmenin tam metni büro sahibine kayıt sırasında sunulur ve talep üzerine iletilir. [HK: tam metin ve imza yöntemi]"
+            ],
+            "table": {
+              "caption": "Veri İşleme Sözleşmesi özeti",
+              "head": ["Madde", "Taahhüt (özet)"],
+              "rows": [
+                [
+                  "Konu ve süre",
+                  "Büro adına müvekkil, dava, evrak ve sohbet verilerinin barındırılması ve yapay zekâ destekli işlenmesi; hizmet süresince ve silme/iade aşamaları tamamlanana kadar."
+                ],
+                [
+                  "Talimatla işleme",
+                  "Veri yalnız büronun talimatları ve ürün ayarları çerçevesinde işlenir; E.D.A. veriyi kendi amacıyla kullanmaz."
+                ],
+                [
+                  "Gizlilik ve meslek sırrı",
+                  "Verilere erişebilecek personel gizlilik taahhüdü altındadır. Uygulama ve panel üzerinden içerik erişimi yoktur; kök erişimi iki kişiyle sınırlıdır ve oturumları kayıtlıdır."
+                ],
+                [
+                  "Güvenlik önlemleri",
+                  "Güven Merkezi'nde özetlenen teknik ve idari tedbirler uygulanır (şifreleme, kiracı izolasyonu, erişim kontrolü, denetim kaydı, yedekleme)."
+                ],
+                [
+                  "Alt işleyenler",
+                  "Alt işleyen listesi Güven Merkezi'nde yayımlanır. Müvekkil verisi için yeni bir sağlayıcı sınıfı açılmadan en az {{providers.newClassNoticeDays}} gün önce bildirim yapılır; büro itiraz edebilir ve ilgili sınıfı kapatabilir."
+                ],
+                [
+                  "Yurt dışı aktarım",
+                  "Müvekkil verisi yalnız KVKK standart sözleşmesi imzalanmış ve Kurum'a bildirilmiş AB sağlayıcısına veya Türkiye'deki yerel modele gönderilir; veri sınıfı ve yerleşim ayarına aykırı aktarım yapılmaz."
+                ],
+                [
+                  "Eğitimde kullanmama",
+                  "Büro verisi model eğitiminde kullanılmaz; müvekkil verisi işleyen sağlayıcılarda eğitimde kullanım ve insan incelemesi bulunmamasını sağlayan sözleşmeler esastır."
+                ],
+                [
+                  "İlgili kişi başvuruları",
+                  "İlgili kişi başvurularının yanıtlanmasında büroya araçlarla yardımcı olunur (ilgili kişi araması, dışa aktarma, silme)."
+                ],
+                [
+                  "İhlal bildirimi",
+                  "Veri ihlali öğrenildiğinde büroya gecikmeksizin ve en geç 24 saat içinde bildirim yapılır (başlangıç taahhüdü)."
+                ],
+                [
+                  "Silme ve iade",
+                  "Büro kapanışında iade (dışa aktarma paketi), dondurma ve silme aşamaları uygulanır; yedeklerden çıkış süresi en çok {{retention.backupContentMaxDays}} gündür; yasal saklama yükümlülükleri saklıdır."
+                ],
+                [
+                  "Denetim",
+                  "Büro, makul ön bildirimle uyum bilgisi talep edebilir; denetim kaydı ve Dosya AI İşlem Kaydı büronun erişimindedir."
+                ],
+                ["Sorumluluk", "[HK: sorumluluk dağılımı ve sınırı]"]
+              ]
+            }
+          }
+        ]
+      },
+      "privacy": {
+        "title": "Gizlilik Politikası",
+        "description": "Verilerin nasıl işlendiğine ilişkin sade anlatım.",
+        "intro": "Verilerinizi nasıl işlediğimizi sade bir dille anlatıyoruz. Resmî aydınlatma için KVKK Aydınlatma Metni geçerlidir.",
+        "sections": [
+          {
+            "id": "kisaca",
+            "title": "Kısaca",
+            "list": [
+              "Hesabınız ve ödeme bilgileriniz için veri sorumlusuyuz. Müvekkil ve dava verileriniz için veri işleyeniz; bu verilerin sorumlusu sizsiniz ve biz yalnız talimatınızla işleriz.",
+              "Müşteri içeriğini model eğitiminde kullanmayız, reklam için kullanmayız, satmayız.",
+              "Tanıtım sitesinde çerez ve izleyici kullanmayız.",
+              "Yapay zekâya giden müvekkil verisi maskelenir ve yalnız izinli sağlayıcıya gider."
+            ]
+          },
+          {
+            "id": "rollerimiz",
+            "title": "Rollerimiz",
+            "paragraphs": [
+              "Kendi kullanıcılarımızın hesap, fatura ve destek verileri için veri sorumlusuyuz. Büronun yüklediği müvekkil, dava, evrak ve sohbet verileri için veri işleyeniz."
+            ]
+          },
+          {
+            "id": "hangi-verileri-isleriz",
+            "title": "Hangi verileri işleriz",
+            "paragraphs": [
+              "İşlenen kişisel veri kategorileri KVKK Aydınlatma Metni'nin \"İşlenen kişisel veriler\" bölümünde listelenir.",
+              "Müvekkil içeriğini yalnız hizmeti sunmak için işleriz."
+            ],
+            "links": [
+              {
+                "href": "/kvkk-aydinlatma#islenen-kisisel-veriler",
+                "label": "KVKK Aydınlatma Metni'ndeki kategoriler"
+              }
+            ]
+          },
+          {
+            "id": "yapmadiklarimiz",
+            "title": "Yapmadıklarımız",
+            "list": [
+              "Müşteri verisiyle model eğitimi veya ince ayar yapmayız.",
+              "Mesaj, belge, evrak ve sorgu içeriğini analitik, reklam veya log amacıyla kopyalamayız.",
+              "Üçüncü taraf izleme çerezi veya analitik betiği kullanmayız.",
+              "Hâkim veya mahkeme bazlı profil, sonuç tahmini ya da avukat sıralaması üretmeyiz.",
+              "Herkese açık paylaşım bağlantısı oluşturmayız; paylaşım yalnız büro içi ve kimlik doğrulamalıdır."
+            ]
+          },
+          {
+            "id": "veri-siniflari-ve-yapay-zeka",
+            "title": "Veri sınıfları ve yapay zekâ",
+            "paragraphs": [
+              "İzinli sağlayıcı yoksa ilgili sınıfta yapay zekâ kapalı kalır; yapay zekâsız özellikler çalışmaya devam eder. Maskeleme (takma adlaştırma), kişisel veriyi kişisel veri olmaktan çıkarmaz."
+            ],
+            "table": {
+              "caption": "Veri sınıfları",
+              "head": ["Sınıf", "Kapsam"],
+              "rows": [
+                [
+                  "Genel araştırma (kamu)",
+                  "Yalnız büro sahibi açarsa ve müvekkil verisi içermediği beyan edilirse kullanılır."
+                ],
+                ["Müvekkil işi", "Yazdığınız her metin en az bu sınıftadır."],
+                ["Dosya", "Dava dosyasına bağlı sohbet ve evrak."]
+              ]
+            }
+          },
+          {
+            "id": "guvenlik",
+            "title": "Güvenlik",
+            "paragraphs": [
+              "Bağlantılar TLS ile şifrelenir; evrak ayrıca şifreli saklanır. Uygulama ve panel üzerinden içerik erişimi yoktur. Ayrıntılar Güven Merkezi'ndedir."
+            ],
+            "links": [
+              {
+                "href": "/guvenlik",
+                "label": "Güven Merkezi'ni inceleyin"
+              }
+            ]
+          },
+          {
+            "id": "saklama-ve-silme",
+            "title": "Saklama ve silme",
+            "paragraphs": [
+              "Saklama süreleri KVKK Aydınlatma Metni'ndedir; silinen içerik yedeklerde en çok {{retention.backupContentMaxDays}} gün kalabilir."
+            ],
+            "links": [
+              {
+                "href": "/kvkk-aydinlatma#saklama-sureleri",
+                "label": "Saklama süreleri"
+              }
+            ]
+          },
+          {
+            "id": "haklariniz",
+            "title": "Haklarınız",
+            "paragraphs": ["Haklarınız ve başvuru yolu KVKK Aydınlatma Metni'nde anlatılır."],
+            "links": [
+              {
+                "href": "/kvkk-aydinlatma#ilgili-kisinin-haklari",
+                "label": "İlgili kişinin hakları"
+              },
+              {
+                "href": "/kvkk-aydinlatma#basvuru-yolu",
+                "label": "Başvuru yolu"
+              }
+            ]
+          },
+          {
+            "id": "hizmetin-kapsami",
+            "title": "Hizmetin kapsamı",
+            "paragraphs": [
+              "E.D.A. Hukuk yalnızca avukatlara ve hukuk bürolarına yöneliktir; vatandaşlardan müvekkil verisi toplamaz."
+            ]
+          },
+          {
+            "id": "iletisim-ve-degisiklikler",
+            "title": "İletişim ve değişiklikler",
+            "paragraphs": ["destek@{{ALAN}}; sürüm ve yürürlük bilgisi sayfa altında."]
+          }
+        ]
+      },
+      "cookies": {
+        "title": "Çerez Politikası",
+        "description": "Hizmette kullanılan zorunlu ve işlevsel çerezler ile tarayıcı depolaması.",
+        "intro": "E.D.A. Hukuk yalnızca hizmetin çalışması için gerekli ve kullanıcının istediği tercihleri hatırlayan çerezleri kullanır. Analitik, reklam veya izleme çerezi kullanılmaz.",
+        "sections": [
+          {
+            "id": "tanitim-sitesi",
+            "title": "Tanıtım sitesi",
+            "paragraphs": ["Bu tanıtım sitesi ({{ALAN}}) hiçbir çerez yazmaz."]
+          },
+          {
+            "id": "uygulama",
+            "title": "Uygulama (app.{{ALAN}})",
+            "paragraphs": [
+              "Uygulamada kullanılan çerezler aşağıdaki tabloda listelenir. Tüm çerezler __Host- önekli, Secure, SameSite=Lax ve Path=/ özellikli olup Domain özniteliği taşımaz. Yönetim paneli çerezleri yalnız platform personeline ait ayrı bir adreste kullanılır ve bu listede yer almaz."
+            ],
+            "table": {
+              "caption": "Uygulama çerezleri",
+              "head": ["Ad", "Amaç", "Tür", "Süre"],
+              "rows": [
+                [
+                  "__Host-eda.session_token",
+                  "Oturumunuzu tanır",
+                  "Zorunlu",
+                  "Tarayıcı oturumu; \"Bu cihazda oturumu açık tut\" seçiliyse en çok {{auth.sessionIdleHours}} saat boşta süresine kadar; mutlak oturum {{auth.sessionAbsoluteDays}} gün"
+                ],
+                [
+                  "__Host-eda.dont_remember",
+                  "\"Oturumu açık tutma\" seçilmediğini işaretler",
+                  "Zorunlu",
+                  "Tarayıcı oturumu"
+                ],
+                [
+                  "__Host-eda.two_factor",
+                  "Parola doğrulandıktan sonra ikinci adımı bekler",
+                  "Zorunlu",
+                  "En çok {{auth.twoFactorPendingMin}} dakika"
+                ],
+                [
+                  "__Host-eda.passkey_challenge",
+                  "Geçiş anahtarı doğrulama sınamasını taşır",
+                  "Zorunlu",
+                  "5 dakika"
+                ],
+                [
+                  "__Host-eda.ui",
+                  "Seçtiğiniz tema ve yoğunluğu hatırlar",
+                  "İşlevsel (kullanıcının açık isteği)",
+                  "1 yıl; yalnız tercihi siz değiştirdiğinizde yazılır"
+                ]
+              ]
+            }
+          },
+          {
+            "id": "onay",
+            "title": "Onay",
+            "paragraphs": [
+              "Bu çerezler hizmetin sunulması için zorunlu veya sizin istediğiniz bir ayarı hatırlamak için kullanıldığından ayrıca çerez onayı istenmez; bu sayfa aydınlatma amacı taşır. [HK: işlevsel tercih çerezinin zorunlu sayılması]"
+            ]
+          },
+          {
+            "id": "cerezleri-yonetme",
+            "title": "Çerezleri yönetme",
+            "paragraphs": [
+              "Çerezleri tarayıcı ayarlarınızdan silebilirsiniz. Oturum çerezini silerseniz yeniden giriş yapmanız gerekir; tema tercihiniz sıfırlanır."
+            ]
+          },
+          {
+            "id": "tarayici-depolamasi",
+            "title": "Tarayıcı depolaması",
+            "paragraphs": ["Aşağıdakiler çerez değildir; şeffaflık için listelenir."],
+            "table": {
+              "caption": "Tarayıcı depolaması",
+              "head": ["Depo", "Amaç", "Not"],
+              "rows": [
+                [
+                  "localStorage (eda.ui.*)",
+                  "Kenar çubuğu durumu, sütun genişlikleri, yakınlaştırma düzeyi (cihaz tercihi)",
+                  "İçerik, kimlik veya anahtar saklanmaz; çıkışta silinmez"
+                ],
+                [
+                  "IndexedDB (eda-local)",
+                  "Editördeki kaydedilmemiş taslağın şifreli yerel kopyası",
+                  "Çıkışta silinir"
+                ],
+                [
+                  "Service worker önbelleği",
+                  "Çevrimdışı açılış sayfası ve simgeler",
+                  "API yanıtı veya içerik önbelleğe alınmaz"
+                ]
+              ]
+            }
+          },
+          {
+            "id": "ucuncu-taraf",
+            "title": "Üçüncü taraf",
+            "paragraphs": ["Hiçbir üçüncü taraf çerezi veya betiği yüklenmez."]
+          }
+        ]
+      },
+      "trust": {
+        "title": "Güven Merkezi",
+        "metaTitle": "Güven Merkezi",
+        "description": "Müvekkil verisinin nerede ve nasıl işlendiğine ilişkin tedarikçi inceleme soruları ve yanıtları.",
+        "intro": "Müvekkil verisinin nerede ve nasıl işlendiğini, Türkiye Barolar Birliği'nin 'Avukatlar İçin Yapay Zekâ Kullanımı Tavsiye Rehberi' (28/08/2026) tedarikçi inceleme sorularına paralel olarak yanıtlıyoruz.",
+        "sections": {
+          "summary": "Özet",
+          "questions": "Tedarikçi soruları",
+          "path": "Veri yolu",
+          "subProcessors": "Alt işleyenler",
+          "measures": "Güvenlik önlemleri",
+          "access": "Erişim ve mesleki sır",
+          "retention": "Silme ve saklama",
+          "mapping": "Mesleki kurallar eşlemesi",
+          "contact": "İletişim ve son güncelleme"
+        },
+        "cards": [
+          {
+            "title": "Veri Türkiye'de",
+            "body": "Veritabanı, evrak ve yedekler Türkiye'deki kurumsal veri merkezinde saklanır."
+          },
+          {
+            "title": "Maskeleme ve veri sınıfı kapısı",
+            "body": "Yapay zekâya giden istemdeki kişisel veriler maskelenir (takma adlaştırma). Maskelenmiş veri de kişisel veri sayılır; bu yüzden istemler yalnız veri sınıfına izin verilen sağlayıcıya gider."
+          },
+          {
+            "title": "Eğitimde kullanılmaz",
+            "body": "Müşteri verisi model eğitiminde kullanılmaz; müvekkil verisi işleyen sağlayıcılarda eğitimde kullanım ve insan incelemesi bulunmamalıdır ve saklama süresi sınırlıdır (kapı kuralı)."
+          },
+          {
+            "title": "İçerik erişimi yok",
+            "body": "Uygulama ve panel üzerinden içerik erişimi yoktur; kök erişimi iki kişiyle sınırlıdır ve oturumları kayıtlıdır."
+          }
+        ],
+        "questions": [
+          {
+            "id": "veri-ulkesi",
+            "q": "Veriler hangi ülkede ve hangi altyapıda işleniyor?",
+            "a": "Veritabanı, evrak (şifreli), arama dizinleri ve yedekler Türkiye'deki kurumsal veri merkezinde ({{VERI_MERKEZI_SAGLAYICISI}}) tutulur. Yapay zekâ özellikleri kullanıldığında istemler, veri sınıfına göre maskelenerek sağlayıcılara gönderilir: müvekkil verisi (Müvekkil işi ve Dosya sınıfları) yalnız veri sınıfı kapısından geçerek ve yalnız o sınıfa izin verilmiş AB veya TR sağlayıcısına gider; izinli sağlayıcı yoksa o sınıfta yapay zekâ kapalıdır. Kamuya açık içerik işleri için kullanılan sağlayıcı ve ülkesi §6.5 listesindedir."
+          },
+          {
+            "id": "egitim",
+            "q": "Girdiler, belgeler ve çıktılar model eğitiminde kullanılıyor mu?",
+            "a": "Hayır. E.D.A. müşteri verisini model eğitiminde kullanmaz. Müvekkil verisi işleyen sağlayıcılar için kapı kuralı: eğitimde kullanım yok, insan incelemesi yok, saklama süresi en çok 30 gün; bu koşulları sağlamayan sağlayıcıya müvekkil verisi gönderilmez. Kalite paylaşımı yalnız sizin seçtiğiniz tek mesaj için, maskeli önizleme gösterilerek ve açık onayınızla yapılır; büro yöneticisi bu özelliği kapatabilir."
+          },
+          {
+            "id": "alt-isleyenler",
+            "q": "Alt işleyenler kimlerdir ve değişiklikler nasıl bildirilir?",
+            "a": "Güncel liste §6.5'tedir. Müvekkil verisinin gönderileceği yeni bir sağlayıcı sınıfı açılmadan en az {{providers.newClassNoticeDays}} gün önce büro yöneticilerine uygulama içi bildirim ve e-posta gönderilir; büro itiraz edip ilgili sınıfı kapatabilir."
+          },
+          {
+            "id": "silme-aktarma",
+            "q": "Silme, dışa aktarma, kayıt ve denetim izi nasıl işliyor?",
+            "a": "Silinen içerik uygulama ve veritabanından kaldırılır. Yedeklerde en çok {{retention.backupContentMaxDays}} gün kalır; yedekten tekil kayıt silinemez. Geri yüklenen veride silme kayıtları yeniden uygulanır. Evrak dosyaları büroya özgü anahtarla şifrelenir; büro kapatıldığında anahtar imha edilir. Yapay zekâ sağlayıcılarında saklama süresi sözleşmeyle en çok 30 gündür; E.D.A. sağlayıcıda içerik saklatmaz. Verilerinizi Ayarlar → Veri bölümünden dışa aktarabilirsiniz. İçeriksiz denetim kaydı {{retention.auditLogYears}} yıl saklanır ve dakikalık mühürle bütünlüğü korunur; her dosya için hangi görevde hangi modelin ve ülkenin kullanıldığını gösteren Dosya AI İşlem Kaydı alınabilir."
+          },
+          {
+            "id": "ihlal-bildirimi",
+            "q": "Veri ihlali durumunda bildirim süresi nedir?",
+            "a": "Veri işleyen olarak E.D.A., ihlali öğrendiğinde büroya gecikmeksizin ve en geç 24 saat içinde bildirir (Veri İşleme Sözleşmesi; başlangıç taahhüdü). Büro, Kurul'a bildirimi mevzuat uyarınca ihlali öğrendiği tarihten itibaren en geç 72 saat içinde yapmakla yükümlüdür."
+          },
+          {
+            "id": "yurtdisi-guvence",
+            "q": "Yurt dışına aktarım hangi güvenceyle yapılıyor?",
+            "a": "Yurt dışına yapılan aktarımlar KVKK m.9 kapsamındadır; yeterlilik kararı bulunan bir ülke yoktur ve sürekli aktarım arızi aktarım sayılmaz. Bu yüzden müvekkil verisi yalnız KVKK standart sözleşmesi imzalanmış ve Kurum'a bildirilmiş AB sağlayıcısına veya Türkiye'deki yerel modele gönderilir. Bildirim tamamlanmadan ilgili sınıfta yapay zekâ açılmaz. Maskeleme ek bir korumadır; aktarım kurallarını ortadan kaldırmaz."
+          },
+          {
+            "id": "kaynak-guncelligi",
+            "q": "Hukuki veri kaynağı ne kadar güncel?",
+            "a": "Karar ve mevzuat resmî kaynaklardan gelir (Adalet Bakanlığı UYAP, Anayasa Mahkemesi, Uyuşmazlık Mahkemesi, mevzuat). Her sonuçta kaynak türü (Yerel korpus veya Canlı) ve erişim tarihi görünür; kaynağa ulaşılamadığında 'kaynak erişilemedi' ile 'sonuç yok' ayrı gösterilir. Kapsamda olmayan kurumlar 'Kapsamda değil' olarak işaretlenir. Mevzuatta MVP'de güncel metin ve son değişiklik tarihi gösterilir."
+          },
+          {
+            "id": "sorumluluk",
+            "q": "Hatalı çıktı, sızıntı veya kesinti halinde sorumluluk nasıl dağılıyor?",
+            "a": "Yapay zekâ çıktısı öneridir; her çıktıyı denetlemek ve nihai hukuki değerlendirmeyi yapmak avukatın sorumluluğundadır. Hatalı atıfı azaltmak için künyeler resmî kaynakta doğrulanır ve doğrulanamayan künye dışa aktarımı engeller. Hizmet seviyesi, sorumluluk sınırları ve kesinti bildirimleri Kullanım Koşulları ve Veri İşleme Sözleşmesi'nde düzenlenir."
+          }
+        ],
+        "pathText": "Metniniz önce Türkiye'deki E.D.A. sunucusuna gelir. Orada veri sınıfı belirlenir ve kişisel veriler maskelenir. Maskeli istem, yalnız bu sınıfa izin verilmiş sağlayıcıya gider. Yanıt geri geldiğinde maskeler yalnız sizin ekranınızda çözülür.",
+        "diagram": {
+          "title": "Veri yolu şeması",
+          "user": "Avukat tarayıcısı",
+          "server": "E.D.A. sunucusu | Türkiye veri merkezi",
+          "gate": "Veri sınıfı kapısı | ve maskeleme",
+          "tls": "TLS",
+          "publicProvider": "Kamuya açık içerik işleri | Kamu sınıfı sağlayıcı | (alt işleyen listesine bakın)",
+          "euProvider": "Müvekkil işi / Dosya | AB veya TR sağlayıcı | (yalnız izinli, sözleşmeli)",
+          "off": "İzinli sağlayıcı yok | Yapay zekâ kapalı | (yapay zekâsız özellikler sürer)"
+        },
+        "subProcessors": {
+          "caption": "Alt işleyenler ve işlem yerleri (son güncelleme: {{GUNCELLEME_TARIHI}})",
+          "head": ["Ad", "Rol", "İşlem yeri", "İşlenen veri", "Durum"],
+          "rows": [
+            [
+              "{{VERI_MERKEZI_SAGLAYICISI}}",
+              "Barındırma (sunucu, depolama, yedek)",
+              "Türkiye",
+              "Tüm veri (evrak ve yedek şifreli)",
+              "Etkin"
+            ],
+            [
+              "Microsoft Azure (AB bölgesi)",
+              "Yapay zekâ modeli barındırma (müvekkil verisi sınıfları için)",
+              "Avrupa Birliği",
+              "Maskeli istemler (Müvekkil işi, Dosya)",
+              "Pilot; KVKK standart sözleşmesi bildirimi tamamlanana kadar müvekkil verisi gönderilmez"
+            ],
+            [
+              "DeepSeek (Hangzhou DeepSeek Artificial Intelligence Co., Ltd.)",
+              "Yapay zekâ modeli (yalnız kamuya açık içerik işleri)",
+              "Çin Halk Cumhuriyeti",
+              "Yalnız sistem/korpus kökenli girdiler (ör. kamuya açık karar özetleri); müşteri verisi içermez",
+              "Etkin"
+            ],
+            [
+              "{{EPOSTA_SAGLAYICISI}}",
+              "İşlemsel e-posta gönderimi",
+              "{{EPOSTA_BOLGESI}}",
+              "Alıcı adresi, görünen ad, işlemsel metin",
+              "Etkin"
+            ],
+            [
+              "iyzico",
+              "Ödeme kuruluşu (abonelik ödemesi)",
+              "Türkiye",
+              "Ödeme işlemi; kart bilgisi E.D.A. sistemlerinden geçmez",
+              "Etkin"
+            ],
+            [
+              "Tarayıcı bildirim servisleri (Google, Mozilla, Apple, Microsoft)",
+              "Web Push iletimi",
+              "Servise göre",
+              "Şifreli bildirim yükü (kilit ekranına taraf adı düşmez)",
+              "Yalnız bildirime kendiniz abone olursanız"
+            ],
+            [
+              "Türkiye'deki yedek hedefi ({{VERI_MERKEZI_SAGLAYICISI}} veya ayrı sağlayıcı)",
+              "Şifreli yedeklerin uzak kopyası",
+              "Türkiye",
+              "Şifreli yedek",
+              "Etkin"
+            ]
+          ],
+          "notes": [
+            "Sağlayıcı kimlikleri ve işlem yerleri uygulamada her yanıtın rozetinde de gösterilir.",
+            "Kamuya açık içerik işleri: genel araştırma modu ve müşteri verisi içermeyen toplu işlemler. Müvekkil verisi hiçbir koşulda bu sağlayıcıya gönderilmez.",
+            "Kullanılan yapay zekâ model sağlayıcılarının listesi değiştiğinde bu sayfa güncellenir."
+          ]
+        },
+        "measures": [
+          {
+            "title": "Aktarım ve depolama",
+            "body": "Bağlantılar TLS ile şifrelenir; evrak ayrıca şifreli saklanır (dosya başına anahtar, büro anahtarı ve ana anahtar katmanları). Yedekler şifrelidir; ana anahtar yedek hedefinde tutulmaz."
+          },
+          {
+            "title": "Kimlik",
+            "body": "Parolalar yalnız özet olarak saklanır. İki adımlı doğrulama (doğrulama uygulaması) ve geçiş anahtarı desteklenir; büro sahibi ve yöneticiler için zorunludur. Dışa aktarma, rol değişikliği ve güvenlik ayarı değişikliği gibi işlemler son dakikalar içinde yeniden doğrulama ister."
+          },
+          {
+            "title": "Kiracı izolasyonu",
+            "body": "Her büronun verisi veritabanı düzeyinde diğer bürolardan ayrılır."
+          },
+          {
+            "title": "Ağ",
+            "body": "Dosya işleme, veritabanı ve depolama servisleri internete çıkamaz; dışarı çıkış yalnız izin listeli vekillerle yapılır."
+          },
+          {
+            "title": "Evrak güvenliği",
+            "body": "Yüklenen dosyalar virüs taramasından geçer ve yalıtılmış ortamda işlenir."
+          },
+          {
+            "title": "Günlükler",
+            "body": "Günlükler istek/yanıt içeriği, sorgu metni veya belge içeriği taşımaz."
+          },
+          {
+            "title": "Denetim",
+            "body": "İçeriksiz denetim kaydı dakikalık mühürle korunur; günlük mühür başı büro sahibine gösterilir."
+          },
+          {
+            "title": "Bağımsız doğrulama",
+            "body": "Bağımsız sızma testi lansman öncesi planlanmıştır; özeti hazır olduğunda bu sayfaya eklenir. (Test yapılmadan 'yapıldı' ibaresi yazılmaz.)"
+          }
+        ],
+        "access": {
+          "lead": "Uygulama ve panel üzerinden içerik erişimi yoktur; kök erişimi iki kişiyle sınırlıdır ve oturumları kayıtlıdır.",
+          "paragraphs": [
+            "Platform destek ve yönetici hesapları yalnız içeriksiz toplu veriyi görür; sohbet, belge, evrak ve dava içeriği görüntülenemez. Bayi (satış ortağı) hesapları büroya üye olamaz ve içerik görmez.",
+            "Müvekkil verisi, Avukatlık Kanunu m. 36 kapsamındaki sır saklama yükümlülüğünüz dikkate alınarak tasarlanmıştır; yükümlülük sizdedir."
+          ]
+        },
+        "retention": {
+          "caption": "Saklama süreleri (özet)",
+          "head": ["Veri", "Saklama"],
+          "rows": [
+            [
+              "Dava ve davaya bağlı içerik",
+              "Dava süresi + vekâletin sona ermesinden sonra en az 3 yıl (Avukatlık Kanunu m. 39); büro daha uzun belirleyebilir"
+            ],
+            [
+              "Davasız sohbet",
+              "{{retention.unlinkedChatInactiveMonths}} ay hareketsizlikten sonra"
+            ],
+            ["Sohbet eki (dosyasız)", "{{retention.inboxDays}} gün"],
+            [
+              "Düşünme süreci (reasoning) metni",
+              "{{retention.reasoningInactiveDays}} gün hareketsizlikten sonra silinir"
+            ],
+            ["Denetim kaydı", "{{retention.auditLogYears}} yıl"],
+            ["Yedekten içeriğin çıkması", "En çok {{retention.backupContentMaxDays}} gün"]
+          ],
+          "note": "Süreler büro ayarı ve mevzuata göre değişebilir."
+        },
+        "mapping": {
+          "caption": "TBB rehberi risk grupları ve E.D.A. denetimleri",
+          "head": ["Rehber başlığı", "E.D.A. denetimi"],
+          "rows": [
+            [
+              "Serbest yardımcı kullanım (genel mevzuat araştırması, kamuya açık metin)",
+              "Karar Arşivi ve Mevzuat (yapay zekâsız çekirdek)."
+            ],
+            [
+              "Sınırlı ve kontrollü kullanım (taslak, belge özeti)",
+              "Öneri modeli, avukat onayı, künye doğrulama, dışa aktarım kontrol listesi."
+            ],
+            [
+              "Özel güvenceye bağlı kullanım (dava dosyası, sağlık, adli sicil, ticari sır)",
+              "Veri sınıfı kapısı, hassas dosyada varsayılan yalnız TR, \"Dava dosyası YZ yetkilendirmesi\", dosya bazında yapay zekâyı kapatma, Dosya AI İşlem Kaydı."
+            ],
+            [
+              "Yasak kullanımlar (sır ihlali, insan denetiminin kaldırılması, reklam yasağı, profilleme)",
+              "Sonuç tahmini ve hâkim profili yok; avukat eşleştirme ve vitrin yok; her çıktı öneridir."
+            ]
+          ],
+          "note": "Bu tablo rehberin bir özeti değildir; rehberin kendisine TBB'nin yayınından ulaşabilirsiniz. E.D.A. Hukuk TBB tarafından onaylanmış veya tavsiye edilmiş bir ürün değildir."
+        },
+        "contact": {
+          "body": "Güvenlik bildirimi ve sorularınız için: destek@{{ALAN}}. Kişisel veri başvuruları için KVKK Aydınlatma Metni'ne bakın.",
+          "updated": "Son güncelleme: {{GUNCELLEME_TARIHI}}",
+          "dpaLink": "Veri İşleme Sözleşmesi özeti",
+          "kvkkLink": "KVKK Aydınlatma Metni"
+        }
+      }
+    }
+  }
+}

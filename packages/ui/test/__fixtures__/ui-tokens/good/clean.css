@@ -1,0 +1,6 @@
+/* Pozitif fixture (KK-P05-3): token başvurusu ve sistem renkleri. */
+.fixture {
+  color: var(--eda-text);
+  outline-color: Highlight;
+  border: 1px solid transparent;
+}

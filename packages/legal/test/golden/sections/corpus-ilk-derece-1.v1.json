@@ -1,0 +1,21 @@
+{
+  "id": "corpus-ilk-derece-1",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. İlk derece: dava, cevap, gerekçe, hüküm.",
+  "courtType": "ilk_derece_hukuk",
+  "lines": [
+    "T.C. ÖRNEK ASLİYE HUKUK MAHKEMESİ",
+    "ESAS NO : 2023/900401",
+    "DAVA",
+    "Davacı örnek alacak istemiştir.",
+    "CEVAP",
+    "Davalı borcu olmadığını savunmuştur.",
+    "GEREKÇE",
+    "Örnek gerekçe: alacak ispatlanmıştır.",
+    "HÜKÜM : Davanın kabulüne."
+  ],
+  "roles": ["kunye", "istem", "taraf_iddiasi", "gerekce", "hukum"],
+  "outcome": "patterned",
+  "gerekceExcludes": ["borcu olmadığını savunmuştur"]
+}

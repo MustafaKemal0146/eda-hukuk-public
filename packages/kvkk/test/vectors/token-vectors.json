@@ -1,0 +1,21 @@
+{
+  "source": "026 §4.6 (Node 24 node:crypto ile hesaplanmış; KK-026-1)",
+  "hmacPseudonymKeyHex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+  "scopeId": "01900000-0000-7000-8000-000000000001",
+  "kConvHex": "44597459fdc3b609e1d4b4273e86f7a3294d6d5193084b2c6b49783128294f34",
+  "tokens": [
+    {
+      "tip": "KISI",
+      "identity": "01900000-0000-7000-8000-0000000000a1",
+      "token4": "[KISI_CMZX]",
+      "hash6": "CMZXKJ"
+    },
+    { "tip": "TCKN", "identity": "10000000146", "token4": "[TCKN_RQWA]", "hash6": "RQWAYG" },
+    {
+      "tip": "EPOSTA",
+      "identity": "ahmet@example.com",
+      "token4": "[EPOSTA_6J45]",
+      "hash6": "6J45VM"
+    }
+  ]
+}

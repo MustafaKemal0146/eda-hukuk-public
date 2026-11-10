@@ -1,0 +1,51 @@
+{
+  "ruleCode": "iik_odeme_emrine_itiraz",
+  "ruleVersion": 1,
+  "source": "083 §9 tablosu; beklenen son gün tablodan aynen, stepKinds/warnings §5.2 algoritma izinden elle (P22.3). Hukuk onayı bekliyor (AS-0205).",
+  "cases": [
+    {
+      "id": "G13",
+      "title": "Yedi günlük icra süresi",
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2026-03-09",
+        "serviceMethod": "postal",
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-03-16",
+        "dueAt": "2026-03-16T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period"],
+        "warnings": []
+      },
+      "rationale": "7 gün; tatil yok",
+      "reviewedBy": null
+    },
+    {
+      "id": "G15",
+      "title": "Adli tatil uygulanmayan icra süresi",
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2026-07-27",
+        "serviceMethod": "postal",
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-08-03",
+        "dueAt": "2026-08-03T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period"],
+        "warnings": []
+      },
+      "rationale": "adli tatil içinde ama recess_applies = false; recessApplied = false (T-12)",
+      "reviewedBy": null
+    }
+  ]
+}

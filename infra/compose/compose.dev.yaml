@@ -1,0 +1,216 @@
+# E.D.A. Hukuk — geliştirme katmanı (070 §5). Port yayınları yalnız 127.0.0.1; iç ağlar internal:false.
+# YAML çapaları dosya kapsamlıdır: taban dosyadakilerin birebir kopyası (P01c check-compose-canon denetler).
+x-hardened: &hardened
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: ["no-new-privileges:true"]
+  init: true
+  pids_limit: 256
+  logging: { driver: json-file, options: { max-size: "10m", max-file: "5" } }
+
+x-hc: &hc { interval: 10s, timeout: 3s, retries: 5, start_period: 20s }
+
+# Araç konteynırları kaynak ağacını rw bağlar: read_only ilkesinin yalnız dev'deki bilinçli istisnası.
+x-tool: &tool
+  cap_drop: [ALL]
+  security_opt: ["no-new-privileges:true"]
+  init: true
+  pids_limit: 1024
+  user: "${EDA_UID:-1000}:${EDA_GID:-1000}"
+  working_dir: /workspace
+  volumes: ["../..:/workspace", "eda-pnpm-store:/pnpm-store"]
+  # exec: SWC yerel eklentisi (next-intl eklentisi) ~/.cache altına çıkarılıp yüklenir (hot profil).
+  tmpfs: ["/home/dev:size=256m,mode=0755,exec,uid=${EDA_UID:-1000},gid=${EDA_GID:-1000}"]
+  logging: { driver: json-file, options: { max-size: "10m", max-file: "5" } }
+
+x-watch-ignore: &watch-ignore ["**/*.test.ts", "**/test/**", "**/generated/**", "**/node_modules/**"]
+
+services:
+  # ---- port yayınları (002 §1; yalnız 127.0.0.1) ve develop.watch (070 §5) ----
+  caddy:
+    ports: ["127.0.0.1:8443:443"]
+    restart: "no"
+    develop:
+      watch:
+        - { path: ../caddy, action: restart }
+  web:
+    ports: ["127.0.0.1:${EDA_WEB_PORT:-3000}:3000"]
+    develop:
+      watch:
+        - { path: ../../apps/web/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../apps/web/public, action: rebuild }
+        - { path: ../../packages/ui/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/contracts/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/api-client/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../pnpm-lock.yaml, action: rebuild }
+  admin:
+    ports: ["127.0.0.1:${EDA_ADMIN_PORT:-3001}:3001"]
+    develop:
+      watch:
+        - { path: ../../apps/admin/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/ui/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/contracts/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../pnpm-lock.yaml, action: rebuild }
+  api:
+    ports: ["127.0.0.1:8000:8000", "127.0.0.1:8010:8010"]
+    environment: { API_ADMIN_LISTEN_HOST: 0.0.0.0 }
+    develop:
+      watch:
+        - { path: ../../apps/api/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/contracts/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/observability/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/ai/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/legal/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/editor/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/db/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../pnpm-lock.yaml, action: rebuild }
+  worker:
+    develop:
+      watch:
+        - { path: ../../apps/worker/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/contracts/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../pnpm-lock.yaml, action: rebuild }
+  jobs:
+    develop:
+      watch:
+        - { path: ../../apps/worker/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/contracts/src, action: rebuild, ignore: *watch-ignore }
+  yargi-mcp:
+    ports: ["127.0.0.1:8001:8001"]
+    develop:
+      watch:
+        - { path: ../../services/yargi-mcp/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/contracts/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/legal/src, action: rebuild, ignore: *watch-ignore }
+        - { path: ../../packages/observability/src, action: rebuild, ignore: *watch-ignore }
+  doc-engine:
+    ports: ["127.0.0.1:8002:8002"]
+    mem_limit: 4g
+    memswap_limit: 4g
+    develop:
+      watch:
+        - { path: ../../services/doc-engine/src, action: rebuild }
+        - { path: ../../services/doc-engine/pyproject.toml, action: rebuild }
+        - { path: ../../uv.lock, action: rebuild }
+  gotenberg:
+    ports: ["127.0.0.1:3100:3000"]
+  egress-llm:
+    develop:
+      watch:
+        - { path: ../egress, action: restart }
+  egress-portal:
+    develop:
+      watch:
+        - { path: ../egress, action: restart }
+  egress-backup:
+    develop:
+      watch:
+        - { path: ../egress, action: restart }
+  egress-av:
+    develop:
+      watch:
+        - { path: ../egress, action: restart }
+  valkey:
+    ports: ["127.0.0.1:6379:6379"]
+    develop:
+      watch:
+        - { path: ../valkey, action: restart }
+  valkey-cache:
+    ports: ["127.0.0.1:6380:6379"]
+    develop:
+      watch:
+        - { path: ../valkey, action: restart }
+  postgres: { ports: ["127.0.0.1:5432:5432"], mem_limit: 4g, memswap_limit: 4g }
+  objstore: { ports: ["127.0.0.1:8333:8333"] }
+  embed-query: { ports: ["127.0.0.1:8080:8080"], mem_limit: 3g, memswap_limit: 3g }
+  embed-batch: { ports: ["127.0.0.1:8082:8080"], mem_limit: 3g, memswap_limit: 3g }
+  rerank: { ports: ["127.0.0.1:8081:8081"] }
+  clamav: { mem_limit: 2g, memswap_limit: 2g }
+
+  migrate:
+    environment:
+      SEED_PROFILE: dev
+      KEK_MASTER_FILE: /run/secrets/kek_master
+      DEV_SEED_PASSWORD_FILE: /run/secrets/dev_seed_password
+    secrets: [kek_master, dev_seed_password]
+
+  mailpit:
+    <<: *hardened
+    profiles: [core]
+    image: axllent/mailpit:v1.31.4@sha256:b68349e3a014b90c5610bfb26b2ae36f3892d7b8cf25ee140c6c71c98d2fcf48
+    user: "10008:10008"
+    networks: [data]
+    environment:
+      MP_SMTP_BIND_ADDR: 0.0.0.0:1025
+      MP_UI_BIND_ADDR: 0.0.0.0:8025
+      MP_MAX_MESSAGES: "500"
+    tmpfs: ["/tmp:size=64m"]
+    ports: ["127.0.0.1:8025:8025"]
+    healthcheck: { <<: *hc, test: ["CMD", "/mailpit", "readyz"] }
+
+  devtools:
+    <<: *tool
+    profiles: [tools]
+    build: { context: ../.., dockerfile: infra/docker/node-app.Dockerfile, target: devtools }
+    image: ${EDA_IMAGE_PREFIX:-eda}/devtools:${EDA_TAG:-dev}
+    networks: [data, edge, mcp, docproc, egress-llm-net]
+    environment:
+      HOME: /home/dev
+      EDA_ENV: ${TOOL_EDA_ENV:-test}
+      CI: "1"
+      NO_COLOR: "1"
+      npm_config_store_dir: /pnpm-store
+      TURBO_TELEMETRY_DISABLED: "1"
+      NEXT_TELEMETRY_DISABLED: "1"
+
+  # ---- hızlı arayüz döngüsü (profil hot; make dev HOT=1) ----
+  web-hot:
+    <<: *tool
+    profiles: [hot]
+    image: ${EDA_IMAGE_PREFIX:-eda}/devtools:${EDA_TAG:-dev}
+    command: ["pnpm", "--filter", "@eda/web", "dev"]
+    networks: { edge: { aliases: [web-hot] } }
+    environment:
+      EDA_ENV: development
+      HOME: /home/dev
+      PORT: "3000"
+      HOSTNAME: 0.0.0.0
+      API_INTERNAL_URL: http://api:8000
+      APP_URL: ${APP_URL:?}
+      ADMIN_URL: ${ADMIN_URL:?}
+      MARKETING_URL: ${MARKETING_URL:?}
+      NEXT_TELEMETRY_DISABLED: "1"
+    healthcheck: { <<: *hc, start_period: 90s, test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/healthz.txt').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"] }
+  admin-hot:
+    <<: *tool
+    profiles: [hot]
+    image: ${EDA_IMAGE_PREFIX:-eda}/devtools:${EDA_TAG:-dev}
+    command: ["pnpm", "--filter", "@eda/admin", "dev"]
+    networks: { edge: {}, admin-edge: { aliases: [admin-hot] } }
+    environment:
+      EDA_ENV: development
+      HOME: /home/dev
+      PORT: "3001"
+      HOSTNAME: 0.0.0.0
+      API_INTERNAL_URL: http://api-admin:8010
+      APP_URL: ${APP_URL:?}
+      ADMIN_URL: ${ADMIN_URL:?}
+      MARKETING_URL: ${MARKETING_URL:?}
+      NEXT_TELEMETRY_DISABLED: "1"
+    healthcheck: { <<: *hc, start_period: 90s, test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/healthz.txt').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"] }
+
+networks:
+  edge: { internal: false }
+  admin-edge: { internal: false }
+  data: { internal: false }
+  docproc: { internal: false }
+  mcp: { internal: false }
+  egress-llm-net: { internal: false }
+  egress-backup-net: { internal: false }
+  egress-av-net: { internal: false }
+
+volumes:
+  eda-pnpm-store: { name: eda-pnpm-store, external: true }
+
+secrets:
+  dev_seed_password: { file: "${EDA_SECRETS_DIR:?}/dev_seed_password" }

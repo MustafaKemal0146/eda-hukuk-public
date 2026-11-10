@@ -1,0 +1,8 @@
+chore(repo): gitignore eklendi
+
+Gövde.
+
+Prompt: P00
+Task: P05.3
+Open-Question: AS-0007
+Co-Authored-By: Biri <a@b.c>

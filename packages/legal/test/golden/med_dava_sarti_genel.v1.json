@@ -1,0 +1,51 @@
+{
+  "ruleCode": "med_dava_sarti_genel",
+  "ruleVersion": 1,
+  "source": "083 §9 tablosu; beklenen son gün tablodan aynen, stepKinds/warnings §5.2 algoritma izinden elle (P22.3). Hukuk onayı bekliyor (AS-0205).",
+  "cases": [
+    {
+      "id": "G22",
+      "title": "Arabuluculuk süreci (genel)",
+      "input": {
+        "startEvent": "learning",
+        "eventDate": "2026-02-02",
+        "serviceMethod": null,
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-02-23",
+        "dueAt": "2026-02-23T23:59:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period", "mediation_extension"],
+        "warnings": []
+      },
+      "rationale": "3 hafta; kaydırma yok; mediation_extension adımı (bilgi: uzatma ile 02.03.2026)",
+      "reviewedBy": null
+    },
+    {
+      "id": "G24",
+      "title": "Süreç süresi Cumartesiye rastlıyor",
+      "input": {
+        "startEvent": "learning",
+        "eventDate": "2026-01-03",
+        "serviceMethod": null,
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-01-24",
+        "dueAt": "2026-01-24T23:59:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period", "mediation_extension"],
+        "warnings": []
+      },
+      "rationale": "süreç süresi; Cumartesiye rastlasa da kaydırma yok (T-13)",
+      "reviewedBy": null
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "corpus-aym-bireysel-2",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. AYM bireysel kısa: başvurunun özeti, değerlendirme, hüküm.",
+  "courtType": "aym_bireysel",
+  "lines": [
+    "ANAYASA MAHKEMESİ",
+    "KARAR",
+    "Başvuru Numarası : 2022/900502",
+    "BAŞVURUNUN ÖZETİ : Örnek başvuru.",
+    "DEĞERLENDİRME",
+    "Örnek kabul edilemezlik değerlendirmesi.",
+    "HÜKÜM",
+    "Başvurunun kabul edilemez olduğuna karar verildi."
+  ],
+  "roles": ["kunye", "istem", "gerekce", "hukum"],
+  "outcome": "patterned",
+  "gerekceExcludes": []
+}

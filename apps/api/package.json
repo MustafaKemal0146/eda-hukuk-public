@@ -1,0 +1,46 @@
+{
+  "name": "@eda/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsdown",
+    "dev": "node --watch src/main.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --project unit",
+    "test:int": "vitest run --project integration"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "catalog:",
+    "@better-auth/passkey": "catalog:",
+    "@eda/ai": "workspace:*",
+    "@eda/contracts": "workspace:*",
+    "@eda/crypto": "workspace:*",
+    "@eda/db": "workspace:*",
+    "@eda/editor": "workspace:*",
+    "@eda/email": "workspace:*",
+    "@eda/kvkk": "workspace:*",
+    "@eda/legal": "workspace:*",
+    "@eda/observability": "workspace:*",
+    "@hono/node-server": "catalog:",
+    "@hono/zod-openapi": "catalog:",
+    "@node-rs/argon2": "catalog:",
+    "@simplewebauthn/server": "catalog:",
+    "ai": "catalog:",
+    "better-auth": "catalog:",
+    "bullmq": "catalog:",
+    "busboy": "catalog:",
+    "drizzle-orm": "catalog:",
+    "hono": "catalog:",
+    "ioredis": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@eda/config": "workspace:*",
+    "@types/node": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

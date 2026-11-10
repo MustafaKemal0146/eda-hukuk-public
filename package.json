@@ -1,0 +1,26 @@
+{
+  "name": "@eda/root",
+  "version": "0.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "packageManager": "pnpm@11.28.5+sha512.484563d30b4c2ad27cb48aa94ff2b302dbcebc8ff6bf28816c2589886e146ce7f76f354f3bc1a438e6f5e9768c302aa0a6f7add8232903cd4cf81426cbc14d9e",
+  "engines": {
+    "node": ">=24.21.0 <25"
+  },
+  "scripts": {
+    "lint": "biome ci --colors=off . && depcruise --config .dependency-cruiser.cjs apps packages services/yargi-mcp evals tests/e2e",
+    "format": "biome format --write .",
+    "test": "node --test infra/scripts/dev/__tests__/*.test.ts infra/scripts/__tests__/*.test.ts",
+    "test:provider": "pnpm --filter @eda/ai run test:provider"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "@eda/config": "workspace:*",
+    "@types/node": "catalog:",
+    "dependency-cruiser": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:",
+    "yaml": "catalog:"
+  }
+}

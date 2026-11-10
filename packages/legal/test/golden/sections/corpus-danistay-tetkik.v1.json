@@ -1,0 +1,25 @@
+{
+  "id": "corpus-danistay-tetkik",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. Danıştay: istemin konusu, savunmanın özeti, tetkik hâkimi düşüncesi (gerekce olmaz), Türk milleti adına gereği düşünüldü, karar sonucu.",
+  "courtType": "danistay",
+  "lines": [
+    "T.C. DANIŞTAY",
+    "ÖRNEK BEŞİNCİ DAİRE",
+    "Esas No : 2023/900201",
+    "İSTEMİN KONUSU",
+    "Örnek idari işlemin iptali istenmektedir.",
+    "SAVUNMANIN ÖZETİ : İstemin reddi gerektiği savunulmaktadır.",
+    "DANIŞTAY TETKİK HÂKİMİ : Örnek Ad",
+    "DÜŞÜNCESİ : İstemin kabulü gerektiği düşünülmektedir.",
+    "TÜRK MİLLETİ ADINA",
+    "Hüküm veren Danıştay Beşinci Dairesince işin gereği görüşülüp düşünüldü:",
+    "Örnek gerekçe: işlem hukuka uygundur.",
+    "KARAR SONUCU",
+    "Açıklanan nedenlerle davanın reddine karar verildi."
+  ],
+  "roles": ["kunye", "istem", "taraf_iddiasi", "tetkik_hakimi", "gerekce", "hukum"],
+  "outcome": "patterned",
+  "gerekceExcludes": ["İstemin kabulü gerektiği", "reddi gerektiği savunulmaktadır"]
+}

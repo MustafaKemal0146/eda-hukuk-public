@@ -1,0 +1,18 @@
+E.D.A. Hukuk
+
+Büro daveti
+
+Merhaba,
+
+Bir büro sizi E.D.A. Hukuk çalışma alanına davet etti.
+
+Rol: Avukat
+
+Daveti görüntüle: https://app.ornek.test/davet/0198d2a4-0000-4000-8000-000000000001
+
+Davet 72 saat geçerlidir ve yalnız bir kez kullanılabilir. Parolanızı siz belirlersiniz.
+
+Bu daveti beklemiyorsanız bu iletiyi yok sayabilirsiniz.
+
+--
+Bu ileti E.D.A. Hukuk hizmetiyle ilgili bilgilendirmedir. Bildirim tercihlerinizi uygulamada Ayarlar > Bildirimler bölümünden değiştirebilirsiniz. Sorularınız için bu iletiyi yanıtlayabilirsiniz.

@@ -1,0 +1,16 @@
+E.D.A. Hukuk
+
+Meslek başvurunuz alındı
+
+Merhaba Örnek Kullanıcı,
+
+Meslek bilgileriniz incelemeye alındı.
+
+İnceleme hedefi 4 iş saatidir; en geç 1 iş günü içinde sonuçlanır. Sonuç e-posta ve uygulama içi bildirimle iletilir.
+
+İnceleme sürerken Karar Arşivi, Mevzuat, süre hesaplayıcı ve Künye Kontrolü kullanılabilir.
+
+İşlem gerekmez.
+
+--
+Bu ileti E.D.A. Hukuk hizmetiyle ilgili bilgilendirmedir. Bildirim tercihlerinizi uygulamada Ayarlar > Bildirimler bölümünden değiştirebilirsiniz. Sorularınız için bu iletiyi yanıtlayabilirsiniz.

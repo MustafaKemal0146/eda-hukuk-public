@@ -1,0 +1,2 @@
+# CADDY_TLS_MODE=internal: admin host'u da yerel CA ile.
+tls internal

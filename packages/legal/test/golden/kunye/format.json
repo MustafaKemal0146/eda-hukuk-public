@@ -1,0 +1,209 @@
+{
+  "note": "081 §4.2 altın tablosu (KK-081-1, KK-081-9). Sayılar ve adlar biçim örneğidir, gerçek karar değildir.",
+  "rows": [
+    {
+      "record": {
+        "courtName": null,
+        "chamberCode": "H9",
+        "chamberName": null,
+        "chamberShort": null,
+        "esasNo": "2024/1234",
+        "kararNo": "2025/5678",
+        "decisionDate": "2025-03-12",
+        "unitLabel": null,
+        "rgText": null,
+        "courtClass": "yargitay"
+      },
+      "full": "Yargıtay 9. Hukuk Dairesi, E. 2024/1234, K. 2025/5678, T. 12.03.2025",
+      "short": "Y. 9. HD 2024/1234 E.",
+      "index": "Y. 9. HD 2024/1234 E. 2025/5678 K."
+    },
+    {
+      "record": {
+        "courtName": null,
+        "chamberCode": "C3",
+        "chamberName": null,
+        "chamberShort": null,
+        "esasNo": "2022/1",
+        "kararNo": "2023/2",
+        "decisionDate": "2023-04-05",
+        "unitLabel": null,
+        "rgText": null,
+        "courtClass": "yargitay"
+      },
+      "full": "Yargıtay 3. Ceza Dairesi, E. 2022/1, K. 2023/2, T. 05.04.2023",
+      "short": "Y. 3. CD 2022/1 E.",
+      "index": "Y. 3. CD 2022/1 E. 2023/2 K."
+    },
+    {
+      "record": {
+        "courtName": null,
+        "chamberCode": "HGK",
+        "chamberName": null,
+        "chamberShort": null,
+        "esasNo": "2023/3-451",
+        "kararNo": "2024/112",
+        "decisionDate": "2024-02-07",
+        "unitLabel": null,
+        "rgText": null,
+        "courtClass": "yargitay"
+      },
+      "full": "Yargıtay Hukuk Genel Kurulu, E. 2023/3-451, K. 2024/112, T. 07.02.2024",
+      "short": "Y. HGK 2023/3-451 E.",
+      "index": "Y. HGK 2023/3-451 E. 2024/112 K."
+    },
+    {
+      "record": {
+        "courtName": null,
+        "chamberCode": "CGK",
+        "chamberName": null,
+        "chamberShort": null,
+        "esasNo": "2021/9-123",
+        "kararNo": "2022/45",
+        "decisionDate": "2022-01-18",
+        "unitLabel": null,
+        "rgText": null,
+        "courtClass": "yargitay"
+      },
+      "full": "Yargıtay Ceza Genel Kurulu, E. 2021/9-123, K. 2022/45, T. 18.01.2022",
+      "short": "Y. CGK 2021/9-123 E.",
+      "index": "Y. CGK 2021/9-123 E. 2022/45 K."
+    },
+    {
+      "record": {
+        "courtName": null,
+        "chamberCode": "IBK",
+        "chamberName": null,
+        "chamberShort": null,
+        "esasNo": "2010/1",
+        "kararNo": "2011/1",
+        "decisionDate": "2011-02-01",
+        "unitLabel": null,
+        "rgText": null,
+        "courtClass": "yargitay"
+      },
+      "full": "Yargıtay İçtihadı Birleştirme Büyük Genel Kurulu, E. 2010/1, K. 2011/1, T. 01.02.2011",
+      "short": "Y. İBBGK 2010/1 E.",
+      "index": "Y. İBBGK 2010/1 E. 2011/1 K."
+    },
+    {
+      "record": {
+        "courtName": null,
+        "chamberCode": "D5",
+        "chamberName": null,
+        "chamberShort": null,
+        "esasNo": "2019/1234",
+        "kararNo": "2020/567",
+        "decisionDate": "2020-06-09",
+        "unitLabel": null,
+        "rgText": null,
+        "courtClass": "danistay"
+      },
+      "full": "Danıştay 5. Daire, E. 2019/1234, K. 2020/567, T. 09.06.2020",
+      "short": "Dn. 5. D. 2019/1234 E.",
+      "index": "Dn. 5. D. 2019/1234 E. 2020/567 K."
+    },
+    {
+      "record": {
+        "courtName": null,
+        "chamberCode": "IDDK",
+        "chamberName": null,
+        "chamberShort": null,
+        "esasNo": "2018/123",
+        "kararNo": "2019/456",
+        "decisionDate": "2019-05-02",
+        "unitLabel": null,
+        "rgText": null,
+        "courtClass": "danistay"
+      },
+      "full": "Danıştay İdare Dava Daireleri Kurulu, E. 2018/123, K. 2019/456, T. 02.05.2019",
+      "short": "Dn. İDDK 2018/123 E.",
+      "index": "Dn. İDDK 2018/123 E. 2019/456 K."
+    },
+    {
+      "record": {
+        "courtName": null,
+        "chamberCode": null,
+        "chamberName": null,
+        "chamberShort": null,
+        "esasNo": "2019/12",
+        "kararNo": "2020/34",
+        "decisionDate": "2020-03-05",
+        "unitLabel": null,
+        "rgText": null,
+        "courtClass": "aym_norm"
+      },
+      "full": "Anayasa Mahkemesi, E. 2019/12, K. 2020/34, T. 05.03.2020",
+      "short": "AYM 2019/12 E.",
+      "index": "AYM 2019/12 E. 2020/34 K."
+    },
+    {
+      "record": {
+        "courtName": null,
+        "chamberCode": null,
+        "chamberName": null,
+        "chamberShort": null,
+        "esasNo": "2019/12345",
+        "kararNo": null,
+        "decisionDate": "2021-06-10",
+        "unitLabel": null,
+        "rgText": null,
+        "courtClass": "aym_bireysel"
+      },
+      "full": "Anayasa Mahkemesi, B. No: 2019/12345, T. 10.06.2021",
+      "short": "AYM B. No: 2019/12345",
+      "index": "AYM B. No: 2019/12345"
+    },
+    {
+      "record": {
+        "courtName": null,
+        "chamberCode": "HUKUK",
+        "chamberName": null,
+        "chamberShort": null,
+        "esasNo": "2020/12",
+        "kararNo": "2020/34",
+        "decisionDate": "2020-03-12",
+        "unitLabel": null,
+        "rgText": null,
+        "courtClass": "uyusmazlik"
+      },
+      "full": "Uyuşmazlık Mahkemesi Hukuk Bölümü, E. 2020/12, K. 2020/34, T. 12.03.2020",
+      "short": "Uyuşmazlık Mah. 2020/12 E.",
+      "index": "Uyuşmazlık Mah. 2020/12 E. 2020/34 K."
+    },
+    {
+      "record": {
+        "courtName": "İstanbul Bölge Adliye Mahkemesi",
+        "chamberCode": "H12",
+        "chamberName": null,
+        "chamberShort": null,
+        "esasNo": "2021/123",
+        "kararNo": "2022/456",
+        "decisionDate": "2022-04-20",
+        "unitLabel": null,
+        "rgText": null,
+        "courtClass": "istinaf_hukuk"
+      },
+      "full": "İstanbul Bölge Adliye Mahkemesi 12. Hukuk Dairesi, E. 2021/123, K. 2022/456, T. 20.04.2022",
+      "short": "İstanbul BAM 12. HD 2021/123 E.",
+      "index": "İstanbul BAM 12. HD 2021/123 E. 2022/456 K."
+    },
+    {
+      "record": {
+        "courtName": "İstanbul 5. Asliye Ticaret Mahkemesi",
+        "chamberCode": null,
+        "chamberName": null,
+        "chamberShort": null,
+        "esasNo": "2023/118",
+        "kararNo": "2023/340",
+        "decisionDate": "2023-11-14",
+        "unitLabel": null,
+        "rgText": null,
+        "courtClass": "yerel"
+      },
+      "full": "İstanbul 5. Asliye Ticaret Mahkemesi, E. 2023/118, K. 2023/340, T. 14.11.2023",
+      "short": "İstanbul 5. Asliye Ticaret Mah. 2023/118 E.",
+      "index": "İstanbul 5. Asliye Ticaret Mah. 2023/118 E. 2023/340 K."
+    }
+  ]
+}

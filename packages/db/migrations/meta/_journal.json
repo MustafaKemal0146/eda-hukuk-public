@@ -1,0 +1,377 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1791663682338,
+      "tag": "0000_schema_schemas_and_base_grants",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1791663683051,
+      "tag": "0001_ext_verify_prereqs",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791663683788,
+      "tag": "0002_schema_auth",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1791663692312,
+      "tag": "0003_rls_auth_column_grants",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1791667839105,
+      "tag": "0004_schema_app_core",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1791667909318,
+      "tag": "0005_fn_trigger_functions",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1791667909767,
+      "tag": "0006_fn_rls_helpers",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1791667910210,
+      "tag": "0007_rls_app_core",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1791668241113,
+      "tag": "0008_schema_app_chat_document",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1791668304202,
+      "tag": "0009_rls_app_chat_document",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1791668314753,
+      "tag": "0010_schema_app_calendar",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1791668315219,
+      "tag": "0011_rls_app_calendar",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1791668341343,
+      "tag": "0012_schema_app_ai_billing_platform",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1791668341859,
+      "tag": "0013_rls_app_ai_billing_platform",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1791668391731,
+      "tag": "0014_fn_deletion_log",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1791668450055,
+      "tag": "0015_fn_partition_functions",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1791668450574,
+      "tag": "0016_partition_initial",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1791668451097,
+      "tag": "0017_fn_security_definer_app",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1791668451640,
+      "tag": "0018_rls_jobs_auth_grants",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1791668539563,
+      "tag": "0019_schema_corpus",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1791668540149,
+      "tag": "0020_rls_corpus",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1791668569028,
+      "tag": "0021_index_auth_fk_columns",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1791668569642,
+      "tag": "0022_index_corpus_search",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "7",
+      "when": 1791672204391,
+      "tag": "0023_fn_security_definer_admin_orgs",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1791673526382,
+      "tag": "0024_seed_ai_catalog_v1",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1791674332308,
+      "tag": "0025_rls_cases_policy_initplan",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "7",
+      "when": 1791683435735,
+      "tag": "0026_fn_email_enqueue",
+      "breakpoints": true
+    },
+    {
+      "idx": 27,
+      "version": "7",
+      "when": 1791683438998,
+      "tag": "0027_rls_worker_email_grants",
+      "breakpoints": true
+    },
+    {
+      "idx": 28,
+      "version": "7",
+      "when": 1791683442187,
+      "tag": "0028_fn_application_decision",
+      "breakpoints": true
+    },
+    {
+      "idx": 29,
+      "version": "7",
+      "when": 1791693329415,
+      "tag": "0029_fn_members_seat_limit",
+      "breakpoints": true
+    },
+    {
+      "idx": 30,
+      "version": "7",
+      "when": 1791693332187,
+      "tag": "0030_fn_org_invitation_helpers",
+      "breakpoints": true
+    },
+    {
+      "idx": 31,
+      "version": "7",
+      "when": 1791693334968,
+      "tag": "0031_rls_worker_invitation_grants",
+      "breakpoints": true
+    },
+    {
+      "idx": 32,
+      "version": "7",
+      "when": 1791786554208,
+      "tag": "0032_expand_documents_subtype",
+      "breakpoints": true
+    },
+    {
+      "idx": 33,
+      "version": "7",
+      "when": 1791786584130,
+      "tag": "0033_expand_documents_subtype_validate",
+      "breakpoints": true
+    },
+    {
+      "idx": 34,
+      "version": "7",
+      "when": 1791786587860,
+      "tag": "0034_rls_document_versions_name_update",
+      "breakpoints": true
+    },
+    {
+      "idx": 35,
+      "version": "7",
+      "when": 1791997622427,
+      "tag": "0035_expand_ai_api_keys",
+      "breakpoints": true
+    },
+    {
+      "idx": 36,
+      "version": "7",
+      "when": 1791997652034,
+      "tag": "0036_expand_ai_api_keys_validate",
+      "breakpoints": true
+    },
+    {
+      "idx": 37,
+      "version": "7",
+      "when": 1791997712034,
+      "tag": "0037_fn_admin_overview_stats",
+      "breakpoints": true
+    },
+    {
+      "idx": 38,
+      "version": "7",
+      "when": 1792139919587,
+      "tag": "0038_rls_user_limit_overrides",
+      "breakpoints": true
+    },
+    {
+      "idx": 39,
+      "version": "7",
+      "when": 1792139979587,
+      "tag": "0039_fn_admin_usage_limits",
+      "breakpoints": true
+    },
+    {
+      "idx": 40,
+      "version": "7",
+      "when": 1792140039587,
+      "tag": "0040_fn_admin_announcements",
+      "breakpoints": true
+    },
+    {
+      "idx": 41,
+      "version": "7",
+      "when": 1792140099587,
+      "tag": "0041_fn_admin_ai_config",
+      "breakpoints": true
+    },
+    {
+      "idx": 42,
+      "version": "7",
+      "when": 1792140159587,
+      "tag": "0042_fn_admin_system",
+      "breakpoints": true
+    },
+    {
+      "idx": 43,
+      "version": "7",
+      "when": 1792140219587,
+      "tag": "0043_fn_admin_sablon_destek_veri_seti",
+      "breakpoints": true
+    },
+    {
+      "idx": 44,
+      "version": "7",
+      "when": 1792140279587,
+      "tag": "0044_fn_admin_audit_log",
+      "breakpoints": true
+    },
+    {
+      "idx": 45,
+      "version": "7",
+      "when": 1792140339587,
+      "tag": "0045_fn_admin_chat_reports",
+      "breakpoints": true
+    },
+    {
+      "idx": 46,
+      "version": "7",
+      "when": 1792140399587,
+      "tag": "0046_rls_custody_system_insert",
+      "breakpoints": true
+    },
+    {
+      "idx": 47,
+      "version": "7",
+      "when": 1792182212546,
+      "tag": "0047_rls_platform_key_usage",
+      "breakpoints": true
+    },
+    {
+      "idx": 48,
+      "version": "7",
+      "when": 1792182272546,
+      "tag": "0048_fn_admin_overview_pending_fix",
+      "breakpoints": true
+    },
+    {
+      "idx": 49,
+      "version": "7",
+      "when": 1792225536088,
+      "tag": "0049_rls_platform_settings",
+      "breakpoints": true
+    },
+    {
+      "idx": 50,
+      "version": "7",
+      "when": 1792229643823,
+      "tag": "0050_rls_platform_key_reserve",
+      "breakpoints": true
+    },
+    {
+      "idx": 51,
+      "version": "7",
+      "when": 1792229703823,
+      "tag": "0051_fn_admin_cap_backup_login",
+      "breakpoints": true
+    },
+    {
+      "idx": 52,
+      "version": "7",
+      "when": 1792246372376,
+      "tag": "0052_rls_source_canary_runs",
+      "breakpoints": true
+    }
+  ]
+}

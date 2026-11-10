@@ -1,0 +1,4 @@
+{
+  "extends": "@eda/config/tsconfig.react-lib.json",
+  "include": ["src", "test"]
+}

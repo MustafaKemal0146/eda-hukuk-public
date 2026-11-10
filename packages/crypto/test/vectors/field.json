@@ -1,0 +1,49 @@
+{
+  "note": "Sentetik bilinen-cevap vektörleri; anahtarlar ardışık bayt desenidir, kimlik numaraları uydurmadır.",
+  "encryptField": [
+    {
+      "dek": "202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f",
+      "orgId": "00000000-0000-7000-8000-00000000000a",
+      "table": "clients",
+      "rowId": "00000000-0000-7000-8000-0000000000c1",
+      "column": "tckn_enc",
+      "keyVersion": 1,
+      "value": "12345678901",
+      "nonce": "e0e1e2e3e4e5e6e7e8e9eaeb",
+      "aad": "0000000000007000800000000000000a0007636c69656e7473000000000000700080000000000000c1000874636b6e5f656e6300000001",
+      "sealed": "e0e1e2e3e4e5e6e7e8e9eaeb22fd0d421260d1ceb3125694b1ff7fe08ad8bce84ebf328690fb35"
+    },
+    {
+      "dek": "202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f",
+      "orgId": "00000000-0000-7000-8000-00000000000a",
+      "table": "case_parties",
+      "rowId": "00000000-0000-7000-8000-0000000000c1",
+      "column": "vkn_enc",
+      "keyVersion": 2,
+      "value": "1234567890",
+      "nonce": "f0f1f2f3f4f5f6f7f8f9fafb",
+      "aad": "0000000000007000800000000000000a000c636173655f70617274696573000000000000700080000000000000c10007766b6e5f656e6300000002",
+      "sealed": "f0f1f2f3f4f5f6f7f8f9fafbde7af0fc4e6b2acb9fa3d360fa9d1e502074b38776f2367dd8b0"
+    }
+  ],
+  "orgSearch": [
+    {
+      "hmacPseudonymKey": "606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f",
+      "orgId": "00000000-0000-7000-8000-00000000000a",
+      "info": "69642d736561726368000000000000007000800000000000000a",
+      "orgSearchKey": "f9d79b878bb1afc46d54c854c521e79207f6782a6e4fd6e47da4ed3f26e560af",
+      "input": "123 456-78901",
+      "normalized": "12345678901",
+      "hmac": "fb7c167f7a14c05b3bbf0af1b9f078feae2516865a236943d5b9c5a348139ac2"
+    },
+    {
+      "hmacPseudonymKey": "606162636465666768696a6b6c6d6e6f707172737475767778797a7b7c7d7e7f",
+      "orgId": "00000000-0000-7000-8000-00000000000b",
+      "info": "69642d736561726368000000000000007000800000000000000b",
+      "orgSearchKey": "814dfc7213a9dc712b81b4281a657b715366a03b5391c4e3bb6c1eca7b95fd2b",
+      "input": "123 456-78901",
+      "normalized": "12345678901",
+      "hmac": "5f8bea43b9ccbb46270f203e83ea8862c84c32b0a387cde6ab7a4093f08adf8c"
+    }
+  ]
+}

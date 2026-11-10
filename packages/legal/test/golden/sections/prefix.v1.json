@@ -1,0 +1,40 @@
+{
+  "note": "034 §7.3 önek altın dosyası (KK-034-6). Biçim örneğidir; gerçek karar değildir (ÖRNEK).",
+  "decision": {
+    "courtType": "yargitay",
+    "courtName": "Yargıtay",
+    "chamberCode": "H9",
+    "chamberRaw": "9. Hukuk Dairesi",
+    "esasNo": "2024/1234",
+    "kararNo": "2025/5678",
+    "decisionDate": "2025-03-12"
+  },
+  "role": "gerekce",
+  "citations": [
+    {
+      "lawNo": "4857",
+      "articleNo": "17"
+    },
+    {
+      "lawNo": "4857",
+      "articleNo": "32"
+    }
+  ],
+  "text": "Örnek gerekçe metni: İŞÇİNİN kıdem tazminatı hakkı doğmuştur.",
+  "candidates": [
+    "Yargıtay 9. HD | E. 2024/1234 K. 2025/5678 | 12.03.2025 | [GEREKÇE] | atıflar: 4857 s.K. m.17, m.32 — ",
+    "Yargıtay 9. HD | E. 2024/1234 K. 2025/5678 | 12.03.2025 | [GEREKÇE] — ",
+    "Yargıtay 9. HD | E. 2024/1234 K. 2025/5678 | [GEREKÇE] — "
+  ],
+  "embedInput": "yargıtay 9. hd | e. 2024/1234 k. 2025/5678 | 12.03.2025 | [gerekçe] | atıflar: 4857 sayılı kanun m. 17, m. 32 - örnek gerekçe metni: işçinin kıdem tazminatı hakkı doğmuştur.",
+  "law": {
+    "input": {
+      "lawNo": "6098",
+      "lawTitle": "Türk Borçlar Kanunu",
+      "lawShort": "TBK",
+      "articleKey": "49",
+      "paragraphs": [1]
+    },
+    "prefix": "6098 sayılı Türk Borçlar Kanunu (TBK) m. 49/1 — "
+  }
+}

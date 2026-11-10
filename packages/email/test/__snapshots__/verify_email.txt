@@ -1,0 +1,16 @@
+E.D.A. Hukuk
+
+E-posta adresinizi doğrulayın
+
+Merhaba Örnek Kullanıcı,
+
+E.D.A. Hukuk hesabınızı etkinleştirmek için e-posta adresinizi doğrulayın.
+
+E-posta adresimi doğrula: https://app.ornek.test/eposta-dogrulama#token=ornek-belirtec-0123456789abcdef
+
+Bağlantı 60 dakika geçerlidir ve yalnız bir kez kullanılabilir.
+
+Bu işlemi siz başlatmadıysanız bu iletiyi yok sayabilirsiniz.
+
+--
+Bu ileti E.D.A. Hukuk hizmetiyle ilgili bilgilendirmedir. Bildirim tercihlerinizi uygulamada Ayarlar > Bildirimler bölümünden değiştirebilirsiniz. Sorularınız için bu iletiyi yanıtlayabilirsiniz.

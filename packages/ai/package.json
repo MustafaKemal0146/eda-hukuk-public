@@ -1,0 +1,37 @@
+{
+  "name": "@eda/ai",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./mcp": "./src/mcp/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --project unit",
+    "test:int": "vitest run --project integration",
+    "test:provider": "node -e \"console.error('test:provider: P07c/P07d\\u0027de uygulanır');process.exit(2)\""
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "catalog:",
+    "@ai-sdk/deepseek": "catalog:",
+    "@ai-sdk/provider": "catalog:",
+    "@eda/contracts": "workspace:*",
+    "@eda/kvkk": "workspace:*",
+    "@eda/legal": "workspace:*",
+    "@modelcontextprotocol/client": "catalog:",
+    "@modelcontextprotocol/core": "catalog:",
+    "ai": "catalog:",
+    "jose": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@eda/config": "workspace:*",
+    "@eda/crypto": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

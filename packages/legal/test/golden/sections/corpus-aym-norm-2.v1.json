@@ -1,0 +1,22 @@
+{
+  "id": "corpus-aym-norm-2",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. AYM norm iptal davası: iptal isteminin gerekçesi, inceleme, hüküm.",
+  "courtType": "aym_norm",
+  "lines": [
+    "ANAYASA MAHKEMESİ KARARI",
+    "Esas Sayısı : 2024/900602",
+    "KARAR",
+    "İPTAL DAVASININ KONUSU : Örnek kuralın iptali.",
+    "İPTAL İSTEMİNİN GEREKÇESİ",
+    "Dava dilekçesinde kuralın belirsiz olduğu ileri sürülmüştür.",
+    "ESASIN İNCELENMESİ",
+    "Örnek değerlendirme.",
+    "HÜKÜM",
+    "İptaline karar verildi."
+  ],
+  "roles": ["kunye", "istem", "taraf_iddiasi", "gerekce", "hukum"],
+  "outcome": "patterned",
+  "gerekceExcludes": ["belirsiz olduğu ileri sürülmüştür"]
+}

@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "recorded_at": "2026-10-10T18:56:50.298Z",
+    "method": "POST",
+    "url": "https://kararlarbilgibankasi.anayasa.gov.tr/api/core/public/search",
+    "request_body": "{\"kararTipi\":\"BireyselBasvuru\",\"basvuruNo\":\"2019/27727\",\"page\":\"0\",\"size\":\"5\"}",
+    "status": 200,
+    "synthetic": false,
+    "note": "Kalıcı numaradan kayıt çözümleme; başvurucu ve vekil adları baş harflere indirildi"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json"
+    },
+    "body": "{\"total\":1,\"page\":1,\"data\":[{\"kararTipi\":\"BireyselBasvuru\",\"id\":\"891e2b7d-6bf8-ccc6-91db-b18f2c4377d6\",\"eskiDBID\":15281,\"basvuruNo\":\"2019/27727\",\"kararTarihi\":\"2025-01-08\",\"basvuruTarihi\":\"2019-08-05\",\"yayinTarihi\":\"2025-05-09T00:00:00\",\"basvuruAdi\":\"Ö.A. VE DİĞERLERİ\",\"kararKonusu\":\"Başvuru, taşınmaz satış işleminin geçerli olmadığına karar verilmesi nedeniyle mülkiyet hakkının ihlal edildiği iddiasına ilişkindir.\",\"kararTuruBasvuruSonucu\":\"766f0500-fa4d-4729-a1b4-828db5e756ad\",\"kararTuruBasvuruSonucuLabel\":\"Kabul Edilemezlik vd.\",\"kararVerenBirim\":\"793101ef-78df-43dc-aee4-b1c4c7ddd7cd\",\"kararVerenBirimLabel\":\"İkinci Bölüm\",\"durum\":\"5a1d555f-e4b6-499b-9b79-b2d28b3dc6c5\",\"tedbirTalebiEn\":false,\"highlightCount\":0,\"bireyselBasvuruIncelemeGerekceleri\":[{\"hakTanimId\":\"1efc25f1-6a86-7f1d-4344-10e4a104b51a\",\"hakTanimLabel\":null,\"mudahaleTanimId\":\"45e80cd5-fc19-c87c-78d5-47a35ee709fd\",\"mudahaleTanimLabel\":null,\"sonucTanimParamId\":\"b0763860-4dff-360f-5aff-28ea7f2c78c2\",\"sonucTanimLabel\":null,\"giderim1TanimId\":null,\"giderim2TanimId\":null,\"giderim3TanimId\":null,\"giderim4TanimId\":null,\"sikayetTanimId\":\"75279dde-b603-0ddd-6da6-b829c3b5dbcf\",\"sonucGerekceTanimId\":null,\"tazminat1\":null,\"tazminat2\":null,\"tazminat3\":null,\"tazminat4\":null,\"yenidenYargilamaYapilacakMahkeme\":null,\"yargiYoluParamId\":null,\"yargiSuresiAraligi\":null,\"davaDurumuParamId\":null,\"karsiOy\":true,\"farkliGerekce\":false,\"bireyselBasvuruKarsiOyRelList\":null,\"bireyselBasvuruFarkliGerekceRelList\":null}]}],\"page_size\":5}"
+  }
+}

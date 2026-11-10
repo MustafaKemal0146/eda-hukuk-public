@@ -1,0 +1,27 @@
+{
+  "name": "@eda/kvkk",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./testing": "./src/testing.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "gen:schemas": "node scripts/gen-version.ts",
+    "measure": "node scripts/measure.ts"
+  },
+  "dependencies": {
+    "@eda/contracts": "workspace:*"
+  },
+  "devDependencies": {
+    "@eda/config": "workspace:*",
+    "@eda/crypto": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

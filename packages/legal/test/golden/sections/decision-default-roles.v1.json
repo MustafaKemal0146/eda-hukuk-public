@@ -1,0 +1,23 @@
+{
+  "id": "decision-default-roles",
+  "synthetic": true,
+  "note": "SENTETİK yapı örneği; gerçek karar metni değildir. Taraf iddiası ve tetkik hâkimi düşüncesi gerekce olmaz (KK-P11-16, KK-034-4).",
+  "profile": "default",
+  "lines": [
+    "T.C. ÖRNEK DAİRE",
+    "ESAS NO : 2024/1",
+    "DAVA",
+    "Davacı örnek bir istemde bulunmuştur.",
+    "CEVAP",
+    "Davalı, davanın reddi gerektiğini savunmuştur.",
+    "TETKİK HÂKİMİ : Örnek Ad",
+    "Düşüncesi: istemin reddi gerekir.",
+    "GEREKÇE",
+    "Dairemizce yapılan inceleme sonucunda örnek gerekçe.",
+    "HÜKÜM : Yukarıda açıklanan nedenlerle istemin reddine.",
+    "KARŞI OY",
+    "Çoğunluk görüşüne katılmıyorum."
+  ],
+  "roles": ["kunye", "istem", "taraf_iddiasi", "tetkik_hakimi", "gerekce", "hukum", "karsi_oy"],
+  "gerekceExcludes": ["reddi gerektiğini savunmuştur", "istemin reddi gerekir"]
+}

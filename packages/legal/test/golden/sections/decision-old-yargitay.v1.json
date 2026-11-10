@@ -1,0 +1,17 @@
+{
+  "id": "decision-old-yargitay",
+  "synthetic": true,
+  "note": "SENTETİK; eski Yargıtay biçimi: aralıklı \"K A R A R\" gerekçeyi, \"SONUÇ:\" hükmü başlatır; temyiz sebepleri taraf iddiasıdır.",
+  "profile": "default",
+  "lines": [
+    "ÖRNEK DAİRE",
+    "Örnek özet paragrafı.",
+    "B. Temyiz Sebepleri",
+    "Davacı vekili kararın bozulmasını istemiştir.",
+    "K A R A R",
+    "Örnek değerlendirme paragrafı.",
+    "SONUÇ: Yukarıda açıklanan nedenlerle onanmasına."
+  ],
+  "roles": ["kunye", "taraf_iddiasi", "gerekce", "hukum"],
+  "gerekceExcludes": ["bozulmasını istemiştir"]
+}

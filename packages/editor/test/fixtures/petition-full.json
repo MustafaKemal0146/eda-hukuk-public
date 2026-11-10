@@ -1,0 +1,667 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PF0001",
+        "rev": 1,
+        "role": "courtHeader"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "ÖRNEK NÖBETÇİ ASLİYE HUKUK MAHKEMESİ'NE",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "DOSYA NO : 0000/1 E."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PF0002",
+        "rev": 1,
+        "role": "partiesGrid"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "DAVACI",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "\t: Örnek Kişi A"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "VEKİLİ",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "\t: Av. Örnek Avukat"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "DAVALI",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "\t: Örnek Şirket B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PF0003",
+        "rev": 1,
+        "role": "subjectLine"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "KONU\t: Örnek alacağın tahsili talebidir."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "DAVA DEĞERİ\t: [[Doldurulacak: dava değeri]]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PF0004",
+        "rev": 1,
+        "role": "numberedExplanations"
+      },
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "AÇIKLAMALAR"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Taraflar arasında örnek bir sözleşme kurulmuştur. Biçim örneği: "
+                    },
+                    {
+                      "type": "citation",
+                      "attrs": {
+                        "citationId": "0192f1c2-7a4b-7c3e-9d10-2b3c4d5e6f01",
+                        "raw": "Örnek künye 1",
+                        "sourceRef": null,
+                        "status": "verified",
+                        "attestKey": null
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "text": "."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Davalı "
+                    },
+                    {
+                      "type": "text",
+                      "text": "örnek",
+                      "marks": [
+                        {
+                          "type": "italic"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " yükümlülüğünü "
+                    },
+                    {
+                      "type": "text",
+                      "text": "yerine getirmemiştir",
+                      "marks": [
+                        {
+                          "type": "underline"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": "."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Eski ifade",
+                      "marks": [
+                        {
+                          "type": "strike"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": " yerine yeni ifade."
+                    },
+                    {
+                      "type": "hardBreak"
+                    },
+                    {
+                      "type": "text",
+                      "text": "İkinci satır."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "content": [
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableHeader",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Kalem"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableHeader",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Açıklama"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Örnek kalem 1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Örnek açıklama"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Örnek kalem 2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "content": [
+                    {
+                      "type": "paragraph"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Ayrıntı için bkz. "
+            },
+            {
+              "type": "text",
+              "text": "örnek bağlantı",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://example.org/ornek"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PF0005",
+        "rev": 1,
+        "role": "legalGrounds"
+      },
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "HUKUKİ SEBEPLER"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "İlgili mevzuat hükümleri."
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Örnek hukuki dayanak."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PF0006",
+        "rev": 1,
+        "role": "evidenceList"
+      },
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "DELİLLER"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Örnek sözleşme."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Her türlü yasal delil."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PF0007",
+        "rev": 1,
+        "role": "resultAndRequest"
+      },
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "SONUÇ VE İSTEM"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Yukarıda arz ve izah edilen nedenlerle;"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Örnek alacağın davalıdan tahsiline,"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Yargılama giderlerinin davalıya yükletilmesine,"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "karar verilmesini vekâleten saygılarımızla arz ve talep ederiz."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "attrs": {
+            "align": "right"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "[[Doldurulacak: tarih]]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PF0008",
+        "rev": 1,
+        "role": "generic"
+      },
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "EKLER"
+            }
+          ]
+        },
+        {
+          "type": "orderedList",
+          "attrs": {
+            "start": 1
+          },
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Örnek vekâletname sureti."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-PF0009",
+        "rev": 1,
+        "role": "attorneySignature"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "attrs": {
+            "align": "center"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Davacı Vekili"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "attrs": {
+            "align": "center"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Av. Örnek Avukat"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "attrs": {
+            "align": "center"
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "İmza – Kaşe"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

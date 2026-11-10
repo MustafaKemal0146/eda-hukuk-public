@@ -1,0 +1,1 @@
+build(deps): vitest 5.0 hattı catalog'a eklendi

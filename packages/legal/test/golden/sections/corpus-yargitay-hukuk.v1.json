@@ -1,0 +1,32 @@
+{
+  "id": "corpus-yargitay-hukuk",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. Yargıtay hukuk: incelenen karar, dava/cevap/temyiz nedenleri, gereği düşünüldü, sonuç, heyet bloğu.",
+  "courtType": "yargitay",
+  "lines": [
+    "T.C. YARGITAY",
+    "ÖRNEK 9. HUKUK DAİRESİ",
+    "ESAS NO : 2024/900101",
+    "KARAR NO : 2025/900102",
+    "İNCELENEN KARARIN",
+    "Mahkemesi : Örnek İş Mahkemesi",
+    "DAVA",
+    "Davacı, örnek alacağın tahsilini istemiştir.",
+    "CEVAP",
+    "Davalı, davanın reddini savunmuştur.",
+    "TEMYİZ NEDENLERİ",
+    "Davalı vekili kararın bozulmasını istemiştir.",
+    "GEREĞİ DÜŞÜNÜLDÜ:",
+    "Dosya kapsamına göre örnek kararda isabetsizlik görülmemiştir.",
+    "SONUÇ: Yukarıda açıklanan nedenlerle kararın onanmasına oy birliğiyle karar verildi.",
+    "Başkan",
+    "Örnek Ad",
+    "Üye",
+    "Örnek Soyad"
+  ],
+  "roles": ["kunye", "istem", "taraf_iddiasi", "gerekce", "hukum", "kunye"],
+  "outcome": "patterned",
+  "headings": [null, "İNCELENEN KARARIN", "CEVAP", "GEREĞİ DÜŞÜNÜLDÜ", "SONUÇ", null],
+  "gerekceExcludes": ["reddini savunmuştur", "bozulmasını istemiştir"]
+}

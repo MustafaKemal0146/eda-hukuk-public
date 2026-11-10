@@ -1,0 +1,51 @@
+{
+  "ruleCode": "iyuk_dava_acma_vergi",
+  "ruleVersion": 1,
+  "source": "083 §9 tablosu; beklenen son gün tablodan aynen, stepKinds/warnings §5.2 algoritma izinden elle (P22.3). Hukuk onayı bekliyor (AS-0205).",
+  "cases": [
+    {
+      "id": "G20",
+      "title": "Ara verme içinde biten vergi davası süresi",
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2026-06-25",
+        "serviceMethod": "postal",
+        "courtExempt": false
+      },
+      "expected": {
+        "dueDate": "2026-09-07",
+        "dueAt": "2026-09-07T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": true,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period", "recess_extension"],
+        "warnings": []
+      },
+      "rationale": "30 gün -> 25.07 Cmt, ara verme içinde; 31.08 + 7 (m.8/3) (T-5); P-IYUK",
+      "reviewedBy": null
+    },
+    {
+      "id": "G21",
+      "title": "Çalışmaya ara vermeyen yer",
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2026-06-25",
+        "serviceMethod": "postal",
+        "courtExempt": true
+      },
+      "expected": {
+        "dueDate": "2026-07-27",
+        "dueAt": "2026-07-27T17:00:00+03:00",
+        "safeDueAt": null,
+        "contestedDueDate": null,
+        "recessApplied": false,
+        "appliedHolidays": [],
+        "stepKinds": ["start", "period", "weekend_shift"],
+        "warnings": ["saturday_shift"]
+      },
+      "rationale": "ara verme yok (m.61); 25.07 Cmt -> Pazartesi",
+      "reviewedBy": null
+    }
+  ]
+}

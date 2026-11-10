@@ -1,0 +1,235 @@
+{
+  "$comment": "URETILDI - elle duzenlemeyin; kaynak: packages/contracts/src/doc-engine/import.ts",
+  "$defs": {
+    "HiddenContentReport": {
+      "additionalProperties": false,
+      "properties": {
+        "excludedFromText": {
+          "type": "boolean"
+        },
+        "found": {
+          "type": "boolean"
+        },
+        "items": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "charCount": {
+                "maximum": 9007199254740991,
+                "minimum": -9007199254740991,
+                "type": "integer"
+              },
+              "excerpt": {
+                "maxLength": 200,
+                "type": "string"
+              },
+              "kind": {
+                "enum": [
+                  "white_text",
+                  "tiny_text",
+                  "offpage_text",
+                  "hidden_layer",
+                  "docx_hidden_run",
+                  "docx_comment",
+                  "docx_tracked_deletion",
+                  "pdf_annotation_text",
+                  "pdf_active_content"
+                ],
+                "type": "string"
+              },
+              "page": {
+                "anyOf": [
+                  {
+                    "maximum": 9007199254740991,
+                    "minimum": -9007199254740991,
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "page",
+              "charCount",
+              "excerpt"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "found",
+        "excludedFromText",
+        "items"
+      ],
+      "title": "HiddenContentReport",
+      "type": "object"
+    },
+    "ImportEngineReport": {
+      "additionalProperties": false,
+      "properties": {
+        "droppedFeatures": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "count": {
+                "maximum": 9007199254740991,
+                "minimum": -9007199254740991,
+                "type": "integer"
+              },
+              "feature": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "feature",
+              "count"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "hiddenContentSkipped": {
+          "maximum": 9007199254740991,
+          "minimum": -9007199254740991,
+          "type": "integer"
+        },
+        "invisibleUnicodeRemoved": {
+          "maximum": 9007199254740991,
+          "minimum": -9007199254740991,
+          "type": "integer"
+        },
+        "sourcePage": {
+          "additionalProperties": false,
+          "properties": {
+            "marginsPt": {
+              "anyOf": [
+                {
+                  "items": {
+                    "type": "number"
+                  },
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "orientation": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "portrait",
+                    "landscape"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "marginsPt",
+            "orientation"
+          ],
+          "type": "object"
+        },
+        "warnings": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "droppedFeatures",
+        "hiddenContentSkipped",
+        "invisibleUnicodeRemoved",
+        "sourcePage",
+        "warnings"
+      ],
+      "title": "ImportEngineReport",
+      "type": "object"
+    },
+    "ImportResult": {
+      "additionalProperties": false,
+      "properties": {
+        "docAst": {
+          "anyOf": [
+            {
+              "$ref": "docast.schema.json"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "fileType": {
+          "enum": [
+            "udf",
+            "docx"
+          ],
+          "type": "string"
+        },
+        "hiddenContent": {
+          "$ref": "#/$defs/HiddenContentReport"
+        },
+        "jobId": {
+          "format": "uuid",
+          "type": "string"
+        },
+        "rejectReason": {
+          "anyOf": [
+            {
+              "enum": [
+                "zip_bomb",
+                "zip_slip",
+                "xxe_blocked",
+                "macro_detected",
+                "corrupt",
+                "unsupported_structure",
+                "page_limit"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "report": {
+          "$ref": "#/$defs/ImportEngineReport"
+        },
+        "verdict": {
+          "enum": [
+            "ok",
+            "reject"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "jobId",
+        "verdict",
+        "rejectReason",
+        "fileType",
+        "docAst",
+        "report",
+        "hiddenContent"
+      ],
+      "title": "ImportResult",
+      "type": "object"
+    }
+  },
+  "$id": "https://schemas.eda.internal/import.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ImportSchemas"
+}

@@ -1,0 +1,1786 @@
+{
+  "components": {
+    "schemas": {
+      "Align": {
+        "enum": [
+          "left",
+          "center",
+          "right",
+          "justify"
+        ],
+        "title": "Align",
+        "type": "string"
+      },
+      "Blocks": {
+        "additionalProperties": false,
+        "properties": {
+          "align": {
+            "$ref": "#/components/schemas/Align"
+          },
+          "hangingMm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hangingmm"
+          },
+          "indent": {
+            "$ref": "#/components/schemas/Indent"
+          },
+          "runs": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Runs"
+                },
+                {
+                  "$ref": "#/components/schemas/Runs1"
+                }
+              ]
+            },
+            "title": "Runs",
+            "type": "array"
+          },
+          "tabStopsMm": {
+            "items": {
+              "type": "number"
+            },
+            "title": "Tabstopsmm",
+            "type": "array"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Type"
+          }
+        },
+        "required": [
+          "align",
+          "hangingMm",
+          "indent",
+          "runs",
+          "tabStopsMm",
+          "type"
+        ],
+        "title": "Blocks",
+        "type": "object"
+      },
+      "Blocks1": {
+        "additionalProperties": false,
+        "properties": {
+          "align": {
+            "$ref": "#/components/schemas/Align"
+          },
+          "level": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Level"
+              },
+              {
+                "$ref": "#/components/schemas/Level1"
+              }
+            ],
+            "title": "Level"
+          },
+          "runs": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Runs2"
+                },
+                {
+                  "$ref": "#/components/schemas/Runs3"
+                }
+              ]
+            },
+            "title": "Runs",
+            "type": "array"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Type1"
+          }
+        },
+        "required": [
+          "align",
+          "level",
+          "runs",
+          "type"
+        ],
+        "title": "Blocks1",
+        "type": "object"
+      },
+      "Blocks2": {
+        "additionalProperties": false,
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/Item-Input"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "ordered": {
+            "title": "Ordered",
+            "type": "boolean"
+          },
+          "start": {
+            "maximum": 9007199254740991.0,
+            "minimum": -9007199254740991.0,
+            "title": "Start",
+            "type": "integer"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Type2"
+          }
+        },
+        "required": [
+          "items",
+          "ordered",
+          "start",
+          "type"
+        ],
+        "title": "Blocks2",
+        "type": "object"
+      },
+      "Blocks3": {
+        "additionalProperties": false,
+        "properties": {
+          "borders": {
+            "$ref": "#/components/schemas/Borders"
+          },
+          "columnWidthsMm": {
+            "items": {
+              "type": "number"
+            },
+            "title": "Columnwidthsmm",
+            "type": "array"
+          },
+          "rows": {
+            "items": {
+              "$ref": "#/components/schemas/Row"
+            },
+            "title": "Rows",
+            "type": "array"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Type3"
+          }
+        },
+        "required": [
+          "borders",
+          "columnWidthsMm",
+          "rows",
+          "type"
+        ],
+        "title": "Blocks3",
+        "type": "object"
+      },
+      "Borders": {
+        "enum": [
+          "none",
+          "grid"
+        ],
+        "title": "Borders",
+        "type": "string"
+      },
+      "Bottom": {
+        "enum": [
+          20
+        ],
+        "title": "Bottom",
+        "type": "integer"
+      },
+      "Cell": {
+        "additionalProperties": false,
+        "properties": {
+          "header": {
+            "title": "Header",
+            "type": "boolean"
+          },
+          "paragraphs": {
+            "items": {
+              "$ref": "#/components/schemas/Paragraph1"
+            },
+            "title": "Paragraphs",
+            "type": "array"
+          }
+        },
+        "required": [
+          "header",
+          "paragraphs"
+        ],
+        "title": "Cell",
+        "type": "object"
+      },
+      "Code": {
+        "enum": [
+          "unauthorized",
+          "invalid_docast",
+          "forbidden_phrase",
+          "payload_too_large",
+          "not_found",
+          "export_failed",
+          "extract_failed",
+          "timeout"
+        ],
+        "title": "Code",
+        "type": "string"
+      },
+      "DegradedItem": {
+        "additionalProperties": false,
+        "properties": {
+          "count": {
+            "maximum": 9007199254740991.0,
+            "minimum": -9007199254740991.0,
+            "title": "Count",
+            "type": "integer"
+          },
+          "feature": {
+            "title": "Feature",
+            "type": "string"
+          }
+        },
+        "required": [
+          "count",
+          "feature"
+        ],
+        "title": "DegradedItem",
+        "type": "object"
+      },
+      "DocAst": {
+        "additionalProperties": false,
+        "properties": {
+          "header": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Header"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "kind": {
+            "$ref": "#/components/schemas/Kind-Input"
+          },
+          "page": {
+            "$ref": "#/components/schemas/Page-Input"
+          },
+          "schemaVersion": {
+            "$ref": "#/components/schemas/SchemaVersion"
+          },
+          "sections": {
+            "items": {
+              "$ref": "#/components/schemas/Section"
+            },
+            "title": "Sections",
+            "type": "array"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          },
+          "typography": {
+            "$ref": "#/components/schemas/Typography"
+          }
+        },
+        "required": [
+          "header",
+          "kind",
+          "page",
+          "schemaVersion",
+          "sections",
+          "title",
+          "typography"
+        ],
+        "title": "DocAst",
+        "type": "object"
+      },
+      "DocEngineError": {
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "message": {
+            "title": "Message",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "DocEngineError",
+        "type": "object"
+      },
+      "ExportReport": {
+        "additionalProperties": false,
+        "properties": {
+          "degraded": {
+            "items": {
+              "$ref": "#/components/schemas/DegradedItem"
+            },
+            "title": "Degraded",
+            "type": "array"
+          },
+          "docEngineVersion": {
+            "title": "Docengineversion",
+            "type": "string"
+          },
+          "gotenbergVersion": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Gotenbergversion"
+          },
+          "pageCount": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/eda_doc_engine__models__generated__export_schema__PageCount"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "degraded",
+          "docEngineVersion",
+          "gotenbergVersion",
+          "pageCount"
+        ],
+        "title": "ExportReport",
+        "type": "object"
+      },
+      "ExportRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "docAst": {
+            "$ref": "#/components/schemas/DocAst"
+          },
+          "format": {
+            "$ref": "#/components/schemas/Format"
+          },
+          "jobId": {
+            "format": "uuid",
+            "title": "Jobid",
+            "type": "string"
+          },
+          "options": {
+            "$ref": "#/components/schemas/Options"
+          }
+        },
+        "required": [
+          "docAst",
+          "format",
+          "jobId",
+          "options"
+        ],
+        "title": "ExportRequest",
+        "type": "object"
+      },
+      "ExportResult": {
+        "additionalProperties": false,
+        "properties": {
+          "format": {
+            "$ref": "#/components/schemas/Format"
+          },
+          "jobId": {
+            "format": "uuid",
+            "title": "Jobid",
+            "type": "string"
+          },
+          "report": {
+            "$ref": "#/components/schemas/ExportReport"
+          },
+          "sha256": {
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Sha256",
+            "type": "string"
+          },
+          "sizeBytes": {
+            "maximum": 9007199254740991.0,
+            "minimum": -9007199254740991.0,
+            "title": "Sizebytes",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "format",
+          "jobId",
+          "report",
+          "sha256",
+          "sizeBytes"
+        ],
+        "title": "ExportResult",
+        "type": "object"
+      },
+      "ExtractResult": {
+        "additionalProperties": false,
+        "properties": {
+          "extractorVersion": {
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Extractorversion",
+            "type": "string"
+          },
+          "fileType": {
+            "$ref": "#/components/schemas/FileType"
+          },
+          "hasTextLayer": {
+            "title": "Hastextlayer",
+            "type": "boolean"
+          },
+          "hiddenContent": {
+            "$ref": "#/components/schemas/HiddenContent"
+          },
+          "jobId": {
+            "format": "uuid",
+            "title": "Jobid",
+            "type": "string"
+          },
+          "pageCount": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/eda_doc_engine__models__generated__extract_schema__PageCount"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "pageOffsets": {
+            "items": {
+              "$ref": "#/components/schemas/PageOffset"
+            },
+            "title": "Pageoffsets",
+            "type": "array"
+          },
+          "rejectReason": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/RejectReason"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "textTruncated": {
+            "title": "Texttruncated",
+            "type": "boolean"
+          },
+          "verdict": {
+            "$ref": "#/components/schemas/Verdict"
+          }
+        },
+        "required": [
+          "extractorVersion",
+          "fileType",
+          "hasTextLayer",
+          "hiddenContent",
+          "jobId",
+          "pageCount",
+          "pageOffsets",
+          "rejectReason",
+          "text",
+          "textTruncated",
+          "verdict"
+        ],
+        "title": "ExtractResult",
+        "type": "object"
+      },
+      "FileType": {
+        "enum": [
+          "pdf",
+          "docx",
+          "txt"
+        ],
+        "title": "FileType",
+        "type": "string"
+      },
+      "FirstLineIndentCm": {
+        "enum": [
+          1.25
+        ],
+        "title": "FirstLineIndentCm",
+        "type": "number"
+      },
+      "FontFamily": {
+        "enum": [
+          "Liberation Serif"
+        ],
+        "title": "FontFamily",
+        "type": "string"
+      },
+      "Format": {
+        "enum": [
+          "udf",
+          "docx",
+          "pdf"
+        ],
+        "title": "Format",
+        "type": "string"
+      },
+      "Header": {
+        "additionalProperties": false,
+        "properties": {
+          "lines": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 8,
+            "title": "Lines",
+            "type": "array"
+          }
+        },
+        "required": [
+          "lines"
+        ],
+        "title": "Header",
+        "type": "object"
+      },
+      "HealthResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          },
+          "version": {
+            "title": "Version",
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "version"
+        ],
+        "title": "HealthResponse",
+        "type": "object"
+      },
+      "HiddenContent": {
+        "additionalProperties": false,
+        "properties": {
+          "excludedFromText": {
+            "title": "Excludedfromtext",
+            "type": "boolean"
+          },
+          "found": {
+            "title": "Found",
+            "type": "boolean"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/Item-Output"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "required": [
+          "excludedFromText",
+          "found",
+          "items"
+        ],
+        "title": "HiddenContent",
+        "type": "object"
+      },
+      "Hyphenate": {
+        "enum": [
+          false
+        ],
+        "title": "Hyphenate",
+        "type": "boolean"
+      },
+      "Indent": {
+        "enum": [
+          "none",
+          "first_line",
+          "hanging"
+        ],
+        "title": "Indent",
+        "type": "string"
+      },
+      "Item-Input": {
+        "additionalProperties": false,
+        "properties": {
+          "paragraphs": {
+            "items": {
+              "$ref": "#/components/schemas/Paragraph"
+            },
+            "title": "Paragraphs",
+            "type": "array"
+          }
+        },
+        "required": [
+          "paragraphs"
+        ],
+        "title": "Item",
+        "type": "object"
+      },
+      "Item-Output": {
+        "additionalProperties": false,
+        "properties": {
+          "charCount": {
+            "maximum": 9007199254740991.0,
+            "minimum": -9007199254740991.0,
+            "title": "Charcount",
+            "type": "integer"
+          },
+          "excerpt": {
+            "maxLength": 200,
+            "title": "Excerpt",
+            "type": "string"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/Kind-Output"
+          },
+          "page": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Page-Output"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "charCount",
+          "excerpt",
+          "kind",
+          "page"
+        ],
+        "title": "Item",
+        "type": "object"
+      },
+      "Justify": {
+        "enum": [
+          true
+        ],
+        "title": "Justify",
+        "type": "boolean"
+      },
+      "Kind-Input": {
+        "enum": [
+          "petition",
+          "notice",
+          "memo",
+          "free"
+        ],
+        "title": "Kind",
+        "type": "string"
+      },
+      "Kind-Output": {
+        "enum": [
+          "white_text",
+          "tiny_text",
+          "offpage_text",
+          "hidden_layer",
+          "docx_hidden_run",
+          "docx_comment",
+          "docx_tracked_deletion",
+          "pdf_annotation_text",
+          "pdf_active_content"
+        ],
+        "title": "Kind",
+        "type": "string"
+      },
+      "Kind1": {
+        "enum": [
+          "text"
+        ],
+        "title": "Kind1",
+        "type": "string"
+      },
+      "Kind2": {
+        "enum": [
+          "break"
+        ],
+        "title": "Kind2",
+        "type": "string"
+      },
+      "Kind3": {
+        "enum": [
+          "text"
+        ],
+        "title": "Kind3",
+        "type": "string"
+      },
+      "Kind4": {
+        "enum": [
+          "break"
+        ],
+        "title": "Kind4",
+        "type": "string"
+      },
+      "Kind5": {
+        "enum": [
+          "text"
+        ],
+        "title": "Kind5",
+        "type": "string"
+      },
+      "Kind6": {
+        "enum": [
+          "break"
+        ],
+        "title": "Kind6",
+        "type": "string"
+      },
+      "Kind7": {
+        "enum": [
+          "text"
+        ],
+        "title": "Kind7",
+        "type": "string"
+      },
+      "Kind8": {
+        "enum": [
+          "break"
+        ],
+        "title": "Kind8",
+        "type": "string"
+      },
+      "Layout": {
+        "enum": [
+          "flow",
+          "right_box"
+        ],
+        "title": "Layout",
+        "type": "string"
+      },
+      "Left": {
+        "enum": [
+          25
+        ],
+        "title": "Left",
+        "type": "integer"
+      },
+      "Level": {
+        "enum": [
+          1
+        ],
+        "title": "Level",
+        "type": "integer"
+      },
+      "Level1": {
+        "enum": [
+          2
+        ],
+        "title": "Level1",
+        "type": "integer"
+      },
+      "LineHeight": {
+        "enum": [
+          1.5
+        ],
+        "title": "LineHeight",
+        "type": "number"
+      },
+      "MarginsMm": {
+        "additionalProperties": false,
+        "properties": {
+          "bottom": {
+            "$ref": "#/components/schemas/Bottom"
+          },
+          "left": {
+            "$ref": "#/components/schemas/Left"
+          },
+          "right": {
+            "$ref": "#/components/schemas/Right"
+          },
+          "top": {
+            "$ref": "#/components/schemas/Top"
+          }
+        },
+        "required": [
+          "bottom",
+          "left",
+          "right",
+          "top"
+        ],
+        "title": "MarginsMm",
+        "type": "object"
+      },
+      "NoteSizePt": {
+        "enum": [
+          10
+        ],
+        "title": "NoteSizePt",
+        "type": "integer"
+      },
+      "Options": {
+        "additionalProperties": false,
+        "properties": {
+          "fixedTimestamp": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fixedtimestamp"
+          },
+          "pageNumbers": {
+            "title": "Pagenumbers",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "fixedTimestamp",
+          "pageNumbers"
+        ],
+        "title": "Options",
+        "type": "object"
+      },
+      "Page-Input": {
+        "additionalProperties": false,
+        "properties": {
+          "marginsMm": {
+            "$ref": "#/components/schemas/MarginsMm"
+          },
+          "size": {
+            "$ref": "#/components/schemas/Size"
+          }
+        },
+        "required": [
+          "marginsMm",
+          "size"
+        ],
+        "title": "Page",
+        "type": "object"
+      },
+      "Page-Output": {
+        "maximum": 9007199254740991.0,
+        "minimum": -9007199254740991.0,
+        "title": "Page",
+        "type": "integer"
+      },
+      "PageOffset": {
+        "maximum": 9007199254740991.0,
+        "minimum": 0.0,
+        "title": "PageOffset",
+        "type": "integer"
+      },
+      "Paragraph": {
+        "additionalProperties": false,
+        "properties": {
+          "align": {
+            "$ref": "#/components/schemas/Align"
+          },
+          "runs": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Runs4"
+                },
+                {
+                  "$ref": "#/components/schemas/Runs5"
+                }
+              ]
+            },
+            "title": "Runs",
+            "type": "array"
+          }
+        },
+        "required": [
+          "align",
+          "runs"
+        ],
+        "title": "Paragraph",
+        "type": "object"
+      },
+      "Paragraph1": {
+        "additionalProperties": false,
+        "properties": {
+          "align": {
+            "$ref": "#/components/schemas/Align"
+          },
+          "runs": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Runs6"
+                },
+                {
+                  "$ref": "#/components/schemas/Runs7"
+                }
+              ]
+            },
+            "title": "Runs",
+            "type": "array"
+          }
+        },
+        "required": [
+          "align",
+          "runs"
+        ],
+        "title": "Paragraph1",
+        "type": "object"
+      },
+      "RejectReason": {
+        "enum": [
+          "zip_bomb",
+          "zip_slip",
+          "xxe_blocked",
+          "macro_detected",
+          "encrypted_pdf",
+          "corrupt",
+          "unsupported_structure",
+          "page_limit"
+        ],
+        "title": "RejectReason",
+        "type": "string"
+      },
+      "Right": {
+        "enum": [
+          20
+        ],
+        "title": "Right",
+        "type": "integer"
+      },
+      "Role": {
+        "enum": [
+          "courtHeader",
+          "partiesGrid",
+          "subjectLine",
+          "numberedExplanations",
+          "legalGrounds",
+          "evidenceList",
+          "resultAndRequest",
+          "attorneySignature",
+          "generic",
+          "freeSection"
+        ],
+        "title": "Role",
+        "type": "string"
+      },
+      "Row": {
+        "additionalProperties": false,
+        "properties": {
+          "cells": {
+            "items": {
+              "$ref": "#/components/schemas/Cell"
+            },
+            "title": "Cells",
+            "type": "array"
+          }
+        },
+        "required": [
+          "cells"
+        ],
+        "title": "Row",
+        "type": "object"
+      },
+      "Runs": {
+        "additionalProperties": false,
+        "properties": {
+          "bold": {
+            "title": "Bold",
+            "type": "boolean"
+          },
+          "href": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Href"
+          },
+          "italic": {
+            "title": "Italic",
+            "type": "boolean"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/Kind1"
+          },
+          "strike": {
+            "title": "Strike",
+            "type": "boolean"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "underline": {
+            "title": "Underline",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "bold",
+          "href",
+          "italic",
+          "kind",
+          "strike",
+          "text",
+          "underline"
+        ],
+        "title": "Runs",
+        "type": "object"
+      },
+      "Runs1": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "$ref": "#/components/schemas/Kind2"
+          }
+        },
+        "required": [
+          "kind"
+        ],
+        "title": "Runs1",
+        "type": "object"
+      },
+      "Runs2": {
+        "additionalProperties": false,
+        "properties": {
+          "bold": {
+            "title": "Bold",
+            "type": "boolean"
+          },
+          "href": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Href"
+          },
+          "italic": {
+            "title": "Italic",
+            "type": "boolean"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/Kind3"
+          },
+          "strike": {
+            "title": "Strike",
+            "type": "boolean"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "underline": {
+            "title": "Underline",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "bold",
+          "href",
+          "italic",
+          "kind",
+          "strike",
+          "text",
+          "underline"
+        ],
+        "title": "Runs2",
+        "type": "object"
+      },
+      "Runs3": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "$ref": "#/components/schemas/Kind4"
+          }
+        },
+        "required": [
+          "kind"
+        ],
+        "title": "Runs3",
+        "type": "object"
+      },
+      "Runs4": {
+        "additionalProperties": false,
+        "properties": {
+          "bold": {
+            "title": "Bold",
+            "type": "boolean"
+          },
+          "href": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Href"
+          },
+          "italic": {
+            "title": "Italic",
+            "type": "boolean"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/Kind5"
+          },
+          "strike": {
+            "title": "Strike",
+            "type": "boolean"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "underline": {
+            "title": "Underline",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "bold",
+          "href",
+          "italic",
+          "kind",
+          "strike",
+          "text",
+          "underline"
+        ],
+        "title": "Runs4",
+        "type": "object"
+      },
+      "Runs5": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "$ref": "#/components/schemas/Kind6"
+          }
+        },
+        "required": [
+          "kind"
+        ],
+        "title": "Runs5",
+        "type": "object"
+      },
+      "Runs6": {
+        "additionalProperties": false,
+        "properties": {
+          "bold": {
+            "title": "Bold",
+            "type": "boolean"
+          },
+          "href": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Href"
+          },
+          "italic": {
+            "title": "Italic",
+            "type": "boolean"
+          },
+          "kind": {
+            "$ref": "#/components/schemas/Kind7"
+          },
+          "strike": {
+            "title": "Strike",
+            "type": "boolean"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "underline": {
+            "title": "Underline",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "bold",
+          "href",
+          "italic",
+          "kind",
+          "strike",
+          "text",
+          "underline"
+        ],
+        "title": "Runs6",
+        "type": "object"
+      },
+      "Runs7": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "$ref": "#/components/schemas/Kind8"
+          }
+        },
+        "required": [
+          "kind"
+        ],
+        "title": "Runs7",
+        "type": "object"
+      },
+      "SchemaVersion": {
+        "enum": [
+          1
+        ],
+        "title": "SchemaVersion",
+        "type": "integer"
+      },
+      "Section": {
+        "additionalProperties": false,
+        "properties": {
+          "blocks": {
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/components/schemas/Blocks"
+                },
+                {
+                  "$ref": "#/components/schemas/Blocks1"
+                },
+                {
+                  "$ref": "#/components/schemas/Blocks2"
+                },
+                {
+                  "$ref": "#/components/schemas/Blocks3"
+                }
+              ]
+            },
+            "title": "Blocks",
+            "type": "array"
+          },
+          "boxWidthMm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Boxwidthmm"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "keepTogether": {
+            "title": "Keeptogether",
+            "type": "boolean"
+          },
+          "layout": {
+            "$ref": "#/components/schemas/Layout"
+          },
+          "role": {
+            "$ref": "#/components/schemas/Role"
+          }
+        },
+        "required": [
+          "blocks",
+          "boxWidthMm",
+          "id",
+          "keepTogether",
+          "layout",
+          "role"
+        ],
+        "title": "Section",
+        "type": "object"
+      },
+      "Size": {
+        "enum": [
+          "A4"
+        ],
+        "title": "Size",
+        "type": "string"
+      },
+      "SizePt": {
+        "enum": [
+          12
+        ],
+        "title": "SizePt",
+        "type": "integer"
+      },
+      "Status": {
+        "enum": [
+          "ok"
+        ],
+        "title": "Status",
+        "type": "string"
+      },
+      "Top": {
+        "enum": [
+          20
+        ],
+        "title": "Top",
+        "type": "integer"
+      },
+      "Type": {
+        "enum": [
+          "paragraph"
+        ],
+        "title": "Type",
+        "type": "string"
+      },
+      "Type1": {
+        "enum": [
+          "heading"
+        ],
+        "title": "Type1",
+        "type": "string"
+      },
+      "Type2": {
+        "enum": [
+          "list"
+        ],
+        "title": "Type2",
+        "type": "string"
+      },
+      "Type3": {
+        "enum": [
+          "table"
+        ],
+        "title": "Type3",
+        "type": "string"
+      },
+      "Typography": {
+        "additionalProperties": false,
+        "properties": {
+          "firstLineIndentCm": {
+            "$ref": "#/components/schemas/FirstLineIndentCm"
+          },
+          "fontFamily": {
+            "$ref": "#/components/schemas/FontFamily"
+          },
+          "hyphenate": {
+            "$ref": "#/components/schemas/Hyphenate"
+          },
+          "justify": {
+            "$ref": "#/components/schemas/Justify"
+          },
+          "lineHeight": {
+            "$ref": "#/components/schemas/LineHeight"
+          },
+          "noteSizePt": {
+            "$ref": "#/components/schemas/NoteSizePt"
+          },
+          "sizePt": {
+            "$ref": "#/components/schemas/SizePt"
+          }
+        },
+        "required": [
+          "firstLineIndentCm",
+          "fontFamily",
+          "hyphenate",
+          "justify",
+          "lineHeight",
+          "noteSizePt",
+          "sizePt"
+        ],
+        "title": "Typography",
+        "type": "object"
+      },
+      "Verdict": {
+        "enum": [
+          "ok",
+          "reject"
+        ],
+        "title": "Verdict",
+        "type": "string"
+      },
+      "eda_doc_engine__models__generated__export_schema__PageCount": {
+        "maximum": 9007199254740991.0,
+        "minimum": -9007199254740991.0,
+        "title": "PageCount",
+        "type": "integer"
+      },
+      "eda_doc_engine__models__generated__extract_schema__PageCount": {
+        "maximum": 9007199254740991.0,
+        "minimum": 0.0,
+        "title": "PageCount",
+        "type": "integer"
+      }
+    }
+  },
+  "info": {
+    "title": "eda-doc-engine",
+    "version": "0.0.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/health": {
+      "get": {
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Health"
+      }
+    },
+    "/v1/export": {
+      "post": {
+        "operationId": "export_v1_export_post",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "authorization",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExportResult"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        },
+        "summary": "Export"
+      }
+    },
+    "/v1/extract": {
+      "post": {
+        "description": "Gövde ham baytlardır (033 §7.4); başlıklar `X-Eda-Job-Id`, `X-Eda-File-Type`,\n`X-Eda-Max-Pages`. Yapısal ret `verdict: reject` ile 200 döner.",
+        "operationId": "extract_v1_extract_post",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "authorization",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtractResult"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        },
+        "summary": "Extract"
+      }
+    },
+    "/v1/jobs/{jobId}": {
+      "delete": {
+        "operationId": "delete_job_v1_jobs__jobId__delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "jobId",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Jobid",
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        },
+        "summary": "Delete Job"
+      }
+    },
+    "/v1/jobs/{jobId}/derived/export": {
+      "get": {
+        "operationId": "derived_export_v1_jobs__jobId__derived_export_get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "jobId",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Jobid",
+              "type": "string"
+            }
+          },
+          {
+            "in": "header",
+            "name": "authorization",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/octet-stream": {}
+            },
+            "description": "Successful Response"
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocEngineError"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        },
+        "summary": "Derived Export"
+      }
+    }
+  }
+}

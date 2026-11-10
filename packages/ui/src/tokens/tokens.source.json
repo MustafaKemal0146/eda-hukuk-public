@@ -1,0 +1,1030 @@
+{
+  "$comment": "Tasarım tokenlarının tek kaynağı (051 §4-§12). tokens.css, contrast-pairs.json ve chart-palette.json bu dosyadan scripts/gen-tokens.ts ile üretilir. Renk değerleri 051 tablolarından ayıklama betiğiyle aktarılmıştır; elle değiştirmeden önce 051'e satır eklenir (051 Kodlama Ajanı İçin Notlar).",
+  "source": "plans/05-frontend/051-tasarim-sistemi.md",
+  "colors": {
+    "bg": {
+      "light": "#F7F7F8",
+      "dark": "#0B0B0D",
+      "use": "Uygulama arka planı, kenar çubuğu"
+    },
+    "surface": {
+      "light": "#FFFFFF",
+      "dark": "#111114",
+      "use": "Kart, içerik alanı, girdi zemini, mesaj yüzeyi"
+    },
+    "surface-raised": {
+      "light": "#FFFFFF",
+      "dark": "#18181C",
+      "use": "Açılır menü, popover, diyalog, istem kutusu (gölge + sınırla birlikte)"
+    },
+    "surface-sunken": {
+      "light": "#F2F2F4",
+      "dark": "#09090B",
+      "use": "Gömülü alan: asistan alıntı kutusu, kod, tablo başlığı, hover zemini"
+    },
+    "primary-soft": {
+      "light": "#EDEDF0",
+      "dark": "#222228",
+      "use": "Seçili satır/sohbet, etkin süzgeç, istemci çipi zemini"
+    },
+    "text": {
+      "light": "#111114",
+      "dark": "#F4F4F5",
+      "use": "Gövde metni, başlık, tablo hücresi"
+    },
+    "text-muted": {
+      "light": "#4B4B55",
+      "dark": "#B4B4BC",
+      "use": "Etiket, yardımcı açıklama, ikincil metin"
+    },
+    "text-subtle": {
+      "light": "#63636D",
+      "dark": "#8E8E98",
+      "use": "Zaman damgası, yer tutucu, ipucu (yalnız bg, surface, surface-raised, surface-sunken, primary-soft üzerinde)"
+    },
+    "text-on-primary": {
+      "light": "#FFFFFF",
+      "dark": "#111114",
+      "use": "Birincil dolgu üzerindeki metin"
+    },
+    "border": {
+      "light": "#E6E6EA",
+      "dark": "#26262B",
+      "use": "Dekoratif ayırıcı, kart çerçevesi, tablo çizgisi (kontrol sınırı OLAMAZ)"
+    },
+    "border-strong": {
+      "light": "#8A8A94",
+      "dark": "#6E6E78",
+      "use": "Girdi, onay kutusu, radyo, düğme (outline) sınırı"
+    },
+    "primary": {
+      "light": "#18181B",
+      "dark": "#F4F4F5",
+      "use": "Birincil düğme dolgusu, bağlantı, seçili sekme; yalnız eylem için"
+    },
+    "primary-hover": {
+      "light": "#2E2E34",
+      "dark": "#D9D9DE",
+      "use": "Birincil hover"
+    },
+    "primary-active": {
+      "light": "#3F3F46",
+      "dark": "#B4B4BC",
+      "use": "Birincil basılı"
+    },
+    "primary-soft-fg": {
+      "light": "#111114",
+      "dark": "#F4F4F5",
+      "use": "primary-soft üzerindeki metin/simge"
+    },
+    "primary-soft-border": {
+      "light": "#D4D4DA",
+      "dark": "#3A3A42",
+      "use": "primary-soft çipi dekoratif kenar"
+    },
+    "focus-ring": {
+      "light": "#2B4ACB",
+      "dark": "#9DB4FF",
+      "use": "Klavye odak halkası (2 px)"
+    },
+    "success": {
+      "light": "#15803D",
+      "dark": "#4ADE80",
+      "use": "Başarı simgesi/metni (bg, surface üzerinde)"
+    },
+    "success-soft": {
+      "light": "#F0FDF4",
+      "dark": "#052E16",
+      "use": "Başarı bandı/çip zemini"
+    },
+    "success-on-soft": {
+      "light": "#166534",
+      "dark": "#BBF7D0",
+      "use": "success-soft üzerindeki metin"
+    },
+    "success-border": {
+      "light": "#16A34A",
+      "dark": "#22C55E",
+      "use": "Başarı çipi/bandı sınırı (>= 3:1)"
+    },
+    "warning": {
+      "light": "#B45309",
+      "dark": "#FBBF24",
+      "use": "Uyarı simgesi/metni"
+    },
+    "warning-soft": {
+      "light": "#FFFBEB",
+      "dark": "#451A03",
+      "use": "Uyarı zemini"
+    },
+    "warning-on-soft": {
+      "light": "#92400E",
+      "dark": "#FDE68A",
+      "use": "warning-soft üzerindeki metin"
+    },
+    "warning-border": {
+      "light": "#D97706",
+      "dark": "#F59E0B",
+      "use": "Uyarı sınırı"
+    },
+    "danger": {
+      "light": "#B91C1C",
+      "dark": "#F87171",
+      "use": "Hata simgesi/metni; yıkıcı düğme dolgusu"
+    },
+    "danger-hover": {
+      "light": "#991B1B",
+      "dark": "#FCA5A5",
+      "use": "Yıkıcı düğme hover"
+    },
+    "danger-soft": {
+      "light": "#FEF2F2",
+      "dark": "#450A0A",
+      "use": "Hata zemini"
+    },
+    "danger-on-soft": {
+      "light": "#991B1B",
+      "dark": "#FECACA",
+      "use": "danger-soft üzerindeki metin"
+    },
+    "danger-border": {
+      "light": "#DC2626",
+      "dark": "#EF4444",
+      "use": "Hata sınırı"
+    },
+    "info": {
+      "light": "#2B4ACB",
+      "dark": "#9DB4FF",
+      "use": "Bilgi simgesi/metni, kayıt durumu"
+    },
+    "info-soft": {
+      "light": "#EEF1FC",
+      "dark": "#141A33",
+      "use": "Bilgi zemini"
+    },
+    "info-on-soft": {
+      "light": "#1E3A8A",
+      "dark": "#C9D5FF",
+      "use": "info-soft üzerindeki metin"
+    },
+    "info-border": {
+      "light": "#5A74DB",
+      "dark": "#6F87E3",
+      "use": "Bilgi sınırı"
+    },
+    "neutral-soft": {
+      "light": "#F1F1F3",
+      "dark": "#1C1C21",
+      "use": "Nötr çip zemini"
+    },
+    "neutral-on-soft": {
+      "light": "#3F3F46",
+      "dark": "#D4D4D8",
+      "use": "neutral-soft üzerindeki metin"
+    },
+    "neutral-border": {
+      "light": "#8A8A94",
+      "dark": "#74747E",
+      "use": "Nötr çip sınırı"
+    },
+    "violet-soft": {
+      "light": "#F5F3FF",
+      "dark": "#2E1065",
+      "use": "Dosya (case) sınıfı, uzman etkinliği zemini"
+    },
+    "violet-on-soft": {
+      "light": "#5B21B6",
+      "dark": "#DDD6FE",
+      "use": "violet-soft üzerindeki metin"
+    },
+    "violet-border": {
+      "light": "#7C3AED",
+      "dark": "#A78BFA",
+      "use": "violet sınırı"
+    },
+    "teal-soft": {
+      "light": "#F0FDFA",
+      "dark": "#042F2E",
+      "use": "Arabuluculuk etkinliği zemini"
+    },
+    "teal-on-soft": {
+      "light": "#115E59",
+      "dark": "#99F6E4",
+      "use": "teal-soft üzerindeki metin"
+    },
+    "teal-border": {
+      "light": "#0D9488",
+      "dark": "#2DD4BF",
+      "use": "teal sınırı"
+    },
+    "inverse-bg": {
+      "light": "#18181B",
+      "dark": "#F4F4F5",
+      "use": "Toast, dolu nötr çip (Avukat beyanı), tooltip"
+    },
+    "inverse-fg": {
+      "light": "#FFFFFF",
+      "dark": "#111114",
+      "use": "inverse üzerindeki metin"
+    },
+    "selection-bg": {
+      "light": "#D9E0FA",
+      "dark": "#2A3766",
+      "use": "Seçili metin zemini"
+    },
+    "disabled-fg": {
+      "light": "#71717A",
+      "dark": "#8E8E98",
+      "use": "Devre dışı metin (WCAG muaf; ek işaret zorunlu)"
+    },
+    "disabled-bg": {
+      "light": "#EDEDF0",
+      "dark": "#1C1C21",
+      "use": "Devre dışı zemin"
+    },
+    "diff-add-bg": {
+      "light": "#ECFDF5",
+      "dark": "#052E16",
+      "use": "Eklenen metin zemini"
+    },
+    "diff-add-fg": {
+      "light": "#065F46",
+      "dark": "#BBF7D0",
+      "use": "Eklenen metin"
+    },
+    "diff-del-bg": {
+      "light": "#FEF2F2",
+      "dark": "#450A0A",
+      "use": "Silinen metin zemini"
+    },
+    "diff-del-fg": {
+      "light": "#991B1B",
+      "dark": "#FECACA",
+      "use": "Silinen metin"
+    },
+    "paper-bg": {
+      "light": "#FFFFFF",
+      "dark": "#FFFFFF",
+      "use": "A4 kâğıt zemini (HER İKİ temada aynı)"
+    },
+    "paper-ink": {
+      "light": "#000000",
+      "dark": "#000000",
+      "use": "A4 kâğıt metni (HER İKİ temada aynı)"
+    }
+  },
+  "aliases": {
+    "citation-pending-bg": "info-soft",
+    "citation-pending-fg": "info-on-soft",
+    "citation-pending-border": "info-border",
+    "citation-verified-bg": "success-soft",
+    "citation-verified-fg": "success-on-soft",
+    "citation-verified-border": "success-border",
+    "citation-verified-user-source-bg": "success-soft",
+    "citation-verified-user-source-fg": "success-on-soft",
+    "citation-verified-user-source-border": "success-border",
+    "citation-out-of-context-bg": "warning-soft",
+    "citation-out-of-context-fg": "warning-on-soft",
+    "citation-out-of-context-border": "warning-border",
+    "citation-source-unavailable-bg": "warning-soft",
+    "citation-source-unavailable-fg": "warning-on-soft",
+    "citation-source-unavailable-border": "warning-border",
+    "citation-not-found-bg": "danger-soft",
+    "citation-not-found-fg": "danger-on-soft",
+    "citation-not-found-border": "danger-border",
+    "citation-out-of-coverage-bg": "neutral-soft",
+    "citation-out-of-coverage-fg": "neutral-on-soft",
+    "citation-out-of-coverage-border": "neutral-border",
+    "citation-attested-bg": "inverse-bg",
+    "citation-attested-fg": "inverse-fg",
+    "citation-attested-border": "inverse-bg",
+    "data-class-public-bg": "neutral-soft",
+    "data-class-public-fg": "neutral-on-soft",
+    "data-class-public-border": "neutral-border",
+    "data-class-client-bg": "primary-soft",
+    "data-class-client-fg": "primary-soft-fg",
+    "data-class-client-border": "primary",
+    "data-class-case-bg": "violet-soft",
+    "data-class-case-fg": "violet-on-soft",
+    "data-class-case-border": "violet-border"
+  },
+  "chart": {
+    "slots": {
+      "chart-1": {
+        "hue": "mavi",
+        "light": "#2a78d6",
+        "dark": "#3987e5"
+      },
+      "chart-2": {
+        "hue": "turuncu",
+        "light": "#eb6834",
+        "dark": "#d95926"
+      },
+      "chart-3": {
+        "hue": "su yeşili",
+        "light": "#1baf7a",
+        "dark": "#199e70"
+      },
+      "chart-4": {
+        "hue": "sarı",
+        "light": "#eda100",
+        "dark": "#c98500"
+      },
+      "chart-5": {
+        "hue": "eflatun",
+        "light": "#e87ba4",
+        "dark": "#d55181"
+      },
+      "chart-6": {
+        "hue": "yeşil",
+        "light": "#008300",
+        "dark": "#008300"
+      },
+      "chart-7": {
+        "hue": "mor",
+        "light": "#4a3aa7",
+        "dark": "#9085e9"
+      },
+      "chart-8": {
+        "hue": "kırmızı",
+        "light": "#e34948",
+        "dark": "#e66767"
+      }
+    },
+    "helpers": {
+      "chart-grid": {
+        "light": "#E6E6EA",
+        "dark": "#26262B",
+        "use": "Dekoratif, ince 1 px"
+      },
+      "chart-axis": {
+        "light": "#63636D",
+        "dark": "#8E8E98",
+        "use": "Eksen metni (`text-subtle`)"
+      }
+    },
+    "sequential": {
+      "chart-seq-100": "#cde2fb",
+      "chart-seq-200": "#9ec5f4",
+      "chart-seq-300": "#6da7ec",
+      "chart-seq-400": "#3987e5",
+      "chart-seq-500": "#256abf",
+      "chart-seq-600": "#184f95",
+      "chart-seq-700": "#0d366b"
+    },
+    "sequentialNote": "Tek ton, açıktan koyuya; büyüklük kodlaması. İki temada aynı değerler; koyu yüzeyde en açık adım (chart-seq-100) kullanılmaz.",
+    "surface": {
+      "light": "surface",
+      "dark": "surface"
+    },
+    "thresholds": {
+      "adjacentCvdMin": 8,
+      "adjacentCvdSecondaryBandMin": 6,
+      "normalMin": 15,
+      "darkSurfaceContrastMin": 3,
+      "allPairsSlotCount": 3
+    },
+    "documented": {
+      "light": {
+        "adjacentCvdWorst": 9.1,
+        "normalWorst": 19.6,
+        "firstThreeCvdWorst": 9.2,
+        "firstThreeNormalWorst": 24,
+        "below3to1": ["chart-3", "chart-4", "chart-5"]
+      },
+      "dark": {
+        "adjacentCvdWorst": 8.4,
+        "normalWorst": 19.3,
+        "firstThreeCvdWorst": 9.4,
+        "firstThreeNormalWorst": 20.9,
+        "below3to1": []
+      }
+    },
+    "rules": [
+      "Sabit slot sırası; dokuzuncu seri üretilmez (Diğer).",
+      "Durum renkleri (success, warning, danger, info) seri rengi olarak kullanılmaz.",
+      "Açık temada chart-3, chart-4, chart-5 yüzeyle 3:1 altındadır: etiket veya tablo görünümü zorunlu.",
+      "Her serinin her seriyle yan yana geldiği grafiklerde yalnız ilk üç slot kullanılır."
+    ]
+  },
+  "elevation": {
+    "themed": {
+      "shadow-1": {
+        "light": "0 1px 2px rgba(17, 17, 20, 0.06)",
+        "dark": "0 1px 2px rgba(0, 0, 0, 0.4)"
+      },
+      "shadow-2": {
+        "light": "0 4px 12px rgba(17, 17, 20, 0.1)",
+        "dark": "0 4px 12px rgba(0, 0, 0, 0.5)"
+      },
+      "shadow-3": {
+        "light": "0 12px 32px rgba(17, 17, 20, 0.16)",
+        "dark": "0 12px 32px rgba(0, 0, 0, 0.6)"
+      },
+      "scrim": {
+        "light": "rgba(17, 17, 20, 0.4)",
+        "dark": "rgba(0, 0, 0, 0.64)"
+      }
+    },
+    "shell": {
+      "shadow-paper": {
+        "light": "0 1px 3px rgba(17, 17, 20, 0.12), 0 8px 24px rgba(17, 17, 20, 0.08)",
+        "dark": "0 0 0 1px #26262B, 0 1px 3px rgba(17, 17, 20, 0.12), 0 8px 24px rgba(17, 17, 20, 0.08)"
+      }
+    },
+    "shellNote": "Kabuk tokenı: kâğıt kökü data-theme=\"light\" taşıdığı için değer [data-theme=\"light\"] bloğunda yeniden tanımlanmaz; koyu kabuktaki 1 px halka (051 §4.9) kâğıda kalıtılır."
+  },
+  "typography": {
+    "families": {
+      "font-sans": "var(--font-ui, \"Geist\"), system-ui, \"Segoe UI\", Roboto, \"Noto Sans\", sans-serif",
+      "font-display": "var(--font-serif, \"Source Serif 4\"), Georgia, \"Times New Roman\", serif",
+      "font-mono": "var(--font-mono-face, \"Geist Mono\"), ui-monospace, \"Cascadia Mono\", Menlo, Consolas, monospace"
+    },
+    "scale": {
+      "display": {
+        "size": "2.5rem",
+        "lineHeight": "3rem",
+        "weight": "500",
+        "tracking": "-0.02em",
+        "belowMd": {
+          "size": "1.875rem",
+          "lineHeight": "2.375rem"
+        }
+      },
+      "heading-lg": {
+        "size": "1.75rem",
+        "lineHeight": "2.25rem",
+        "weight": "500",
+        "tracking": "-0.015em"
+      },
+      "heading-md": {
+        "size": "1.375rem",
+        "lineHeight": "1.875rem",
+        "weight": "600",
+        "tracking": "-0.01em"
+      },
+      "heading-sm": {
+        "size": "1.125rem",
+        "lineHeight": "1.625rem",
+        "weight": "600",
+        "tracking": "-0.005em"
+      },
+      "title": {
+        "size": "1rem",
+        "lineHeight": "1.5rem",
+        "weight": "600"
+      },
+      "body": {
+        "size": "1rem",
+        "lineHeight": "1.5rem",
+        "weight": "400"
+      },
+      "prose": {
+        "size": "1rem",
+        "lineHeight": "1.625rem",
+        "weight": "400"
+      },
+      "body-sm": {
+        "size": "0.875rem",
+        "lineHeight": "1.25rem",
+        "weight": "400"
+      },
+      "label": {
+        "size": "0.875rem",
+        "lineHeight": "1.25rem",
+        "weight": "500",
+        "tracking": "0.005em"
+      },
+      "caption": {
+        "size": "0.75rem",
+        "lineHeight": "1rem",
+        "weight": "400"
+      },
+      "overline": {
+        "size": "0.75rem",
+        "lineHeight": "1rem",
+        "weight": "600",
+        "tracking": "0.04em"
+      },
+      "code": {
+        "size": "0.8125rem",
+        "lineHeight": "1.25rem",
+        "weight": "400"
+      }
+    }
+  },
+  "spacing": {
+    "unit": "0.25rem",
+    "allowedSteps": [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 8, 10, 12, 16, 20]
+  },
+  "layout": {
+    "sidebar-width": {
+      "value": "16.5rem"
+    },
+    "rail-width": {
+      "value": "4rem"
+    },
+    "topbar-height": {
+      "value": "3rem",
+      "belowMd": "3rem"
+    },
+    "chat-max": {
+      "value": "52.5rem"
+    },
+    "doc-max": {
+      "value": "71.25rem"
+    },
+    "panel-sources": {
+      "value": "23rem"
+    },
+    "panel-preview": {
+      "value": "40rem"
+    },
+    "studio-chat-min": {
+      "value": "25rem"
+    },
+    "studio-chat-max": {
+      "value": "30rem"
+    },
+    "form-max": {
+      "value": "40rem"
+    },
+    "gutter": {
+      "value": "1.5rem",
+      "belowMd": "1rem"
+    },
+    "content-max": {
+      "value": "90rem"
+    }
+  },
+  "paper": {
+    "paper-width": "210mm",
+    "paper-min-height": "297mm",
+    "paper-margin-top": "20mm",
+    "paper-margin-bottom": "20mm",
+    "paper-margin-left": "25mm",
+    "paper-margin-right": "20mm",
+    "page-gap": "8mm",
+    "paper-font": "var(--font-liberation-serif, \"Liberation Serif\"), \"Times New Roman\", Times, serif",
+    "paper-font-size": "12pt",
+    "paper-note-size": "10pt",
+    "paper-line-height": "1.5",
+    "paper-indent": "1.25cm"
+  },
+  "radius": {
+    "radius-none": "0",
+    "radius-sm": "0.25rem",
+    "radius-md": "0.5rem",
+    "radius-lg": "0.75rem",
+    "radius-xl": "1rem",
+    "radius-2xl": "1.5rem",
+    "radius-full": "9999px"
+  },
+  "zIndex": {
+    "z-base": "0",
+    "z-sticky": "10",
+    "z-sidebar": "30",
+    "z-topbar": "35",
+    "z-dropdown": "40",
+    "z-overlay": "50",
+    "z-dialog": "60",
+    "z-toast": "70",
+    "z-tooltip": "80",
+    "z-skip-link": "100"
+  },
+  "motion": {
+    "durations": {
+      "duration-instant": {
+        "value": "0ms",
+        "reduced": "0ms"
+      },
+      "duration-fast": {
+        "value": "120ms",
+        "reduced": "0ms"
+      },
+      "duration-base": {
+        "value": "200ms",
+        "reduced": "0ms"
+      },
+      "duration-slow": {
+        "value": "320ms",
+        "reduced": "0ms"
+      },
+      "duration-highlight": {
+        "value": "1500ms",
+        "reduced": "0ms"
+      }
+    },
+    "easings": {
+      "ease-standard": "cubic-bezier(0.2, 0, 0, 1)",
+      "ease-emphasized": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  },
+  "density": {
+    "comfortable": {
+      "control-h-sm": "32px",
+      "control-h-md": "36px",
+      "control-h-lg": "44px",
+      "row-h": "44px",
+      "sidebar-item-h": "32px",
+      "card-padding-min": "16px",
+      "card-padding-max": "24px"
+    },
+    "compact": {
+      "control-h-sm": "28px",
+      "control-h-md": "32px",
+      "control-h-lg": "40px",
+      "row-h": "36px",
+      "sidebar-item-h": "28px",
+      "card-padding-min": "12px",
+      "card-padding-max": "16px"
+    }
+  },
+  "target": {
+    "target-min": "24px",
+    "target-coarse": "44px",
+    "target-gap-coarse": "8px"
+  },
+  "breakpoints": {
+    "sm": "40rem",
+    "md": "48rem",
+    "lg": "64rem",
+    "xl": "80rem",
+    "2xl": "100rem"
+  },
+  "contrastPairs": [
+    {
+      "fg": "text",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Gövde metni / uygulama zemini"
+    },
+    {
+      "fg": "text",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Gövde metni / kart"
+    },
+    {
+      "fg": "text",
+      "bg": "surface-sunken",
+      "min": 4.5,
+      "use": "Metin / gömülü alan, kod, alıntı kutusu"
+    },
+    {
+      "fg": "text",
+      "bg": "primary-soft",
+      "min": 4.5,
+      "use": "Metin / seçili satır"
+    },
+    {
+      "fg": "text-muted",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Etiket, yardımcı metin"
+    },
+    {
+      "fg": "text-muted",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Etiket, yardımcı metin"
+    },
+    {
+      "fg": "text-muted",
+      "bg": "surface-sunken",
+      "min": 4.5,
+      "use": "Yardımcı metin / gömülü alan"
+    },
+    {
+      "fg": "text-muted",
+      "bg": "primary-soft",
+      "min": 4.5,
+      "use": "Yardımcı metin / seçili satır"
+    },
+    {
+      "fg": "text-subtle",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Zaman damgası, yer tutucu, ipucu"
+    },
+    {
+      "fg": "text-subtle",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Zaman damgası, yer tutucu"
+    },
+    {
+      "fg": "text-subtle",
+      "bg": "surface-sunken",
+      "min": 4.5,
+      "use": "Zaman damgası / gömülü alan"
+    },
+    {
+      "fg": "text-subtle",
+      "bg": "primary-soft",
+      "min": 4.5,
+      "use": "İpucu / seçili satır"
+    },
+    {
+      "fg": "text-on-primary",
+      "bg": "primary",
+      "min": 4.5,
+      "use": "Birincil düğme metni"
+    },
+    {
+      "fg": "text-on-primary",
+      "bg": "primary-hover",
+      "min": 4.5,
+      "use": "Birincil düğme (hover)"
+    },
+    {
+      "fg": "text-on-primary",
+      "bg": "primary-active",
+      "min": 4.5,
+      "use": "Birincil düğme (basılı)"
+    },
+    {
+      "fg": "text-on-primary",
+      "bg": "danger",
+      "min": 4.5,
+      "use": "Yıkıcı düğme metni"
+    },
+    {
+      "fg": "text-on-primary",
+      "bg": "danger-hover",
+      "min": 4.5,
+      "use": "Yıkıcı düğme (hover)"
+    },
+    {
+      "fg": "primary",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Bağlantı, seçili sekme metni"
+    },
+    {
+      "fg": "primary",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Bağlantı, seçili sekme metni"
+    },
+    {
+      "fg": "primary-hover",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Bağlantı (hover)"
+    },
+    {
+      "fg": "primary-soft-fg",
+      "bg": "primary-soft",
+      "min": 4.5,
+      "use": "Çip / etkin süzgeç metni"
+    },
+    {
+      "fg": "border-strong",
+      "bg": "bg",
+      "min": 3,
+      "use": "Girdi, onay kutusu sınırı"
+    },
+    {
+      "fg": "border-strong",
+      "bg": "surface",
+      "min": 3,
+      "use": "Girdi, onay kutusu sınırı"
+    },
+    {
+      "fg": "border-strong",
+      "bg": "surface-sunken",
+      "min": 3,
+      "use": "Sınır / gömülü alan"
+    },
+    {
+      "fg": "border-strong",
+      "bg": "surface-raised",
+      "min": 3,
+      "use": "Sınır / yükseltilmiş yüzey"
+    },
+    {
+      "fg": "focus-ring",
+      "bg": "bg",
+      "min": 3,
+      "use": "Odak halkası"
+    },
+    {
+      "fg": "focus-ring",
+      "bg": "surface",
+      "min": 3,
+      "use": "Odak halkası"
+    },
+    {
+      "fg": "focus-ring",
+      "bg": "surface-sunken",
+      "min": 3,
+      "use": "Odak halkası"
+    },
+    {
+      "fg": "focus-ring",
+      "bg": "surface-raised",
+      "min": 3,
+      "use": "Odak halkası"
+    },
+    {
+      "fg": "success",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Başarı simgesi ve metni"
+    },
+    {
+      "fg": "success",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Başarı simgesi ve metni"
+    },
+    {
+      "fg": "warning",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Uyarı simgesi ve metni"
+    },
+    {
+      "fg": "warning",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Uyarı simgesi ve metni"
+    },
+    {
+      "fg": "danger",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Hata simgesi ve metni"
+    },
+    {
+      "fg": "danger",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Hata simgesi ve metni"
+    },
+    {
+      "fg": "info",
+      "bg": "surface",
+      "min": 4.5,
+      "use": "Bilgi simgesi ve metni"
+    },
+    {
+      "fg": "info",
+      "bg": "bg",
+      "min": 4.5,
+      "use": "Bilgi simgesi ve metni"
+    },
+    {
+      "fg": "success-on-soft",
+      "bg": "success-soft",
+      "min": 4.5,
+      "use": "Başarı bandı / çip metni"
+    },
+    {
+      "fg": "warning-on-soft",
+      "bg": "warning-soft",
+      "min": 4.5,
+      "use": "Uyarı bandı / çip metni"
+    },
+    {
+      "fg": "danger-on-soft",
+      "bg": "danger-soft",
+      "min": 4.5,
+      "use": "Hata bandı / çip metni"
+    },
+    {
+      "fg": "info-on-soft",
+      "bg": "info-soft",
+      "min": 4.5,
+      "use": "Bilgi bandı / çip metni"
+    },
+    {
+      "fg": "neutral-on-soft",
+      "bg": "neutral-soft",
+      "min": 4.5,
+      "use": "Nötr çip metni"
+    },
+    {
+      "fg": "violet-on-soft",
+      "bg": "violet-soft",
+      "min": 4.5,
+      "use": "Dosya sınıfı çipi metni"
+    },
+    {
+      "fg": "success-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Durum çipi / bant sınırı (bileşen tanıma)"
+    },
+    {
+      "fg": "warning-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Durum çipi / bant sınırı"
+    },
+    {
+      "fg": "danger-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Durum çipi / bant sınırı"
+    },
+    {
+      "fg": "info-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Durum çipi / bant sınırı"
+    },
+    {
+      "fg": "neutral-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Nötr çip sınırı"
+    },
+    {
+      "fg": "violet-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Dosya sınıfı çipi sınırı"
+    },
+    {
+      "fg": "teal-on-soft",
+      "bg": "teal-soft",
+      "min": 4.5,
+      "use": "Arabuluculuk etkinliği metni"
+    },
+    {
+      "fg": "teal-border",
+      "bg": "surface",
+      "min": 3,
+      "use": "Arabuluculuk etkinliği sınırı"
+    },
+    {
+      "fg": "text",
+      "bg": "surface-raised",
+      "min": 4.5,
+      "use": "Metin / açılır menü, diyalog, kaldırılmış kart"
+    },
+    {
+      "fg": "text-muted",
+      "bg": "surface-raised",
+      "min": 4.5,
+      "use": "Yardımcı metin / yükseltilmiş yüzey"
+    },
+    {
+      "fg": "text-subtle",
+      "bg": "surface-raised",
+      "min": 4.5,
+      "use": "Yer tutucu / yükseltilmiş yüzey"
+    },
+    {
+      "fg": "primary",
+      "bg": "surface-raised",
+      "min": 4.5,
+      "use": "Bağlantı / yükseltilmiş yüzey"
+    },
+    {
+      "fg": "danger",
+      "bg": "surface-raised",
+      "min": 4.5,
+      "use": "Alan hatası / yükseltilmiş yüzey"
+    },
+    {
+      "fg": "text",
+      "bg": "selection-bg",
+      "min": 4.5,
+      "use": "Seçili metin (::selection)"
+    },
+    {
+      "fg": "inverse-fg",
+      "bg": "inverse-bg",
+      "min": 4.5,
+      "use": "Dolu nötr çip (Avukat beyanı), toast"
+    },
+    {
+      "fg": "diff-add-fg",
+      "bg": "diff-add-bg",
+      "min": 4.5,
+      "use": "Eklenen metin"
+    },
+    {
+      "fg": "diff-del-fg",
+      "bg": "diff-del-bg",
+      "min": 4.5,
+      "use": "Silinen metin"
+    },
+    {
+      "fg": "disabled-fg",
+      "bg": "disabled-bg",
+      "min": 0,
+      "use": "Devre dışı (WCAG muaf; yine de okunur)",
+      "exempt": true
+    },
+    {
+      "fg": "paper-ink",
+      "bg": "paper-bg",
+      "min": 4.5,
+      "use": "A4 kâğıt metni"
+    }
+  ]
+}

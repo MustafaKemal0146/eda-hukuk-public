@@ -1,0 +1,104 @@
+{
+  "source": "083 §9 negatif vakalar N1-N6. Hukuk onayı bekliyor (AS-0205).",
+  "cases": [
+    {
+      "id": "N1",
+      "title": "Doğrulanmamış kural prod kipinde",
+      "ruleCode": "hmk_istinaf_basvuru",
+      "mode": "prod",
+      "verified": false,
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2026-03-05",
+        "serviceMethod": "postal"
+      },
+      "expected": {
+        "code": "DEADLINE_RULE_UNVERIFIED",
+        "reason": null
+      }
+    },
+    {
+      "id": "N2",
+      "title": "Kuralda olmayan başlangıç olayı",
+      "ruleCode": "hmk_cevap_dilekcesi",
+      "mode": "prod",
+      "verified": true,
+      "input": {
+        "startEvent": "pronouncement",
+        "eventDate": "2026-03-05",
+        "serviceMethod": null
+      },
+      "expected": {
+        "code": "VALIDATION_FAILED",
+        "reason": "start_event_not_allowed"
+      }
+    },
+    {
+      "id": "N3",
+      "title": "Öğrenme olayı ile tebligat yöntemi",
+      "ruleCode": "iik_sikayet",
+      "mode": "prod",
+      "verified": true,
+      "input": {
+        "startEvent": "learning",
+        "eventDate": "2026-03-05",
+        "serviceMethod": "e_tebligat"
+      },
+      "expected": {
+        "code": "VALIDATION_FAILED",
+        "reason": "service_method_not_applicable"
+      }
+    },
+    {
+      "id": "N4",
+      "title": "Aralık dışı olay tarihi",
+      "ruleCode": "hmk_istinaf_basvuru",
+      "mode": "prod",
+      "verified": true,
+      "input": {
+        "startEvent": "service",
+        "eventDate": "1999-12-31",
+        "serviceMethod": "postal"
+      },
+      "expected": {
+        "code": "VALIDATION_FAILED",
+        "reason": "event_date_out_of_range"
+      }
+    },
+    {
+      "id": "N5",
+      "title": "Yürürlük aralığı dışı olay tarihi",
+      "ruleCode": "hmk_istinaf_basvuru",
+      "mode": "prod",
+      "verified": true,
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2023-12-31",
+        "serviceMethod": "postal"
+      },
+      "expected": {
+        "code": "VALIDATION_FAILED",
+        "reason": "rule_not_effective"
+      }
+    },
+    {
+      "id": "N6",
+      "title": "Bozuk kural satırı (recess_applies = true, recessBranch = null)",
+      "ruleCode": "hmk_istinaf_basvuru",
+      "mode": "prod",
+      "verified": true,
+      "corrupt": {
+        "params.recessBranch": null
+      },
+      "input": {
+        "startEvent": "service",
+        "eventDate": "2026-03-05",
+        "serviceMethod": "postal"
+      },
+      "expected": {
+        "code": "RULE_INVALID",
+        "reason": null
+      }
+    }
+  ]
+}

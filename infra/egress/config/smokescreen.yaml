@@ -1,0 +1,22 @@
+# smokescreen taban yapılandırması (imaja gömülür: /etc/smokescreen/config.yaml).
+# Dört vekil için ortaktır; dinleme adresi, port ve ACL dosyası compose komut satırından gelir.
+# Değişiklik süreci ACL dosyalarıyla aynıdır (CODEOWNERS, 070 §11).
+#
+# allow_missing_role: istemciler mTLS kullanmadığından rol belirlenemez; bu ayar olmadan smokescreen
+#   her isteği "Client role cannot be determined" ile reddeder. true iken boş rol ACL'in `default`
+#   bloğuna düşer (smokescreen 99be9f5, pkg/smokescreen/smokescreen.go getRole + acl.Rule).
+# network: ip4 — IPv6 kapalı (070 §11).
+# RFC 1918, loopback, link-local (169.254.169.254 dahil) ve global olmayan adresler smokescreen'de
+#   varsayılan olarak reddedilir (ip_policy.go); deny_ranges yalnız bunların kapsamadığı özel amaçlı
+#   IPv4 bloklarını (RFC 6890) ekler. unsafe_allow_private_ranges ve allow_ranges BİLEREK yok.
+allow_missing_role: true
+network: ip4
+deny_ranges:
+  - 0.0.0.0/8
+  - 100.64.0.0/10
+  - 192.0.0.0/24
+  - 192.0.2.0/24
+  - 198.18.0.0/15
+  - 198.51.100.0/24
+  - 203.0.113.0/24
+  - 240.0.0.0/4

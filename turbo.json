@@ -1,0 +1,59 @@
+{
+  "$schema": "https://turborepo.dev/schema.json",
+  "ui": "stream",
+  "envMode": "strict",
+  "globalDependencies": [
+    ".node-version",
+    "packages/config/tsconfig.base.json",
+    "pnpm-workspace.yaml"
+  ],
+  "globalEnv": ["EDA_ENV"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "!test/**",
+        "!tests/**",
+        "!**/*.test.ts",
+        "!**/*.test.tsx",
+        "!**/*.md"
+      ],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
+      "env": ["NEXT_TELEMETRY_DISABLED"]
+    },
+    "dev": { "cache": false, "persistent": true },
+    "//#lint": {
+      "inputs": [
+        "**/*.{ts,tsx,js,mjs,cjs,json,jsonc,css}",
+        "!**/node_modules/**",
+        "!**/generated/**",
+        "!plans/**"
+      ],
+      "outputs": []
+    },
+    "//#test": {
+      "dependsOn": ["@eda/ui#test"],
+      "inputs": ["infra/scripts/**"],
+      "outputs": []
+    },
+    "lint": { "outputs": [] },
+    "typecheck": { "outputs": [] },
+    "test": {
+      "outputs": [],
+      "env": ["MOCK_LLM", "EMBED_PROVIDER"],
+      "passThroughEnv": [
+        "PG_*",
+        "VALKEY_*",
+        "S3_*",
+        "*_FILE",
+        "YARGI_MCP_URL",
+        "EMBED_QUERY_URL",
+        "DOC_ENGINE_URL"
+      ]
+    },
+    "test:e2e": { "cache": false },
+    "eval": { "cache": false },
+    "gen:schemas": { "outputs": ["generated/**"] }
+  }
+}

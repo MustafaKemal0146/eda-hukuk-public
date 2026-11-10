@@ -1,0 +1,22 @@
+{
+  "id": "corpus-istinaf-hukuk-2",
+  "synthetic": true,
+  "unverified_shape": true,
+  "note": "SENTETİK yapı örneği (ÖRNEK); gerçek karar metni değildir, yalnız 034 §6.4 başlık biçimlerini taşır. BAM hukuk: dava, cevap, delillerin değerlendirilmesi ve gerekçe, hüküm.",
+  "courtType": "istinaf_hukuk",
+  "lines": [
+    "T.C. ÖRNEK BÖLGE ADLİYE MAHKEMESİ",
+    "5. HUKUK DAİRESİ",
+    "DAVA",
+    "Örnek tazminat istemi.",
+    "CEVAP",
+    "Davalı istemin reddini savunmuştur.",
+    "DELİLLERİN DEĞERLENDİRİLMESİ VE GEREKÇE",
+    "Örnek gerekçe paragrafı.",
+    "HÜKÜM",
+    "Başvurunun kabulüne."
+  ],
+  "roles": ["kunye", "istem", "taraf_iddiasi", "gerekce", "hukum"],
+  "outcome": "patterned",
+  "gerekceExcludes": ["reddini savunmuştur"]
+}

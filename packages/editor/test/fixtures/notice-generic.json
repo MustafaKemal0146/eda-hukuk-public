@@ -1,0 +1,142 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-NT0001",
+        "rev": 1,
+        "role": "partiesGrid"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "İHTAR EDEN\t: Örnek Kişi A"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "MUHATAP\t: Örnek Kişi B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-NT0002",
+        "rev": 1,
+        "role": "subjectLine"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "KONU\t: Örnek ihtar konusu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-NT0003",
+        "rev": 1,
+        "role": "generic"
+      },
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "AÇIKLAMALAR"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Örnek açıklama metni."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-NT0004",
+        "rev": 1,
+        "role": "generic"
+      },
+      "content": [
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 1
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "İHTAR VE TALEP"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Örnek talep metni."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "attrs": {
+        "blockId": "b-NT0005",
+        "rev": 1,
+        "role": "attorneySignature"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "İhtar Eden Vekili"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Av. Örnek Avukat"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
