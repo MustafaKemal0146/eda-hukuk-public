@@ -248,7 +248,7 @@ görüldüğü üzere **yaklaşık 1.400 ABD doları** olmuştur (geliştirici b
 | Kodu, mimarisini, şemalarını, istemlerini veya tasarımını başka bir projede kullanmak, uyarlamak, türev eser üretmek | **Yasak** |
 | Yeniden dağıtmak, yayımlamak, canlı hizmet olarak sunmak | **Yasak** |
 | Yapay zekâ modeli eğitmek veya veri seti oluşturmak için kullanmak | **Yasak** |
-| "E.D.A. Hukuk", "Expert Digital Assistant" adlarını ve logoyu kullanmak | **Yasak** |
+| "E.D.A. Hukuk", "Expert Digital Assistant" adlarını ve logoyu projeden silip kullanmak veya dağıtmak | **Yasak** |
 
 Fikirler serbesttir; lisans kodun, metnin ve tasarımın özgün ifadesini korur. Üçüncü taraf bileşenler kendi
 lisanslarına tabidir ([`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)). Ticari lisans veya izin için GitHub
